@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "337890b2c2ddec495584a687b3aa5691"
+build_time: [538944131, 379683000]
+inputs:
+  "/Users/vsokoltsov/ios_projects/UProgress/UProgress/ViewController.swift": [9223372036854775807, 0]
+  "/Users/vsokoltsov/ios_projects/UProgress/UProgress/AppDelegate.swift": [9223372036854775807, 0]
