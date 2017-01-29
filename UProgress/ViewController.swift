@@ -7,17 +7,32 @@
 //
 
 import UIKit
-import RxAlamofire
+import ObjectMapper
+import Alamofire
+import AlamofireObjectMapper
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     var itemsList:[String] = ["1", "2", "3", "4", "5"]
+    var url = "http://192.168.99.100:3000/api/v1/users/vforvad/directions"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        var headers = [
+            "Content-Type": "application/json",
+        ]
+        
+        Alamofire.request(url, method: .get)
+            .responseArray(keyPath: "directions") { (response: DataResponse<[Direction]>) in
+                switch(response.result) {
+                case .success(let value):
+                    print(value)
+                case .failure(let errorValue):
+                    print(errorValue)
+                }
+            }
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,6 +7,8 @@ target 'UProgress' do
   pod 'RxAlamofire'
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
+  pod 'ObjectMapper', '~> 2.2'
+  pod 'AlamofireObjectMapper', '~> 4.0'
 
   # Pods for UProgress
 

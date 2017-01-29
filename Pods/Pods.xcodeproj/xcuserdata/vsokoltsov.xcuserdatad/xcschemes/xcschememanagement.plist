@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-UProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,22 +62,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A5D1DCB6EA157C56AE84F30E102E4E9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>34BE5B655624CC60FC5917C32467796C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3FEBC1B6A8D1479635077D4C0A85D0EA</key>
+		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>4ABBA6900B7E6FCDABCEF5109D5DA1A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D57D160420C8D9576FC016EEB3671CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7B5FA77168F7527B446DC39FEA440417</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,12 +92,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8AAF4F7822599F2AE0E3A53B0DA4A283</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8F0B5E9C3CB891F6C00EDC495A26463F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5B0AA9580B393B40527A259591F43E2</key>
+		<key>9502FB01641FBABB78522037E882757B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B5A23A9A8F91C644D8DA7048DD80C7C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
