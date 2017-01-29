@@ -16,24 +16,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var itemsList:[String] = ["1", "2", "3", "4", "5"]
-    var url = "http://192.168.99.100:3000/api/v1/users/vforvad/directions"
+    var itemsList:[Direction]! = []
+    private let manager = DirectionManager()
+    private var presenter: DirectionListPresenterImpl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var headers = [
-            "Content-Type": "application/json",
-        ]
-        
-        Alamofire.request(url, method: .get)
-            .responseArray(keyPath: "directions") { (response: DataResponse<[Direction]>) in
-                switch(response.result) {
-                case .success(let value):
-                    print(value)
-                case .failure(let errorValue):
-                    print(errorValue)
-                }
-            }
+        presenter = DirectionListPresenterImpl(model: manager, view: self)
+        presenter.loadDirections(userNick: "vforvad", pageNumber: 1)
+//        var headers = [
+//            "Content-Type": "application/json",
+//        ]
+//        
+//        Alamofire.request(url, method: .get)
+//            .responseArray(keyPath: "directions") { (response: DataResponse<[Direction]>) in
+//                switch(response.result) {
+//                case .success(let value):
+//                    print(value)
+//                case .failure(let errorValue):
+//                    print(errorValue)
+//                }
+//            }
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,12 +50,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cellId")
-        cell.textLabel?.text = itemsList[indexPath.row]
+        cell.textLabel?.text = itemsList[indexPath.row].title
         return cell
     }
 
     internal func successDirectionsLoad(directions: [Direction]!) {
-        
+        itemsList = directions
+        tableView.reloadData()
     }
     
     internal func stopLoader() {

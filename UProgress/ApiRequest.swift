@@ -52,6 +52,6 @@ class ApiRequest: NSObject {
     }
     
     func defineFullUrl(url: String!) -> String {
-        return "\(host)/api/v1\(url)"
+        return "\(host)/api/v1\(url!)"
     }
 }
