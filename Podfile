@@ -11,6 +11,7 @@ target 'UProgress' do
   pod 'AlamofireObjectMapper', '~> 4.0'
   pod 'OHHTTPStubs'
   pod 'OHHTTPStubs/Swift'
+  pod 'SideMenuController'
 
   # Pods for UProgress
 

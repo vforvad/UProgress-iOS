@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8B44B55BCA2F5DC78EA5A5DE26B2E503'
-               BlueprintName = 'RxCocoa'
+               BlueprintIdentifier = 'E066DAA21C8A98D5CCF5FD4734BFB6F9'
+               BlueprintName = 'SideMenuController'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'RxCocoa.framework'>
+               BuildableName = 'SideMenuController.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

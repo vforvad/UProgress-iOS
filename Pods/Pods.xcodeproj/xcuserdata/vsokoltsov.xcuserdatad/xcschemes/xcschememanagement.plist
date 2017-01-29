@@ -29,27 +29,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-UProgress-UProgressTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-UProgress-UProgressUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-UProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-UProgressTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-UProgressUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>RxAlamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RxBlocking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -64,7 +59,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RxTest.xcscheme</key>
+		<key>SideMenuController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -77,22 +72,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0349C34BB16A675AF537B03AD4CA6526</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0942ADC735A58A7D1A5EF074400B21D2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0A18423987E7143073B19F001B21B8E7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0A9AEAD3E37FD2C473325978E66173A7</key>
+		<key>0FD0E88D8BC4191CB357D6461AE8A4C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>834A9A5723912E77CF5EB7F9DB6143ED</key>
+		<key>748F1C7F61D88F3FB355A8E829489671</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,27 +102,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8B44B55BCA2F5DC78EA5A5DE26B2E503</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9502FB01641FBABB78522037E882757B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C3D9F2ACEB5A4603E19756FAC86D7126</key>
+		<key>C29EC591C265C0366498F327409FCB1C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E6776BACBB250F0CF63A9A1A55F4540B</key>
+		<key>D265CCE89D93734E5741B4C456524466</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F58F747D7BF761B62065DBFA9B58B9C9</key>
+		<key>D60C7822B3E555D02B253C4D7DCF4BCA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F99F3C4802828451BAB8206A0E3112AD</key>
+		<key>E066DAA21C8A98D5CCF5FD4734BFB6F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F88479F7E379FD89D2B869D01ACE2517</key>
 		<dict>
 			<key>primary</key>
 			<true/>
