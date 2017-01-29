@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import RxAlamofire
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var itemsList:[String] = ["1", "2", "3", "4", "5"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

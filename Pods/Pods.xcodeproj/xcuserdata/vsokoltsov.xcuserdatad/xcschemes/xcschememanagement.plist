@@ -3,20 +3,96 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
+	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-UProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-UProgressTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-UProgressUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxAlamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxBlocking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxTest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0A5D1DCB6EA157C56AE84F30E102E4E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>34BE5B655624CC60FC5917C32467796C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3FEBC1B6A8D1479635077D4C0A85D0EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4ABBA6900B7E6FCDABCEF5109D5DA1A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7CAB3C52D5A534B1B1AA977669452485</key>
+		<key>7D12EFA70BA963CC87DAC0B9878404AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FC86272CC23749CA8A135017E1A41CAB</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F0B5E9C3CB891F6C00EDC495A26463F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C5B0AA9580B393B40527A259591F43E2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1DECA16B5EA8B62C87F628B8104C6D6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
