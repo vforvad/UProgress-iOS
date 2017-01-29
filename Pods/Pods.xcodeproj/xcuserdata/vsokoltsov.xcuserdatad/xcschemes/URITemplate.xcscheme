@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0942ADC735A58A7D1A5EF074400B21D2'
-               BlueprintName = 'RxBlocking'
+               BlueprintIdentifier = '5BAEE407D509A3F67350A21DD9179E25'
+               BlueprintName = 'URITemplate'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'RxBlocking.framework'>
+               BuildableName = 'URITemplate.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

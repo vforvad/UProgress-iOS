@@ -16,10 +16,12 @@ target 'UProgress' do
     inherit! :search_paths
     pod 'RxBlocking', '~> 3.0'
     pod 'RxTest',     '~> 3.0'
+    pod 'Mockingjay'
   end
 
   target 'UProgressUITests' do
     inherit! :search_paths
+    pod 'Mockingjay'
     # Pods for testing
   end
 
