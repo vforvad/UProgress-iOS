@@ -11,7 +11,8 @@ import ObjectMapper
 import Alamofire
 import AlamofireObjectMapper
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DirectionViewProtocol {
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -50,5 +51,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
 
+    internal func successDirectionsLoad(directions: [Direction]!) {
+        
+    }
+    
+    internal func stopLoader() {
+        
+    }
+    
+    internal func startLoader() {
+        
+    }
+    
+    internal func failedDirectionsLoad(error: NSError) {
+        
+    }
 }
 

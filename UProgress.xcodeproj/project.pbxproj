@@ -20,6 +20,8 @@
 		64D9309C1E3E2CEE007C7112 /* DirectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */; };
 		64D9309F1E3E3C68007C7112 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309E1E3E3C68007C7112 /* ApiRequest.swift */; };
 		64D930A61E3E40A7007C7112 /* DirectionModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A51E3E40A7007C7112 /* DirectionModelProtocol.swift */; };
+		64D930A81E3E44D7007C7112 /* DirectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A71E3E44D7007C7112 /* DirectionResponse.swift */; };
+		64D930AA1E3E452E007C7112 /* DirectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A91E3E452E007C7112 /* DirectionViewProtocol.swift */; };
 		64E015181E3E023E0055DFD5 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E015171E3E023E0055DFD5 /* Direction.swift */; };
 		8355BE18053B154ED4CA22C8 /* Pods_UProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD8BB09CFC827EB003C41A2 /* Pods_UProgress.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionManager.swift; sourceTree = "<group>"; };
 		64D9309E1E3E3C68007C7112 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		64D930A51E3E40A7007C7112 /* DirectionModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionModelProtocol.swift; sourceTree = "<group>"; };
+		64D930A71E3E44D7007C7112 /* DirectionResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionResponse.swift; sourceTree = "<group>"; };
+		64D930A91E3E452E007C7112 /* DirectionViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionViewProtocol.swift; sourceTree = "<group>"; };
 		64E015171E3E023E0055DFD5 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		68D4A01EB56EC7D79F5B52DC /* Pods-UProgressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgressUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UProgressUITests/Pods-UProgressUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		779513CA6D1DE240C7496902 /* Pods-UProgressUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgressUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UProgressUITests/Pods-UProgressUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 		64D930A21E3E404A007C7112 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				64D930A91E3E452E007C7112 /* DirectionViewProtocol.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 				64E015171E3E023E0055DFD5 /* Direction.swift */,
 				64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */,
 				64D930A51E3E40A7007C7112 /* DirectionModelProtocol.swift */,
+				64D930A71E3E44D7007C7112 /* DirectionResponse.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -515,7 +521,9 @@
 			files = (
 				6474B1A91E3D04C200C46165 /* ViewController.swift in Sources */,
 				64D9309C1E3E2CEE007C7112 /* DirectionManager.swift in Sources */,
+				64D930A81E3E44D7007C7112 /* DirectionResponse.swift in Sources */,
 				6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */,
+				64D930AA1E3E452E007C7112 /* DirectionViewProtocol.swift in Sources */,
 				64D930A61E3E40A7007C7112 /* DirectionModelProtocol.swift in Sources */,
 				64D9309F1E3E3C68007C7112 /* ApiRequest.swift in Sources */,
 				64E015181E3E023E0055DFD5 /* Direction.swift in Sources */,
