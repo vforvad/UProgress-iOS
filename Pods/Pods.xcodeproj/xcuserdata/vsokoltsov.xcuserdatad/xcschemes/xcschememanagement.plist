@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>OHHTTPStubs.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,7 +77,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0349C34BB16A675AF537B03AD4CA6526</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0942ADC735A58A7D1A5EF074400B21D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0A18423987E7143073B19F001B21B8E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D57D160420C8D9576FC016EEB3671CA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7B5FA77168F7527B446DC39FEA440417</key>
+		<key>834A9A5723912E77CF5EB7F9DB6143ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,17 +122,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8AAF4F7822599F2AE0E3A53B0DA4A283</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9502FB01641FBABB78522037E882757B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5A23A9A8F91C644D8DA7048DD80C7C5</key>
+		<key>C3D9F2ACEB5A4603E19756FAC86D7126</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -133,6 +138,11 @@
 			<true/>
 		</dict>
 		<key>F58F747D7BF761B62065DBFA9B58B9C9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F99F3C4802828451BAB8206A0E3112AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

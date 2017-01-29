@@ -9,20 +9,17 @@ target 'UProgress' do
   pod 'RxCocoa',    '~> 3.0'
   pod 'ObjectMapper', '~> 2.2'
   pod 'AlamofireObjectMapper', '~> 4.0'
+  pod 'OHHTTPStubs'
+  pod 'OHHTTPStubs/Swift'
 
   # Pods for UProgress
 
   target 'UProgressTests' do
-    inherit! :search_paths
-    pod 'RxBlocking', '~> 3.0'
-    pod 'RxTest',     '~> 3.0'
     pod 'Mockingjay'
   end
 
   target 'UProgressUITests' do
-    inherit! :search_paths
     pod 'Mockingjay'
-    # Pods for testing
   end
 
 end
