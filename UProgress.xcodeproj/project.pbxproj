@@ -52,6 +52,7 @@
 		64D930C71E3E7311007C7112 /* DirectionListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */; };
 		64D930C81E3E7312007C7112 /* DirectionListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */; };
 		64E015181E3E023E0055DFD5 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E015171E3E023E0055DFD5 /* Direction.swift */; };
+		64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */; };
 		8355BE18053B154ED4CA22C8 /* Pods_UProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD8BB09CFC827EB003C41A2 /* Pods_UProgress.framework */; };
 		9DFB990BFC345690E0598208 /* Pods_UProgress_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396F0220AA154D509C1E95B /* Pods_UProgress_UProgressTests.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		64D930AF1E3E4DA1007C7112 /* DirectionsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListView.swift; sourceTree = "<group>"; };
 		64D930B11E3E4EF2007C7112 /* DirectionsListViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListViewProtocol.swift; sourceTree = "<group>"; };
 		64E015171E3E023E0055DFD5 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		68D4A01EB56EC7D79F5B52DC /* Pods-UProgressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgressUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UProgressUITests/Pods-UProgressUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D5C3E99CC7E7FD863502E7F /* Pods-UProgress-UProgressUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgress-UProgressUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UProgress-UProgressUITests/Pods-UProgress-UProgressUITests.release.xcconfig"; sourceTree = "<group>"; };
 		726D3C86FF753C8EEDC99541 /* Pods_UProgress_UProgressUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UProgress_UProgressUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +203,7 @@
 				6474B1AD1E3D04C200C46165 /* Assets.xcassets */,
 				6474B1AF1E3D04C200C46165 /* LaunchScreen.storyboard */,
 				6474B1B21E3D04C200C46165 /* Info.plist */,
+				64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */,
 			);
 			path = UProgress;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */,
+				64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */,
 				64D9309C1E3E2CEE007C7112 /* DirectionManager.swift in Sources */,
 				64D930AE1E3E4632007C7112 /* DirectionListPresenterImpl.swift in Sources */,
 				64D930A81E3E44D7007C7112 /* DirectionResponse.swift in Sources */,
