@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DirectionsListViewProtocol {
-    func clickOnItem(direction: Direction)
+    func clickOnItem(direction: Direction, indexPath: IndexPath!)
 }

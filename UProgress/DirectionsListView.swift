@@ -40,4 +40,9 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate {
         self.itemsList = directions
         self.tableView.reloadData()
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewController.clickOnItem(direction: itemsList[indexPath.row], indexPath: indexPath)
+    }
 }

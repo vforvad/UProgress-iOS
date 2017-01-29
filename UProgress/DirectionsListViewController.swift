@@ -49,7 +49,7 @@ class DirectionsListViewController: UIViewController, DirectionViewProtocol, Dir
         
     }
     
-    internal func clickOnItem(direction: Direction) {
+    internal func clickOnItem(direction: Direction, indexPath: IndexPath!) {
         
     }
 }
