@@ -10,5 +10,5 @@ import Foundation
 import Alamofire
 
 protocol DirectionModelProtocol {
-    func loadDirectionsList(userNick: String, pageNumber: Int) -> DataRequest
+    func loadDirectionsList(userNick: String, pageNumber: Int, success: @escaping (_ directions: [Direction]) -> Void, failure: @escaping (_ error: NSError) -> Void)
 }

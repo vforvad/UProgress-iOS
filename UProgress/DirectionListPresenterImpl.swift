@@ -20,14 +20,6 @@ class DirectionListPresenterImpl: DirectionsListPresenter {
     }
     
     internal func loadDirections(userNick: String!, pageNumber: Int!) {
-        model.loadDirectionsList(userNick: userNick, pageNumber: pageNumber)
-            .responseArray(keyPath: "directions") { (response: DataResponse<[Direction]>) in
-                switch(response.result) {
-                case .success(let value):
-                    self.view.successDirectionsLoad(directions: value)
-                case .failure(let errorValue):
-                    self.view.failedDirectionsLoad(error: errorValue as NSError)
-                }
-        }
+        model.loadDirectionsList(userNick: userNick, pageNumber: pageNumber, success: self.view.successDirectionsLoad, failure: self.view.failedDirectionsLoad)
     }
 }

@@ -21,8 +21,6 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
     override func viewDidLoad() {
         super.viewDidLoad()
         viewInstance = DirectionsListView(viewController: self, table: tableView, searchBar: searchBar)
-        let session = URLSession.shared
-        
         presenter = DirectionListPresenterImpl(model: manager, view: self)
         presenter.loadDirections(userNick: "vforvad", pageNumber: 1)
     }

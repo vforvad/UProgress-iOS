@@ -14,7 +14,14 @@ class DirectionManager: DirectionModelProtocol {
     init() {
     }
     
-    internal func loadDirectionsList(userNick: String, pageNumber: Int) -> DataRequest {
-        return ApiRequest.sharedInstance.get(url: "/users/\(userNick)/directions", parameters: ["page": pageNumber])
+    internal func loadDirectionsList(userNick: String, pageNumber: Int, success: @escaping (_ directions: [Direction]) -> Void, failure: @escaping (_ error: NSError) -> Void) {
+        ApiRequest.sharedInstance.get(url: "/users/\(userNick)/directions", parameters: ["page": pageNumber]).responseArray(keyPath: "directions") { (response: DataResponse<[Direction]>) in
+            switch(response.result) {
+            case .success(let value):
+                success(value)
+            case .failure(let errorValue):
+                failure(errorValue as NSError)
+            }
+        }
     }
 }
