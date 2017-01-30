@@ -8,7 +8,7 @@
 
 import XCTest
 import Alamofire
-import Mockingjay
+
 @testable import UProgress
 
 class UProgressTests: XCTestCase {

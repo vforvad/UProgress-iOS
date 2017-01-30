@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/DirectionsListViewController.swift"
-            timestampString = "507456907.732822"
+            timestampString = "507472102.217669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "clickOnItem(direction:indexPath:)"
             landmarkType = "7">
          </BreakpointContent>

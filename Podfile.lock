@@ -11,6 +11,7 @@ PODS:
   - Mockingjay/XCTest (2.0.0):
     - Mockingjay/Core
   - ObjectMapper (2.2.2)
+  - OCMock (3.4)
   - OHHTTPStubs (5.2.3):
     - OHHTTPStubs/Default (= 5.2.3)
   - OHHTTPStubs/Core (5.2.3)
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - AlamofireObjectMapper (~> 4.0)
   - Mockingjay
   - ObjectMapper (~> 2.2)
+  - OCMock
   - OHHTTPStubs
   - OHHTTPStubs/Swift
   - RxAlamofire
@@ -55,6 +57,7 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
   Mockingjay: 7122a3fc0597aa63438e4cd9b71b7bc8aac05b87
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
+  OCMock: 35ae71d6a8fcc1b59434d561d1520b9dd4f15765
   OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
   RxAlamofire: bc53604b29fd2d220cfaa490c736cc4500819f34
   RxCocoa: 50d7564866da9299161e86a263ce12a0873904d8
@@ -63,6 +66,6 @@ SPEC CHECKSUMS:
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
   URITemplate: a5acb3f76c6a2338116fde88b658d83f91bbac45
 
-PODFILE CHECKSUM: 703a06e2d2fd3e40a081974f46144a93bc769aa8
+PODFILE CHECKSUM: 0ede5ed18ce6fa5df74570d9585db93f53a86751
 
 COCOAPODS: 1.2.0
