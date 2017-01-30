@@ -12,7 +12,6 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-//    @IBOutlet weak var navigationItem: UINavigationItem!
     
     var itemsList:[Direction]! = []
     private let manager = DirectionManager()
