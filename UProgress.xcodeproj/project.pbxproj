@@ -16,7 +16,7 @@
 		6474B1AC1E3D04C200C46165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AA1E3D04C200C46165 /* Main.storyboard */; };
 		6474B1AE1E3D04C200C46165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AD1E3D04C200C46165 /* Assets.xcassets */; };
 		6474B1B11E3D04C200C46165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AF1E3D04C200C46165 /* LaunchScreen.storyboard */; };
-		6474B1BC1E3D04C200C46165 /* UProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1BB1E3D04C200C46165 /* UProgressTests.swift */; };
+		6474B1BC1E3D04C200C46165 /* DirectionsListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1BB1E3D04C200C46165 /* DirectionsListPresenterTest.swift */; };
 		6474B1C71E3D04C200C46165 /* UProgressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1C61E3D04C200C46165 /* UProgressUITests.swift */; };
 		6474B1D51E3D091800C46165 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1D41E3D091800C46165 /* .travis.yml */; };
 		64D9309C1E3E2CEE007C7112 /* DirectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */; };
@@ -92,7 +92,7 @@
 		6474B1B01E3D04C200C46165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6474B1B21E3D04C200C46165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6474B1B71E3D04C200C46165 /* UProgressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UProgressTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6474B1BB1E3D04C200C46165 /* UProgressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UProgressTests.swift; sourceTree = "<group>"; };
+		6474B1BB1E3D04C200C46165 /* DirectionsListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsListPresenterTest.swift; sourceTree = "<group>"; };
 		6474B1BD1E3D04C200C46165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6474B1C21E3D04C200C46165 /* UProgressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UProgressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6474B1C61E3D04C200C46165 /* UProgressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UProgressUITests.swift; sourceTree = "<group>"; };
@@ -213,7 +213,7 @@
 		6474B1BA1E3D04C200C46165 /* UProgressTests */ = {
 			isa = PBXGroup;
 			children = (
-				6474B1BB1E3D04C200C46165 /* UProgressTests.swift */,
+				6474B1BB1E3D04C200C46165 /* DirectionsListPresenterTest.swift */,
 				6474B1BD1E3D04C200C46165 /* Info.plist */,
 			);
 			path = UProgressTests;
@@ -626,7 +626,7 @@
 			files = (
 				64EA8BF81E3F24700088009E /* BaseViewController.swift in Sources */,
 				64D930B51E3E72AE007C7112 /* DirectionModelProtocol.swift in Sources */,
-				6474B1BC1E3D04C200C46165 /* UProgressTests.swift in Sources */,
+				6474B1BC1E3D04C200C46165 /* DirectionsListPresenterTest.swift in Sources */,
 				64D930BD1E3E72F0007C7112 /* DirectionsListViewController.swift in Sources */,
 				64D930C51E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */,
 				64D930BB1E3E72EB007C7112 /* ApiRequest.swift in Sources */,

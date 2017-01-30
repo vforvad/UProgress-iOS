@@ -14,6 +14,10 @@ class Direction: Mappable {
     var title: String!
     var description: String!
     
+    required init?() {
+    
+    }
+    
     required init?(map: Map) {
         
     }
