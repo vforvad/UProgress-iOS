@@ -21,12 +21,16 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
     }
     
     internal func onItemSelect(segueName: String!) {
-        self.performSegue(withIdentifier: "directions", sender: self)
+        if CommonFunctions.DeviceData.isIphone() {
+            sideMenuController?.performSegue(withIdentifier: segueName, sender: nil)
+        }
+        else {
+            self.performSegue(withIdentifier: "directions", sender: self)
+        }
     }
     
     //MARK: Segue Navigation
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         let navVC = segue.destination as! UINavigationController
         
         if (segue.identifier == "directions") {

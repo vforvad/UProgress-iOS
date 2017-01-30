@@ -11,7 +11,11 @@ import UIKit
 
 class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
     private let cellIdentificator = "navigationCellId"
-    private var items = ["Sign in", "Sign up", "Directions"]
+    private var items = [
+        ["title": "Sign in", "segue": "sign_in"],
+        ["title": "Sign up", "segue": "sign_up"],
+        ["title": "Directions", "segue": "directions"]
+    ]
     private var tableView: UITableView!
     private var viewController: NavigationViewProtocol!
     
@@ -25,7 +29,7 @@ class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: cellIdentificator)
-        cell.textLabel?.text = items[indexPath.row]
+        cell.textLabel?.text = items[indexPath.row]["title"]
         return cell
     }
     
@@ -35,6 +39,6 @@ class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewController.onItemSelect(segueName: items[indexPath.row])
+        viewController.onItemSelect(segueName: items[indexPath.row]["segue"])
     }
 }

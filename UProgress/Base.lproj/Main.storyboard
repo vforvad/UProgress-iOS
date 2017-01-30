@@ -25,6 +25,7 @@
                     <connections>
                         <segue destination="pi7-0K-RRf" kind="custom" identifier="embedSideController" customClass="SideContainmentSegue" customModule="SideMenuController" id="fL9-rP-1Gs"/>
                         <segue destination="AOU-KQ-Pf8" kind="custom" identifier="embedInitialCenterController" customClass="CenterContainmentSegue" customModule="SideMenuController" id="zUR-IQ-AaP"/>
+                        <segue destination="AOU-KQ-Pf8" kind="custom" identifier="directions" customClass="CenterContainmentSegue" customModule="SideMenuController" id="OCz-nS-0Pz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uei-Oe-JnH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,7 +142,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="741" y="-690"/>
+            <point key="canvasLocation" x="1132" y="-259"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YJh-cq-2Pb">
@@ -159,7 +160,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahc-qs-VKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-302" y="-689"/>
+            <point key="canvasLocation" x="341" y="-382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jg5-Eg-WgC">
@@ -180,4 +181,7 @@
             <point key="canvasLocation" x="1050.7246376811595" y="-1372.0108695652175"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OCz-nS-0Pz"/>
+    </inferredMetricsTieBreakers>
 </document>
