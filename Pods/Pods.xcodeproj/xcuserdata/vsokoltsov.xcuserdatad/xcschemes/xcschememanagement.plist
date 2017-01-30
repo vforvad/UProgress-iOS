@@ -14,32 +14,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Mockingjay.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>OCMock.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>OHHTTPStubs.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>ObjectMapper.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-UProgress-UProgressTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-UProgress-UProgressUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -49,17 +24,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RxAlamofire.xcscheme</key>
+		<key>Pods-UProgressTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RxCocoa.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RxSwift.xcscheme</key>
+		<key>Pods-UProgressUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -74,20 +44,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>URITemplate.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1D09B41D7E4E7145E99FE2F1BE2F4C2A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>278EBE807BA51EA04C4E25596A198B58</key>
+		<key>09A8003B9A4F393C9A0AAB2E28F5069F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,27 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5BAACC736A5215103E10E2DC0A74FDCD</key>
+		<key>4ABBA6900B7E6FCDABCEF5109D5DA1A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5BAEE407D509A3F67350A21DD9179E25</key>
+		<key>5C70C11DA13E886ECBC103D36B20FC9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7072C998F7FEC12EA4BC46531AA87F86</key>
+		<key>7CAB3C52D5A534B1B1AA977669452485</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>70792F343C7E0F82505D58484747C928</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>748F1C7F61D88F3FB355A8E829489671</key>
+		<key>872D2421DA4542733B4205F3F033620F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,32 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>94D7A9513F5CD581434241BE296FFF64</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9502FB01641FBABB78522037E882757B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9F7BE70B9EFBC5A59F43F7C2E44956F3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A68A953F69BED483D85F99DDDFF08E13</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DC54C98851E54D349520C786701A1845</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F5336A065009449764BA6C7B45485135</key>
 		<dict>
 			<key>primary</key>
 			<true/>

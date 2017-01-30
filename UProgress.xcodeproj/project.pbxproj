@@ -11,7 +11,6 @@
 		198C1F504EA67A89BB92B6FB /* Pods_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0278647014FB9AFDB08AEC /* Pods_UProgressTests.framework */; };
 		5E2ECF37024A74B8E3E15D25 /* Pods_UProgress_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726D3C86FF753C8EEDC99541 /* Pods_UProgress_UProgressUITests.framework */; };
 		645F5A0E1E3E95D0005CCBD6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */; };
-		645F5A141E3E9F78005CCBD6 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F5A131E3E9F78005CCBD6 /* OHHTTPStubs.framework */; };
 		6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A61E3D04C200C46165 /* AppDelegate.swift */; };
 		6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
 		6474B1AC1E3D04C200C46165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AA1E3D04C200C46165 /* Main.storyboard */; };
@@ -130,7 +129,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				645F5A141E3E9F78005CCBD6 /* OHHTTPStubs.framework in Frameworks */,
 				645F5A0E1E3E95D0005CCBD6 /* Alamofire.framework in Frameworks */,
 				8355BE18053B154ED4CA22C8 /* Pods_UProgress.framework in Frameworks */,
 			);
@@ -475,7 +473,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UProgress-UProgressTests/Pods-UProgress-UProgressTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UProgressTests/Pods-UProgressTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4E7694C041F83E24AFC65C28 /* [CP] Embed Pods Frameworks */ = {
@@ -490,7 +488,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UProgress-UProgressUITests/Pods-UProgress-UProgressUITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UProgressUITests/Pods-UProgressUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5BA34F2CB3D6A94A709F283D /* [CP] Embed Pods Frameworks */ = {
@@ -505,7 +503,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UProgress-UProgressTests/Pods-UProgress-UProgressTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UProgressTests/Pods-UProgressTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5BEE422FAE157FE2788EA90F /* [CP] Copy Pods Resources */ = {
@@ -520,7 +518,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UProgress-UProgressUITests/Pods-UProgress-UProgressUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UProgressUITests/Pods-UProgressUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		61BB0F2AD31F19A56FDB0799 /* [CP] Copy Pods Resources */ = {
@@ -828,7 +826,7 @@
 		};
 		6474B1CF1E3D04C200C46165 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE093EFF50B2CD73C7632E2E /* Pods-UProgress-UProgressTests.debug.xcconfig */;
+			baseConfigurationReference = 7FDBFEFD52C955FFA316B70C /* Pods-UProgressTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -844,7 +842,7 @@
 		};
 		6474B1D01E3D04C200C46165 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A82DC417568D2A5ECB0302C /* Pods-UProgress-UProgressTests.release.xcconfig */;
+			baseConfigurationReference = EA49F6AA392E1D2261CC02EB /* Pods-UProgressTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -860,7 +858,7 @@
 		};
 		6474B1D21E3D04C200C46165 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DAF568722EA6F1921D97601 /* Pods-UProgress-UProgressUITests.debug.xcconfig */;
+			baseConfigurationReference = 68D4A01EB56EC7D79F5B52DC /* Pods-UProgressUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = H6WZYAW7R8;
@@ -875,7 +873,7 @@
 		};
 		6474B1D31E3D04C200C46165 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D5C3E99CC7E7FD863502E7F /* Pods-UProgress-UProgressUITests.release.xcconfig */;
+			baseConfigurationReference = 779513CA6D1DE240C7496902 /* Pods-UProgressUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = H6WZYAW7R8;

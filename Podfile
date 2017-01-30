@@ -4,25 +4,19 @@
 target 'UProgress' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'RxAlamofire'
-  pod 'RxSwift',    '~> 3.0'
-  pod 'RxCocoa',    '~> 3.0'
   pod 'ObjectMapper', '~> 2.2'
   pod 'AlamofireObjectMapper', '~> 4.0'
-  pod 'OHHTTPStubs'
-  pod 'OHHTTPStubs/Swift'
   pod 'SideMenuController'
   pod 'UIColor_Hex_Swift', '~> 3.0.2'
-  pod 'OCMock'
 
   # Pods for UProgress
 
   target 'UProgressTests' do
-    pod 'Mockingjay'
+    inherit! :search_paths
   end
 
   target 'UProgressUITests' do
-    pod 'Mockingjay'
+    inherit! :search_paths
   end
 
 end
