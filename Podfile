@@ -8,6 +8,7 @@ target 'UProgress' do
   pod 'AlamofireObjectMapper', '~> 4.0'
   pod 'SideMenuController'
   pod 'UIColor_Hex_Swift', '~> 3.0.2'
+  pod 'MBProgressHUD'
 
   # Pods for UProgress
 

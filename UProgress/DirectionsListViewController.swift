@@ -7,6 +7,7 @@
 //
 import Foundation
 import UIKit
+import MBProgressHUD
 
 class DirectionsListViewController: BaseViewController, DirectionViewProtocol, DirectionsListViewProtocol {
 
@@ -17,6 +18,7 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
     private let manager = DirectionManager()
     private var presenter: DirectionListPresenterImpl!
     private var viewInstance: DirectionsListView!
+    var actInd : UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +37,11 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
     }
     
     internal func stopLoader() {
-        
+        MBProgressHUD.hide(for: view, animated: true)
     }
     
     internal func startLoader() {
-        
+        MBProgressHUD.showAdded(to: view, animated: true)
     }
     
     internal func failedDirectionsLoad(error: NSError) {

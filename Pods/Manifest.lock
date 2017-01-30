@@ -3,12 +3,14 @@ PODS:
   - AlamofireObjectMapper (4.0.1):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
+  - MBProgressHUD (1.0.0)
   - ObjectMapper (2.2.2)
   - SideMenuController (0.2.4)
   - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
   - AlamofireObjectMapper (~> 4.0)
+  - MBProgressHUD
   - ObjectMapper (~> 2.2)
   - SideMenuController
   - UIColor_Hex_Swift (~> 3.0.2)
@@ -16,10 +18,11 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: 8a9a3bda5b7397426656ac7d0eec0b7ca00e82e2
+PODFILE CHECKSUM: 8f517900ebf04b6c17f50f9ab37e4a07790eb776
 
 COCOAPODS: 1.2.0

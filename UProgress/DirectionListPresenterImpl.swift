@@ -20,11 +20,14 @@ class DirectionListPresenterImpl: DirectionsListPresenter {
     }
     
     internal func loadDirections(userNick: String!, pageNumber: Int!) {
+        view.startLoader()
         model.loadDirectionsList(userNick: userNick, pageNumber: pageNumber,
         success: { directions in
+            self.view.stopLoader()
             self.view.successDirectionsLoad(directions: directions)
         },
         failure: { error in
+            self.view.stopLoader()
             self.view.failedDirectionsLoad(error: error)
         })
     }
