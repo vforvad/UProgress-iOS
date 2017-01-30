@@ -45,6 +45,10 @@ class SidebarViewController: BaseViewController, NavigationViewProtocol {
         switch identifier {
         case "directions":
             viewController = super.fromStoryboard(identifier: "DirectionsListViewController")
+        case "sign_in":
+            viewController = super.fromStoryboard(identifier: "AuthorizationViewController")
+        case "sign_up":
+            viewController = super.fromStoryboard(identifier: "AuthorizationViewController")
         default:
             viewController = super.fromStoryboard(identifier: "DirectionsListViewController")
         }
