@@ -19,6 +19,7 @@
 		6474B1BC1E3D04C200C46165 /* DirectionsListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1BB1E3D04C200C46165 /* DirectionsListPresenterTest.swift */; };
 		6474B1C71E3D04C200C46165 /* UProgressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1C61E3D04C200C46165 /* UProgressUITests.swift */; };
 		6474B1D51E3D091800C46165 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1D41E3D091800C46165 /* .travis.yml */; };
+		6483E4C31E3FA5170072B97C /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6483E4C21E3FA5170072B97C /* iPadStoryboard.storyboard */; };
 		64D9309C1E3E2CEE007C7112 /* DirectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */; };
 		64D9309F1E3E3C68007C7112 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309E1E3E3C68007C7112 /* ApiRequest.swift */; };
 		64D930A61E3E40A7007C7112 /* DirectionModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A51E3E40A7007C7112 /* DirectionModelProtocol.swift */; };
@@ -95,6 +96,7 @@
 		6474B1C61E3D04C200C46165 /* UProgressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UProgressUITests.swift; sourceTree = "<group>"; };
 		6474B1C81E3D04C200C46165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6474B1D41E3D091800C46165 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		6483E4C21E3FA5170072B97C /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
 		64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionManager.swift; sourceTree = "<group>"; };
 		64D9309E1E3E3C68007C7112 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		64D930A51E3E40A7007C7112 /* DirectionModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionModelProtocol.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				6474B1AD1E3D04C200C46165 /* Assets.xcassets */,
 				6474B1AF1E3D04C200C46165 /* LaunchScreen.storyboard */,
 				6474B1B21E3D04C200C46165 /* Info.plist */,
+				6483E4C21E3FA5170072B97C /* iPadStoryboard.storyboard */,
 			);
 			path = UProgress;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				6474B1AE1E3D04C200C46165 /* Assets.xcassets in Resources */,
 				6474B1D51E3D091800C46165 /* .travis.yml in Resources */,
 				6474B1AC1E3D04C200C46165 /* Main.storyboard in Resources */,
+				6483E4C31E3FA5170072B97C /* iPadStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
