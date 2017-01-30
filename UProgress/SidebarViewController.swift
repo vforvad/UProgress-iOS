@@ -21,6 +21,16 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
     }
     
     internal func onItemSelect(segueName: String!) {
+        self.performSegue(withIdentifier: "directions", sender: self)
+    }
+    
+    //MARK: Segue Navigation
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
+        let navVC = segue.destination as! UINavigationController
+        
+        if (segue.identifier == "directions") {
+            _ = navVC.viewControllers.first as! DirectionsListViewController
+        }
     }
 }
