@@ -3,10 +3,66 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
+	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AlamofireObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-UProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-UProgressTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-UProgressUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SideMenuController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UIColor_Hex_Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>09A8003B9A4F393C9A0AAB2E28F5069F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4ABBA6900B7E6FCDABCEF5109D5DA1A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C70C11DA13E886ECBC103D36B20FC9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -16,7 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FC86272CC23749CA8A135017E1A41CAB</key>
+		<key>872D2421DA4542733B4205F3F033620F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9502FB01641FBABB78522037E882757B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

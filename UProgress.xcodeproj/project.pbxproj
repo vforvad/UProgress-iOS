@@ -9,15 +9,54 @@
 /* Begin PBXBuildFile section */
 		1535171CDCE91FAE11927401 /* Pods_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B2E59EF71986B1EE57862A /* Pods_UProgressUITests.framework */; };
 		198C1F504EA67A89BB92B6FB /* Pods_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0278647014FB9AFDB08AEC /* Pods_UProgressTests.framework */; };
+		5E2ECF37024A74B8E3E15D25 /* Pods_UProgress_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726D3C86FF753C8EEDC99541 /* Pods_UProgress_UProgressUITests.framework */; };
+		645F5A0E1E3E95D0005CCBD6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */; };
 		6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A61E3D04C200C46165 /* AppDelegate.swift */; };
-		6474B1A91E3D04C200C46165 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* ViewController.swift */; };
+		6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
 		6474B1AC1E3D04C200C46165 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AA1E3D04C200C46165 /* Main.storyboard */; };
 		6474B1AE1E3D04C200C46165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AD1E3D04C200C46165 /* Assets.xcassets */; };
 		6474B1B11E3D04C200C46165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AF1E3D04C200C46165 /* LaunchScreen.storyboard */; };
 		6474B1BC1E3D04C200C46165 /* UProgressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1BB1E3D04C200C46165 /* UProgressTests.swift */; };
 		6474B1C71E3D04C200C46165 /* UProgressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1C61E3D04C200C46165 /* UProgressUITests.swift */; };
 		6474B1D51E3D091800C46165 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1D41E3D091800C46165 /* .travis.yml */; };
+		64D9309C1E3E2CEE007C7112 /* DirectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */; };
+		64D9309F1E3E3C68007C7112 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309E1E3E3C68007C7112 /* ApiRequest.swift */; };
+		64D930A61E3E40A7007C7112 /* DirectionModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A51E3E40A7007C7112 /* DirectionModelProtocol.swift */; };
+		64D930A81E3E44D7007C7112 /* DirectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A71E3E44D7007C7112 /* DirectionResponse.swift */; };
+		64D930AA1E3E452E007C7112 /* DirectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A91E3E452E007C7112 /* DirectionViewProtocol.swift */; };
+		64D930AC1E3E45EE007C7112 /* DirectionsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AB1E3E45EE007C7112 /* DirectionsListPresenter.swift */; };
+		64D930AE1E3E4632007C7112 /* DirectionListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */; };
+		64D930B01E3E4DA1007C7112 /* DirectionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AF1E3E4DA1007C7112 /* DirectionsListView.swift */; };
+		64D930B21E3E4EF2007C7112 /* DirectionsListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930B11E3E4EF2007C7112 /* DirectionsListViewProtocol.swift */; };
+		64D930B31E3E72AA007C7112 /* DirectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */; };
+		64D930B41E3E72AA007C7112 /* DirectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */; };
+		64D930B51E3E72AE007C7112 /* DirectionModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A51E3E40A7007C7112 /* DirectionModelProtocol.swift */; };
+		64D930B61E3E72AE007C7112 /* DirectionModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A51E3E40A7007C7112 /* DirectionModelProtocol.swift */; };
+		64D930B71E3E72B1007C7112 /* DirectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A71E3E44D7007C7112 /* DirectionResponse.swift */; };
+		64D930B81E3E72B2007C7112 /* DirectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A71E3E44D7007C7112 /* DirectionResponse.swift */; };
+		64D930B91E3E72B4007C7112 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E015171E3E023E0055DFD5 /* Direction.swift */; };
+		64D930BA1E3E72B5007C7112 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E015171E3E023E0055DFD5 /* Direction.swift */; };
+		64D930BB1E3E72EB007C7112 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309E1E3E3C68007C7112 /* ApiRequest.swift */; };
+		64D930BC1E3E72EB007C7112 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309E1E3E3C68007C7112 /* ApiRequest.swift */; };
+		64D930BD1E3E72F0007C7112 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
+		64D930BE1E3E72F1007C7112 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
+		64D930BF1E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A91E3E452E007C7112 /* DirectionViewProtocol.swift */; };
+		64D930C01E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A91E3E452E007C7112 /* DirectionViewProtocol.swift */; };
+		64D930C11E3E72F8007C7112 /* DirectionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AF1E3E4DA1007C7112 /* DirectionsListView.swift */; };
+		64D930C21E3E72F8007C7112 /* DirectionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AF1E3E4DA1007C7112 /* DirectionsListView.swift */; };
+		64D930C31E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930B11E3E4EF2007C7112 /* DirectionsListViewProtocol.swift */; };
+		64D930C41E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930B11E3E4EF2007C7112 /* DirectionsListViewProtocol.swift */; };
+		64D930C51E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AB1E3E45EE007C7112 /* DirectionsListPresenter.swift */; };
+		64D930C61E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AB1E3E45EE007C7112 /* DirectionsListPresenter.swift */; };
+		64D930C71E3E7311007C7112 /* DirectionListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */; };
+		64D930C81E3E7312007C7112 /* DirectionListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */; };
+		64E015181E3E023E0055DFD5 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E015171E3E023E0055DFD5 /* Direction.swift */; };
+		64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */; };
+		64EA8BF41E3EB9AE0088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
+		64EA8BF81E3F24700088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
+		64EA8BF91E3F24710088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
 		8355BE18053B154ED4CA22C8 /* Pods_UProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD8BB09CFC827EB003C41A2 /* Pods_UProgress.framework */; };
+		9DFB990BFC345690E0598208 /* Pods_UProgress_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396F0220AA154D509C1E95B /* Pods_UProgress_UProgressTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,10 +78,15 @@
 
 /* Begin PBXFileReference section */
 		26B2E59EF71986B1EE57862A /* Pods_UProgressUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UProgressUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAF568722EA6F1921D97601 /* Pods-UProgress-UProgressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgress-UProgressUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UProgress-UProgressUITests/Pods-UProgress-UProgressUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3EEFA24D7EA84D774EDB8B59 /* Pods-UProgress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgress.release.xcconfig"; path = "Pods/Target Support Files/Pods-UProgress/Pods-UProgress.release.xcconfig"; sourceTree = "<group>"; };
+		645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		645F5A0F1E3E95D4005CCBD6 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/AlamofireObjectMapper/AlamofireObjectMapper.framework"; sourceTree = "<group>"; };
+		645F5A111E3E95DB005CCBD6 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
+		645F5A131E3E9F78005CCBD6 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "Pods/../build/Debug-iphoneos/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
 		6474B1A31E3D04C200C46165 /* UProgress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UProgress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6474B1A61E3D04C200C46165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6474B1A81E3D04C200C46165 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsListViewController.swift; sourceTree = "<group>"; };
 		6474B1AB1E3D04C200C46165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6474B1AD1E3D04C200C46165 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6474B1B01E3D04C200C46165 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,13 +98,30 @@
 		6474B1C61E3D04C200C46165 /* UProgressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UProgressUITests.swift; sourceTree = "<group>"; };
 		6474B1C81E3D04C200C46165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6474B1D41E3D091800C46165 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionManager.swift; sourceTree = "<group>"; };
+		64D9309E1E3E3C68007C7112 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		64D930A51E3E40A7007C7112 /* DirectionModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionModelProtocol.swift; sourceTree = "<group>"; };
+		64D930A71E3E44D7007C7112 /* DirectionResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionResponse.swift; sourceTree = "<group>"; };
+		64D930A91E3E452E007C7112 /* DirectionViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionViewProtocol.swift; sourceTree = "<group>"; };
+		64D930AB1E3E45EE007C7112 /* DirectionsListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListPresenter.swift; sourceTree = "<group>"; };
+		64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionListPresenterImpl.swift; sourceTree = "<group>"; };
+		64D930AF1E3E4DA1007C7112 /* DirectionsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListView.swift; sourceTree = "<group>"; };
+		64D930B11E3E4EF2007C7112 /* DirectionsListViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListViewProtocol.swift; sourceTree = "<group>"; };
+		64E015171E3E023E0055DFD5 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		68D4A01EB56EC7D79F5B52DC /* Pods-UProgressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgressUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UProgressUITests/Pods-UProgressUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D5C3E99CC7E7FD863502E7F /* Pods-UProgress-UProgressUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgress-UProgressUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UProgress-UProgressUITests/Pods-UProgress-UProgressUITests.release.xcconfig"; sourceTree = "<group>"; };
+		726D3C86FF753C8EEDC99541 /* Pods_UProgress_UProgressUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UProgress_UProgressUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		779513CA6D1DE240C7496902 /* Pods-UProgressUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgressUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UProgressUITests/Pods-UProgressUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7FDBFEFD52C955FFA316B70C /* Pods-UProgressTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgressTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UProgressTests/Pods-UProgressTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A82DC417568D2A5ECB0302C /* Pods-UProgress-UProgressTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgress-UProgressTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UProgress-UProgressTests/Pods-UProgress-UProgressTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7A32DDD7EF182634B70BB10 /* Pods-UProgress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgress.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UProgress/Pods-UProgress.debug.xcconfig"; sourceTree = "<group>"; };
 		AF0278647014FB9AFDB08AEC /* Pods_UProgressTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UProgressTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE093EFF50B2CD73C7632E2E /* Pods-UProgress-UProgressTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgress-UProgressTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UProgress-UProgressTests/Pods-UProgress-UProgressTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBD8BB09CFC827EB003C41A2 /* Pods_UProgress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UProgress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA49F6AA392E1D2261CC02EB /* Pods-UProgressTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgressTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UProgressTests/Pods-UProgressTests.release.xcconfig"; sourceTree = "<group>"; };
+		F396F0220AA154D509C1E95B /* Pods_UProgress_UProgressTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UProgress_UProgressTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				645F5A0E1E3E95D0005CCBD6 /* Alamofire.framework in Frameworks */,
 				8355BE18053B154ED4CA22C8 /* Pods_UProgress.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				198C1F504EA67A89BB92B6FB /* Pods_UProgressTests.framework in Frameworks */,
+				9DFB990BFC345690E0598208 /* Pods_UProgress_UProgressTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1535171CDCE91FAE11927401 /* Pods_UProgressUITests.framework in Frameworks */,
+				5E2ECF37024A74B8E3E15D25 /* Pods_UProgress_UProgressUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +164,10 @@
 				EA49F6AA392E1D2261CC02EB /* Pods-UProgressTests.release.xcconfig */,
 				68D4A01EB56EC7D79F5B52DC /* Pods-UProgressUITests.debug.xcconfig */,
 				779513CA6D1DE240C7496902 /* Pods-UProgressUITests.release.xcconfig */,
+				CE093EFF50B2CD73C7632E2E /* Pods-UProgress-UProgressTests.debug.xcconfig */,
+				9A82DC417568D2A5ECB0302C /* Pods-UProgress-UProgressTests.release.xcconfig */,
+				3DAF568722EA6F1921D97601 /* Pods-UProgress-UProgressUITests.debug.xcconfig */,
+				6D5C3E99CC7E7FD863502E7F /* Pods-UProgress-UProgressUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -130,8 +198,10 @@
 		6474B1A51E3D04C200C46165 /* UProgress */ = {
 			isa = PBXGroup;
 			children = (
+				64EA8BF21E3EB9970088009E /* Navigation */,
+				64D930A11E3E402E007C7112 /* DirectionsList */,
+				64D9309D1E3E3C55007C7112 /* common */,
 				6474B1A61E3D04C200C46165 /* AppDelegate.swift */,
-				6474B1A81E3D04C200C46165 /* ViewController.swift */,
 				6474B1AA1E3D04C200C46165 /* Main.storyboard */,
 				6474B1AD1E3D04C200C46165 /* Assets.xcassets */,
 				6474B1AF1E3D04C200C46165 /* LaunchScreen.storyboard */,
@@ -158,12 +228,92 @@
 			path = UProgressUITests;
 			sourceTree = "<group>";
 		};
+		64D9309D1E3E3C55007C7112 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				64EA8BF51E3EBB900088009E /* Extensions */,
+				64D930A01E3E4020007C7112 /* utils */,
+				64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		64D930A01E3E4020007C7112 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				64D9309E1E3E3C68007C7112 /* ApiRequest.swift */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		64D930A11E3E402E007C7112 /* DirectionsList */ = {
+			isa = PBXGroup;
+			children = (
+				64D930A41E3E4058007C7112 /* presenter */,
+				64D930A31E3E4050007C7112 /* model */,
+				64D930A21E3E404A007C7112 /* view */,
+			);
+			name = DirectionsList;
+			sourceTree = "<group>";
+		};
+		64D930A21E3E404A007C7112 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */,
+				64D930A91E3E452E007C7112 /* DirectionViewProtocol.swift */,
+				64D930AF1E3E4DA1007C7112 /* DirectionsListView.swift */,
+				64D930B11E3E4EF2007C7112 /* DirectionsListViewProtocol.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		64D930A31E3E4050007C7112 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				64E015171E3E023E0055DFD5 /* Direction.swift */,
+				64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */,
+				64D930A51E3E40A7007C7112 /* DirectionModelProtocol.swift */,
+				64D930A71E3E44D7007C7112 /* DirectionResponse.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		64D930A41E3E4058007C7112 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				64D930AB1E3E45EE007C7112 /* DirectionsListPresenter.swift */,
+				64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */,
+			);
+			name = presenter;
+			sourceTree = "<group>";
+		};
+		64EA8BF21E3EB9970088009E /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		64EA8BF51E3EBB900088009E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		C677A2DD374B74FC58AC9AE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				645F5A131E3E9F78005CCBD6 /* OHHTTPStubs.framework */,
+				645F5A111E3E95DB005CCBD6 /* OHHTTPStubs.framework */,
+				645F5A0F1E3E95D4005CCBD6 /* AlamofireObjectMapper.framework */,
+				645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */,
 				DBD8BB09CFC827EB003C41A2 /* Pods_UProgress.framework */,
 				AF0278647014FB9AFDB08AEC /* Pods_UProgressTests.framework */,
 				26B2E59EF71986B1EE57862A /* Pods_UProgressUITests.framework */,
+				F396F0220AA154D509C1E95B /* Pods_UProgress_UProgressTests.framework */,
+				726D3C86FF753C8EEDC99541 /* Pods_UProgress_UProgressUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -453,8 +603,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6474B1A91E3D04C200C46165 /* ViewController.swift in Sources */,
+				6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */,
+				64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */,
+				64D9309C1E3E2CEE007C7112 /* DirectionManager.swift in Sources */,
+				64D930AE1E3E4632007C7112 /* DirectionListPresenterImpl.swift in Sources */,
+				64D930A81E3E44D7007C7112 /* DirectionResponse.swift in Sources */,
 				6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */,
+				64D930AA1E3E452E007C7112 /* DirectionViewProtocol.swift in Sources */,
+				64D930A61E3E40A7007C7112 /* DirectionModelProtocol.swift in Sources */,
+				64D9309F1E3E3C68007C7112 /* ApiRequest.swift in Sources */,
+				64D930B21E3E4EF2007C7112 /* DirectionsListViewProtocol.swift in Sources */,
+				64D930B01E3E4DA1007C7112 /* DirectionsListView.swift in Sources */,
+				64E015181E3E023E0055DFD5 /* Direction.swift in Sources */,
+				64D930AC1E3E45EE007C7112 /* DirectionsListPresenter.swift in Sources */,
+				64EA8BF41E3EB9AE0088009E /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +624,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64EA8BF81E3F24700088009E /* BaseViewController.swift in Sources */,
+				64D930B51E3E72AE007C7112 /* DirectionModelProtocol.swift in Sources */,
 				6474B1BC1E3D04C200C46165 /* UProgressTests.swift in Sources */,
+				64D930BD1E3E72F0007C7112 /* DirectionsListViewController.swift in Sources */,
+				64D930C51E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */,
+				64D930BB1E3E72EB007C7112 /* ApiRequest.swift in Sources */,
+				64D930C31E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
+				64D930BF1E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */,
+				64D930B71E3E72B1007C7112 /* DirectionResponse.swift in Sources */,
+				64D930C71E3E7311007C7112 /* DirectionListPresenterImpl.swift in Sources */,
+				64D930C11E3E72F8007C7112 /* DirectionsListView.swift in Sources */,
+				64D930B91E3E72B4007C7112 /* Direction.swift in Sources */,
+				64D930B31E3E72AA007C7112 /* DirectionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,7 +644,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64EA8BF91E3F24710088009E /* BaseViewController.swift in Sources */,
+				64D930B61E3E72AE007C7112 /* DirectionModelProtocol.swift in Sources */,
 				6474B1C71E3D04C200C46165 /* UProgressUITests.swift in Sources */,
+				64D930BE1E3E72F1007C7112 /* DirectionsListViewController.swift in Sources */,
+				64D930C61E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */,
+				64D930BC1E3E72EB007C7112 /* ApiRequest.swift in Sources */,
+				64D930C41E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
+				64D930C01E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */,
+				64D930B81E3E72B2007C7112 /* DirectionResponse.swift in Sources */,
+				64D930C81E3E7312007C7112 /* DirectionListPresenterImpl.swift in Sources */,
+				64D930C21E3E72F8007C7112 /* DirectionsListView.swift in Sources */,
+				64D930BA1E3E72B5007C7112 /* Direction.swift in Sources */,
+				64D930B41E3E72AA007C7112 /* DirectionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +794,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H6WZYAW7R8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/OHHTTPStubs",
+				);
 				INFOPLIST_FILE = UProgress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgress;
@@ -622,6 +812,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H6WZYAW7R8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/OHHTTPStubs",
+				);
 				INFOPLIST_FILE = UProgress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgress;
