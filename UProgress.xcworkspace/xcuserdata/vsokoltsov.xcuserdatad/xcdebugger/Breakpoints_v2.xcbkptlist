@@ -184,11 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/DirectionListPresenterImpl.swift"
-            timestampString = "507419686.594476"
+            timestampString = "507482939.692994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "loadDirections(userNick:pageNumber:)"
             landmarkType = "7">
             <Locations>
