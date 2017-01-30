@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SidebarViewController: UIViewController, NavigationViewProtocol {
+class SidebarViewController: BaseViewController, NavigationViewProtocol {
 
     @IBOutlet weak var tableView: UITableView!
     private var navigationView: NavigationView!
@@ -22,10 +22,10 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
     
     internal func onItemSelect(segueName: String!) {
         if CommonFunctions.DeviceData.isIphone() {
-            sideMenuController?.performSegue(withIdentifier: segueName, sender: nil)
+            segueForNavigationController(identifier: segueName)
         }
         else {
-            self.performSegue(withIdentifier: "directions", sender: self)
+            self.performSegue(withIdentifier: segueName, sender: self)
         }
     }
     
@@ -35,6 +35,25 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
         
         if (segue.identifier == "directions") {
             _ = navVC.viewControllers.first as! DirectionsListViewController
+        }
+    }
+    
+    private func segueForNavigationController(identifier: String!) {
+        var viewController: UIViewController!
+        var cacheIdentifier = identifier
+        
+        switch identifier {
+        case "directions":
+            viewController = super.fromStoryboard(identifier: "DirectionsListViewController")
+        default:
+            viewController = super.fromStoryboard(identifier: "DirectionsListViewController")
+        }
+        
+        if let controller = sideMenuController?.viewController(forCacheIdentifier: cacheIdentifier!) {
+            sideMenuController?.embed(centerViewController: controller)
+        }
+        else {
+            sideMenuController?.embed(centerViewController: UINavigationController(rootViewController: viewController), cacheIdentifier: cacheIdentifier)
         }
     }
 }
