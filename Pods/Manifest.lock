@@ -35,6 +35,7 @@ PODS:
     - RxSwift (~> 3.1)
   - RxSwift (3.1.0)
   - SideMenuController (0.2.4)
+  - UIColor_Hex_Swift (3.0.2)
   - URITemplate (2.0.0)
 
 DEPENDENCIES:
@@ -47,6 +48,7 @@ DEPENDENCIES:
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - SideMenuController
+  - UIColor_Hex_Swift (~> 3.0.2)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
@@ -58,8 +60,9 @@ SPEC CHECKSUMS:
   RxCocoa: 50d7564866da9299161e86a263ce12a0873904d8
   RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
+  UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
   URITemplate: a5acb3f76c6a2338116fde88b658d83f91bbac45
 
-PODFILE CHECKSUM: 2064733003329d9621f5c395e022413dbc82684c
+PODFILE CHECKSUM: 703a06e2d2fd3e40a081974f46144a93bc769aa8
 
 COCOAPODS: 1.2.0

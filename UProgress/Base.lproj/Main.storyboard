@@ -98,6 +98,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gmK-6R-NtM"/>
                     <connections>
+                        <outlet property="navigationItem" destination="gmK-6R-NtM" id="2DY-vG-JGW"/>
                         <outlet property="searchBar" destination="dfT-7Z-uTu" id="nRq-Ja-Qmz"/>
                         <outlet property="searchDisplayController" destination="Z3R-Oz-iT1" id="lye-YS-E8N"/>
                         <outlet property="tableView" destination="Ffb-nf-KAk" id="iyQ-Cu-FE9"/>

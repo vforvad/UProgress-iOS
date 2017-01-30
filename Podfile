@@ -12,6 +12,7 @@ target 'UProgress' do
   pod 'OHHTTPStubs'
   pod 'OHHTTPStubs/Swift'
   pod 'SideMenuController'
+  pod 'UIColor_Hex_Swift', '~> 3.0.2'
 
   # Pods for UProgress
 

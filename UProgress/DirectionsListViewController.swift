@@ -5,16 +5,14 @@
 //  Created by Vadim Sokoltsov on 28.01.17.
 //  Copyright © 2017 vsokoltsov. All rights reserved.
 //
-
+import Foundation
 import UIKit
-import ObjectMapper
-import Alamofire
-import AlamofireObjectMapper
 
-class DirectionsListViewController: UIViewController, DirectionViewProtocol, DirectionsListViewProtocol {
+class DirectionsListViewController: BaseViewController, DirectionViewProtocol, DirectionsListViewProtocol {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+//    @IBOutlet weak var navigationItem: UINavigationItem!
     
     var itemsList:[Direction]! = []
     private let manager = DirectionManager()
