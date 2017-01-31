@@ -51,5 +51,17 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
     internal func clickOnItem(direction: Direction, indexPath: IndexPath!) {
         
     }
+    
+    internal func refreshTriggered() {
+        presenter.reloadDirectionsList(userNick: "vforvad")
+    }
+    
+    internal func startRefresh() {
+        viewInstance.refreshControl.beginRefreshing()
+    }
+    
+    internal func stopRefresh() {
+        viewInstance.refreshControl.endRefreshing()
+    }
 }
 

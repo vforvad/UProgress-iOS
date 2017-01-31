@@ -14,6 +14,7 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
     var cellIdentifier = "cellId"
     var itemsList:[Direction]! = []
     var filtered:[Direction] = []
+    public var refreshControl: UIRefreshControl!
     private var tableView: UITableView!
     private var searchBar: UISearchBar!
     private var viewController: DirectionsListViewProtocol!
@@ -34,6 +35,8 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         
         tableView.register(UINib(nibName: "DirectionsListCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        
+        setupUIRefreshController()
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,4 +103,19 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         }
         self.tableView.reloadData()
     }
+    
+    
+    func reloadList() {
+        viewController.refreshTriggered()
+    }
+    
+    
+    // MARK: Refresh Control
+    func setupUIRefreshController() {
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: NSLocalizedString("pull_to_refresh", comment: ""))
+        refreshControl.addTarget(self, action: #selector(DirectionsListView.reloadList), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+
 }

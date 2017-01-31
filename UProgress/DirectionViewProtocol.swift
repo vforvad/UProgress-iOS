@@ -11,6 +11,8 @@ import Foundation
 protocol DirectionViewProtocol {
     func startLoader()
     func stopLoader()
+    func startRefresh()
+    func stopRefresh()
     func successDirectionsLoad(directions: [Direction]!)
     func failedDirectionsLoad(error: NSError)
 }

@@ -31,4 +31,17 @@ class DirectionListPresenterImpl: DirectionsListPresenter {
             self.view.failedDirectionsLoad(error: error)
         })
     }
+    
+    internal func reloadDirectionsList(userNick: String!) {
+        view.startRefresh()
+        model.loadDirectionsList(userNick: userNick, pageNumber: 1,
+        success: { directions in
+            self.view.stopRefresh()
+            self.view.successDirectionsLoad(directions: directions)
+        },
+        failure: { error in
+            self.view.stopRefresh()
+            self.view.failedDirectionsLoad(error: error)
+        })
+    }
 }

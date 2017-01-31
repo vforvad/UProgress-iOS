@@ -10,4 +10,5 @@ import Foundation
 
 protocol DirectionsListPresenter {
     func loadDirections(userNick: String!, pageNumber: Int!)
+    func reloadDirectionsList(userNick: String!)
 }
