@@ -15,6 +15,16 @@ class DirectionsListCell: UITableViewCell {
     @IBOutlet var titleValue: UILabel!
     @IBOutlet var updatedAtValue: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var cardView: UIView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.backgroundColor = UIColor.clear
+        self.cardView.alpha = 1.0
+        self.cardView.layer.masksToBounds = false
+        self.cardView.layer.cornerRadius = 5
+
+    }
     
     public func setData(direction: Direction!) {
         self.direction = direction

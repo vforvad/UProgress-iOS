@@ -29,6 +29,9 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         
         tableView.estimatedRowHeight = 300
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.backgroundColor = UIColor("#f6f7f8")
+        tableView.allowsSelection = false
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         
         tableView.register(UINib(nibName: "DirectionsListCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
