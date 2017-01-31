@@ -11,4 +11,5 @@ import Foundation
 protocol DirectionsListViewProtocol {
     func clickOnItem(direction: Direction, indexPath: IndexPath!)
     func refreshTriggered()
+    func infiniteScrollTriggered()
 }

@@ -113,6 +113,7 @@
 		6483E4D01E4091290072B97C /* DirectionsListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectionsListCell.xib; sourceTree = "<group>"; };
 		6483E4D21E4093F60072B97C /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		6483E4D41E409A1D0072B97C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		6483E4D61E40BC340072B97C /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionManager.swift; sourceTree = "<group>"; };
 		64D9309E1E3E3C68007C7112 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		64D930A51E3E40A7007C7112 /* DirectionModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionModelProtocol.swift; sourceTree = "<group>"; };
@@ -250,6 +251,7 @@
 				64D930A01E3E4020007C7112 /* utils */,
 				64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */,
 				6483E4CA1E3FE0490072B97C /* CommonFunctions.swift */,
+				6483E4D61E40BC340072B97C /* Bridge-Header.h */,
 			);
 			name = common;
 			sourceTree = "<group>";
@@ -830,6 +832,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UProgress/Bridge-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -848,6 +851,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UProgress/Bridge-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import UIScrollView_InfiniteScroll
 
 class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     var searchActive : Bool = false
@@ -37,6 +38,7 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         tableView.register(UINib(nibName: "DirectionsListCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         
         setupUIRefreshController()
+        setupInfinteScrolling()
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,7 +51,21 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
             item = itemsList[indexPath.row]
         }
         cell.setData(direction: item)
-        return cell as! UITableViewCell
+        return cell as UITableViewCell
+    }
+    
+    public func updateData(directions: [Direction]!) {
+        self.itemsList = directions
+        self.tableView.reloadData()
+    }
+    
+    public func addDirections(directions: [Direction]!) {
+        self.itemsList.append(contentsOf: directions)
+        self.tableView.reloadData()
+    }
+    
+    public func stopInfiniteScroll() {
+        tableView.finishInfiniteScroll()
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -62,12 +78,6 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         }
         return itemsList.count
     }
-    
-    public func updateData(directions: [Direction]!) {
-        self.itemsList = directions
-        self.tableView.reloadData()
-    }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewController.clickOnItem(direction: itemsList[indexPath.row], indexPath: indexPath)
@@ -116,6 +126,14 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         refreshControl.attributedTitle = NSAttributedString(string: NSLocalizedString("pull_to_refresh", comment: ""))
         refreshControl.addTarget(self, action: #selector(DirectionsListView.reloadList), for: UIControlEvents.valueChanged)
         tableView.addSubview(refreshControl)
+    }
+    
+    // MARK: Infinite scroll
+    func setupInfinteScrolling() {
+        tableView.infiniteScrollIndicatorStyle = .gray
+        self.tableView.addInfiniteScroll { (scrollView) -> Void in
+            self.viewController.infiniteScrollTriggered()
+        }
     }
 
 }

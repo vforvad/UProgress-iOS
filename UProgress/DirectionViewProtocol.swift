@@ -13,6 +13,8 @@ protocol DirectionViewProtocol {
     func stopLoader()
     func startRefresh()
     func stopRefresh()
+    func stopInfiniteScroll()
     func successDirectionsLoad(directions: [Direction]!)
     func failedDirectionsLoad(error: NSError)
+    func successLoadMoreDirections(directions: [Direction]!)
 }

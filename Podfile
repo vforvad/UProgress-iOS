@@ -9,6 +9,7 @@ target 'UProgress' do
   pod 'SideMenuController'
   pod 'UIColor_Hex_Swift', '~> 3.0.2'
   pod 'MBProgressHUD'
+  pod 'UIScrollView-InfiniteScroll'
 
   # Pods for UProgress
 

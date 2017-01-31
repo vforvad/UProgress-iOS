@@ -15,6 +15,7 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
     @IBOutlet weak var searchBar: UISearchBar!
     
     var itemsList:[Direction]! = []
+    private let userNick = "vforvad"
     private let manager = DirectionManager()
     private var presenter: DirectionListPresenterImpl!
     private var viewInstance: DirectionsListView!
@@ -24,7 +25,7 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
         super.viewDidLoad()
         viewInstance = DirectionsListView(viewController: self, table: tableView, searchBar: searchBar)
         presenter = DirectionListPresenterImpl(model: manager, view: self)
-        presenter.loadDirections(userNick: "vforvad", pageNumber: 1)
+        presenter.loadDirections(userNick: userNick)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +35,10 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
 
     internal func successDirectionsLoad(directions: [Direction]!) {
         viewInstance.updateData(directions: directions)
+    }
+    
+    internal func successLoadMoreDirections(directions: [Direction]!) {
+        viewInstance.addDirections(directions: directions)
     }
     
     internal func stopLoader() {
@@ -53,7 +58,11 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
     }
     
     internal func refreshTriggered() {
-        presenter.reloadDirectionsList(userNick: "vforvad")
+        presenter.reloadDirectionsList(userNick: userNick)
+    }
+    
+    internal func infiniteScrollTriggered() {
+        presenter.loadMoreDirections(userNick: userNick)
     }
     
     internal func startRefresh() {
@@ -62,6 +71,10 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
     
     internal func stopRefresh() {
         viewInstance.refreshControl.endRefreshing()
+    }
+    
+    internal func stopInfiniteScroll() {
+        viewInstance.stopInfiniteScroll()
     }
 }
 

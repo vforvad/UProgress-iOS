@@ -13,13 +13,14 @@ import AlamofireObjectMapper
 class DirectionListPresenterImpl: DirectionsListPresenter {
     private var model: DirectionModelProtocol!
     private var view: DirectionViewProtocol
+    private var pageNumber = 1
     
     init(model: DirectionModelProtocol, view: DirectionViewProtocol) {
         self.model = model
         self.view = view
     }
     
-    internal func loadDirections(userNick: String!, pageNumber: Int!) {
+    internal func loadDirections(userNick: String!) {
         view.startLoader()
         model.loadDirectionsList(userNick: userNick, pageNumber: pageNumber,
         success: { directions in
@@ -41,6 +42,19 @@ class DirectionListPresenterImpl: DirectionsListPresenter {
         },
         failure: { error in
             self.view.stopRefresh()
+            self.view.failedDirectionsLoad(error: error)
+        })
+    }
+    
+    internal func loadMoreDirections(userNick: String!) {
+        pageNumber += 1
+        model.loadDirectionsList(userNick: userNick, pageNumber: pageNumber,
+        success: { directions in
+            self.view.stopInfiniteScroll()
+            self.view.successLoadMoreDirections(directions: directions)
+        },
+        failure: { error in
+            self.view.stopInfiniteScroll()
             self.view.failedDirectionsLoad(error: error)
         })
     }
