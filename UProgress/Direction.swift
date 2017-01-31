@@ -13,6 +13,8 @@ class Direction: Mappable {
     var id: Int!
     var title: String!
     var description: String!
+    var percentsResult: Int!
+    var updatedAt: Date!
     
     required init?() {
     
@@ -26,6 +28,12 @@ class Direction: Mappable {
         id <- map["id"]
         title <- map["title"]
         description <- map["description"]
+        percentsResult <- map["percents_result"]
+        
+        let stringFromDate = map["updated_at"].currentValue as! String
+        if let dateFromString = stringFromDate.dateFromISO8601 {
+            updatedAt = dateFromString
+        }
     }
 
 }

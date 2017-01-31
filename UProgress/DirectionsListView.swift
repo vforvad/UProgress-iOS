@@ -26,10 +26,15 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.searchBar.delegate = self
+        
+        tableView.estimatedRowHeight = 300
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        tableView.register(UINib(nibName: "DirectionsListCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cellId")
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! DirectionsListCell
         var item: Direction!
         if (searchActive) {
             item = filtered[indexPath.row]
@@ -37,10 +42,13 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         else {
             item = itemsList[indexPath.row]
         }
-        cell.textLabel?.text = item.title
-        return cell
+        cell.setData(direction: item)
+        return cell as! UITableViewCell
     }
-
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (searchActive) {
