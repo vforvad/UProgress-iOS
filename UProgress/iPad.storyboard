@@ -139,11 +139,45 @@
                     <connections>
                         <outlet property="tableView" destination="e9d-PI-G9s" id="VGN-Bd-3vj"/>
                         <segue destination="dLc-54-i8i" kind="showDetail" identifier="directions" id="doI-cn-ClC"/>
+                        <segue destination="hSl-Cv-xN5" kind="showDetail" identifier="sign_in" id="NQV-up-m78"/>
+                        <segue destination="hSl-Cv-xN5" kind="showDetail" identifier="sign_up" id="bVE-fB-8Rk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRh-F6-LP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="183.19999999999999" y="-608.54572713643188"/>
+        </scene>
+        <!--Authorizations View Controller-->
+        <scene sceneID="v5i-jD-SpH">
+            <objects>
+                <viewController id="9bK-ot-zdH" customClass="AuthorizationsViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3xD-wZ-hAh"/>
+                        <viewControllerLayoutGuide type="bottom" id="vrc-qh-YZe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KoY-Ud-Tb2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rim-Ib-R60">
+                                <rect key="frame" x="127" y="64" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rim-Ib-R60" firstAttribute="centerX" secondItem="KoY-Ud-Tb2" secondAttribute="centerX" id="61r-Pi-54L"/>
+                            <constraint firstItem="rim-Ib-R60" firstAttribute="top" secondItem="3xD-wZ-hAh" secondAttribute="bottom" constant="10" id="A23-Rn-GiH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="66c-pF-uKe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLO-rG-a8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2432.8000000000002" y="-614.84257871064472"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="hdy-8z-gvi">
@@ -176,5 +210,26 @@
             </objects>
             <point key="canvasLocation" x="120.8" y="152.47376311844079"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8K6-zB-s1z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hSl-Cv-xN5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HQx-7K-3Xl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9bK-ot-zdH" kind="relationship" relationship="rootViewController" id="VWP-FN-V3t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kla-RD-yAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1493.5999999999999" y="-614.84257871064472"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bVE-fB-8Rk"/>
+    </inferredMetricsTieBreakers>
 </document>

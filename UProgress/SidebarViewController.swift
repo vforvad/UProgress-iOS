@@ -36,6 +36,16 @@ class SidebarViewController: BaseViewController, NavigationViewProtocol {
         if (segue.identifier == "directions") {
             _ = navVC.viewControllers.first as! DirectionsListViewController
         }
+        
+        if (segue.identifier == "sign_in") {
+            let tableVC = navVC.viewControllers.first as! AuthorizationsViewController
+//            tableVC.isAuth = true
+        }
+        
+        if (segue.identifier == "sign_up") {
+            let tableVC = navVC.viewControllers.first as! AuthorizationsViewController
+            //            tableVC.isAuth = true
+        }
     }
     
     private func segueForNavigationController(identifier: String!) {
