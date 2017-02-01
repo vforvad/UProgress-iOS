@@ -30,6 +30,9 @@
                                             <segment title="First"/>
                                             <segment title="Second"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="toggleController:" destination="YaS-JC-nXI" eventType="valueChanged" id="Aci-Rp-K2O"/>
+                                        </connections>
                                     </segmentedControl>
                                     <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="80G-X1-Edc">
                                         <rect key="frame" x="0.0" y="107" width="414" height="300"/>
@@ -40,12 +43,25 @@
                                             <segue destination="nHq-VX-msN" kind="embed" id="O2N-DT-gsg"/>
                                         </connections>
                                     </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UiF-bd-3XQ">
+                                        <rect key="frame" x="0.0" y="107" width="414" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="OYd-zD-qaW"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="05v-Qu-sVH" kind="embed" id="Una-lK-98g"/>
+                                        </connections>
+                                    </containerView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="80G-X1-Edc" firstAttribute="leading" secondItem="lQD-bE-z0z" secondAttribute="leading" constant="10" id="2VA-pH-tBN"/>
+                                    <constraint firstItem="UiF-bd-3XQ" firstAttribute="top" secondItem="IhS-RI-hNM" secondAttribute="bottom" constant="8" id="9SO-rZ-5Pa"/>
                                     <constraint firstItem="80G-X1-Edc" firstAttribute="centerX" secondItem="lQD-bE-z0z" secondAttribute="centerX" id="LHe-Hg-8rH"/>
                                     <constraint firstItem="IhS-RI-hNM" firstAttribute="top" secondItem="lQD-bE-z0z" secondAttribute="top" constant="10" id="UCC-bO-qvX"/>
+                                    <constraint firstItem="UiF-bd-3XQ" firstAttribute="leading" secondItem="lQD-bE-z0z" secondAttribute="leading" constant="10" id="WdT-Je-R4h"/>
+                                    <constraint firstItem="UiF-bd-3XQ" firstAttribute="centerX" secondItem="lQD-bE-z0z" secondAttribute="centerX" id="lWt-R1-Viv"/>
                                     <constraint firstItem="80G-X1-Edc" firstAttribute="top" secondItem="IhS-RI-hNM" secondAttribute="bottom" constant="8" id="ntI-vM-lmo"/>
+                                    <constraint firstAttribute="trailing" secondItem="UiF-bd-3XQ" secondAttribute="trailing" constant="10" id="qJZ-v4-GEj"/>
                                     <constraint firstAttribute="trailing" secondItem="80G-X1-Edc" secondAttribute="trailing" constant="10" id="vdL-Wz-g1W"/>
                                     <constraint firstItem="IhS-RI-hNM" firstAttribute="centerX" secondItem="lQD-bE-z0z" secondAttribute="centerX" id="xz9-Ez-13N"/>
                                 </constraints>
@@ -61,6 +77,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gYq-a7-UcS"/>
+                    <connections>
+                        <outlet property="segmentControl" destination="IhS-RI-hNM" id="DYg-it-tuC"/>
+                        <outlet property="signInContainer" destination="80G-X1-Edc" id="C0e-Dg-Mgg"/>
+                        <outlet property="signUpContainer" destination="UiF-bd-3XQ" id="7dg-y4-2Rl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjw-LH-5bC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,9 +132,9 @@
                         <viewControllerLayoutGuide type="bottom" id="Lca-M2-Haa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LyQ-FY-zp2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5iA-8f-RCo" userLabel="First Responder" sceneMemberID="firstResponder"/>

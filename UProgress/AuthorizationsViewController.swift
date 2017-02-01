@@ -11,11 +11,32 @@ import UIKit
 
 class AuthorizationsViewController: BaseViewController {
     public var signIn: Bool!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var signInContainer: UIView!
+    @IBOutlet weak var signUpContainer: UIView!
     
     override func viewDidLoad() {
          super.viewDidLoad()
-        var authView = AuthorizationFragment.initWith(nibName: "AuthorizationFragment") as! AuthorizationFragment
-//        contentView.addSubview(authView)
+        if signIn! {
+            segmentControl.selectedSegmentIndex = 0
+            signInContainer.isHidden = false
+            signUpContainer.isHidden = true
+        } else {
+            segmentControl.selectedSegmentIndex = 1
+            signInContainer.isHidden = true
+            signUpContainer.isHidden = false
+        }
+    }
+    
+    @IBAction func toggleController(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            signInContainer.isHidden = false
+            signUpContainer.isHidden = true
+        }
+        else if sender.selectedSegmentIndex == 1 {
+            signInContainer.isHidden = true
+            signUpContainer.isHidden = false
+        }
     }
 }

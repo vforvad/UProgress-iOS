@@ -55,9 +55,13 @@ class SidebarViewController: BaseViewController, NavigationViewProtocol {
         case "directions":
             viewController = super.fromStoryboard(identifier: "DirectionsListViewController")
         case "sign_in":
-            viewController = super.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController")
+            var authViewController = super.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
+            authViewController.signIn = true
+            viewController = authViewController as! UIViewController
         case "sign_up":
-            viewController = super.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController")
+            var authViewController = super.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
+            authViewController.signIn = false
+            viewController = authViewController as! UIViewController
         default:
             viewController = super.fromStoryboard(identifier: "DirectionsListViewController")
         }
