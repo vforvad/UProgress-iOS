@@ -30,7 +30,7 @@ class SidebarViewController: BaseViewController, NavigationViewProtocol {
     }
     
     //MARK: Segue Navigation
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let navVC = segue.destination as! UINavigationController
         
         if (segue.identifier == "directions") {
@@ -38,12 +38,12 @@ class SidebarViewController: BaseViewController, NavigationViewProtocol {
         }
         if (segue.identifier == "sign_in") {
             let tableVC = navVC.viewControllers.first as! AuthorizationsViewController
-//            tableVC.isAuth = true
+            tableVC.signIn = true
         }
         
         if (segue.identifier == "sign_up") {
             let tableVC = navVC.viewControllers.first as! AuthorizationsViewController
-            //            tableVC.isAuth = true
+            tableVC.signIn = false
         }
     }
     

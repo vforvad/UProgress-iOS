@@ -21,6 +21,10 @@ class AuthorizationsViewController: BaseViewController {
         updateSegment(sender: self.segmentControl, index: (signIn! ? 0 : 1))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     @IBAction func toggleController(_ sender: UISegmentedControl) {
         updateSegment(sender: sender, index: sender.selectedSegmentIndex)
     }
