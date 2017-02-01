@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class AuthorizationFragmentController: BaseViewController {
+    var parentVC: SignInProtocol!
+    
     @IBOutlet weak var stackView: UIStackView!
     
     @IBOutlet weak var emailField: UITextField!
@@ -23,6 +25,7 @@ class AuthorizationFragmentController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         emailErrors.isHidden = true
         passwordErrors.isHidden = true
         
@@ -32,7 +35,8 @@ class AuthorizationFragmentController: BaseViewController {
     
     
     @IBAction func signIn(_ sender: Any) {
-        emailErrors.isHidden = false
-        passwordErrors.isHidden = false
+        let dictionary = ["email": emailField.text!, "password": passwordField.text!]
+        parentVC.signInRequest(parameters: dictionary as Dictionary<String, AnyObject> )
+        
     }
 }

@@ -40,7 +40,7 @@
                                             <constraint firstAttribute="height" constant="300" id="7zS-kV-E50"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="nHq-VX-msN" kind="embed" id="O2N-DT-gsg"/>
+                                            <segue destination="nHq-VX-msN" kind="embed" identifier="auth_fragment" id="O2N-DT-gsg"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UiF-bd-3XQ">
@@ -49,7 +49,7 @@
                                             <constraint firstAttribute="height" constant="300" id="OYd-zD-qaW"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="05v-Qu-sVH" kind="embed" id="Una-lK-98g"/>
+                                            <segue destination="05v-Qu-sVH" kind="embed" identifier="reg_fragment" id="Una-lK-98g"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -108,7 +108,7 @@
         <!--Authorization Fragment Controller-->
         <scene sceneID="H5X-9R-02P">
             <objects>
-                <viewController id="nHq-VX-msN" customClass="AuthorizationFragmentController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthorizationFragmentController" id="nHq-VX-msN" customClass="AuthorizationFragmentController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NFC-Hk-kFZ"/>
                         <viewControllerLayoutGuide type="bottom" id="Xt8-pr-PTW"/>

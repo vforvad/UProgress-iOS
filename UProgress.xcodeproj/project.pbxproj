@@ -11,6 +11,13 @@
 		198C1F504EA67A89BB92B6FB /* Pods_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0278647014FB9AFDB08AEC /* Pods_UProgressTests.framework */; };
 		5E2ECF37024A74B8E3E15D25 /* Pods_UProgress_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726D3C86FF753C8EEDC99541 /* Pods_UProgress_UProgressUITests.framework */; };
 		641F25C91E422621008BD119 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25C81E422621008BD119 /* Image.swift */; };
+		641F25CB1E422BE6008BD119 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25CA1E422BE6008BD119 /* AuthorizationManager.swift */; };
+		641F25CD1E422BF2008BD119 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25CC1E422BF2008BD119 /* User.swift */; };
+		641F25CF1E422CC3008BD119 /* AuthorizationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25CE1E422CC3008BD119 /* AuthorizationManagerProtocol.swift */; };
+		641F25D11E422FC3008BD119 /* AuthorizationViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25D01E422FC3008BD119 /* AuthorizationViewProtocol.swift */; };
+		641F25D31E42307B008BD119 /* AuthorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25D21E42307B008BD119 /* AuthorizationPresenter.swift */; };
+		641F25D51E42309D008BD119 /* AuthorizationPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25D41E42309D008BD119 /* AuthorizationPresenterProtocol.swift */; };
+		641F25D71E4232BE008BD119 /* SignInProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25D61E4232BE008BD119 /* SignInProtocol.swift */; };
 		645F5A0E1E3E95D0005CCBD6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */; };
 		6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A61E3D04C200C46165 /* AppDelegate.swift */; };
 		6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
@@ -93,6 +100,13 @@
 		3DAF568722EA6F1921D97601 /* Pods-UProgress-UProgressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgress-UProgressUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UProgress-UProgressUITests/Pods-UProgress-UProgressUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3EEFA24D7EA84D774EDB8B59 /* Pods-UProgress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgress.release.xcconfig"; path = "Pods/Target Support Files/Pods-UProgress/Pods-UProgress.release.xcconfig"; sourceTree = "<group>"; };
 		641F25C81E422621008BD119 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		641F25CA1E422BE6008BD119 /* AuthorizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
+		641F25CC1E422BF2008BD119 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		641F25CE1E422CC3008BD119 /* AuthorizationManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationManagerProtocol.swift; sourceTree = "<group>"; };
+		641F25D01E422FC3008BD119 /* AuthorizationViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewProtocol.swift; sourceTree = "<group>"; };
+		641F25D21E42307B008BD119 /* AuthorizationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenter.swift; sourceTree = "<group>"; };
+		641F25D41E42309D008BD119 /* AuthorizationPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenterProtocol.swift; sourceTree = "<group>"; };
+		641F25D61E4232BE008BD119 /* SignInProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInProtocol.swift; sourceTree = "<group>"; };
 		645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		645F5A0F1E3E95D4005CCBD6 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/AlamofireObjectMapper/AlamofireObjectMapper.framework"; sourceTree = "<group>"; };
 		645F5A111E3E95DB005CCBD6 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
@@ -261,6 +275,11 @@
 			isa = PBXGroup;
 			children = (
 				6483E4DA1E4104E20072B97C /* view */,
+				641F25CA1E422BE6008BD119 /* AuthorizationManager.swift */,
+				641F25CC1E422BF2008BD119 /* User.swift */,
+				641F25CE1E422CC3008BD119 /* AuthorizationManagerProtocol.swift */,
+				641F25D21E42307B008BD119 /* AuthorizationPresenter.swift */,
+				641F25D41E42309D008BD119 /* AuthorizationPresenterProtocol.swift */,
 			);
 			name = Authorization;
 			sourceTree = "<group>";
@@ -273,6 +292,8 @@
 				64F80D3A1E41FCA500E90004 /* AuthorizationFragmentController.swift */,
 				64F80D3C1E41FCB000E90004 /* RegistrationFragmentController.swift */,
 				64F80D421E42058500E90004 /* AuthorizationStoryboard.storyboard */,
+				641F25D01E422FC3008BD119 /* AuthorizationViewProtocol.swift */,
+				641F25D61E4232BE008BD119 /* SignInProtocol.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -667,13 +688,18 @@
 				6483E4C51E3FA9790072B97C /* NavigationView.swift in Sources */,
 				6483E4CB1E3FE0490072B97C /* CommonFunctions.swift in Sources */,
 				6483E4D51E409A1D0072B97C /* String.swift in Sources */,
+				641F25CF1E422CC3008BD119 /* AuthorizationManagerProtocol.swift in Sources */,
 				6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */,
+				641F25D51E42309D008BD119 /* AuthorizationPresenterProtocol.swift in Sources */,
 				64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */,
+				641F25CD1E422BF2008BD119 /* User.swift in Sources */,
 				64D9309C1E3E2CEE007C7112 /* DirectionManager.swift in Sources */,
+				641F25D71E4232BE008BD119 /* SignInProtocol.swift in Sources */,
 				64D930AE1E3E4632007C7112 /* DirectionListPresenterImpl.swift in Sources */,
 				6483E4D91E40FED00072B97C /* AuthorizationsViewController.swift in Sources */,
 				6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */,
 				64D930AA1E3E452E007C7112 /* DirectionViewProtocol.swift in Sources */,
+				641F25D31E42307B008BD119 /* AuthorizationPresenter.swift in Sources */,
 				6483E4DC1E4104F40072B97C /* AuthorizationView.swift in Sources */,
 				6483E4C71E3FA9E50072B97C /* NavigationViewProtocol.swift in Sources */,
 				64F80D3D1E41FCB000E90004 /* RegistrationFragmentController.swift in Sources */,
@@ -683,10 +709,12 @@
 				64D930B21E3E4EF2007C7112 /* DirectionsListViewProtocol.swift in Sources */,
 				64D930B01E3E4DA1007C7112 /* DirectionsListView.swift in Sources */,
 				64E015181E3E023E0055DFD5 /* Direction.swift in Sources */,
+				641F25CB1E422BE6008BD119 /* AuthorizationManager.swift in Sources */,
 				64D930AC1E3E45EE007C7112 /* DirectionsListPresenter.swift in Sources */,
 				6483E4D31E4093F60072B97C /* Date.swift in Sources */,
 				64EA8BF41E3EB9AE0088009E /* BaseViewController.swift in Sources */,
 				64F80D3B1E41FCA500E90004 /* AuthorizationFragmentController.swift in Sources */,
+				641F25D11E422FC3008BD119 /* AuthorizationViewProtocol.swift in Sources */,
 				6483E4C91E3FAAF90072B97C /* SidebarViewController.swift in Sources */,
 				641F25C91E422621008BD119 /* Image.swift in Sources */,
 			);
