@@ -25,6 +25,9 @@ class AuthorizationFragmentController: BaseViewController {
         super.viewDidLoad()
         emailErrors.isHidden = true
         passwordErrors.isHidden = true
+        
+        CommonFunctions.customizeTextField(field: self.emailField, placeholder: "Email", image: "email_icon")
+        CommonFunctions.customizeTextField(field: self.passwordField, placeholder: "Email", image: "password_icon")
     }
     
     

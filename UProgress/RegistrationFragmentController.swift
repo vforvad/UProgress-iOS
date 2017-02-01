@@ -27,6 +27,15 @@ class RegistrationFragmentController:BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailErrors.isHidden = true
+        passwordErrors.isHidden = true
+        passwordConfirmationErrors.isHidden = true
+        nickErrors.isHidden = true
+        
+        CommonFunctions.customizeTextField(field: self.emailField, placeholder: "Email", image: "email_icon")
+        CommonFunctions.customizeTextField(field: self.passwordField, placeholder: "Email", image: "password_icon")
+        CommonFunctions.customizeTextField(field: self.passwordConfirmationField, placeholder: "Email", image: "password_icon")
+        CommonFunctions.customizeTextField(field: self.nickField, placeholder: "Email", image: "user_nick")
     }
     
     @IBAction func signUp(_ sender: Any) {

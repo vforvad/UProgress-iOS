@@ -15,7 +15,7 @@ public enum Method: String {
 }
 
 class ApiRequest: NSObject {
-    var host = "http://a022d594.ngrok.io"
+    var host = "http://dockerhost:3000"
     
     class var sharedInstance: ApiRequest {
         struct Singleton {
