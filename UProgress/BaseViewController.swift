@@ -28,7 +28,11 @@ class BaseViewController: UIViewController {
     }
     
     public func fromStoryboard(identifier: String!) -> UIViewController {
-        return UIStoryboard(name: "iPhone", bundle: nil).instantiateViewController(withIdentifier: identifier)
+        return fromStoryboard(name: "iPhone", identifier: identifier)
+    }
+    
+    public func fromStoryboard(name: String!, identifier: String! ) -> UIViewController {
+        return UIStoryboard(name: name, bundle: nil).instantiateViewController(withIdentifier: identifier)
     }
 
 }

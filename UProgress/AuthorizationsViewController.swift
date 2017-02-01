@@ -11,8 +11,11 @@ import UIKit
 
 class AuthorizationsViewController: BaseViewController {
     public var signIn: Bool!
+    @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
          super.viewDidLoad()
+        var authView = AuthorizationFragment.initWith(nibName: "AuthorizationFragment") as! AuthorizationFragment
+//        contentView.addSubview(authView)
     }
 }

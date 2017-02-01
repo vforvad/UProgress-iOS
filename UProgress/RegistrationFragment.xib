@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4KT-uA-7x7">
+                    <rect key="frame" x="12" y="10" width="351" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wm4-EY-Omw">
+                    <rect key="frame" x="12" y="86" width="351" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHf-zQ-zab">
+                    <rect key="frame" x="12" y="124" width="351" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWv-5t-qpA">
+                    <rect key="frame" x="12" y="162" width="351" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DYd-8W-Lg2">
+                    <rect key="frame" x="12" y="48" width="351" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CWv-5t-qpA" firstAttribute="leading" secondItem="Wm4-EY-Omw" secondAttribute="leading" id="4qD-nm-Ds3"/>
+                <constraint firstAttribute="bottom" secondItem="CWv-5t-qpA" secondAttribute="bottom" constant="28" id="8Zd-mQ-gkt"/>
+                <constraint firstItem="CWv-5t-qpA" firstAttribute="trailing" secondItem="GHf-zQ-zab" secondAttribute="trailing" id="EnA-BE-QwG"/>
+                <constraint firstItem="CWv-5t-qpA" firstAttribute="trailing" secondItem="Wm4-EY-Omw" secondAttribute="trailing" id="OGx-xH-Ccp"/>
+                <constraint firstItem="CWv-5t-qpA" firstAttribute="leading" secondItem="GHf-zQ-zab" secondAttribute="leading" id="T69-qV-FzM"/>
+                <constraint firstItem="CWv-5t-qpA" firstAttribute="leading" secondItem="DYd-8W-Lg2" secondAttribute="leading" id="VFJ-ia-OSw"/>
+                <constraint firstItem="CWv-5t-qpA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="aN0-8Q-YMh"/>
+                <constraint firstItem="CWv-5t-qpA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="e9U-Ls-e1D"/>
+                <constraint firstItem="CWv-5t-qpA" firstAttribute="leading" secondItem="4KT-uA-7x7" secondAttribute="leading" id="lZA-iR-Mrg"/>
+                <constraint firstItem="CWv-5t-qpA" firstAttribute="trailing" secondItem="DYd-8W-Lg2" secondAttribute="trailing" id="tgM-pp-u8P"/>
+                <constraint firstItem="CWv-5t-qpA" firstAttribute="trailing" secondItem="4KT-uA-7x7" secondAttribute="trailing" id="yig-yo-bor"/>
+                <constraint firstItem="CWv-5t-qpA" firstAttribute="top" secondItem="GHf-zQ-zab" secondAttribute="bottom" constant="8" symbolic="YES" id="zfj-dm-ZcV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33.5" y="15"/>
+        </view>
+    </objects>
+</document>

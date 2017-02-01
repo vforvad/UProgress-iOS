@@ -581,22 +581,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/SidebarViewController.swift"
-            timestampString = "507576127.911209"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "prepareForSegue(segue:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UProgress/SidebarViewController.swift"
             timestampString = "507490968.003835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -641,7 +625,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/SidebarViewController.swift"
@@ -901,11 +885,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/SidebarViewController.swift"
-            timestampString = "507576169.264125"
+            timestampString = "507644114.107919"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "prepareForSegue(segue:sender:)"
             landmarkType = "7">
          </BreakpointContent>

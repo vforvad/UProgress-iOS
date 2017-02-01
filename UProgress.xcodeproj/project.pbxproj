@@ -63,6 +63,11 @@
 		64EA8BF41E3EB9AE0088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
 		64EA8BF81E3F24700088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
 		64EA8BF91E3F24710088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
+		64F80D3B1E41FCA500E90004 /* AuthorizationFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80D3A1E41FCA500E90004 /* AuthorizationFragment.swift */; };
+		64F80D3D1E41FCB000E90004 /* RegistrationFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80D3C1E41FCB000E90004 /* RegistrationFragment.swift */; };
+		64F80D3F1E41FCBE00E90004 /* AuthorizationFragment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F80D3E1E41FCBE00E90004 /* AuthorizationFragment.xib */; };
+		64F80D411E41FCCA00E90004 /* RegistrationFragment.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F80D401E41FCCA00E90004 /* RegistrationFragment.xib */; };
+		64F80D431E42058500E90004 /* AuthorizationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64F80D421E42058500E90004 /* AuthorizationStoryboard.storyboard */; };
 		8355BE18053B154ED4CA22C8 /* Pods_UProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD8BB09CFC827EB003C41A2 /* Pods_UProgress.framework */; };
 		9DFB990BFC345690E0598208 /* Pods_UProgress_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396F0220AA154D509C1E95B /* Pods_UProgress_UProgressTests.framework */; };
 /* End PBXBuildFile section */
@@ -129,6 +134,11 @@
 		64E015171E3E023E0055DFD5 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		64F80D3A1E41FCA500E90004 /* AuthorizationFragment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationFragment.swift; sourceTree = "<group>"; };
+		64F80D3C1E41FCB000E90004 /* RegistrationFragment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationFragment.swift; sourceTree = "<group>"; };
+		64F80D3E1E41FCBE00E90004 /* AuthorizationFragment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthorizationFragment.xib; sourceTree = "<group>"; };
+		64F80D401E41FCCA00E90004 /* RegistrationFragment.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationFragment.xib; sourceTree = "<group>"; };
+		64F80D421E42058500E90004 /* AuthorizationStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthorizationStoryboard.storyboard; sourceTree = "<group>"; };
 		68D4A01EB56EC7D79F5B52DC /* Pods-UProgressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgressUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UProgressUITests/Pods-UProgressUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6D5C3E99CC7E7FD863502E7F /* Pods-UProgress-UProgressUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UProgress-UProgressUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UProgress-UProgressUITests/Pods-UProgress-UProgressUITests.release.xcconfig"; sourceTree = "<group>"; };
 		726D3C86FF753C8EEDC99541 /* Pods_UProgress_UProgressUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UProgress_UProgressUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +272,11 @@
 			children = (
 				6483E4D81E40FED00072B97C /* AuthorizationsViewController.swift */,
 				6483E4DB1E4104F40072B97C /* AuthorizationView.swift */,
+				64F80D3A1E41FCA500E90004 /* AuthorizationFragment.swift */,
+				64F80D3C1E41FCB000E90004 /* RegistrationFragment.swift */,
+				64F80D3E1E41FCBE00E90004 /* AuthorizationFragment.xib */,
+				64F80D401E41FCCA00E90004 /* RegistrationFragment.xib */,
+				64F80D421E42058500E90004 /* AuthorizationStoryboard.storyboard */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -483,10 +498,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64F80D431E42058500E90004 /* AuthorizationStoryboard.storyboard in Resources */,
+				64F80D411E41FCCA00E90004 /* RegistrationFragment.xib in Resources */,
 				6474B1B11E3D04C200C46165 /* LaunchScreen.storyboard in Resources */,
 				6483E4D11E4091290072B97C /* DirectionsListCell.xib in Resources */,
 				6474B1AE1E3D04C200C46165 /* Assets.xcassets in Resources */,
 				6474B1D51E3D091800C46165 /* .travis.yml in Resources */,
+				64F80D3F1E41FCBE00E90004 /* AuthorizationFragment.xib in Resources */,
 				6474B1AC1E3D04C200C46165 /* iPhone.storyboard in Resources */,
 				6483E4C31E3FA5170072B97C /* iPad.storyboard in Resources */,
 			);
@@ -663,6 +681,7 @@
 				64D930AA1E3E452E007C7112 /* DirectionViewProtocol.swift in Sources */,
 				6483E4DC1E4104F40072B97C /* AuthorizationView.swift in Sources */,
 				6483E4C71E3FA9E50072B97C /* NavigationViewProtocol.swift in Sources */,
+				64F80D3D1E41FCB000E90004 /* RegistrationFragment.swift in Sources */,
 				64D930A61E3E40A7007C7112 /* DirectionModelProtocol.swift in Sources */,
 				64D9309F1E3E3C68007C7112 /* ApiRequest.swift in Sources */,
 				6483E4CF1E40911E0072B97C /* DirectionsListCell.swift in Sources */,
@@ -672,6 +691,7 @@
 				64D930AC1E3E45EE007C7112 /* DirectionsListPresenter.swift in Sources */,
 				6483E4D31E4093F60072B97C /* Date.swift in Sources */,
 				64EA8BF41E3EB9AE0088009E /* BaseViewController.swift in Sources */,
+				64F80D3B1E41FCA500E90004 /* AuthorizationFragment.swift in Sources */,
 				6483E4C91E3FAAF90072B97C /* SidebarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

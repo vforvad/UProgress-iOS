@@ -36,7 +36,6 @@ class SidebarViewController: BaseViewController, NavigationViewProtocol {
         if (segue.identifier == "directions") {
             _ = navVC.viewControllers.first as! DirectionsListViewController
         }
-        
         if (segue.identifier == "sign_in") {
             let tableVC = navVC.viewControllers.first as! AuthorizationsViewController
 //            tableVC.isAuth = true
@@ -56,9 +55,9 @@ class SidebarViewController: BaseViewController, NavigationViewProtocol {
         case "directions":
             viewController = super.fromStoryboard(identifier: "DirectionsListViewController")
         case "sign_in":
-            viewController = super.fromStoryboard(identifier: "AuthorizationViewController")
+            viewController = super.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController")
         case "sign_up":
-            viewController = super.fromStoryboard(identifier: "AuthorizationViewController")
+            viewController = super.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController")
         default:
             viewController = super.fromStoryboard(identifier: "DirectionsListViewController")
         }

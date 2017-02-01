@@ -143,61 +143,6 @@
             </objects>
             <point key="canvasLocation" x="897" y="-382"/>
         </scene>
-        <!--Authorizations View Controller-->
-        <scene sceneID="Mda-wi-SF9">
-            <objects>
-                <viewController storyboardIdentifier="AuthorizationViewController" id="JbE-Ly-M2m" customClass="AuthorizationsViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DWB-zG-W3T"/>
-                        <viewControllerLayoutGuide type="bottom" id="c5Q-JC-k0B"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ezx-LX-FFa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ACU-cg-fqj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C4z-Ix-FO1">
-                                        <rect key="frame" x="147" y="71" width="121" height="29"/>
-                                        <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
-                                        </segments>
-                                    </segmentedControl>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kAO-y4-tmY">
-                                        <rect key="frame" x="0.0" y="107" width="414" height="300"/>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="Ppj-mH-yqg"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="C4z-Ix-FO1" firstAttribute="top" secondItem="ACU-cg-fqj" secondAttribute="top" constant="10" id="2QJ-Fk-pzC"/>
-                                    <constraint firstItem="C4z-Ix-FO1" firstAttribute="centerX" secondItem="ACU-cg-fqj" secondAttribute="centerX" id="71L-Pn-XfQ"/>
-                                    <constraint firstItem="kAO-y4-tmY" firstAttribute="top" secondItem="C4z-Ix-FO1" secondAttribute="bottom" constant="8" symbolic="YES" id="YO0-xL-Y0s"/>
-                                    <constraint firstItem="C4z-Ix-FO1" firstAttribute="centerX" secondItem="kAO-y4-tmY" secondAttribute="centerX" id="bPG-dr-gss"/>
-                                    <constraint firstAttribute="trailing" secondItem="kAO-y4-tmY" secondAttribute="trailing" id="hXz-4F-5gM"/>
-                                    <constraint firstItem="kAO-y4-tmY" firstAttribute="leading" secondItem="ACU-cg-fqj" secondAttribute="leading" id="ilE-QW-15O"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ACU-cg-fqj" firstAttribute="leading" secondItem="ezx-LX-FFa" secondAttribute="leading" id="J50-jM-lO1"/>
-                            <constraint firstItem="ACU-cg-fqj" firstAttribute="top" secondItem="ezx-LX-FFa" secondAttribute="top" id="L3R-oh-qBe"/>
-                            <constraint firstItem="ACU-cg-fqj" firstAttribute="width" secondItem="ezx-LX-FFa" secondAttribute="width" id="Nlm-Ev-guf"/>
-                            <constraint firstAttribute="trailing" secondItem="ACU-cg-fqj" secondAttribute="trailing" id="OxS-Cl-Qxg"/>
-                            <constraint firstItem="ACU-cg-fqj" firstAttribute="bottom" secondItem="c5Q-JC-k0B" secondAttribute="top" id="XC8-BQ-Iky"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="nSn-XO-IZG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fEP-t7-lDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2976.811594202899" y="-440.21739130434787"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="YJh-cq-2Pb">
             <objects>
@@ -234,23 +179,13 @@
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="-1372.0108695652175"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="AuO-Yr-wLJ">
+        <!--AuthorizationStoryboard-->
+        <scene sceneID="TzN-n4-W4n">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CHV-7j-v1U" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uwf-MP-buJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="JbE-Ly-M2m" kind="relationship" relationship="rootViewController" id="PDu-0F-bq2"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g4E-qe-c95" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="AuthorizationStoryboard" referencedIdentifier="AuthorizationStoryboard" id="NC7-ju-Z5s" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVj-tY-XkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2069.5652173913045" y="-440.21739130434787"/>
+            <point key="canvasLocation" x="1791" y="-671"/>
         </scene>
     </scenes>
 </document>
