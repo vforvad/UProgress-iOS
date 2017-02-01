@@ -18,23 +18,21 @@ class AuthorizationsViewController: BaseViewController {
     
     override func viewDidLoad() {
          super.viewDidLoad()
-        if signIn! {
-            segmentControl.selectedSegmentIndex = 0
-            signInContainer.isHidden = false
-            signUpContainer.isHidden = true
-        } else {
-            segmentControl.selectedSegmentIndex = 1
-            signInContainer.isHidden = true
-            signUpContainer.isHidden = false
-        }
+        updateSegment(sender: self.segmentControl, index: (signIn! ? 0 : 1))
     }
     
     @IBAction func toggleController(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
+        updateSegment(sender: sender, index: sender.selectedSegmentIndex)
+    }
+    
+    private func updateSegment(sender: UISegmentedControl, index: Int!) {
+        if index == 0 {
+            segmentControl.selectedSegmentIndex = 0
             signInContainer.isHidden = false
             signUpContainer.isHidden = true
         }
-        else if sender.selectedSegmentIndex == 1 {
+        else if index == 1 {
+            segmentControl.selectedSegmentIndex = 1
             signInContainer.isHidden = true
             signUpContainer.isHidden = false
         }
