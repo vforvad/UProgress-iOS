@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="2069.5652173913045" y="-440.21739130434787"/>
         </scene>
-        <!--View Controller-->
+        <!--Authorization Fragment Controller-->
         <scene sceneID="H5X-9R-02P">
             <objects>
-                <viewController id="nHq-VX-msN" sceneMemberID="viewController">
+                <viewController id="nHq-VX-msN" customClass="AuthorizationFragmentController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NFC-Hk-kFZ"/>
                         <viewControllerLayoutGuide type="bottom" id="Xt8-pr-PTW"/>
@@ -117,8 +117,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6h9-oF-gmB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="131"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6h9-oF-gmB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="151"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YpO-nE-WlO">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
@@ -127,26 +127,29 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFF-Jb-6EJ">
-                                        <rect key="frame" x="0.0" y="30" width="414" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="35" width="414" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qbw-z1-8SL">
-                                        <rect key="frame" x="0.0" y="50.5" width="414" height="30"/>
+                                        <rect key="frame" x="0.0" y="60.5" width="414" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEs-Xd-req">
-                                        <rect key="frame" x="0.0" y="80.5" width="414" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="95.5" width="414" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-94-7Mm">
-                                        <rect key="frame" x="0.0" y="101" width="414" height="30"/>
+                                        <rect key="frame" x="0.0" y="121" width="414" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="signIn:" destination="nHq-VX-msN" eventType="touchUpInside" id="rO5-pK-nDy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -157,15 +160,23 @@
                             <constraint firstAttribute="trailing" secondItem="6h9-oF-gmB" secondAttribute="trailing" id="s2y-QF-xPO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailErrors" destination="uFF-Jb-6EJ" id="ROd-bz-FoK"/>
+                        <outlet property="emailField" destination="YpO-nE-WlO" id="hUR-js-NGw"/>
+                        <outlet property="passwordErrors" destination="OEs-Xd-req" id="pUg-5w-j9f"/>
+                        <outlet property="passwordField" destination="qbw-z1-8SL" id="aCx-t4-HXs"/>
+                        <outlet property="signInButton" destination="3pO-94-7Mm" id="dKZ-2T-HAU"/>
+                        <outlet property="stackView" destination="6h9-oF-gmB" id="Rk1-G1-Iea"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYc-gf-tfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3804.8000000000002" y="-606.29685157421295"/>
         </scene>
-        <!--View Controller-->
+        <!--Registration Fragment Controller-->
         <scene sceneID="Fib-6m-ja9">
             <objects>
-                <viewController id="05v-Qu-sVH" sceneMemberID="viewController">
+                <viewController id="05v-Qu-sVH" customClass="RegistrationFragmentController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WtC-I0-dFG"/>
                         <viewControllerLayoutGuide type="bottom" id="Lca-M2-Haa"/>
@@ -174,7 +185,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4hv-wL-dmg">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4hv-wL-dmg">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0V-wM-YMB">
@@ -228,6 +239,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUR-tS-GD5">
                                         <rect key="frame" x="0.0" y="202" width="414" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="signUp:" destination="05v-Qu-sVH" eventType="touchUpInside" id="atv-5W-aXE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -238,6 +252,18 @@
                             <constraint firstItem="4hv-wL-dmg" firstAttribute="leading" secondItem="LyQ-FY-zp2" secondAttribute="leading" id="ed2-Hf-VPF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailErrors" destination="542-Db-sJO" id="iDm-Qp-RR3"/>
+                        <outlet property="emailField" destination="h0V-wM-YMB" id="kYn-cd-XnQ"/>
+                        <outlet property="nickErrors" destination="eA9-jW-8OX" id="94Q-mU-3g2"/>
+                        <outlet property="nickField" destination="FG9-Dn-GtB" id="hen-Tg-K3T"/>
+                        <outlet property="passwordConfirmationErrors" destination="QdB-Hq-SjT" id="GIY-1I-hSt"/>
+                        <outlet property="passwordConfirmationField" destination="MC0-l7-7KX" id="qTt-bi-MKH"/>
+                        <outlet property="passwordErrors" destination="1pH-RL-Da1" id="Aie-td-Z61"/>
+                        <outlet property="passwordField" destination="7Yd-Cr-DAq" id="kFD-mS-MD1"/>
+                        <outlet property="signUpButton" destination="NUR-tS-GD5" id="lbq-M5-YDX"/>
+                        <outlet property="stackView" destination="4hv-wL-dmg" id="Ghw-At-9J9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5iA-8f-RCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
