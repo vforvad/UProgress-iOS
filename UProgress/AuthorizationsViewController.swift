@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class AuthorizationsViewController: BaseViewController {
     public var signIn: Bool!

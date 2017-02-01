@@ -166,11 +166,18 @@
                                     <segment title="Second"/>
                                 </segments>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zol-q2-Zib">
+                                <rect key="frame" x="0.0" y="100" width="375" height="300"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zol-q2-Zib" secondAttribute="trailing" id="5ti-WF-9e4"/>
                             <constraint firstItem="rim-Ib-R60" firstAttribute="centerX" secondItem="KoY-Ud-Tb2" secondAttribute="centerX" id="61r-Pi-54L"/>
                             <constraint firstItem="rim-Ib-R60" firstAttribute="top" secondItem="3xD-wZ-hAh" secondAttribute="bottom" constant="10" id="A23-Rn-GiH"/>
+                            <constraint firstItem="zol-q2-Zib" firstAttribute="leading" secondItem="KoY-Ud-Tb2" secondAttribute="leading" id="jwh-QQ-MG4"/>
+                            <constraint firstItem="zol-q2-Zib" firstAttribute="top" secondItem="rim-Ib-R60" secondAttribute="bottom" constant="30" id="oDe-8e-klE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="66c-pF-uKe"/>

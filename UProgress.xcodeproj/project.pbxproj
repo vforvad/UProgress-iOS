@@ -29,6 +29,7 @@
 		6483E4D31E4093F60072B97C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4D21E4093F60072B97C /* Date.swift */; };
 		6483E4D51E409A1D0072B97C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4D41E409A1D0072B97C /* String.swift */; };
 		6483E4D91E40FED00072B97C /* AuthorizationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4D81E40FED00072B97C /* AuthorizationsViewController.swift */; };
+		6483E4DC1E4104F40072B97C /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4DB1E4104F40072B97C /* AuthorizationView.swift */; };
 		64D9309C1E3E2CEE007C7112 /* DirectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */; };
 		64D9309F1E3E3C68007C7112 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309E1E3E3C68007C7112 /* ApiRequest.swift */; };
 		64D930A61E3E40A7007C7112 /* DirectionModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A51E3E40A7007C7112 /* DirectionModelProtocol.swift */; };
@@ -116,6 +117,7 @@
 		6483E4D41E409A1D0072B97C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		6483E4D61E40BC340072B97C /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		6483E4D81E40FED00072B97C /* AuthorizationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationsViewController.swift; sourceTree = "<group>"; };
+		6483E4DB1E4104F40072B97C /* AuthorizationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionManager.swift; sourceTree = "<group>"; };
 		64D9309E1E3E3C68007C7112 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		64D930A51E3E40A7007C7112 /* DirectionModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionModelProtocol.swift; sourceTree = "<group>"; };
@@ -250,9 +252,18 @@
 		6483E4D71E40FEBF0072B97C /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				6483E4D81E40FED00072B97C /* AuthorizationsViewController.swift */,
+				6483E4DA1E4104E20072B97C /* view */,
 			);
 			name = Authorization;
+			sourceTree = "<group>";
+		};
+		6483E4DA1E4104E20072B97C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				6483E4D81E40FED00072B97C /* AuthorizationsViewController.swift */,
+				6483E4DB1E4104F40072B97C /* AuthorizationView.swift */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 		64D9309D1E3E3C55007C7112 /* common */ = {
@@ -650,6 +661,7 @@
 				6483E4D91E40FED00072B97C /* AuthorizationsViewController.swift in Sources */,
 				6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */,
 				64D930AA1E3E452E007C7112 /* DirectionViewProtocol.swift in Sources */,
+				6483E4DC1E4104F40072B97C /* AuthorizationView.swift in Sources */,
 				6483E4C71E3FA9E50072B97C /* NavigationViewProtocol.swift in Sources */,
 				64D930A61E3E40A7007C7112 /* DirectionModelProtocol.swift in Sources */,
 				64D9309F1E3E3C68007C7112 /* ApiRequest.swift in Sources */,
