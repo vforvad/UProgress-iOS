@@ -23,6 +23,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.view.frame.size = CGSize(width: 320, height: 100000)
         scrollView.backgroundColor = UIColor("#f6f7f8")
         self.segmentControl.setTitle(NSLocalizedString("segment_authorization", comment: ""), forSegmentAt: 0)
         self.segmentControl.setTitle(NSLocalizedString("segment_registration", comment: ""), forSegmentAt: 1)
