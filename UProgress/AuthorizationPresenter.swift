@@ -21,7 +21,7 @@ class AuthorizationPresenter: AuthorizationPresenterProtocol {
     
     internal func signIn(parameters: Dictionary<String, AnyObject>) {
         model.signIn(signInParameters: parameters,
-        success: { string in
+        success: { user in
         
         },
         failure: { error in

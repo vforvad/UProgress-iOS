@@ -26,7 +26,7 @@ class User: Mappable {
     func mapping(map: Map) {
         id <- map["id"]
         firstName <- map["first_name"]
-        lastName <- map["descriptiolast_name"]
+        lastName <- map["last_name"]
         email <- map["email"]
     }
 }

@@ -51,7 +51,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         presenter.signIn(parameters: parameters)
     }
     
-    internal func successSignIn() {
+    internal func successSignIn(currentUser: User) {
     
     }
     

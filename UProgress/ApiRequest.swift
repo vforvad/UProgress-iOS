@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
+import KeychainSwift
 
 public enum Method: String {
     case GET, HEAD, POST, PUT, PATCH, DELETE
@@ -16,6 +17,7 @@ public enum Method: String {
 
 class ApiRequest: NSObject {
     var host = "http://dockerhost:3000"
+    var keychain = KeychainSwift()
     
     class var sharedInstance: ApiRequest {
         struct Singleton {
@@ -35,17 +37,22 @@ class ApiRequest: NSObject {
     
     func request(url: String, requestType: HTTPMethod, parameters: NSDictionary) -> DataRequest {
         var request: DataRequest!
+        let tokenName = "uprogresstoken"
+        let token = keychain.get(tokenName)
         
         var headers = [
             "Content-Type": "application/json",
         ]
         
+        if (token != nil) {
+            headers[tokenName] = token
+        }
         
         if requestType != .get {
-            request =  Alamofire.request(self.defineFullUrl(url: url), method: requestType, parameters: parameters as! Parameters, encoding: JSONEncoding.default, headers: headers)
+            request =  Alamofire.request(self.defineFullUrl(url: url), method: requestType, parameters: (parameters as! Parameters), encoding: JSONEncoding.default, headers: headers)
         }
         else {
-            request =  Alamofire.request(self.defineFullUrl(url: url), method: requestType, parameters: parameters as! Parameters, headers: headers)
+            request =  Alamofire.request(self.defineFullUrl(url: url), method: requestType, parameters: (parameters as! Parameters), headers: headers)
         }
         
         return request

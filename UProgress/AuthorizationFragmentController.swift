@@ -28,7 +28,7 @@ class AuthorizationFragmentController: BaseViewController {
         
         emailErrors.isHidden = true
         passwordErrors.isHidden = true
-        
+        stackView.spacing = 30.0
         CommonFunctions.customizeTextField(field: self.emailField, placeholder: "Email", image: "email_icon")
         CommonFunctions.customizeTextField(field: self.passwordField, placeholder: "Email", image: "password_icon")
     }
@@ -37,6 +37,5 @@ class AuthorizationFragmentController: BaseViewController {
     @IBAction func signIn(_ sender: Any) {
         let dictionary = ["email": emailField.text!, "password": passwordField.text!]
         parentVC.signInRequest(parameters: dictionary as Dictionary<String, AnyObject> )
-        
     }
 }
