@@ -10,4 +10,5 @@ import Foundation
 
 protocol SignInProtocol {
     func signInRequest(parameters: Dictionary<String, AnyObject>)
+    func signUpRequest(parameters: Dictionary<String, AnyObject>)
 }

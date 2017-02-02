@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class RegistrationFragmentController:BaseViewController {
+class RegistrationFragmentController: BaseViewController, ErrorsHandling {
+    var parentVC: SignInProtocol!
+    
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -39,6 +41,10 @@ class RegistrationFragmentController:BaseViewController {
     }
     
     @IBAction func signUp(_ sender: Any) {
+        hideErrors()
+        let dictionary = ["email": emailField.text!, "password": passwordField.text!,
+                          "password_confirmation": passwordConfirmationField.text!, "nick": nickField.text!]
+        parentVC.signUpRequest(parameters: dictionary as Dictionary<String, AnyObject>)
     }
     
     private func hideErrors() {
@@ -47,5 +53,39 @@ class RegistrationFragmentController:BaseViewController {
         passwordConfirmationErrors.isHidden = true
         nickErrors.isHidden = true
         stackView.spacing = Constants.authDefaultSpacing
+    }
+    
+    internal func handleErrors(errors: ServerError) {
+        stackView.spacing = Constants.authErrorSpacing
+        
+        let errorsList = errors.params!
+        if let emailErrorsArr = errorsList["email"] {
+            let errorsArr = emailErrorsArr as! [String]
+            let emailError: String! = errorsArr.joined(separator: "\n")
+            self.emailErrors.text = emailError
+            self.emailErrors.isHidden = false
+            
+        }
+        
+        if errorsList["password"] != nil {
+            let errorsArr = errorsList["password"] as! [String]
+            let passwordError: String! = errorsArr.joined(separator: "\n")
+            self.passwordErrors.text = passwordError
+            self.passwordErrors.isHidden = false
+        }
+        
+        if errorsList["password_confirmation"] != nil {
+            let errorsArr = errorsList["password_confirmation"] as! [String]
+            let passwordConfError: String! = errorsArr.joined(separator: "\n")
+            self.passwordConfirmationErrors.text = passwordConfError
+            self.passwordConfirmationErrors.isHidden = false
+        }
+        
+        if errorsList["nick"] != nil {
+            let errorsArr = errorsList["nick"] as! [String]
+            let nickError: String! = errorsArr.joined(separator: "\n")
+            self.nickErrors.text = nickError
+            self.nickErrors.isHidden = false
+        }
     }
 }

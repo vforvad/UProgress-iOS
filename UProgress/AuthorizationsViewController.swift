@@ -18,6 +18,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     private var presenter: AuthorizationPresenter!
     private var signInView: ErrorsHandling!
+    private var signUpView: ErrorsHandling!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,10 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         presenter.signIn(parameters: parameters)
     }
     
+    internal func signUpRequest(parameters: Dictionary<String, AnyObject>) {
+        presenter.signUp(parameters: parameters)
+    }
+    
     internal func successSignIn(currentUser: User) {
     
     }
@@ -60,11 +65,21 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         self.signInView.handleErrors(errors: error)
     }
     
+    internal func failedSignUp(error: ServerError) {
+        self.signUpView.handleErrors(errors: error)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "auth_fragment" {
             let viewController = segue.destination as! AuthorizationFragmentController
             viewController.parentVC = self
             self.signInView = viewController
+        }
+        
+        if segue.identifier == "reg_fragment" {
+            let viewController = segue.destination as! RegistrationFragmentController
+            viewController.parentVC = self
+            self.signUpView = viewController
         }
         
     }

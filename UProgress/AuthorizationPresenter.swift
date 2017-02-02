@@ -28,4 +28,14 @@ class AuthorizationPresenter: AuthorizationPresenterProtocol {
             self.view.failedSignIn(error: error)
         })
     }
+    
+    internal func signUp(parameters: Dictionary<String, AnyObject>) {
+        model.signUp(signUpParameters: parameters,
+        success: { user in
+                        
+        },
+        failure: { error in
+            self.view.failedSignUp(error: error)
+        })
+    }
 }

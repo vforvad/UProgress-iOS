@@ -16,9 +16,23 @@ class AuthorizationManager: AuthorizationManagerProtocol {
     init() {
     }
     
-    internal func signUp(signUpParameters: Dictionary<String, AnyObject>, success: @escaping (String) -> Void, failure: @escaping (ServerError) -> Void) {
-    
-    
+    internal func signUp(signUpParameters: Dictionary<String, AnyObject>, success: @escaping (_ currentUser: User) -> Void, failure: @escaping (ServerError) -> Void) {
+        var params = signUpParameters
+        params.updateValue(self.deviseInormation(provider: "UProgress"), forKey: "authorization")
+        ApiRequest.sharedInstance.post(url: "/registrations", parameters: ["user": params] as NSDictionary).responseJSON { response in
+            
+            if response.response?.statusCode == 200 {
+                let dictionary = response.result.value as! Dictionary<String, AnyObject>
+                self.writeToken(token: dictionary["token"]! as! String)
+                self.currentUser(success: success, failure: failure)
+            }
+            else {
+                let error = response.result.value as! NSDictionary
+                let errorMessage = error.object(forKey: "errors") as! NSDictionary
+                failure(ServerError(status: response.response!.statusCode, parameters: errorMessage))
+            }
+        }
+
     }
     
     internal func signIn(signInParameters: Dictionary<String, AnyObject>, success: @escaping (User) -> Void, failure: @escaping (ServerError) -> Void) {
@@ -36,23 +50,6 @@ class AuthorizationManager: AuthorizationManagerProtocol {
                 let errorMessage = error.object(forKey: "errors") as! NSDictionary
                 failure(ServerError(status: response.response!.statusCode, parameters: errorMessage))
             }
-//            response.response.
-//            switch(response.result) {
-//            case .success(let value):
-//                if let error = response.result.error {
-//                    // got an error while deleting, need to handle it
-//                    print("error calling DELETE on /todos/1")
-//                    print(error)
-//                }
-//                let dictionary = value as! Dictionary<String, AnyObject>
-//                self.writeToken(token: dictionary["token"]! as! String)
-//                self.currentUser(success: success, failure: failure)
-//            case .failure(let errorValue):
-//                if let error = errorValue as? AFError {
-//                    
-//                }
-//                
-//            }
         }
     }
     
