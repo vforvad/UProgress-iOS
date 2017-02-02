@@ -13,9 +13,12 @@ class SidebarViewController: BaseViewController, NavigationViewProtocol {
 
     @IBOutlet weak var tableView: UITableView!
     private var navigationView: NavigationView!
+    let notificationName = Notification.Name("signedIn")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(SidebarViewController.signedIn(user:)), name: notificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: Selector(("signedOut:")), name: NSNotification.Name(rawValue: "signOut"), object: nil)
         navigationView = NavigationView(viewController: self, table: tableView)
         
     }
@@ -72,5 +75,20 @@ class SidebarViewController: BaseViewController, NavigationViewProtocol {
         else {
             sideMenuController?.embed(centerViewController: UINavigationController(rootViewController: viewController), cacheIdentifier: cacheIdentifier)
         }
+    }
+    
+    func signedIn(user: Notification) {
+        if let currentUserInfo = user.object {
+            AuthorizationService.sharedInstance.currentUser = currentUserInfo as! User
+            navigationView.setUser(user: AuthorizationService.sharedInstance.currentUser)
+        }
+    }
+    
+    func signedOut() {
+    
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: notificationName, object: nil);
     }
 }

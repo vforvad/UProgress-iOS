@@ -13,7 +13,7 @@ class User: Mappable {
     var id: Int!
     var firstName: String!
     var lastName: String!
-    var email: Int!
+    var email: String!
     
     required init?() {
         

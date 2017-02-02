@@ -22,7 +22,7 @@ class AuthorizationPresenter: AuthorizationPresenterProtocol {
     internal func signIn(parameters: Dictionary<String, AnyObject>) {
         model.signIn(signInParameters: parameters,
         success: { user in
-        
+            self.view.successSignIn(currentUser: user)
         },
         failure: { error in
             self.view.failedSignIn(error: error)
@@ -32,7 +32,7 @@ class AuthorizationPresenter: AuthorizationPresenterProtocol {
     internal func signUp(parameters: Dictionary<String, AnyObject>) {
         model.signUp(signUpParameters: parameters,
         success: { user in
-                        
+            self.view.successSignIn(currentUser: user)            
         },
         failure: { error in
             self.view.failedSignUp(error: error)
