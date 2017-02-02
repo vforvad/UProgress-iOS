@@ -17,6 +17,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     @IBOutlet weak var signUpContainer: UIView!
     
     private var presenter: AuthorizationPresenter!
+    private var signInView: ErrorsHandling!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,14 +56,15 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     }
     
-    internal func failedSignIn(error: NSError) {
-    
+    internal func failedSignIn(error: ServerError) {
+        self.signInView.handleErrors(errors: error)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "auth_fragment" {
-            var viewController = segue.destination as! AuthorizationFragmentController
+            let viewController = segue.destination as! AuthorizationFragmentController
             viewController.parentVC = self
+            self.signInView = viewController
         }
         
     }

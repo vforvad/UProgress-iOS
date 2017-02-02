@@ -18,6 +18,8 @@
 		641F25D31E42307B008BD119 /* AuthorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25D21E42307B008BD119 /* AuthorizationPresenter.swift */; };
 		641F25D51E42309D008BD119 /* AuthorizationPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25D41E42309D008BD119 /* AuthorizationPresenterProtocol.swift */; };
 		641F25D71E4232BE008BD119 /* SignInProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25D61E4232BE008BD119 /* SignInProtocol.swift */; };
+		6443CBED1E42BFE3008F15E5 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6443CBEC1E42BFE3008F15E5 /* ServerError.swift */; };
+		6443CBEF1E42C0DA008F15E5 /* ErrorsHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6443CBEE1E42C0DA008F15E5 /* ErrorsHandling.swift */; };
 		645F5A0E1E3E95D0005CCBD6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */; };
 		6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A61E3D04C200C46165 /* AppDelegate.swift */; };
 		6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
@@ -106,6 +108,8 @@
 		641F25D21E42307B008BD119 /* AuthorizationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenter.swift; sourceTree = "<group>"; };
 		641F25D41E42309D008BD119 /* AuthorizationPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenterProtocol.swift; sourceTree = "<group>"; };
 		641F25D61E4232BE008BD119 /* SignInProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInProtocol.swift; sourceTree = "<group>"; };
+		6443CBEC1E42BFE3008F15E5 /* ServerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		6443CBEE1E42C0DA008F15E5 /* ErrorsHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorsHandling.swift; sourceTree = "<group>"; };
 		645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		645F5A0F1E3E95D4005CCBD6 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/AlamofireObjectMapper/AlamofireObjectMapper.framework"; sourceTree = "<group>"; };
 		645F5A111E3E95DB005CCBD6 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
@@ -291,6 +295,7 @@
 				64F80D421E42058500E90004 /* AuthorizationStoryboard.storyboard */,
 				641F25D01E422FC3008BD119 /* AuthorizationViewProtocol.swift */,
 				641F25D61E4232BE008BD119 /* SignInProtocol.swift */,
+				6443CBEE1E42C0DA008F15E5 /* ErrorsHandling.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				64D9309E1E3E3C68007C7112 /* ApiRequest.swift */,
+				6443CBEC1E42BFE3008F15E5 /* ServerError.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -683,6 +689,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6483E4C51E3FA9790072B97C /* NavigationView.swift in Sources */,
+				6443CBEF1E42C0DA008F15E5 /* ErrorsHandling.swift in Sources */,
 				6483E4CB1E3FE0490072B97C /* CommonFunctions.swift in Sources */,
 				6483E4D51E409A1D0072B97C /* String.swift in Sources */,
 				641F25CF1E422CC3008BD119 /* AuthorizationManagerProtocol.swift in Sources */,
@@ -695,6 +702,7 @@
 				64D930AE1E3E4632007C7112 /* DirectionListPresenterImpl.swift in Sources */,
 				6483E4D91E40FED00072B97C /* AuthorizationsViewController.swift in Sources */,
 				6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */,
+				6443CBED1E42BFE3008F15E5 /* ServerError.swift in Sources */,
 				64D930AA1E3E452E007C7112 /* DirectionViewProtocol.swift in Sources */,
 				641F25D31E42307B008BD119 /* AuthorizationPresenter.swift in Sources */,
 				6483E4C71E3FA9E50072B97C /* NavigationViewProtocol.swift in Sources */,

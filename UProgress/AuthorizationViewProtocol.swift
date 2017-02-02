@@ -10,5 +10,5 @@ import Foundation
 
 protocol AuthorizationViewProtocol {
     func successSignIn(currentUser: User)
-    func failedSignIn(error: NSError)
+    func failedSignIn(error: ServerError)
 }

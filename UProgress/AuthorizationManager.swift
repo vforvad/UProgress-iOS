@@ -16,33 +16,53 @@ class AuthorizationManager: AuthorizationManagerProtocol {
     init() {
     }
     
-    internal func signUp(signUpParameters: Dictionary<String, AnyObject>, success: @escaping (String) -> Void, failure: @escaping (NSError) -> Void) {
+    internal func signUp(signUpParameters: Dictionary<String, AnyObject>, success: @escaping (String) -> Void, failure: @escaping (ServerError) -> Void) {
     
     
     }
     
-    internal func signIn(signInParameters: Dictionary<String, AnyObject>, success: @escaping (User) -> Void, failure: @escaping (NSError) -> Void) {
+    internal func signIn(signInParameters: Dictionary<String, AnyObject>, success: @escaping (User) -> Void, failure: @escaping (ServerError) -> Void) {
         var params = signInParameters
         params.updateValue(self.deviseInormation(provider: "UProgress"), forKey: "authorization")
         ApiRequest.sharedInstance.post(url: "/sessions", parameters: ["user": params] as NSDictionary).responseJSON { response in
-            switch(response.result) {
-            case .success(let value):
-                let dictionary = value as! Dictionary<String, AnyObject>
+            
+            if response.response?.statusCode == 200 {
+                let dictionary = response.result.value as! Dictionary<String, AnyObject>
                 self.writeToken(token: dictionary["token"]! as! String)
                 self.currentUser(success: success, failure: failure)
-            case .failure(let errorValue):
-                failure(errorValue as NSError)
             }
+            else {
+                let error = response.result.value as! NSDictionary
+                let errorMessage = error.object(forKey: "errors") as! NSDictionary
+                failure(ServerError(status: response.response!.statusCode, parameters: errorMessage))
+            }
+//            response.response.
+//            switch(response.result) {
+//            case .success(let value):
+//                if let error = response.result.error {
+//                    // got an error while deleting, need to handle it
+//                    print("error calling DELETE on /todos/1")
+//                    print(error)
+//                }
+//                let dictionary = value as! Dictionary<String, AnyObject>
+//                self.writeToken(token: dictionary["token"]! as! String)
+//                self.currentUser(success: success, failure: failure)
+//            case .failure(let errorValue):
+//                if let error = errorValue as? AFError {
+//                    
+//                }
+//                
+//            }
         }
     }
     
-    private func currentUser(success: @escaping (User) -> Void, failure: @escaping (NSError) -> Void) {
+    private func currentUser(success: @escaping (User) -> Void, failure: @escaping (ServerError) -> Void) {
         ApiRequest.sharedInstance.get(url: "/sessions/current", parameters: [:]).responseObject(keyPath: "current_user") { (response: DataResponse<User>) in
             switch(response.result) {
             case .success(let value):
                 success(value)
             case .failure(let errorValue):
-                failure(errorValue as NSError)
+                failure(errorValue as! ServerError)
             }
         }
     }

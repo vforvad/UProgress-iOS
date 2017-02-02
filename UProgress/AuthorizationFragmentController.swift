@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AuthorizationFragmentController: BaseViewController {
+class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
     var parentVC: SignInProtocol!
     
     @IBOutlet weak var stackView: UIStackView!
@@ -26,16 +26,44 @@ class AuthorizationFragmentController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailErrors.isHidden = true
-        passwordErrors.isHidden = true
-        stackView.spacing = 30.0
+        hideErrors()
         CommonFunctions.customizeTextField(field: self.emailField, placeholder: "Email", image: "email_icon")
         CommonFunctions.customizeTextField(field: self.passwordField, placeholder: "Email", image: "password_icon")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     
     @IBAction func signIn(_ sender: Any) {
+        hideErrors()
         let dictionary = ["email": emailField.text!, "password": passwordField.text!]
         parentVC.signInRequest(parameters: dictionary as Dictionary<String, AnyObject> )
+    }
+    
+    func handleErrors(errors: ServerError) {
+        stackView.spacing = 5.0
+        let errorsList = errors.params!
+        if let emailErrorsArr = errorsList["email"] {
+            let errorsArr = emailErrorsArr as! [String]
+            let emailError: String! = errorsArr.joined(separator: "\n")
+            self.emailErrors.text = emailError
+            self.emailErrors.isHidden = false
+
+        }
+        
+        if errorsList["password"] != nil {
+            let errorsArr = errorsList["password"] as! [String]
+            let passwordError: String! = errorsArr.joined(separator: "\n")
+            self.passwordErrors.text = passwordError
+            self.passwordErrors.isHidden = false
+        }
+    }
+    
+    private func hideErrors() {
+        emailErrors.isHidden = true
+        passwordErrors.isHidden = true
+        stackView.spacing = 30.0
     }
 }

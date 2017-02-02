@@ -9,6 +9,5 @@
 import Foundation
 
 protocol SignInProtocol {
-
     func signInRequest(parameters: Dictionary<String, AnyObject>)
 }
