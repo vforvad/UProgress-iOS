@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SidebarViewController: BaseViewController, NavigationViewProtocol {
+class SidebarViewController: UIViewController, NavigationViewProtocol {
 
     @IBOutlet weak var tableView: UITableView!
     private var navigationView: NavigationView!
@@ -17,10 +17,17 @@ class SidebarViewController: BaseViewController, NavigationViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
         NotificationCenter.default.addObserver(self, selector: #selector(SidebarViewController.signedIn(user:)), name: notificationName, object: nil)
         NotificationCenter.default.addObserver(self, selector: Selector(("signedOut:")), name: NSNotification.Name(rawValue: "signOut"), object: nil)
         navigationView = NavigationView(viewController: self, table: tableView)
-        
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setNavBarToTheView()
     }
     
     internal func onItemSelect(segueName: String!) {
@@ -52,21 +59,21 @@ class SidebarViewController: BaseViewController, NavigationViewProtocol {
     
     private func segueForNavigationController(identifier: String!) {
         var viewController: UIViewController!
-        var cacheIdentifier = identifier
+        let cacheIdentifier = identifier
         
         switch identifier {
         case "directions":
-            viewController = super.fromStoryboard(identifier: "DirectionsListViewController")
+            viewController = CommonFunctions.fromStoryboard(identifier: "DirectionsListViewController")
         case "sign_in":
-            var authViewController = super.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
+            let authViewController = CommonFunctions.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
             authViewController.signIn = true
-            viewController = authViewController as! UIViewController
+            viewController = authViewController as UIViewController
         case "sign_up":
-            var authViewController = super.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
+            let authViewController = CommonFunctions.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
             authViewController.signIn = false
-            viewController = authViewController as! UIViewController
+            viewController = authViewController as UIViewController
         default:
-            viewController = super.fromStoryboard(identifier: "DirectionsListViewController")
+            viewController = CommonFunctions.fromStoryboard(identifier: "DirectionsListViewController")
         }
         
         if let controller = sideMenuController?.viewController(forCacheIdentifier: cacheIdentifier!) {
@@ -90,5 +97,11 @@ class SidebarViewController: BaseViewController, NavigationViewProtocol {
     
     deinit {
         NotificationCenter.default.removeObserver(self, name: notificationName, object: nil);
+    }
+    
+    func setNavBarToTheView() {
+        let height: CGFloat = 150 //whatever height you want
+        let bounds = self.navigationController!.navigationBar.bounds
+        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height + height)
     }
 }

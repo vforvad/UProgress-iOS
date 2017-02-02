@@ -49,6 +49,16 @@ struct CommonFunctions {
         
         return newImage!
     }
+    
+    static func fromStoryboard(name: String!, identifier: String! ) -> UIViewController {
+        return UIStoryboard(name: name, bundle: nil).instantiateViewController(withIdentifier: identifier)
+    }
+
+    
+    static func fromStoryboard(identifier: String!) -> UIViewController {
+        return self.fromStoryboard(name: "iPhone", identifier: identifier)
+    }
+    
     struct DeviceData {
         static func isIPad() -> Bool {
             return  UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad

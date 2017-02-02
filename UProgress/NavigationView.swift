@@ -30,6 +30,7 @@ class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
         self.tableView = table
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        tableView.separatorStyle = .none
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

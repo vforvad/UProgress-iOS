@@ -26,13 +26,4 @@ class BaseViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    public func fromStoryboard(identifier: String!) -> UIViewController {
-        return fromStoryboard(name: "iPhone", identifier: identifier)
-    }
-    
-    public func fromStoryboard(name: String!, identifier: String! ) -> UIViewController {
-        return UIStoryboard(name: name, bundle: nil).instantiateViewController(withIdentifier: identifier)
-    }
-
 }
