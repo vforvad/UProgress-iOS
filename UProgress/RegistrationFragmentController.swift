@@ -31,7 +31,7 @@ class RegistrationFragmentController:BaseViewController {
         passwordErrors.isHidden = true
         passwordConfirmationErrors.isHidden = true
         nickErrors.isHidden = true
-        
+        hideErrors()
         CommonFunctions.customizeTextField(field: self.emailField, placeholder: "Email", image: "email_icon")
         CommonFunctions.customizeTextField(field: self.passwordField, placeholder: "Email", image: "password_icon")
         CommonFunctions.customizeTextField(field: self.passwordConfirmationField, placeholder: "Email", image: "password_icon")
@@ -39,5 +39,13 @@ class RegistrationFragmentController:BaseViewController {
     }
     
     @IBAction func signUp(_ sender: Any) {
+    }
+    
+    private func hideErrors() {
+        emailErrors.isHidden = true
+        passwordErrors.isHidden = true
+        passwordConfirmationErrors.isHidden = true
+        nickErrors.isHidden = true
+        stackView.spacing = Constants.authDefaultSpacing
     }
 }

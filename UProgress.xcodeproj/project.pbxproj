@@ -20,6 +20,7 @@
 		641F25D71E4232BE008BD119 /* SignInProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25D61E4232BE008BD119 /* SignInProtocol.swift */; };
 		6443CBED1E42BFE3008F15E5 /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6443CBEC1E42BFE3008F15E5 /* ServerError.swift */; };
 		6443CBEF1E42C0DA008F15E5 /* ErrorsHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6443CBEE1E42C0DA008F15E5 /* ErrorsHandling.swift */; };
+		6443CBF11E433E9E008F15E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6443CBF01E433E9E008F15E5 /* Constants.swift */; };
 		645F5A0E1E3E95D0005CCBD6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */; };
 		6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A61E3D04C200C46165 /* AppDelegate.swift */; };
 		6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
@@ -110,6 +111,7 @@
 		641F25D61E4232BE008BD119 /* SignInProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInProtocol.swift; sourceTree = "<group>"; };
 		6443CBEC1E42BFE3008F15E5 /* ServerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 		6443CBEE1E42C0DA008F15E5 /* ErrorsHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorsHandling.swift; sourceTree = "<group>"; };
+		6443CBF01E433E9E008F15E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		645F5A0F1E3E95D4005CCBD6 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/AlamofireObjectMapper/AlamofireObjectMapper.framework"; sourceTree = "<group>"; };
 		645F5A111E3E95DB005CCBD6 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */,
 				6483E4CA1E3FE0490072B97C /* CommonFunctions.swift */,
 				6483E4D61E40BC340072B97C /* Bridge-Header.h */,
+				6443CBF01E433E9E008F15E5 /* Constants.swift */,
 			);
 			name = common;
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6483E4C51E3FA9790072B97C /* NavigationView.swift in Sources */,
+				6443CBF11E433E9E008F15E5 /* Constants.swift in Sources */,
 				6443CBEF1E42C0DA008F15E5 /* ErrorsHandling.swift in Sources */,
 				6483E4CB1E3FE0490072B97C /* CommonFunctions.swift in Sources */,
 				6483E4D51E409A1D0072B97C /* String.swift in Sources */,

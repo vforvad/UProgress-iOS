@@ -43,7 +43,7 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
     }
     
     func handleErrors(errors: ServerError) {
-        stackView.spacing = 5.0
+        stackView.spacing = Constants.authErrorSpacing
         let errorsList = errors.params!
         if let emailErrorsArr = errorsList["email"] {
             let errorsArr = emailErrorsArr as! [String]
@@ -64,6 +64,6 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
     private func hideErrors() {
         emailErrors.isHidden = true
         passwordErrors.isHidden = true
-        stackView.spacing = 30.0
+        stackView.spacing = Constants.authDefaultSpacing
     }
 }
