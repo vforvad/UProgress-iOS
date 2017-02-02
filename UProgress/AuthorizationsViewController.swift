@@ -24,6 +24,12 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.backgroundColor = UIColor("#f6f7f8")
+        self.segmentControl.setTitle(NSLocalizedString("segment_authorization", comment: ""), forSegmentAt: 0)
+        self.segmentControl.setTitle(NSLocalizedString("segment_registration", comment: ""), forSegmentAt: 1)
+        setMVP()
+    }
+    
+    private func setMVP() {
         let model = AuthorizationManager()
         presenter = AuthorizationPresenter(model: model, view: self)
         updateSegment(sender: self.segmentControl, index: (signIn! ? 0 : 1))
