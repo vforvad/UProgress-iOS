@@ -13,9 +13,7 @@ struct CommonFunctions {
     static func customizeTextField(field: UITextField!, placeholder: String!, image: String!) {
         field.backgroundColor = UIColor.clear
 //        let str = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName:Constants.Colors.authViewPlaceholder])
-//        field.layer.masksToBounds = true
-//        field.tintColor = UIColor.white
-//        field.textColor = UIColor.white
+        field.layer.masksToBounds = true
 //        field.attributedPlaceholder = place
         field.leftViewMode = UITextFieldViewMode.always
         var image = UIImage(named: image)

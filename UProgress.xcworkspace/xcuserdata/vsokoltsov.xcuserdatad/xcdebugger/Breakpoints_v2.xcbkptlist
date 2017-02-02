@@ -645,11 +645,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/CommonFunctions.swift"
-            timestampString = "507727636.313667"
+            timestampString = "507761078.96435"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "isIphone()"
             landmarkType = "7">
          </BreakpointContent>
@@ -917,11 +917,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/AuthorizationsViewController.swift"
-            timestampString = "507724236.495169"
+            timestampString = "507760466.807683"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "toggleController(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -965,11 +965,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/AuthorizationsViewController.swift"
-            timestampString = "507724236.495169"
+            timestampString = "507761795.25556"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -981,11 +981,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/AuthorizationsViewController.swift"
-            timestampString = "507724236.495169"
+            timestampString = "507760466.807683"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "updateSegment(sender:index:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1013,11 +1013,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/AuthorizationsViewController.swift"
-            timestampString = "507724236.495169"
+            timestampString = "507761795.25556"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1061,7 +1061,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/AuthorizationFragmentController.swift"
-            timestampString = "507724236.495169"
+            timestampString = "507760682.276144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -1077,11 +1077,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/CommonFunctions.swift"
-            timestampString = "507652068.002181"
+            timestampString = "507761078.96435"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "customizeTextField(field:placeholder:image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1125,11 +1125,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/AuthorizationsViewController.swift"
-            timestampString = "507725666.771389"
+            timestampString = "507760466.807683"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "successSignIn(currentUser:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1141,11 +1141,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/AuthorizationsViewController.swift"
-            timestampString = "507725666.771389"
+            timestampString = "507760466.807683"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "failedSignIn(error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1157,11 +1157,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/AuthorizationsViewController.swift"
-            timestampString = "507725666.771389"
+            timestampString = "507760466.807683"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1173,11 +1173,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/AuthorizationsViewController.swift"
-            timestampString = "507724236.495169"
+            timestampString = "507760466.807683"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "signInRequest(parameters:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1269,7 +1269,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/AuthorizationFragmentController.swift"
-            timestampString = "507724236.495169"
+            timestampString = "507760682.276144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
@@ -1349,7 +1349,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/AuthorizationFragmentController.swift"
-            timestampString = "507724236.495169"
+            timestampString = "507760682.276144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -1435,6 +1435,22 @@
             startingLineNumber = "72"
             endingLineNumber = "72"
             landmarkName = "segueForNavigationController(identifier:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/BaseViewController.swift"
+            timestampString = "507761753.595965"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

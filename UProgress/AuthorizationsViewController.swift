@@ -15,6 +15,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var signInContainer: UIView!
     @IBOutlet weak var signUpContainer: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     private var presenter: AuthorizationPresenter!
     private var signInView: ErrorsHandling!
@@ -22,7 +23,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.addChildViewController(<#T##childController: UIViewController##UIViewController#>)
+        scrollView.backgroundColor = UIColor("#f6f7f8")
         let model = AuthorizationManager()
         presenter = AuthorizationPresenter(model: model, view: self)
         updateSegment(sender: self.segmentControl, index: (signIn! ? 0 : 1))
@@ -30,6 +31,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.barTintColor = UIColor("#f6f7f8")
     }
     
     @IBAction func toggleController(_ sender: UISegmentedControl) {
