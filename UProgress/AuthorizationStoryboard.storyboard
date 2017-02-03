@@ -45,14 +45,20 @@
                                                     <action selector="toggleController:" destination="YaS-JC-nXI" eventType="valueChanged" id="Aci-Rp-K2O"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80G-X1-Edc">
+                                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80G-X1-Edc">
                                                 <rect key="frame" x="30" y="253" width="315" height="297"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="297" id="k16-6T-gXL"/>
+                                                </constraints>
                                                 <connections>
                                                     <segue destination="nHq-VX-msN" kind="embed" identifier="auth_fragment" id="O2N-DT-gsg"/>
                                                 </connections>
                                             </containerView>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiF-bd-3XQ">
-                                                <rect key="frame" x="30" y="253" width="315" height="297"/>
+                                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiF-bd-3XQ">
+                                                <rect key="frame" x="30" y="253" width="315" height="400"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="Ozd-eO-ETV"/>
+                                                </constraints>
                                                 <connections>
                                                     <segue destination="05v-Qu-sVH" kind="embed" identifier="reg_fragment" id="Una-lK-98g"/>
                                                 </connections>
@@ -60,23 +66,21 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="UiF-bd-3XQ" secondAttribute="bottom" constant="117" id="1tf-YG-BJz"/>
-                                            <constraint firstItem="80G-X1-Edc" firstAttribute="top" secondItem="IhS-RI-hNM" secondAttribute="bottom" constant="30" id="4Sp-nY-Ad4"/>
-                                            <constraint firstItem="80G-X1-Edc" firstAttribute="leading" secondItem="U5X-EW-8oj" secondAttribute="leading" constant="30" id="7ik-sb-6mq"/>
+                                            <constraint firstItem="80G-X1-Edc" firstAttribute="top" secondItem="IhS-RI-hNM" secondAttribute="bottom" constant="30" id="1FT-eG-WWz"/>
                                             <constraint firstItem="hDy-5r-tx2" firstAttribute="centerX" secondItem="U5X-EW-8oj" secondAttribute="centerX" id="CN5-qZ-HkX"/>
+                                            <constraint firstItem="80G-X1-Edc" firstAttribute="leading" secondItem="U5X-EW-8oj" secondAttribute="leading" constant="30" id="FOo-XD-Ws3"/>
                                             <constraint firstItem="hDy-5r-tx2" firstAttribute="top" secondItem="U5X-EW-8oj" secondAttribute="top" constant="10" id="Ghp-5R-f7Y"/>
-                                            <constraint firstItem="UiF-bd-3XQ" firstAttribute="top" secondItem="IhS-RI-hNM" secondAttribute="bottom" constant="30" id="Iq7-0c-3aa"/>
-                                            <constraint firstAttribute="trailing" secondItem="UiF-bd-3XQ" secondAttribute="trailing" constant="30" id="M1Z-wN-yFz"/>
-                                            <constraint firstItem="80G-X1-Edc" firstAttribute="centerX" secondItem="U5X-EW-8oj" secondAttribute="centerX" id="P3E-ac-S5b"/>
-                                            <constraint firstItem="UiF-bd-3XQ" firstAttribute="bottom" secondItem="80G-X1-Edc" secondAttribute="bottom" id="VU5-E6-sNd"/>
-                                            <constraint firstAttribute="trailing" secondItem="80G-X1-Edc" secondAttribute="trailing" constant="30" id="ZDg-lh-GXG"/>
+                                            <constraint firstItem="UiF-bd-3XQ" firstAttribute="top" secondItem="IhS-RI-hNM" secondAttribute="bottom" constant="30" id="Mtg-Mo-uzI"/>
                                             <constraint firstItem="IhS-RI-hNM" firstAttribute="top" secondItem="hDy-5r-tx2" secondAttribute="bottom" constant="25" id="ZjQ-FZ-3SN"/>
-                                            <constraint firstItem="UiF-bd-3XQ" firstAttribute="leading" secondItem="U5X-EW-8oj" secondAttribute="leading" constant="30" id="hXp-dC-bQ0"/>
+                                            <constraint firstItem="UiF-bd-3XQ" firstAttribute="leading" secondItem="U5X-EW-8oj" secondAttribute="leading" constant="30" id="fE3-d3-Dv6"/>
+                                            <constraint firstAttribute="trailing" secondItem="UiF-bd-3XQ" secondAttribute="trailing" constant="30" id="gjt-rU-5zv"/>
+                                            <constraint firstAttribute="trailing" secondItem="80G-X1-Edc" secondAttribute="trailing" constant="30" id="wpi-f0-o1u"/>
                                             <constraint firstItem="IhS-RI-hNM" firstAttribute="centerX" secondItem="U5X-EW-8oj" secondAttribute="centerX" id="z5C-fq-DAL"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="0nk-gc-Nfo"/>
                                     <constraint firstAttribute="bottom" secondItem="U5X-EW-8oj" secondAttribute="bottom" id="KV9-Bc-5GP"/>
                                     <constraint firstItem="U5X-EW-8oj" firstAttribute="width" secondItem="lQD-bE-z0z" secondAttribute="width" id="T3q-au-CIp"/>
                                     <constraint firstItem="U5X-EW-8oj" firstAttribute="height" secondItem="lQD-bE-z0z" secondAttribute="height" id="VKU-UQ-S0c"/>
@@ -97,6 +101,7 @@
                     <navigationItem key="navigationItem" id="gYq-a7-UcS"/>
                     <connections>
                         <outlet property="scrollView" destination="lQD-bE-z0z" id="dQJ-3i-8ZY"/>
+                        <outlet property="scrollViewHeightConstraint" destination="0nk-gc-Nfo" id="4NT-c5-PU1"/>
                         <outlet property="segmentControl" destination="IhS-RI-hNM" id="DYg-it-tuC"/>
                         <outlet property="signInContainer" destination="80G-X1-Edc" id="C0e-Dg-Mgg"/>
                         <outlet property="signUpContainer" destination="UiF-bd-3XQ" id="7dg-y4-2Rl"/>
@@ -201,7 +206,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Lca-M2-Haa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LyQ-FY-zp2">
-                        <rect key="frame" x="0.0" y="0.0" width="315" height="297"/>
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4hv-wL-dmg">

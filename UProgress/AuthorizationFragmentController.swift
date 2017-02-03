@@ -26,6 +26,8 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideErrors()
+        emailField.isUserInteractionEnabled = true
+        passwordField.isUserInteractionEnabled = true
         CommonFunctions.customizeTextField(field: self.emailField, placeholder: "Email", image: "email_icon")
         CommonFunctions.customizeTextField(field: self.passwordField, placeholder: "Email", image: "password_icon")
     }

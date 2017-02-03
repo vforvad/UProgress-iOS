@@ -16,6 +16,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     @IBOutlet weak var signInContainer: UIView!
     @IBOutlet weak var signUpContainer: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollViewHeightConstraint: NSLayoutConstraint!
     
     private var presenter: AuthorizationPresenter!
     private var signInView: ErrorsHandling!
@@ -23,11 +24,45 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.frame.size = CGSize(width: 320, height: 100000)
         scrollView.backgroundColor = UIColor("#f6f7f8")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        
         self.segmentControl.setTitle(NSLocalizedString("segment_authorization", comment: ""), forSegmentAt: 0)
         self.segmentControl.setTitle(NSLocalizedString("segment_registration", comment: ""), forSegmentAt: 1)
         setMVP()
+    }
+    
+    func rotated() {
+        var increasingHeight: Int!
+        
+        if UIDevice.current.orientation.isLandscape {
+            if (!signInContainer.isHidden) {
+                increasingHeight = 2 * 40 + 50
+            }
+            else {
+                increasingHeight = 4 * 40 + 50
+            }
+            self.scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: scrollView.frame.size.height +  CGFloat(increasingHeight))
+        }
+
+    }
+    
+    func keyboardDidShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
+            self.scrollView.contentInset = contentInsets
+            self.scrollView.scrollIndicatorInsets = contentInsets
+        }
+    }
+    
+    func keyboardWillBeHidden(notification: NSNotification) {
+        let contentInsets = UIEdgeInsets.zero
+        self.scrollView.contentInset = contentInsets
+        self.scrollView.scrollIndicatorInsets = contentInsets
     }
     
     private func setMVP() {
@@ -92,5 +127,9 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
             self.signUpView = viewController
         }
         
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self);
     }
 }
