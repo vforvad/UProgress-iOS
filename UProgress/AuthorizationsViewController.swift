@@ -53,7 +53,8 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     func keyboardDidShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
+            let realSize = UIDevice.current.orientation.isPortrait ? keyboardSize.height / 2 : keyboardSize.height
+            let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: realSize, right: 0.0)
             self.scrollView.contentInset = contentInsets
             self.scrollView.scrollIndicatorInsets = contentInsets
         }
