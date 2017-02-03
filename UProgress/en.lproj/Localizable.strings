@@ -15,5 +15,5 @@
 "auth_password" = "Password";
 "auth_password_confirmation" = "Password confirmation";
 "auth_nick" = "Nick";
-"auth_sign_in" = "Sign in!"
-"auth_sign_up" = "Sign up!"
+"auth_sign_in" = "Sign in!";
+"auth_sign_up" = "Sign up!";

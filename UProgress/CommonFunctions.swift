@@ -14,7 +14,7 @@ struct CommonFunctions {
         field.backgroundColor = UIColor.clear
 //        let str = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName:Constants.Colors.authViewPlaceholder])
         field.layer.masksToBounds = true
-//        field.attributedPlaceholder = place
+        field.placeholder = placeholder
         field.leftViewMode = UITextFieldViewMode.always
         var image = UIImage(named: image)
         var resizedImage = self.resizeImage(image: image!, targetSize: CGSize(width: 30.0, height: 30.0))

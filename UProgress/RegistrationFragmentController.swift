@@ -34,10 +34,10 @@ class RegistrationFragmentController: BaseViewController, ErrorsHandling {
         passwordConfirmationErrors.isHidden = true
         nickErrors.isHidden = true
         hideErrors()
-        CommonFunctions.customizeTextField(field: self.emailField, placeholder: "Email", image: "email_icon")
-        CommonFunctions.customizeTextField(field: self.passwordField, placeholder: "Email", image: "password_icon")
-        CommonFunctions.customizeTextField(field: self.passwordConfirmationField, placeholder: "Email", image: "password_icon")
-        CommonFunctions.customizeTextField(field: self.nickField, placeholder: "Email", image: "user_nick")
+        CommonFunctions.customizeTextField(field: self.emailField, placeholder: NSLocalizedString("auth_email", comment: ""), image: "email_icon")
+        CommonFunctions.customizeTextField(field: self.passwordField, placeholder: NSLocalizedString("auth_password", comment: ""), image: "password_icon")
+        CommonFunctions.customizeTextField(field: self.passwordConfirmationField, placeholder: NSLocalizedString("auth_password_confirmation", comment: ""), image: "password_icon")
+        CommonFunctions.customizeTextField(field: self.nickField, placeholder: NSLocalizedString("auth_nick", comment: ""), image: "user_nick")
     }
     
     @IBAction func signUp(_ sender: Any) {

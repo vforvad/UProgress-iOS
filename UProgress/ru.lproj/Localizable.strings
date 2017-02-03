@@ -12,5 +12,5 @@
 "auth_password" = "Пароль";
 "auth_password_confirmation" = "Подтверждение пароля";
 "auth_nick" = "Имя пользователя";
-"auth_sign_in" = "Авторизация"
-"auth_sign_up" = "Регистрация"
+"auth_sign_in" = "Авторизация";
+"auth_sign_up" = "Регистрация";

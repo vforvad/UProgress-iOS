@@ -28,8 +28,8 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
         hideErrors()
         emailField.isUserInteractionEnabled = true
         passwordField.isUserInteractionEnabled = true
-        CommonFunctions.customizeTextField(field: self.emailField, placeholder: "Email", image: "email_icon")
-        CommonFunctions.customizeTextField(field: self.passwordField, placeholder: "Email", image: "password_icon")
+        CommonFunctions.customizeTextField(field: self.emailField, placeholder: NSLocalizedString("auth_email", comment: ""), image: "email_icon")
+        CommonFunctions.customizeTextField(field: self.passwordField, placeholder: NSLocalizedString("auth_password", comment: ""), image: "password_icon")
     }
     
     override func viewWillAppear(_ animated: Bool) {
