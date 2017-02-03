@@ -118,6 +118,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "auth_fragment" {
             let viewController = segue.destination as! AuthorizationFragmentController
+            viewController.view.translatesAutoresizingMaskIntoConstraints = false;
             viewController.parentVC = self
             self.signInView = viewController
         }
@@ -127,7 +128,6 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
             viewController.parentVC = self
             self.signUpView = viewController
         }
-        
     }
     
     deinit {

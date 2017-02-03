@@ -26,6 +26,8 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideErrors()
+        self.view.backgroundColor = UIColor.white
+        self.view.layer.cornerRadius = 10.0
         emailField.isUserInteractionEnabled = true
         passwordField.isUserInteractionEnabled = true
         CommonFunctions.customizeTextField(field: self.emailField, placeholder: NSLocalizedString("auth_email", comment: ""), image: "email_icon")
@@ -39,11 +41,13 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
     
     @IBAction func signIn(_ sender: Any) {
         hideErrors()
+        signInButton.loadingIndicator(show: true)
         let dictionary = ["email": emailField.text!, "password": passwordField.text!]
         parentVC.signInRequest(parameters: dictionary as Dictionary<String, AnyObject> )
     }
     
     func handleErrors(errors: ServerError) {
+        signInButton.loadingIndicator(show: false)
         stackView.spacing = Constants.authErrorSpacing
         let errorsList = errors.params!
         if let emailErrorsArr = errorsList["email"] {
