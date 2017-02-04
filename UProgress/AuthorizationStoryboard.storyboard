@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cu0-DK-6JM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,24 +19,28 @@
                         <viewControllerLayoutGuide type="bottom" id="3GC-mN-VKN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Px8-x8-1mb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQD-bE-z0z">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5X-EW-8oj">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5X-EW-8oj">
+                                        <rect key="frame" x="0.0" y="0.0" width="667" height="667"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_name" translatesAutoresizingMaskIntoConstraints="NO" id="hDy-5r-tx2">
-                                                <rect key="frame" x="107" y="10" width="160" height="160"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo_name" translatesAutoresizingMaskIntoConstraints="NO" id="hDy-5r-tx2">
+                                                <rect key="frame" x="107" y="0.0" width="160" height="160"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="160" id="XYp-zC-CZJ"/>
-                                                    <constraint firstAttribute="width" constant="160" id="jqm-kI-UOV"/>
+                                                    <constraint firstAttribute="width" constant="160" id="ZG3-eH-8B7">
+                                                        <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="160" id="ekW-ni-AzO">
+                                                        <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                                    </constraint>
                                                 </constraints>
                                             </imageView>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IhS-RI-hNM">
-                                                <rect key="frame" x="127" y="195" width="121" height="29"/>
+                                                <rect key="frame" x="273" y="135" width="121" height="29"/>
                                                 <segments>
                                                     <segment title="First"/>
                                                     <segment title="Second"/>
@@ -55,7 +59,7 @@
                                                 </connections>
                                             </containerView>
                                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiF-bd-3XQ">
-                                                <rect key="frame" x="30" y="253" width="315" height="400"/>
+                                                <rect key="frame" x="30" y="193" width="607" height="460"/>
                                                 <connections>
                                                     <segue destination="05v-Qu-sVH" kind="embed" identifier="reg_fragment" id="Una-lK-98g"/>
                                                 </connections>
@@ -204,7 +208,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Lca-M2-Haa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LyQ-FY-zp2">
-                        <rect key="frame" x="0.0" y="0.0" width="315" height="400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="607" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4hv-wL-dmg">
