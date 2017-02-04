@@ -24,7 +24,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.backgroundColor = UIColor("#f6f7f8")
+        view.backgroundColor = UIColor("#f6f7f8")
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
         
