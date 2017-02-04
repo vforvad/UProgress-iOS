@@ -28,6 +28,8 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
         hideErrors()
         self.view.backgroundColor = UIColor.white
         self.view.layer.cornerRadius = 10.0
+        signInButton.setTitle(NSLocalizedString("auth_sign_in", comment: ""), for: UIControlState.normal)
+        signInButton.layer.cornerRadius = 5.0
         emailField.isUserInteractionEnabled = true
         passwordField.isUserInteractionEnabled = true
         CommonFunctions.customizeTextField(field: self.emailField, placeholder: NSLocalizedString("auth_email", comment: ""), image: "email_icon")
