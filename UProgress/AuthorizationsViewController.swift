@@ -104,8 +104,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     }
     
     internal func successSignIn(currentUser: User) {
-        let notificationName = Notification.Name("signedIn")
-        NotificationCenter.default.post(name: notificationName, object: currentUser)
+        
     }
     
     internal func failedSignIn(error: ServerError) {

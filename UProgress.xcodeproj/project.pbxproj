@@ -26,6 +26,9 @@
 		645F5A0E1E3E95D0005CCBD6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */; };
 		6464C5A71E44CBAA00C79975 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6464C5A61E44CBAA00C79975 /* Button.swift */; };
 		646861881E467CF700583945 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861871E467CF700583945 /* LaunchViewController.swift */; };
+		6468618A1E46826700583945 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861891E46826700583945 /* LaunchPresenter.swift */; };
+		6468618C1E46827900583945 /* LaunchPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468618B1E46827900583945 /* LaunchPresenterProtocol.swift */; };
+		6468618E1E46828D00583945 /* LaunchViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468618D1E46828D00583945 /* LaunchViewProtocol.swift */; };
 		6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A61E3D04C200C46165 /* AppDelegate.swift */; };
 		6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
 		6474B1AC1E3D04C200C46165 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AA1E3D04C200C46165 /* iPhone.storyboard */; };
@@ -125,6 +128,9 @@
 		645F5A131E3E9F78005CCBD6 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "Pods/../build/Debug-iphoneos/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
 		6464C5A61E44CBAA00C79975 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		646861871E467CF700583945 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		646861891E46826700583945 /* LaunchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
+		6468618B1E46827900583945 /* LaunchPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchPresenterProtocol.swift; sourceTree = "<group>"; };
+		6468618D1E46828D00583945 /* LaunchViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewProtocol.swift; sourceTree = "<group>"; };
 		6474B1A31E3D04C200C46165 /* UProgress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UProgress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6474B1A61E3D04C200C46165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsListViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +236,9 @@
 			isa = PBXGroup;
 			children = (
 				646861871E467CF700583945 /* LaunchViewController.swift */,
+				646861891E46826700583945 /* LaunchPresenter.swift */,
+				6468618B1E46827900583945 /* LaunchPresenterProtocol.swift */,
+				6468618D1E46828D00583945 /* LaunchViewProtocol.swift */,
 			);
 			name = Launch;
 			sourceTree = "<group>";
@@ -723,6 +732,7 @@
 				641F25CF1E422CC3008BD119 /* AuthorizationManagerProtocol.swift in Sources */,
 				6464C5A71E44CBAA00C79975 /* Button.swift in Sources */,
 				6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */,
+				6468618A1E46826700583945 /* LaunchPresenter.swift in Sources */,
 				641F25D51E42309D008BD119 /* AuthorizationPresenterProtocol.swift in Sources */,
 				646861881E467CF700583945 /* LaunchViewController.swift in Sources */,
 				64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */,
@@ -733,6 +743,7 @@
 				6483E4D91E40FED00072B97C /* AuthorizationsViewController.swift in Sources */,
 				6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */,
 				6443CBED1E42BFE3008F15E5 /* ServerError.swift in Sources */,
+				6468618E1E46828D00583945 /* LaunchViewProtocol.swift in Sources */,
 				64D930AA1E3E452E007C7112 /* DirectionViewProtocol.swift in Sources */,
 				641F25D31E42307B008BD119 /* AuthorizationPresenter.swift in Sources */,
 				6483E4C71E3FA9E50072B97C /* NavigationViewProtocol.swift in Sources */,
@@ -750,6 +761,7 @@
 				64F80D3B1E41FCA500E90004 /* AuthorizationFragmentController.swift in Sources */,
 				641F25D11E422FC3008BD119 /* AuthorizationViewProtocol.swift in Sources */,
 				6483E4C91E3FAAF90072B97C /* SidebarViewController.swift in Sources */,
+				6468618C1E46827900583945 /* LaunchPresenterProtocol.swift in Sources */,
 				641F25C91E422621008BD119 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

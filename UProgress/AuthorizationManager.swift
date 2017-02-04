@@ -53,13 +53,18 @@ class AuthorizationManager: AuthorizationManagerProtocol {
         }
     }
     
-    private func currentUser(success: @escaping (User) -> Void, failure: @escaping (ServerError) -> Void) {
+    func currentUser(success: @escaping (User) -> Void, failure: @escaping (ServerError) -> Void) {
         ApiRequest.sharedInstance.get(url: "/sessions/current", parameters: [:]).responseObject(keyPath: "current_user") { (response: DataResponse<User>) in
-            switch(response.result) {
-            case .success(let value):
-                success(value)
-            case .failure(let errorValue):
-                failure(errorValue as! ServerError)
+            if response.response?.statusCode == 200 {
+                let user = response.result.value! as User
+                AuthorizationService.sharedInstance.currentUser = user
+                let notificationName = Notification.Name("signedIn")
+                NotificationCenter.default.post(name: notificationName, object: user)
+                success(user)
+            } else {
+                let error = response.result.value as! NSDictionary
+                let errorMessage = error.object(forKey: "errors") as! NSDictionary
+                failure(ServerError(status: response.response!.statusCode, parameters: errorMessage))
             }
         }
     }
