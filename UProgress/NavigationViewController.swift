@@ -11,6 +11,8 @@ import UIKit
 import SideMenuController
 
 class NavigationViewController: SideMenuController {
+    static var isMainControllerVisible = true
+    
     required init?(coder aDecoder: NSCoder) {
         SideMenuController.preferences.drawing.menuButtonImage = UIImage(named: "menu")
         SideMenuController.preferences.drawing.sidePanelPosition = .overCenterPanelLeft
@@ -24,5 +26,13 @@ class NavigationViewController: SideMenuController {
         super.viewDidLoad()
         performSegue(withIdentifier: "embedInitialCenterController", sender: nil)
         performSegue(withIdentifier: "embedSideController", sender: nil)
+    }
+    
+    open override func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if NavigationViewController.isMainControllerVisible {
+            return super.gestureRecognizer(gestureRecognizer, shouldReceive: touch)
+        } else {
+            return false
+        }
     }
 }
