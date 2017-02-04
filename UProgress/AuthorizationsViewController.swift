@@ -46,6 +46,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
             else {
                 increasingHeight = 4 * 40 + 50
             }
+//            signUpContainer.frame.size = CGSize(width: scrollView.frame.size.width, height: scrollView.frame.size.height +  CGFloat(increasingHeight))
             self.scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: scrollView.frame.size.height +  CGFloat(increasingHeight))
         }
 

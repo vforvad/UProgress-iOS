@@ -29,6 +29,10 @@ class RegistrationFragmentController: BaseViewController, ErrorsHandling {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
+        self.view.layer.cornerRadius = 10.0
+        signUpButton.setTitle(NSLocalizedString("auth_sign_up", comment: ""), for: UIControlState.normal)
+        signUpButton.layer.cornerRadius = 5.0
         emailErrors.isHidden = true
         passwordErrors.isHidden = true
         passwordConfirmationErrors.isHidden = true
