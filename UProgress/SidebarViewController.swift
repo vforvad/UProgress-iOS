@@ -25,7 +25,6 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setNavBarToTheView()
     }
     
     internal func onItemSelect(segueName: String!) {
@@ -74,12 +73,7 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
             viewController = CommonFunctions.fromStoryboard(identifier: "DirectionsListViewController")
         }
         
-        if let controller = sideMenuController?.viewController(forCacheIdentifier: cacheIdentifier!) {
-            sideMenuController?.embed(centerViewController: controller)
-        }
-        else {
-            sideMenuController?.embed(centerViewController: UINavigationController(rootViewController: viewController), cacheIdentifier: cacheIdentifier)
-        }
+        sideMenuController?.embed(centerViewController: UINavigationController(rootViewController: viewController))
     }
     
     func signedIn(user: Notification) {

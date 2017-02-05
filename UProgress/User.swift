@@ -13,7 +13,9 @@ class User: Mappable {
     var id: Int!
     var firstName: String!
     var lastName: String!
+    var nick: String!
     var email: String!
+    var avatarUrl: String!
     
     required init?() {
         
@@ -27,6 +29,8 @@ class User: Mappable {
         id <- map["id"]
         firstName <- map["first_name"]
         lastName <- map["last_name"]
+        nick <- map["nick"]
         email <- map["email"]
+        avatarUrl <- map["attachment.url"]
     }
 }

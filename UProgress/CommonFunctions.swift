@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Alamofire
+import AlamofireImage
 
 struct CommonFunctions {
     static func customizeTextField(field: UITextField!, placeholder: String!, image: String!) {
@@ -46,6 +48,21 @@ struct CommonFunctions {
         UIGraphicsEndImageContext()
         
         return newImage!
+    }
+    
+    static func avatarImage(imageView: UIImageView!, url: String?) {
+        if let avatarUrl =  url {
+            Alamofire.request(avatarUrl).responseImage{ response in
+                if let image = response.result.value {
+                    imageView.layer.cornerRadius = imageView.frame.size.width / 2
+                    imageView.clipsToBounds = true
+                    imageView.layer.borderWidth = 1
+                    imageView.image = image
+                }
+            }
+        } else {
+            imageView.image = UIImage(named: "empty_user")
+        }
     }
     
     static func fromStoryboard(name: String!, identifier: String! ) -> UIViewController {
