@@ -35,13 +35,13 @@ class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         tableView.separatorStyle = .none
-        tableView.register(UINib(nibName: "ProfileViewCell", bundle: nil), forCellReuseIdentifier: cellIdentificator)
+        tableView.register(UINib(nibName: "ProfileViewCell", bundle: nil), forCellReuseIdentifier: "profileCell")
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell!
         if isProfileCell(item: items[indexPath.row]) {
-            var profileCell = tableView.dequeueReusableCell(withIdentifier: cellIdentificator, for: indexPath) as! ProfileViewCell
+            let profileCell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath) as! ProfileViewCell
             profileCell.setData(user: currentUser)
             cell = profileCell
         }
@@ -59,6 +59,7 @@ class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     public func setUser(user: User!) {
         currentUser = user
+        signedInItems.insert(["segue": "profile"], at: 0)
         items = signedInItems
         tableView.reloadData()
     }
