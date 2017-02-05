@@ -60,7 +60,7 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
         
         switch identifier {
         case "directions":
-            viewController = CommonFunctions.fromStoryboard(identifier: "DirectionsListViewController")
+            viewController = CommonFunctions.fromStoryboard(name: "DirectionsStoryboard", identifier: "DirectionsListViewController")
         case "sign_in":
             let authViewController = CommonFunctions.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
             authViewController.signIn = true

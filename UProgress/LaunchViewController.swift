@@ -33,7 +33,7 @@ class LaunchViewController: UIViewController, LaunchViewProtocol {
     
     internal func successCurrentUserReceived() {
         if CommonFunctions.DeviceData.isIphone() {
-            var viewController = CommonFunctions.fromStoryboard(identifier: "DirectionsListViewController")
+            var viewController = CommonFunctions.fromStoryboard(name: "DirectionsStoryboard", identifier: "DirectionsListViewController")
             sideMenuController?.embed(centerViewController: UINavigationController(rootViewController: viewController))
         }
         else {
