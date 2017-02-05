@@ -28,6 +28,7 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.searchBar.delegate = self
+        self.searchBar.showsCancelButton = false
         
         tableView.estimatedRowHeight = 300
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -85,6 +86,7 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true;
+        self.searchBar.showsCancelButton = true
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
@@ -92,7 +94,11 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.text = ""
         searchActive = false;
+        self.searchBar.showsCancelButton = false
+        self.searchBar.reloadInputViews()
+        self.searchBar.resignFirstResponder()
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

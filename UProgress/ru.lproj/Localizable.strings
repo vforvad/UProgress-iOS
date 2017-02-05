@@ -5,6 +5,8 @@
   Created by Vadim Sokoltsov on 03.02.17.
   Copyright © 2017 vsokoltsov. All rights reserved.
 */
+"pull_to_refresh" = "Потяните для обновления";
+
 "segment_authorization"="Авторизация";
 "segment_registration" = "Регистрация";
 
