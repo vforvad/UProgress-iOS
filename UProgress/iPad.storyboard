@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qn8-I1-5tR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xvw-7h-5IQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -145,12 +145,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRh-F6-LP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78" y="-562"/>
+            <point key="canvasLocation" x="860" y="-562.66866566716647"/>
+        </scene>
+        <!--LaunchViewController-->
+        <scene sceneID="Dbs-YA-nUv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTF-Kk-cSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="LaunchStoryboard" referencedIdentifier="LaunchViewController" id="VFF-Wd-rV3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="12J-am-0Lu"/>
+                </viewControllerPlaceholder>
+            </objects>
+            <point key="canvasLocation" x="-2454" y="-217"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="hdy-8z-gvi">
             <objects>
-                <splitViewController id="qn8-I1-5tR" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="iPadBaseViewController" id="qn8-I1-5tR" sceneMemberID="viewController">
                     <connections>
                         <segue destination="4PV-tY-Xbf" kind="relationship" relationship="masterViewController" id="NXI-HM-PbR"/>
                         <segue destination="IMc-WR-Xuh" kind="relationship" relationship="detailViewController" id="x5Z-te-IIk"/>
@@ -158,7 +168,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3m-H1-LfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1705" y="-291"/>
+            <point key="canvasLocation" x="-1554" y="-216"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hsc-43-zr3">
@@ -185,6 +195,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05a-47-aS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1641" y="-1186"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qvF-VK-iRu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIK-EV-6RX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xvw-7h-5IQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k0l-4v-tt1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VFF-Wd-rV3" kind="relationship" relationship="rootViewController" id="fPi-0h-Z8b"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-3337" y="-216"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

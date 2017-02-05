@@ -246,8 +246,8 @@
 		6468618F1E46A46E00583945 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
-				646861871E467CF700583945 /* LaunchViewController.swift */,
-				6468618D1E46828D00583945 /* LaunchViewProtocol.swift */,
+				646861891E46826700583945 /* LaunchPresenter.swift */,
+				6468618B1E46827900583945 /* LaunchPresenterProtocol.swift */,
 			);
 			name = presenter;
 			sourceTree = "<group>";
@@ -255,8 +255,8 @@
 		646861901E46A47500583945 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				646861891E46826700583945 /* LaunchPresenter.swift */,
-				6468618B1E46827900583945 /* LaunchPresenterProtocol.swift */,
+				646861871E467CF700583945 /* LaunchViewController.swift */,
+				6468618D1E46828D00583945 /* LaunchViewProtocol.swift */,
 				646861911E46A48B00583945 /* LaunchStoryboard.storyboard */,
 			);
 			name = views;

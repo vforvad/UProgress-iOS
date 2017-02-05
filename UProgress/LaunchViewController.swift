@@ -32,11 +32,22 @@ class LaunchViewController: UIViewController, LaunchViewProtocol {
     }
     
     internal func successCurrentUserReceived() {
-        var viewController = CommonFunctions.fromStoryboard(identifier: "DirectionsListViewController")
-        sideMenuController?.embed(centerViewController: UINavigationController(rootViewController: viewController))
+        if CommonFunctions.DeviceData.isIphone() {
+            var viewController = CommonFunctions.fromStoryboard(identifier: "DirectionsListViewController")
+            sideMenuController?.embed(centerViewController: UINavigationController(rootViewController: viewController))
+        }
+        else {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "iPad", bundle:nil)
+            
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "iPadBaseViewController") as! UISplitViewController
+            self.present(nextViewController, animated:true, completion:nil)
+        }
     }
     
     internal func failedCurrentUserReceived(error: ServerError) {
-    
+        let storyBoard : UIStoryboard = UIStoryboard(name: "iPad", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "iPadBaseViewController") as! UISplitViewController
+        self.present(nextViewController, animated:true, completion:nil)
     }
 }

@@ -62,9 +62,8 @@ class AuthorizationManager: AuthorizationManagerProtocol {
                 NotificationCenter.default.post(name: notificationName, object: user)
                 success(user)
             } else {
-                let error = response.result.value as! NSDictionary
-                let errorMessage = error.object(forKey: "errors") as! NSDictionary
-                failure(ServerError(status: response.response!.statusCode, parameters: errorMessage))
+                let error = response.result.error as? NSError
+                failure(ServerError(parameters: error!))
             }
         }
     }
