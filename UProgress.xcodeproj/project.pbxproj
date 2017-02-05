@@ -31,6 +31,8 @@
 		6468618E1E46828D00583945 /* LaunchViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468618D1E46828D00583945 /* LaunchViewProtocol.swift */; };
 		646861921E46A48B00583945 /* LaunchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646861911E46A48B00583945 /* LaunchStoryboard.storyboard */; };
 		646861941E46AC9800583945 /* MySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861931E46AC9800583945 /* MySplitViewController.swift */; };
+		646861951E47370200583945 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4CA1E3FE0490072B97C /* CommonFunctions.swift */; };
+		646861961E47370300583945 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4CA1E3FE0490072B97C /* CommonFunctions.swift */; };
 		6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A61E3D04C200C46165 /* AppDelegate.swift */; };
 		6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
 		6474B1AC1E3D04C200C46165 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AA1E3D04C200C46165 /* iPhone.storyboard */; };
@@ -804,6 +806,7 @@
 				64D930BF1E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */,
 				64D930C71E3E7311007C7112 /* DirectionListPresenterImpl.swift in Sources */,
 				64D930C11E3E72F8007C7112 /* DirectionsListView.swift in Sources */,
+				646861951E47370200583945 /* CommonFunctions.swift in Sources */,
 				64D930B91E3E72B4007C7112 /* Direction.swift in Sources */,
 				64D930B31E3E72AA007C7112 /* DirectionManager.swift in Sources */,
 			);
@@ -823,6 +826,7 @@
 				64D930C01E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */,
 				64D930C81E3E7312007C7112 /* DirectionListPresenterImpl.swift in Sources */,
 				64D930C21E3E72F8007C7112 /* DirectionsListView.swift in Sources */,
+				646861961E47370300583945 /* CommonFunctions.swift in Sources */,
 				64D930BA1E3E72B5007C7112 /* Direction.swift in Sources */,
 				64D930B41E3E72AA007C7112 /* DirectionManager.swift in Sources */,
 			);

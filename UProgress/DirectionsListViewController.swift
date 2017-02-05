@@ -23,6 +23,10 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if CommonFunctions.DeviceData.isIPad() {
+            self.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+            self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+        }
         viewInstance = DirectionsListView(viewController: self, table: tableView, searchBar: searchBar)
         presenter = DirectionListPresenterImpl(model: manager, view: self)
         presenter.loadDirections(userNick: userNick)
@@ -75,6 +79,12 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
     
     internal func stopInfiniteScroll() {
         viewInstance.stopInfiniteScroll()
+    }
+    
+    func backAction() {
+//        if let sidebar = self.splitViewController?.viewControllers[0] as! SidebarViewController {
+//            sidebar.popToRootViewControllerAnimated(true)
+//        }
     }
 }
 

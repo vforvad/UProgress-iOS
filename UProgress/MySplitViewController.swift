@@ -19,6 +19,7 @@ class MySplitViewController: UISplitViewController {
 //            navigationController.setUser(user: user!)
             let navCtrl = UINavigationController(rootViewController: detailViewController)
             self.viewControllers[1] = navCtrl
+            self.preferredDisplayMode = .allVisible
         }
     }
 }
