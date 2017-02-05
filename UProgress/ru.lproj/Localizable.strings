@@ -6,6 +6,7 @@
   Copyright © 2017 vsokoltsov. All rights reserved.
 */
 "pull_to_refresh" = "Потяните для обновления";
+"search" = "Поиск";
 
 "segment_authorization"="Авторизация";
 "segment_registration" = "Регистрация";
@@ -16,3 +17,10 @@
 "auth_nick" = "Имя пользователя";
 "auth_sign_in" = "Авторизация";
 "auth_sign_up" = "Регистрация";
+
+
+// NAVIGATION
+
+"sidebar_sign_in" = "Войти";
+"sidebar_sign_up" = "Регистрация";
+"sidebar_directions" = "Направления";

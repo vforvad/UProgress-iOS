@@ -7,10 +7,12 @@
 */
 
 "pull_to_refresh" = "Pull to refresh";
+"search" = "Search";
 
 // AUTHORIZATION
 "segment_authorization"= "Authorization";
 "segment_registration" = "Registration";
+
 
 
 "auth_email" = "Email";
@@ -19,3 +21,10 @@
 "auth_nick" = "Nick";
 "auth_sign_in" = "Sign in!";
 "auth_sign_up" = "Sign up!";
+
+
+// NAVIGATION
+
+"sidebar_sign_in" = "Sign in";
+"sidebar_sign_up" = "Sign up";
+"sidebar_directions" = "Directions";

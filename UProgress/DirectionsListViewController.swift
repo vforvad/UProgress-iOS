@@ -80,11 +80,5 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
     internal func stopInfiniteScroll() {
         viewInstance.stopInfiniteScroll()
     }
-    
-    func backAction() {
-//        if let sidebar = self.splitViewController?.viewControllers[0] as! SidebarViewController {
-//            sidebar.popToRootViewControllerAnimated(true)
-//        }
-    }
 }
 

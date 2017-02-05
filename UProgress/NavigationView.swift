@@ -14,11 +14,11 @@ class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
     private var currentUser: User!
     private var items: [Dictionary<String, String>] = []
     private let signedInItems = [
-        ["title": "Directions", "segue": "directions"]
+        ["title": NSLocalizedString("sidebar_directions", comment: ""), "segue": "directions"]
     ]
     private var unsignedItems = [
-        ["title": "Sign in", "segue": "sign_in"],
-        ["title": "Sign up", "segue": "sign_up"]
+        ["title": NSLocalizedString("sidebar_sign_in", comment: ""), "segue": "sign_in"],
+        ["title": NSLocalizedString("sidebar_sign_up", comment: ""), "segue": "sign_up"]
     ]
     private var tableView: UITableView!
     private var viewController: NavigationViewProtocol!

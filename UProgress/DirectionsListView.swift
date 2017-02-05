@@ -29,6 +29,7 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         self.tableView.dataSource = self
         self.searchBar.delegate = self
         self.searchBar.showsCancelButton = false
+        self.searchBar.placeholder = NSLocalizedString("search", comment: "")
         
         tableView.estimatedRowHeight = 300
         tableView.rowHeight = UITableViewAutomaticDimension
