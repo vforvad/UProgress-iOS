@@ -25,6 +25,7 @@ class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
     
     init(viewController: NavigationViewProtocol!, table: UITableView!) {
         super.init()
+        currentUser = AuthorizationService.sharedInstance.currentUser
         items = currentUser == nil ? unsignedItems : signedInItems
         self.viewController = viewController
         self.tableView = table

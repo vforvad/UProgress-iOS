@@ -108,7 +108,7 @@
         <!--Sidebar View Controller-->
         <scene sceneID="0Z9-SB-mh0">
             <objects>
-                <viewController id="fXj-sj-Wz8" customClass="SidebarViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SidebarViewController" id="fXj-sj-Wz8" customClass="SidebarViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="O2Z-WO-kbs"/>
                         <viewControllerLayoutGuide type="bottom" id="rIf-bF-JKg"/>
