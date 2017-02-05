@@ -42,7 +42,7 @@
         <!--Directions List View Controller-->
         <scene sceneID="7j3-0d-rVJ">
             <objects>
-                <viewController id="35T-DY-eiJ" customClass="DirectionsListViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DirectionsListViewController" id="35T-DY-eiJ" customClass="DirectionsListViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mhL-BL-eFd"/>
                         <viewControllerLayoutGuide type="bottom" id="gO2-Tz-0lA"/>
@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="-2454" y="-217"/>
         </scene>
-        <!--Split View Controller-->
+        <!--My Split View Controller-->
         <scene sceneID="hdy-8z-gvi">
             <objects>
-                <splitViewController storyboardIdentifier="iPadBaseViewController" id="qn8-I1-5tR" sceneMemberID="viewController">
+                <splitViewController storyboardIdentifier="iPadBaseViewController" id="qn8-I1-5tR" customClass="MySplitViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="4PV-tY-Xbf" kind="relationship" relationship="masterViewController" id="NXI-HM-PbR"/>
                         <segue destination="IMc-WR-Xuh" kind="relationship" relationship="detailViewController" id="x5Z-te-IIk"/>

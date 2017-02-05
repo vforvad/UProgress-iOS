@@ -30,6 +30,7 @@
 		6468618C1E46827900583945 /* LaunchPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468618B1E46827900583945 /* LaunchPresenterProtocol.swift */; };
 		6468618E1E46828D00583945 /* LaunchViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468618D1E46828D00583945 /* LaunchViewProtocol.swift */; };
 		646861921E46A48B00583945 /* LaunchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646861911E46A48B00583945 /* LaunchStoryboard.storyboard */; };
+		646861941E46AC9800583945 /* MySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861931E46AC9800583945 /* MySplitViewController.swift */; };
 		6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A61E3D04C200C46165 /* AppDelegate.swift */; };
 		6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
 		6474B1AC1E3D04C200C46165 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AA1E3D04C200C46165 /* iPhone.storyboard */; };
@@ -133,6 +134,7 @@
 		6468618B1E46827900583945 /* LaunchPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchPresenterProtocol.swift; sourceTree = "<group>"; };
 		6468618D1E46828D00583945 /* LaunchViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewProtocol.swift; sourceTree = "<group>"; };
 		646861911E46A48B00583945 /* LaunchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchStoryboard.storyboard; sourceTree = "<group>"; };
+		646861931E46AC9800583945 /* MySplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySplitViewController.swift; sourceTree = "<group>"; };
 		6474B1A31E3D04C200C46165 /* UProgress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UProgress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6474B1A61E3D04C200C46165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsListViewController.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				6474B1AF1E3D04C200C46165 /* LaunchScreen.storyboard */,
 				6474B1B21E3D04C200C46165 /* Info.plist */,
 				6483E4C21E3FA5170072B97C /* iPad.storyboard */,
+				646861931E46AC9800583945 /* MySplitViewController.swift */,
 			);
 			path = UProgress;
 			sourceTree = "<group>";
@@ -772,6 +775,7 @@
 				64D9309F1E3E3C68007C7112 /* ApiRequest.swift in Sources */,
 				6483E4CF1E40911E0072B97C /* DirectionsListCell.swift in Sources */,
 				64D930B21E3E4EF2007C7112 /* DirectionsListViewProtocol.swift in Sources */,
+				646861941E46AC9800583945 /* MySplitViewController.swift in Sources */,
 				64D930B01E3E4DA1007C7112 /* DirectionsListView.swift in Sources */,
 				64E015181E3E023E0055DFD5 /* Direction.swift in Sources */,
 				641F25CB1E422BE6008BD119 /* AuthorizationManager.swift in Sources */,
