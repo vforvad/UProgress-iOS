@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AQr-2s-wGo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch View Controller-->
+        <scene sceneID="1vu-7f-erl">
+            <objects>
+                <viewController storyboardIdentifier="LaunchViewController" id="AQr-2s-wGo" customClass="LaunchViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SJ5-br-eyA"/>
+                        <viewControllerLayoutGuide type="bottom" id="qaS-K4-hfj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LIV-CH-uPw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_name" translatesAutoresizingMaskIntoConstraints="NO" id="AC0-45-PwI">
+                                <rect key="frame" x="51" y="213" width="273" height="241"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AC0-45-PwI" firstAttribute="centerX" secondItem="LIV-CH-uPw" secondAttribute="centerX" id="VUQ-gi-eVe"/>
+                            <constraint firstItem="AC0-45-PwI" firstAttribute="centerY" secondItem="LIV-CH-uPw" secondAttribute="centerY" id="x5h-Od-pvm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SVw-v9-z2P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ogr-PS-kfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016.8" y="-413.3433283358321"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_name" width="273" height="241"/>
+    </resources>
+</document>

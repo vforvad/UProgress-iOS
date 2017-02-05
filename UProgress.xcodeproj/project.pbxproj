@@ -29,6 +29,7 @@
 		6468618A1E46826700583945 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861891E46826700583945 /* LaunchPresenter.swift */; };
 		6468618C1E46827900583945 /* LaunchPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468618B1E46827900583945 /* LaunchPresenterProtocol.swift */; };
 		6468618E1E46828D00583945 /* LaunchViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468618D1E46828D00583945 /* LaunchViewProtocol.swift */; };
+		646861921E46A48B00583945 /* LaunchStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646861911E46A48B00583945 /* LaunchStoryboard.storyboard */; };
 		6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A61E3D04C200C46165 /* AppDelegate.swift */; };
 		6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
 		6474B1AC1E3D04C200C46165 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AA1E3D04C200C46165 /* iPhone.storyboard */; };
@@ -131,6 +132,7 @@
 		646861891E46826700583945 /* LaunchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
 		6468618B1E46827900583945 /* LaunchPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchPresenterProtocol.swift; sourceTree = "<group>"; };
 		6468618D1E46828D00583945 /* LaunchViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewProtocol.swift; sourceTree = "<group>"; };
+		646861911E46A48B00583945 /* LaunchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchStoryboard.storyboard; sourceTree = "<group>"; };
 		6474B1A31E3D04C200C46165 /* UProgress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UProgress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6474B1A61E3D04C200C46165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsListViewController.swift; sourceTree = "<group>"; };
@@ -235,12 +237,29 @@
 		646861861E467CE700583945 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
-				646861871E467CF700583945 /* LaunchViewController.swift */,
-				646861891E46826700583945 /* LaunchPresenter.swift */,
-				6468618B1E46827900583945 /* LaunchPresenterProtocol.swift */,
-				6468618D1E46828D00583945 /* LaunchViewProtocol.swift */,
+				646861901E46A47500583945 /* views */,
+				6468618F1E46A46E00583945 /* presenter */,
 			);
 			name = Launch;
+			sourceTree = "<group>";
+		};
+		6468618F1E46A46E00583945 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				646861871E467CF700583945 /* LaunchViewController.swift */,
+				6468618D1E46828D00583945 /* LaunchViewProtocol.swift */,
+			);
+			name = presenter;
+			sourceTree = "<group>";
+		};
+		646861901E46A47500583945 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				646861891E46826700583945 /* LaunchPresenter.swift */,
+				6468618B1E46827900583945 /* LaunchPresenterProtocol.swift */,
+				646861911E46A48B00583945 /* LaunchStoryboard.storyboard */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 		6474B19A1E3D04C200C46165 = {
@@ -560,6 +579,7 @@
 				6474B1AE1E3D04C200C46165 /* Assets.xcassets in Resources */,
 				6474B1D51E3D091800C46165 /* .travis.yml in Resources */,
 				6474B1AC1E3D04C200C46165 /* iPhone.storyboard in Resources */,
+				646861921E46A48B00583945 /* LaunchStoryboard.storyboard in Resources */,
 				6483E4C31E3FA5170072B97C /* iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
