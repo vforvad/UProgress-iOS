@@ -34,7 +34,6 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         tableView.estimatedRowHeight = 300
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.backgroundColor = UIColor("#f6f7f8")
-        tableView.allowsSelection = false
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         
         tableView.register(UINib(nibName: "DirectionsListCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
@@ -45,6 +44,7 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! DirectionsListCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         var item: Direction!
         if (searchActive) {
             item = filtered[indexPath.row]
@@ -80,6 +80,10 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         }
         return itemsList.count
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        viewController.clickOnItem(direction: itemsList[indexPath.row], indexPath: indexPath)
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewController.clickOnItem(direction: itemsList[indexPath.row], indexPath: indexPath)

@@ -10,10 +10,10 @@ import UIKit
 import MBProgressHUD
 
 class DirectionsListViewController: BaseViewController, DirectionViewProtocol, DirectionsListViewProtocol {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
+    var selectedDirection: Direction!
     var itemsList:[Direction]! = []
     private let userNick = "vforvad"
     private let manager = DirectionManager()
@@ -58,7 +58,8 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
     }
     
     internal func clickOnItem(direction: Direction, indexPath: IndexPath!) {
-        
+        selectedDirection = direction
+        performSegue(withIdentifier: "detail", sender: self)
     }
     
     internal func refreshTriggered() {
@@ -79,6 +80,14 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
     
     internal func stopInfiniteScroll() {
         viewInstance.stopInfiniteScroll()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail" {
+            let detailViewController = segue.destination as! DirectionsDetailViewController
+            detailViewController.direction = selectedDirection
+        }
+        selectedDirection = nil
     }
 }
 
