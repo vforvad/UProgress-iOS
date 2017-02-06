@@ -34,6 +34,8 @@
 		646861941E46AC9800583945 /* BaseSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861931E46AC9800583945 /* BaseSplitViewController.swift */; };
 		646861951E47370200583945 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4CA1E3FE0490072B97C /* CommonFunctions.swift */; };
 		646861961E47370300583945 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4CA1E3FE0490072B97C /* CommonFunctions.swift */; };
+		646E8E9F1E48B028003B8DFB /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646E8E9E1E48B028003B8DFB /* ProfileStoryboard.storyboard */; };
+		646E8EA11E48B03B003B8DFB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E8EA01E48B03B003B8DFB /* ProfileViewController.swift */; };
 		6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A61E3D04C200C46165 /* AppDelegate.swift */; };
 		6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
 		6474B1AC1E3D04C200C46165 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AA1E3D04C200C46165 /* iPhone.storyboard */; };
@@ -141,6 +143,8 @@
 		6468618D1E46828D00583945 /* LaunchViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewProtocol.swift; sourceTree = "<group>"; };
 		646861911E46A48B00583945 /* LaunchStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchStoryboard.storyboard; sourceTree = "<group>"; };
 		646861931E46AC9800583945 /* BaseSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSplitViewController.swift; sourceTree = "<group>"; };
+		646E8E9E1E48B028003B8DFB /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		646E8EA01E48B03B003B8DFB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6474B1A31E3D04C200C46165 /* UProgress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UProgress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6474B1A61E3D04C200C46165 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsListViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +276,15 @@
 			name = views;
 			sourceTree = "<group>";
 		};
+		646E8E9D1E48B016003B8DFB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				646E8E9E1E48B028003B8DFB /* ProfileStoryboard.storyboard */,
+				646E8EA01E48B03B003B8DFB /* ProfileViewController.swift */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 		6474B19A1E3D04C200C46165 = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +312,7 @@
 		6474B1A51E3D04C200C46165 /* UProgress */ = {
 			isa = PBXGroup;
 			children = (
+				646E8E9D1E48B016003B8DFB /* User */,
 				646861861E467CE700583945 /* Launch */,
 				6483E4D71E40FEBF0072B97C /* Authorization */,
 				64EA8BF21E3EB9970088009E /* Navigation */,
@@ -611,6 +625,7 @@
 				643C20301E47D6D90066D9BC /* DirectionsStoryboard.storyboard in Resources */,
 				6474B1D51E3D091800C46165 /* .travis.yml in Resources */,
 				6474B1AC1E3D04C200C46165 /* iPhone.storyboard in Resources */,
+				646E8E9F1E48B028003B8DFB /* ProfileStoryboard.storyboard in Resources */,
 				646861921E46A48B00583945 /* LaunchStoryboard.storyboard in Resources */,
 				6483E4C31E3FA5170072B97C /* iPad.storyboard in Resources */,
 			);
@@ -815,6 +830,7 @@
 				64F80D3B1E41FCA500E90004 /* AuthorizationFragmentController.swift in Sources */,
 				641F25D11E422FC3008BD119 /* AuthorizationViewProtocol.swift in Sources */,
 				6483E4C91E3FAAF90072B97C /* SidebarViewController.swift in Sources */,
+				646E8EA11E48B03B003B8DFB /* ProfileViewController.swift in Sources */,
 				6468618C1E46827900583945 /* LaunchPresenterProtocol.swift in Sources */,
 				641F25C91E422621008BD119 /* Image.swift in Sources */,
 			);

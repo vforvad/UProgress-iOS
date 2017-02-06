@@ -59,6 +59,8 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
         let cacheIdentifier = identifier
         
         switch identifier {
+        case "profile":
+            viewController = CommonFunctions.fromStoryboard(name: "ProfileStoryboard", identifier: "ProfileViewController")
         case "directions":
             viewController = CommonFunctions.fromStoryboard(name: "DirectionsStoryboard", identifier: "DirectionsListViewController")
         case "sign_in":

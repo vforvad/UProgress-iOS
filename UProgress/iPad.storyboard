@@ -91,6 +91,7 @@
                         <segue destination="Kje-xO-UBa" kind="showDetail" identifier="sign_up" id="KAw-fu-Ppl"/>
                         <segue destination="Kje-xO-UBa" kind="showDetail" identifier="sign_in" id="A30-AA-UX1"/>
                         <segue destination="Vh6-tG-odW" kind="showDetail" identifier="directions" id="zN1-6k-nXF"/>
+                        <segue destination="Mvt-rn-JHq" kind="showDetail" identifier="profile" id="dzy-dr-Gq3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRh-F6-LP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -153,6 +154,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PT5-6t-4Pf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="860" y="-84"/>
+        </scene>
+        <!--ProfileStoryboard-->
+        <scene sceneID="o01-67-Ktg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileStoryboard" id="Mvt-rn-JHq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ln0-8D-0nY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245" y="-85"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
