@@ -81,10 +81,6 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         return itemsList.count
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        viewController.clickOnItem(direction: itemsList[indexPath.row], indexPath: indexPath)
-//    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewController.clickOnItem(direction: itemsList[indexPath.row], indexPath: indexPath)
     }
