@@ -11,9 +11,10 @@ import UIKit
 
 class DirectionsDetailViewController: UIViewController, DirectionsDetailViewProtocol, UITableViewDelegate,
 UITableViewDataSource {
-    var steps: [Step]! = []
-    let cellIdentifier = "stepId"
     var direction: Direction!
+    var steps: [Step]! = []
+    var directionDetailView: DirectionDetailInfoView!
+    let cellIdentifier = "stepId"
     var presenter: DirectionsDetailPresenter!
     
     @IBOutlet weak var tableView: UITableView!
@@ -36,6 +37,7 @@ UITableViewDataSource {
     }
     
     internal func successDirectionLoad(direction: Direction!) {
+        self.direction = direction
         steps = direction.steps
         tableView.reloadData()
     }
@@ -57,14 +59,21 @@ UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        directionDetailView = DirectionDetailInfoView.instanceFromNib() as! DirectionDetailInfoView
+        if self.direction != nil {
+            directionDetailView.setDirection(direction: self.direction)
+        }
+//        vw.backgroundColor = UIColor.red
+        
+        return directionDetailView
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let vw = UIView(frame :CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: 300, height: 300)))
-        vw.backgroundColor = UIColor.red
-        
-        return vw
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if self.direction != nil && directionDetailView != nil {
+            var height = directionDetailView.getHeight()
+            return height
+        }
+        return 200
     }
 }

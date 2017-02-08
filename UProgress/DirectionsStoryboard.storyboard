@@ -91,14 +91,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="n5h-Ed-jQN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="10" y="0.0" width="355" height="667"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stepId" id="RlT-t8-RW1">
-                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="355" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RlT-t8-RW1" id="W9G-eW-UoP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -109,8 +109,8 @@
                         <constraints>
                             <constraint firstItem="pip-Ul-Ah1" firstAttribute="top" secondItem="n5h-Ed-jQN" secondAttribute="bottom" id="4SW-fu-VhP"/>
                             <constraint firstItem="n5h-Ed-jQN" firstAttribute="top" secondItem="37V-jV-BBS" secondAttribute="top" id="Zwh-AL-U2B"/>
-                            <constraint firstItem="n5h-Ed-jQN" firstAttribute="leading" secondItem="37V-jV-BBS" secondAttribute="leading" id="ahB-bh-AYz"/>
-                            <constraint firstAttribute="trailing" secondItem="n5h-Ed-jQN" secondAttribute="trailing" id="cSa-q3-RmC"/>
+                            <constraint firstItem="n5h-Ed-jQN" firstAttribute="leading" secondItem="37V-jV-BBS" secondAttribute="leading" constant="10" id="ahB-bh-AYz"/>
+                            <constraint firstAttribute="trailing" secondItem="n5h-Ed-jQN" secondAttribute="trailing" constant="10" id="cSa-q3-RmC"/>
                         </constraints>
                     </view>
                     <connections>
