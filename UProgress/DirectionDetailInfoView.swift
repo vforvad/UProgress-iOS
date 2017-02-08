@@ -11,6 +11,8 @@ import UIKit
 
 class DirectionDetailInfoView: UIView {
     @IBOutlet weak var descriptionText: UILabel!
+    @IBOutlet weak var directionRate: UILabel!
+    @IBOutlet weak var directionTitle: UILabel!
     var direction: Direction!
     
     override func awakeFromNib() {
@@ -24,10 +26,12 @@ class DirectionDetailInfoView: UIView {
     
     public func setDirection(direction: Direction!) {
         self.direction = direction
+        self.directionTitle.text = direction.title
+        self.directionRate.text =  String(direction.percentsResult)
         self.descriptionText.text = direction.description
     }
     
     public func getHeight() -> CGFloat {
-        return direction.description.heightWithConstrainedWidth(width: self.frame.size.width, font: UIFont(name: "AppleSDGothicNeo-SemiBold", size: 19.0)!) * 3 
+        return direction.description.heightWithConstrainedWidth(width: self.frame.size.width, font: UIFont(name: "AppleSDGothicNeo-SemiBold", size: 19.0)!) + 65
     }
 }
