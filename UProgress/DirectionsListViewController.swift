@@ -19,6 +19,7 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
     private let manager = DirectionManager()
     private var presenter: DirectionListPresenterImpl!
     private var viewInstance: DirectionsListView!
+    public var refreshControl: UIRefreshControl!
     var actInd : UIActivityIndicatorView!
     
     override func viewDidLoad() {

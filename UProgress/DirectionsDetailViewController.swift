@@ -16,12 +16,14 @@ UITableViewDataSource {
     var directionDetailView: DirectionDetailInfoView!
     let cellIdentifier = "stepId"
     var presenter: DirectionsDetailPresenter!
+    public var refreshControl: UIRefreshControl!
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        setupUIRefreshController()
         let model = DirectionManager()
         let directionId: String = String(direction.id)
         presenter = DirectionsDetailPresenter(model: model, view: self)
@@ -75,5 +77,13 @@ UITableViewDataSource {
             return height
         }
         return 200
+    }
+    
+    // MARK: Refresh Control
+    func setupUIRefreshController() {
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: NSLocalizedString("pull_to_refresh", comment: ""))
+//        refreshControl.addTarget(self, action: #selector(DirectionsListView.reloadList), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refreshControl)
     }
 }
