@@ -11,24 +11,46 @@ import Foundation
 class DirectionDetailView: NSObject, DirectionsDetailViewProtocol, UITableViewDelegate,
 UITableViewDataSource {
     var direction: Direction!
+    var viewController: BaseViewController!
     var steps: [Step]! = []
     var directionDetailView: DirectionDetailInfoView!
     let cellIdentifier = "stepId"
     var presenter: DirectionsDetailPresenter!
     public var refreshControl: UIRefreshControl!
     private var tableView: UITableView!
+    private let navButtonSize = 30
     
-    init(table: UITableView!, direction: Direction!) {
+    init(table: UITableView!, direction: Direction!, viewController: BaseViewController!) {
         super.init()
+        self.viewController = viewController
         self.direction = direction
         self.tableView = table
         self.tableView.delegate = self
         self.tableView.dataSource = self
         setupUIRefreshController()
+        var myBtn: UIButton = UIButton()
+        myBtn.setImage(UIImage(named: "menu"), for: .normal)
+        myBtn.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: navButtonSize, height: navButtonSize))
+        myBtn.addTarget(self, action: #selector(createStep), for: .touchUpInside)
+        viewController.navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(customView: myBtn)
+//            UIBarButtonItem(image: UIImage(image: "menu"), style: .plain, target: self, action: #selector(createStep)),
+//            UIBarButtonItem(title: "Remove", style: .plain, target: self, action: #selector(removeDirection),
+//                            image: UIImage(image: "menu"))
+        ]
+        
         let model = DirectionManager()
         let directionId: String = String(self.direction.id)
         presenter = DirectionsDetailPresenter(model: model, view: self)
         presenter.loadDirection(userNick: "vforvad", directionId: directionId)
+    }
+    
+    func createStep() {
+        viewController.performSegue(withIdentifier: "modal", sender: viewController)
+    }
+    
+    func removeDirection() {
+    
     }
     
     internal func startLoader() {

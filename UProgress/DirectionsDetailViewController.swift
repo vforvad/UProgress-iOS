@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DirectionsDetailViewController: UIViewController {
+class DirectionsDetailViewController: BaseViewController {
     var direction: Direction!
     private var directionDetailView: DirectionDetailView!
     
@@ -17,6 +17,6 @@ class DirectionsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        directionDetailView = DirectionDetailView(table: tableView, direction: direction)
+        directionDetailView = DirectionDetailView(table: tableView, direction: direction, viewController: self )
     }
 }
