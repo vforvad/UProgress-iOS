@@ -17,6 +17,10 @@ class DirectionDetailInfoView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        directionRate.backgroundColor = UIColor.gray
+        directionRate.layer.masksToBounds = true
+        directionRate.layer.cornerRadius = directionRate.frame.size.height / 2
+        directionRate.backgroundColor = UIColor("#f6f7f8")
     }
     
     
@@ -32,6 +36,9 @@ class DirectionDetailInfoView: UIView {
     }
     
     public func getHeight() -> CGFloat {
-        return direction.description.heightWithConstrainedWidth(width: self.frame.size.width, font: UIFont(name: "AppleSDGothicNeo-SemiBold", size: 19.0)!) + 65
+        let descriptionHeight = direction.description.heightWithConstrainedWidth(width: self.frame.size.width, font: UIFont(name: "AppleSDGothicNeo-SemiBold", size: 19.0)!)
+        let rateHeight = directionRate.frame.size.height
+        let titleHeight = directionTitle.frame.size.height
+        return descriptionHeight + rateHeight + titleHeight + 30
     }
 }
