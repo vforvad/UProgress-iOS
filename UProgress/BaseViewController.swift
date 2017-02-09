@@ -20,6 +20,7 @@ class BaseViewController: UIViewController {
         super.viewWillAppear(animated)
         let color = UIColor("#55BA52")
         self.navigationController?.navigationBar.barTintColor = color
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         
     }
     
