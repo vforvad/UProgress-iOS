@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DirectionsDetailViewController: BaseViewController {
+class DirectionsDetailViewController: BaseViewController, DirectionViewActionsProtocol, DirectionsPopupProtocol {
     var direction: Direction!
     private var directionDetailView: DirectionDetailView!
     
@@ -18,5 +18,28 @@ class DirectionsDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         directionDetailView = DirectionDetailView(table: tableView, direction: direction, viewController: self )
+    }
+    
+    internal func selectStepItem(step: Step) {
+    
+    }
+    
+    internal func createStep() {
+        performSegue(withIdentifier: "modal", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "modal") {
+             var viewController = segue.destination as! StepFormViewController
+             viewController.mainView = self
+        }
+    }
+    
+    internal func successOperation(step: Step) {
+        
+    }
+    
+    internal func failedOperation(error: ServerError) {
+    
     }
 }

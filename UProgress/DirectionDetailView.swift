@@ -11,6 +11,7 @@ import Foundation
 class DirectionDetailView: NSObject, DirectionsDetailViewProtocol, UITableViewDelegate,
 UITableViewDataSource {
     var direction: Direction!
+    var actions: DirectionViewActionsProtocol!
     var viewController: BaseViewController!
     var steps: [Step]! = []
     var directionDetailView: DirectionDetailInfoView!
@@ -20,9 +21,10 @@ UITableViewDataSource {
     private var tableView: UITableView!
     private let navButtonSize = 30
     
-    init(table: UITableView!, direction: Direction!, viewController: BaseViewController!) {
+    init(table: UITableView!, direction: Direction!, viewController: BaseViewController ) {
         super.init()
-        self.viewController = viewController
+        self.viewController = viewController as! BaseViewController
+        actions = viewController as! DirectionViewActionsProtocol
         self.direction = direction
         self.tableView = table
         self.tableView.delegate = self
@@ -46,7 +48,7 @@ UITableViewDataSource {
     }
     
     func createStep() {
-        viewController.performSegue(withIdentifier: "modal", sender: viewController)
+        actions.createStep()
     }
     
     func removeDirection() {

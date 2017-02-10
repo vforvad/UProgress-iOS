@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="2844" y="-389.05547226386807"/>
         </scene>
-        <!--Direction Form View Controller-->
+        <!--Step Form View Controller-->
         <scene sceneID="k1D-IS-bmE">
             <objects>
-                <viewController id="NPy-C5-qXJ" customClass="DirectionFormViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NPy-C5-qXJ" customClass="StepFormViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Njn-7j-0io"/>
                         <viewControllerLayoutGuide type="bottom" id="D2j-Jw-qq2"/>
@@ -138,7 +138,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eR6-WK-U7f">
-                                        <rect key="frame" x="15" y="30" width="345" height="300"/>
+                                        <rect key="frame" x="15" y="50" width="345" height="300"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="664-WF-Opy">
                                                 <rect key="frame" x="10" y="10" width="325" height="242"/>
@@ -176,10 +176,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRo-sx-3qY">
                                                 <rect key="frame" x="10" y="260" width="34" height="30"/>
                                                 <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="clickSave:" destination="NPy-C5-qXJ" eventType="touchUpInside" id="HdO-RJ-vtN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P78-Gq-8W6">
                                                 <rect key="frame" x="287" y="260" width="48" height="30"/>
                                                 <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="clickCancel:" destination="NPy-C5-qXJ" eventType="touchUpInside" id="rQI-2r-0HA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -199,7 +205,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="eR6-WK-U7f" firstAttribute="top" secondItem="wVL-sH-3qg" secondAttribute="top" constant="30" id="J7I-fJ-j7i"/>
+                                    <constraint firstItem="eR6-WK-U7f" firstAttribute="top" secondItem="wVL-sH-3qg" secondAttribute="top" constant="50" id="J7I-fJ-j7i"/>
                                     <constraint firstAttribute="bottom" secondItem="eR6-WK-U7f" secondAttribute="bottom" constant="337" id="Nhx-Qa-i3W"/>
                                     <constraint firstItem="eR6-WK-U7f" firstAttribute="centerX" secondItem="wVL-sH-3qg" secondAttribute="centerX" id="eAI-8h-RyT"/>
                                     <constraint firstItem="eR6-WK-U7f" firstAttribute="leading" secondItem="wVL-sH-3qg" secondAttribute="leading" constant="15" id="sdp-Wm-mAu"/>
@@ -214,6 +220,15 @@
                             <constraint firstAttribute="trailing" secondItem="wVL-sH-3qg" secondAttribute="trailing" id="vCJ-vc-Fsp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancellButton" destination="P78-Gq-8W6" id="LaK-ZI-DJ2"/>
+                        <outlet property="descriptionField" destination="0Lv-4q-dua" id="Mfd-ZT-o9s"/>
+                        <outlet property="descriptionFieldError" destination="SHd-sY-MkD" id="MIv-gR-yg1"/>
+                        <outlet property="popupTopMargin" destination="J7I-fJ-j7i" id="JPE-gx-Bg5"/>
+                        <outlet property="saveButton" destination="pRo-sx-3qY" id="URY-6D-4IM"/>
+                        <outlet property="titleField" destination="bu0-Ly-vcK" id="P68-gV-SVL"/>
+                        <outlet property="titleFieldError" destination="aOs-ED-7M5" id="buM-dZ-vTh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STG-M8-uf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

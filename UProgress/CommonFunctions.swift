@@ -82,5 +82,13 @@ struct CommonFunctions {
         static func isIphone() -> Bool {
             return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone
         }
+        
+        static func isOrientationLandscape() -> Bool {
+            return UIDevice.current.orientation.isLandscape
+        }
+        
+        static func isOrientationPortrait() -> Bool {
+            return UIDevice.current.orientation.isPortrait
+        }
     }
 }
