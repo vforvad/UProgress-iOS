@@ -41,7 +41,7 @@ UITableViewDataSource {
 //                            image: UIImage(image: "menu"))
         ]
         
-        let model = DirectionManager()
+        let model = DirectionDetailManager()
         let directionId: String = String(self.direction.id)
         presenter = DirectionsDetailPresenter(model: model, view: self)
         presenter.loadDirection(userNick: "vforvad", directionId: directionId)

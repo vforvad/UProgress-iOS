@@ -9,10 +9,10 @@
 import Foundation
 
 class DirectionsDetailPresenter: DirectionsDetailPresenterProtocol {
-    private var model: DirectionModelProtocol!
+    private var model: DirectionDetailManagerProtocol!
     private var view: DirectionsDetailViewProtocol!
     
-    init(model: DirectionModelProtocol, view: DirectionsDetailViewProtocol) {
+    init(model: DirectionDetailManagerProtocol, view: DirectionsDetailViewProtocol) {
         self.model = model
         self.view = view
     }
