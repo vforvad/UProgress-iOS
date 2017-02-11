@@ -32,11 +32,12 @@ class DirectionsDetailViewController: BaseViewController, DirectionViewActionsPr
         if (segue.identifier == "modal") {
              var viewController = segue.destination as! StepFormViewController
              viewController.mainView = self
+             viewController.direction = direction
         }
     }
     
     internal func successOperation(step: Step) {
-        
+        directionDetailView.addStep(step: step)
     }
     
     internal func failedOperation(error: ServerError) {

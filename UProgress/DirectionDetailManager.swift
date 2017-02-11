@@ -24,4 +24,18 @@ class DirectionDetailManager: DirectionDetailManagerProtocol {
             }
         }
     }
+    
+    internal func createStep(userNick: String, directionId: String!, parameters: Dictionary<String, AnyObject>, success: @escaping (_ step: Step) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
+        let direction = "\(directionId)"
+        let url = "/users/\(userNick)/directions/" + directionId + "/steps"
+        ApiRequest.sharedInstance.post(url: url, parameters: ["step": parameters] as NSDictionary).responseObject(keyPath: "step") { (response: DataResponse<Step>) in
+            if response.response?.statusCode == 200 {
+                let step = response.result.value! as Step
+                success(step)
+            } else {
+                let error = response.result.error as? NSError
+                failure(ServerError(parameters: error!))
+            }
+        }
+    }
 }

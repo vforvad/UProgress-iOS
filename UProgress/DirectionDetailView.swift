@@ -111,4 +111,9 @@ UITableViewDataSource {
         //        refreshControl.addTarget(self, action: #selector(DirectionsListView.reloadList), for: UIControlEvents.valueChanged)
         tableView.addSubview(refreshControl)
     }
+    
+    public func addStep(step: Step!) {
+        steps.insert(step, at: 0)
+        tableView.reloadData()
+    }
 }

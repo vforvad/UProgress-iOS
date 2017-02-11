@@ -73,6 +73,9 @@
 		6474B1D51E3D091800C46165 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1D41E3D091800C46165 /* .travis.yml */; };
 		647B34A41E4F8823006639DD /* DirectionDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A31E4F8823006639DD /* DirectionDetailManager.swift */; };
 		647B34A61E4F8839006639DD /* DirectionDetailManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A51E4F8839006639DD /* DirectionDetailManagerProtocol.swift */; };
+		647B34A81E4F8F66006639DD /* StepPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A71E4F8F66006639DD /* StepPresenter.swift */; };
+		647B34AA1E4F8F7C006639DD /* StepPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A91E4F8F7C006639DD /* StepPresenterProtocol.swift */; };
+		647B34AC1E4F902A006639DD /* StepViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34AB1E4F902A006639DD /* StepViewProtocol.swift */; };
 		6483E4C31E3FA5170072B97C /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6483E4C21E3FA5170072B97C /* iPad.storyboard */; };
 		6483E4C51E3FA9790072B97C /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4C41E3FA9790072B97C /* NavigationView.swift */; };
 		6483E4C71E3FA9E50072B97C /* NavigationViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4C61E3FA9E50072B97C /* NavigationViewProtocol.swift */; };
@@ -201,6 +204,9 @@
 		6474B1D41E3D091800C46165 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		647B34A31E4F8823006639DD /* DirectionDetailManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionDetailManager.swift; sourceTree = "<group>"; };
 		647B34A51E4F8839006639DD /* DirectionDetailManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionDetailManagerProtocol.swift; sourceTree = "<group>"; };
+		647B34A71E4F8F66006639DD /* StepPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepPresenter.swift; sourceTree = "<group>"; };
+		647B34A91E4F8F7C006639DD /* StepPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepPresenterProtocol.swift; sourceTree = "<group>"; };
+		647B34AB1E4F902A006639DD /* StepViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepViewProtocol.swift; sourceTree = "<group>"; };
 		6483E4C21E3FA5170072B97C /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		6483E4C41E3FA9790072B97C /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		6483E4C61E3FA9E50072B97C /* NavigationViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewProtocol.swift; sourceTree = "<group>"; };
@@ -348,6 +354,7 @@
 				64109F971E4CD31D003C0914 /* StepFormViewController.swift */,
 				6426C7731E4DFE3100F37701 /* DirectionsPopupProtocol.swift */,
 				6426C7771E4DFED900F37701 /* DirectionViewActionsProtocol.swift */,
+				647B34AB1E4F902A006639DD /* StepViewProtocol.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -357,6 +364,8 @@
 			children = (
 				646E8EAB1E48BBC8003B8DFB /* DirectionsDetailPresenter.swift */,
 				646E8EAF1E48BCC3003B8DFB /* DirectionsDetailPresenterProtocol.swift */,
+				647B34A71E4F8F66006639DD /* StepPresenter.swift */,
+				647B34A91E4F8F7C006639DD /* StepPresenterProtocol.swift */,
 			);
 			name = presenter;
 			sourceTree = "<group>";
@@ -882,6 +891,7 @@
 			files = (
 				64109F981E4CD31D003C0914 /* StepFormViewController.swift in Sources */,
 				6483E4C51E3FA9790072B97C /* NavigationView.swift in Sources */,
+				647B34A81E4F8F66006639DD /* StepPresenter.swift in Sources */,
 				646E8EA41E48B23E003B8DFB /* DirectionsDetailViewController.swift in Sources */,
 				6443CBF31E4349B5008F15E5 /* AuthorizationService.swift in Sources */,
 				6443CBF11E433E9E008F15E5 /* Constants.swift in Sources */,
@@ -907,7 +917,9 @@
 				64D930AE1E3E4632007C7112 /* DirectionListPresenterImpl.swift in Sources */,
 				6483E4D91E40FED00072B97C /* AuthorizationsViewController.swift in Sources */,
 				6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */,
+				647B34AA1E4F8F7C006639DD /* StepPresenterProtocol.swift in Sources */,
 				646E8EAC1E48BBC8003B8DFB /* DirectionsDetailPresenter.swift in Sources */,
+				647B34AC1E4F902A006639DD /* StepViewProtocol.swift in Sources */,
 				6443CBED1E42BFE3008F15E5 /* ServerError.swift in Sources */,
 				647B34A61E4F8839006639DD /* DirectionDetailManagerProtocol.swift in Sources */,
 				6468618E1E46828D00583945 /* LaunchViewProtocol.swift in Sources */,
