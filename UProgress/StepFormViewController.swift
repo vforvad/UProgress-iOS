@@ -37,7 +37,12 @@ class StepFormViewController: UIViewController, StepViewProtocol {
         view.insertSubview(blurEffectView, at: 0)
         saveButton.layer.cornerRadius = 8.0
         cancellButton.layer.cornerRadius = 8.0
-        var model = DirectionDetailManager()
+        
+        descriptionField.layer.cornerRadius = 8.0
+        descriptionField.layer.borderWidth = 0.3
+        descriptionField.layer.borderColor = UIColor.lightGray.cgColor
+        
+        let model = DirectionDetailManager()
         presenter = StepPresenter(model: model, view: self)
         
         
