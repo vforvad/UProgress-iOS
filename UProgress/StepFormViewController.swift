@@ -55,6 +55,8 @@ class StepFormViewController: UIViewController, StepViewProtocol {
     }
     
     @IBAction func clickSave(_ sender: Any) {
+        self.titleFieldError.isHidden = true
+        self.descriptionFieldError.isHidden = true
         let directionId: String = String(self.direction.id)
         var parameters: Dictionary<String, AnyObject>! = ["title": self.titleField.text as String! as AnyObject, "description": self.descriptionField.text as String! as AnyObject]
         presenter.createStep(userId: user.nick, directionId: directionId, parameters: parameters )
@@ -79,6 +81,20 @@ class StepFormViewController: UIViewController, StepViewProtocol {
     }
     
     internal func failureCreation(error: ServerError!) {
-    
+        let errorsList = error.params!
+        if let titleErrorsArr = errorsList["title"] {
+            let errorsArr = titleErrorsArr as! [String]
+            let titleError: String! = errorsArr.joined(separator: "\n")
+            self.titleFieldError.text = titleError
+            self.titleFieldError.isHidden = false
+            
+        }
+        
+        if errorsList["description"] != nil {
+            let errorsArr = errorsList["description"] as! [String]
+            let descriptionError: String! = errorsArr.joined(separator: "\n")
+            self.descriptionFieldError.text = descriptionError
+            self.descriptionFieldError.isHidden = false
+        }
     }
 }
