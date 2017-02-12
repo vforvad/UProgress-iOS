@@ -27,14 +27,20 @@ class StepFormViewController: UIViewController, StepViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
-        self.popupTopMargin.constant = self.view.frame.size.width / 2
+        if CommonFunctions.DeviceData.isOrientationLandscape() {
+            self.popupTopMargin.constant = self.view.frame.size.width / 5
+        }
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.regular)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.insertSubview(blurEffectView, at: 0)
+        saveButton.layer.cornerRadius = 8.0
+        cancellButton.layer.cornerRadius = 8.0
         var model = DirectionDetailManager()
         presenter = StepPresenter(model: model, view: self)
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
