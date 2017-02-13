@@ -43,4 +43,5 @@ class DirectionsDetailViewController: BaseViewController, DirectionViewActionsPr
     internal func failedOperation(error: ServerError) {
     
     }
+    
 }

@@ -27,4 +27,16 @@ class DirectionsDetailPresenter: DirectionsDetailPresenterProtocol {
             self.view.failedDirectionLoad(error: error)
         })
     }
+    
+    internal func updateStep(userId: String!, directionId: String!, stepId: String!, parameters: Dictionary<String, AnyObject>) {
+        view.startLoader()
+        model.updateStep(userNick: userId, directionId: directionId, stepId: stepId, parameters: parameters,
+                         success: { step in
+                            self.view.stopLoader()
+                            self.view.successStepUpdate(step: step)
+        }, failure: { error in
+            self.view.stopLoader()
+            self.view.failureStepUpdate(error: error)
+        })
+    }
 }

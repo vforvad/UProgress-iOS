@@ -40,4 +40,19 @@ class DirectionDetailManager: DirectionDetailManagerProtocol {
             }
         }
     }
+    
+    internal func updateStep(userNick: String, directionId: String!, stepId: String!, parameters: Dictionary<String, AnyObject>, success: @escaping (_ step: Step) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
+        let direction = "\(directionId)"
+        let url = "/users/\(userNick)/directions/" + directionId + "/steps/" + stepId
+        ApiRequest.sharedInstance.put(url: url, parameters: ["step": parameters] as NSDictionary).responseJSON { response  in
+            if response.response?.statusCode == 200 {
+                let stepObject = response.result.value! as! Dictionary<String, Any>
+                let step = Mapper<Step>().map(JSONObject: stepObject["step"])
+                success(step!)
+            } else {
+                let stepError = response.result.value! as! Dictionary<String, Any>
+                failure(ServerError(status: response.response!.statusCode, parameters: stepError["errors"] as! NSDictionary))
+            }
+        }
+    }
 }

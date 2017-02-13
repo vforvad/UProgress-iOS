@@ -9,7 +9,7 @@
 import Foundation
 
 class DirectionDetailView: NSObject, DirectionsDetailViewProtocol, UITableViewDelegate,
-UITableViewDataSource {
+UITableViewDataSource, StepCellProtocol {
     var direction: Direction!
     var actions: DirectionViewActionsProtocol!
     var viewController: BaseViewController!
@@ -20,6 +20,8 @@ UITableViewDataSource {
     public var refreshControl: UIRefreshControl!
     private var tableView: UITableView!
     private let navButtonSize = 30
+    private var user = AuthorizationService.sharedInstance.currentUser
+    private var directionId: String!
     
     init(table: UITableView!, direction: Direction!, viewController: BaseViewController ) {
         super.init()
@@ -46,11 +48,11 @@ UITableViewDataSource {
         ]
         
         tableView.register(UINib(nibName: "StepTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        
+        directionId = String(self.direction.id)
         let model = DirectionDetailManager()
-        let directionId: String = String(self.direction.id)
+        
         presenter = DirectionsDetailPresenter(model: model, view: self)
-        presenter.loadDirection(userNick: "vforvad", directionId: directionId)
+        presenter.loadDirection(userNick: user?.nick, directionId: directionId)
     }
     
     func createStep() {
@@ -86,7 +88,7 @@ UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! StepTableViewCell
         if steps[indexPath.row] != nil {
-            cell.setData(step: steps[indexPath.row])
+            cell.setData(step: steps[indexPath.row], viewController: self)
 //            cell.textLabel?.text = steps[indexPath.row].title
         }
         //        cell.textLabel?.text = direction.steps?[indexPath.row].title
@@ -123,5 +125,25 @@ UITableViewDataSource {
         steps.insert(step, at: 0)
         self.direction = step.direction
         tableView.reloadData()
+    }
+
+    
+    internal func toggleSwitcher(step: Step!, value: Bool!) {
+        var params = ["title": step.title, "description": step.description, "direction_id": self.direction.id, "is_done": value] as [String : Any]
+        presenter.updateStep(userId: user?.nick, directionId: directionId, stepId: String(step.id), parameters: params as Dictionary<String, AnyObject>)
+    }
+    
+    internal func successStepUpdate(step: Step!) {
+        var index = steps.index(where: { $0.id == step.id })
+        //        var index = steps.index
+        //        var index = mappedSteps.index(where: step.id)
+        steps.remove(at: index!)
+        steps.insert(step, at: index!)
+        self.direction = step.direction
+        tableView.reloadData()
+    }
+    
+    internal func failureStepUpdate(error: ServerError!) {
+        
     }
 }

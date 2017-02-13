@@ -44,6 +44,9 @@
 		642407701E52114A00E4CF95 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25C81E422621008BD119 /* Image.swift */; };
 		642407711E52114D00E4CF95 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6464C5A61E44CBAA00C79975 /* Button.swift */; };
 		642407721E52114D00E4CF95 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6464C5A61E44CBAA00C79975 /* Button.swift */; };
+		642407741E52190B00E4CF95 /* StepCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642407731E52190B00E4CF95 /* StepCellProtocol.swift */; };
+		642407751E52197000E4CF95 /* StepCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642407731E52190B00E4CF95 /* StepCellProtocol.swift */; };
+		642407761E52197100E4CF95 /* StepCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642407731E52190B00E4CF95 /* StepCellProtocol.swift */; };
 		6426C7741E4DFE3100F37701 /* DirectionsPopupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6426C7731E4DFE3100F37701 /* DirectionsPopupProtocol.swift */; };
 		6426C7781E4DFED900F37701 /* DirectionViewActionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6426C7771E4DFED900F37701 /* DirectionViewActionsProtocol.swift */; };
 		643C20301E47D6D90066D9BC /* DirectionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643C202F1E47D6D90066D9BC /* DirectionsStoryboard.storyboard */; };
@@ -173,6 +176,7 @@
 		641F25D61E4232BE008BD119 /* SignInProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInProtocol.swift; sourceTree = "<group>"; };
 		642407671E51CA6800E4CF95 /* StepTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTableViewCell.swift; sourceTree = "<group>"; };
 		642407691E51CA7400E4CF95 /* StepTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepTableViewCell.xib; sourceTree = "<group>"; };
+		642407731E52190B00E4CF95 /* StepCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCellProtocol.swift; sourceTree = "<group>"; };
 		6426C7731E4DFE3100F37701 /* DirectionsPopupProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsPopupProtocol.swift; sourceTree = "<group>"; };
 		6426C7771E4DFED900F37701 /* DirectionViewActionsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionViewActionsProtocol.swift; sourceTree = "<group>"; };
 		643C202F1E47D6D90066D9BC /* DirectionsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectionsStoryboard.storyboard; sourceTree = "<group>"; };
@@ -315,6 +319,7 @@
 				647B34AB1E4F902A006639DD /* StepViewProtocol.swift */,
 				642407671E51CA6800E4CF95 /* StepTableViewCell.swift */,
 				642407691E51CA7400E4CF95 /* StepTableViewCell.xib */,
+				642407731E52190B00E4CF95 /* StepCellProtocol.swift */,
 			);
 			name = steps;
 			sourceTree = "<group>";
@@ -931,6 +936,7 @@
 				641F25D51E42309D008BD119 /* AuthorizationPresenterProtocol.swift in Sources */,
 				646861881E467CF700583945 /* LaunchViewController.swift in Sources */,
 				64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */,
+				642407741E52190B00E4CF95 /* StepCellProtocol.swift in Sources */,
 				641F25CD1E422BF2008BD119 /* User.swift in Sources */,
 				6426C7781E4DFED900F37701 /* DirectionViewActionsProtocol.swift in Sources */,
 				64D9309C1E3E2CEE007C7112 /* DirectionManager.swift in Sources */,
@@ -992,6 +998,7 @@
 				64D930BB1E3E72EB007C7112 /* ApiRequest.swift in Sources */,
 				64D930C31E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
 				6424076D1E52114600E4CF95 /* String.swift in Sources */,
+				642407751E52197000E4CF95 /* StepCellProtocol.swift in Sources */,
 				64D930BF1E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */,
 				64D930C71E3E7311007C7112 /* DirectionListPresenterImpl.swift in Sources */,
 				64D930C11E3E72F8007C7112 /* DirectionsListView.swift in Sources */,
@@ -1023,6 +1030,7 @@
 				64D930BC1E3E72EB007C7112 /* ApiRequest.swift in Sources */,
 				64D930C41E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
 				6424076E1E52114600E4CF95 /* String.swift in Sources */,
+				642407761E52197100E4CF95 /* StepCellProtocol.swift in Sources */,
 				64D930C01E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */,
 				64D930C81E3E7312007C7112 /* DirectionListPresenterImpl.swift in Sources */,
 				64D930C21E3E72F8007C7112 /* DirectionsListView.swift in Sources */,

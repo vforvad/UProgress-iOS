@@ -10,4 +10,5 @@ import Foundation
 
 protocol DirectionsDetailPresenterProtocol {
     func loadDirection(userNick: String!, directionId: String!)
+    func updateStep(userId: String!, directionId: String!, stepId: String!, parameters: Dictionary<String, AnyObject>)
 }
