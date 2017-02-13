@@ -87,6 +87,7 @@ UITableViewDataSource, StepCellProtocol {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! StepTableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         if steps[indexPath.row] != nil {
             cell.setData(step: steps[indexPath.row], viewController: self)
 //            cell.textLabel?.text = steps[indexPath.row].title
