@@ -37,7 +37,7 @@ UITableViewDataSource, StepCellProtocol {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         var myBtn: UIButton = UIButton()
-        myBtn.setImage(UIImage(named: "menu"), for: .normal)
+        myBtn.setImage(UIImage(named: "add_icon"), for: .normal)
         myBtn.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: navButtonSize, height: navButtonSize))
         myBtn.addTarget(self, action: #selector(createStep), for: .touchUpInside)
         viewController.navigationItem.rightBarButtonItems = [
