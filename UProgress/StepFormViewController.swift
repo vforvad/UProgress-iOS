@@ -28,7 +28,12 @@ class StepFormViewController: UIViewController, StepViewProtocol {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         if CommonFunctions.DeviceData.isOrientationLandscape() {
-            self.popupTopMargin.constant = self.view.frame.size.width / 5
+            if CommonFunctions.DeviceData.isIPad() {
+                self.popupTopMargin.constant = 60
+            }
+            else {
+                self.popupTopMargin.constant = self.view.frame.size.width / 5
+            }
         }
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.regular)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
