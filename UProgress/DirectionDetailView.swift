@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Toaster
 
 class DirectionDetailView: NSObject, DirectionsDetailViewProtocol, UITableViewDelegate,
 UITableViewDataSource, StepCellProtocol {
@@ -130,12 +131,11 @@ UITableViewDataSource, StepCellProtocol {
     
     internal func successStepUpdate(step: Step!) {
         let index = steps.index(where: { $0.id == step.id })
-        //        var index = steps.index
-        //        var index = mappedSteps.index(where: step.id)
         steps.remove(at: index!)
         steps.insert(step, at: index!)
         self.direction = step.direction
         tableView.reloadData()
+        Toast(text: String.localizedStringWithFormat(NSLocalizedString("steps_update_success", comment: ""), step.title!)).show()
     }
     
     internal func failureStepUpdate(error: ServerError!) {

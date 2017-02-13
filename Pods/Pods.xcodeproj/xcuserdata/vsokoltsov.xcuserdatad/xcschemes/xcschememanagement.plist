@@ -54,6 +54,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Toaster.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>UIColor_Hex_Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,7 +72,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>22D80C467531776CEFB74C45BAD62FB2</key>
+		<key>0B0443ED6BD1469BF0B05BB7F0012E62</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,17 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34ACBF2954FC669850638F7A6F772E64</key>
+		<key>3029DCD8FB9D31CB9B681998B2436DBE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>38ACA430605AFB4229712A18BDDF5086</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3B870C0993DF6EDB370283AA4CD908AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,12 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>75D7E982287CF41DD20A4342AA24B9FF</key>
+		<key>51284E89F1DE7F86E293BE0B5F30C311</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>7CAB3C52D5A534B1B1AA977669452485</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>81F0EBD9A507B1768AC03CA5463F7F98</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,22 +132,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A4CE7F5967E9BE39069AC314721E6E08</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B65DE52251DACC04341048B5712D3DC1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DCB84751FA7249AB0BF2AD0250B8D6F0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E35E813F9C64577D7A88FD00E67086E6</key>
+		<key>A27D9CDEC9A0963770FFE01A73BD4D3C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

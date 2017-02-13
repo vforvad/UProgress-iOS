@@ -9,6 +9,7 @@ PODS:
   - MBProgressHUD (1.0.0)
   - ObjectMapper (2.2.2)
   - SideMenuController (0.2.4)
+  - Toaster (2.0.1)
   - UIColor_Hex_Swift (3.0.2)
   - UIScrollView-InfiniteScroll (1.0.0)
 
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - ObjectMapper (~> 2.2)
   - SideMenuController
+  - Toaster (~> 2.0)
   - UIColor_Hex_Swift (~> 3.0.2)
   - UIScrollView-InfiniteScroll
 
@@ -30,9 +32,10 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
+  Toaster: be65cd48e93a525b2a9cc4bd25a2bfc900e02d9f
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
   UIScrollView-InfiniteScroll: d26885be71caca7485cdb37eab513a8f89036bb0
 
-PODFILE CHECKSUM: b5c98677444c50e6d5966c7f6c9db436e767b25a
+PODFILE CHECKSUM: a28c542a1d80a18c29a8c95da771a30710f993fe
 
 COCOAPODS: 1.2.0

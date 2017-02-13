@@ -24,3 +24,8 @@
 "sidebar_sign_in" = "Войти";
 "sidebar_sign_up" = "Регистрация";
 "sidebar_directions" = "Направления";
+
+// STEPS
+
+"steps_update_success" = "Шаг %@ был успешно обновлен";
+"steps_update_failed" = "При выполнении операции произошла ошибка";

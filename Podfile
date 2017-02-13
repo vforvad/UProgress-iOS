@@ -12,6 +12,7 @@ target 'UProgress' do
   pod 'MBProgressHUD'
   pod 'UIScrollView-InfiniteScroll'
   pod 'KeychainSwift', '~> 7.0'
+  pod 'Toaster', '~> 2.0'
 
   # Pods for UProgress
 

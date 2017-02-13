@@ -28,3 +28,9 @@
 "sidebar_sign_in" = "Sign in";
 "sidebar_sign_up" = "Sign up";
 "sidebar_directions" = "Directions";
+
+
+// STEPS
+
+"steps_update_success" = "Step '%@' was succesfully updated";
+"steps_update_failed" = "Unfortunatelly, an error has occured";
