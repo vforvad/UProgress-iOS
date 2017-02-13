@@ -31,13 +31,6 @@ class Direction: Mappable {
         description <- map["description"]
         percentsResult <- map["percents_result"]
         steps <- map["steps"]
-//        let stps = map["steps"].currentValue as? [Step]
-//        if let stepsValue = stps {
-//            self.steps = stepsValue as [Step]!
-//        }
-//        else {
-//            self.steps = []
-//        }
         
         let stringFromDate = map["updated_at"].currentValue as! String
         if let dateFromString = stringFromDate.dateFromISO8601 {

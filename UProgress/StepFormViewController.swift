@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MBProgressHUD
 
 class StepFormViewController: UIViewController, StepViewProtocol {
     var defaultKeyboardSize: CGFloat!
@@ -101,5 +102,13 @@ class StepFormViewController: UIViewController, StepViewProtocol {
             self.descriptionFieldError.text = descriptionError
             self.descriptionFieldError.isHidden = false
         }
+    }
+    
+    internal func startLoader() {
+        MBProgressHUD.showAdded(to: view, animated: true)
+    }
+    
+    internal func stopLoader() {
+        MBProgressHUD.hide(for: view, animated: true)
     }
 }

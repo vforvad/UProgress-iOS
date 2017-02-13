@@ -18,11 +18,14 @@ class StepPresenter: StepPresenterProtocol {
     }
     
     internal func createStep(userId: String!, directionId: String!, parameters: Dictionary<String, AnyObject>) {
+        view.startLoader()
         model.createStep(userNick: userId, directionId: directionId, parameters: parameters,
         success: { step in
+            self.view.stopLoader()
             self.view.successCreation(step: step)
         },
         failure: { error in
+            self.view.stopLoader()
             self.view.failureCreation(error: error)
         })
     }

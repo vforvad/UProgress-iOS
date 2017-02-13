@@ -14,6 +14,7 @@ class Step: Mappable {
     var title: String!
     var description: String!
     var updatedAt: Date!
+    var direction: Direction!
     
     required init?() {
         
@@ -27,6 +28,7 @@ class Step: Mappable {
         id <- map["id"]
         title <- map["title"]
         description <- map["description"]
+        direction <- map["direction"]
         
         let stringFromDate = map["updated_at"].currentValue as! String
         if let dateFromString = stringFromDate.dateFromISO8601 {

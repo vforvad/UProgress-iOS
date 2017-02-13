@@ -114,6 +114,7 @@ UITableViewDataSource {
     
     public func addStep(step: Step!) {
         steps.insert(step, at: 0)
+        self.direction = step.direction
         tableView.reloadData()
     }
 }

@@ -9,6 +9,8 @@
 import Foundation
 
 protocol StepViewProtocol {
+    func startLoader()
+    func stopLoader()
     func successCreation(step: Step!)
     func failureCreation(error: ServerError!)
 }
