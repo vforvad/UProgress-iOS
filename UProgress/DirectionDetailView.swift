@@ -30,6 +30,10 @@ UITableViewDataSource {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         setupUIRefreshController()
+        
+        tableView.estimatedRowHeight = 300
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         var myBtn: UIButton = UIButton()
         myBtn.setImage(UIImage(named: "menu"), for: .normal)
         myBtn.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: navButtonSize, height: navButtonSize))
@@ -40,6 +44,8 @@ UITableViewDataSource {
 //            UIBarButtonItem(title: "Remove", style: .plain, target: self, action: #selector(removeDirection),
 //                            image: UIImage(image: "menu"))
         ]
+        
+        tableView.register(UINib(nibName: "StepTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         
         let model = DirectionDetailManager()
         let directionId: String = String(self.direction.id)
@@ -78,12 +84,13 @@ UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! StepTableViewCell
         if steps[indexPath.row] != nil {
-            cell.textLabel?.text = steps[indexPath.row].title
+            cell.setData(step: steps[indexPath.row])
+//            cell.textLabel?.text = steps[indexPath.row].title
         }
         //        cell.textLabel?.text = direction.steps?[indexPath.row].title
-        return cell
+        return cell as! UITableViewCell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
