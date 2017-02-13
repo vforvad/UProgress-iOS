@@ -12,9 +12,8 @@ import UIKit
 class BaseSplitViewController: UISplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        var user = AuthorizationService.sharedInstance.currentUser
+        let user = AuthorizationService.sharedInstance.currentUser
         if (user != nil) {
-//            let navigationController = self.storyboard!.instantiateViewController(withIdentifier: "SidebarViewController") as! SidebarViewController
             let detailViewController = CommonFunctions.fromStoryboard(name: "DirectionsStoryboard", identifier: "DirectionsListViewController") as! DirectionsListViewController
 //            navigationController.setUser(user: user!)
             let navCtrl = UINavigationController(rootViewController: detailViewController)

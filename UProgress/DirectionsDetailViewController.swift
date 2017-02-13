@@ -30,7 +30,7 @@ class DirectionsDetailViewController: BaseViewController, DirectionViewActionsPr
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "modal") {
-             var viewController = segue.destination as! StepFormViewController
+             let viewController = segue.destination as! StepFormViewController
              viewController.mainView = self
              viewController.direction = direction
         }

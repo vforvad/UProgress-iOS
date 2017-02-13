@@ -25,7 +25,7 @@ UITableViewDataSource, StepCellProtocol {
     
     init(table: UITableView!, direction: Direction!, viewController: BaseViewController ) {
         super.init()
-        self.viewController = viewController as! BaseViewController
+        self.viewController = viewController 
         actions = viewController as! DirectionViewActionsProtocol
         self.direction = direction
         self.tableView = table
@@ -36,7 +36,7 @@ UITableViewDataSource, StepCellProtocol {
         tableView.estimatedRowHeight = 300
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        var myBtn: UIButton = UIButton()
+        let myBtn: UIButton = UIButton()
         myBtn.setImage(UIImage(named: "add_icon"), for: .normal)
         myBtn.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: navButtonSize, height: navButtonSize))
         myBtn.addTarget(self, action: #selector(createStep), for: .touchUpInside)
@@ -88,12 +88,8 @@ UITableViewDataSource, StepCellProtocol {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! StepTableViewCell
         cell.selectionStyle = UITableViewCellSelectionStyle.none
-        if steps[indexPath.row] != nil {
-            cell.setData(step: steps[indexPath.row], viewController: self)
-//            cell.textLabel?.text = steps[indexPath.row].title
-        }
-        //        cell.textLabel?.text = direction.steps?[indexPath.row].title
-        return cell as! UITableViewCell
+        cell.setData(step: steps[indexPath.row], viewController: self)
+        return cell as UITableViewCell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -101,14 +97,13 @@ UITableViewDataSource, StepCellProtocol {
         if self.direction != nil {
             directionDetailView.setDirection(direction: self.direction)
         }
-        //        vw.backgroundColor = UIColor.red
         
         return directionDetailView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if self.direction != nil && directionDetailView != nil {
-            var height = directionDetailView.getHeight()
+            let height = directionDetailView.getHeight()
             return height
         }
         return 200
@@ -118,7 +113,6 @@ UITableViewDataSource, StepCellProtocol {
     func setupUIRefreshController() {
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: NSLocalizedString("pull_to_refresh", comment: ""))
-        //        refreshControl.addTarget(self, action: #selector(DirectionsListView.reloadList), for: UIControlEvents.valueChanged)
         tableView.addSubview(refreshControl)
     }
     
@@ -130,12 +124,12 @@ UITableViewDataSource, StepCellProtocol {
 
     
     internal func toggleSwitcher(step: Step!, value: Bool!) {
-        var params = ["title": step.title, "description": step.description, "direction_id": self.direction.id, "is_done": value] as [String : Any]
+        let params = ["title": step.title, "description": step.description, "direction_id": self.direction.id, "is_done": value] as [String : Any]
         presenter.updateStep(userId: user?.nick, directionId: directionId, stepId: String(step.id), parameters: params as Dictionary<String, AnyObject>)
     }
     
     internal func successStepUpdate(step: Step!) {
-        var index = steps.index(where: { $0.id == step.id })
+        let index = steps.index(where: { $0.id == step.id })
         //        var index = steps.index
         //        var index = mappedSteps.index(where: step.id)
         steps.remove(at: index!)

@@ -56,7 +56,7 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
     
     private func segueForNavigationController(identifier: String!) {
         var viewController: UIViewController!
-        let cacheIdentifier = identifier
+        _ = identifier
         
         switch identifier {
         case "profile":

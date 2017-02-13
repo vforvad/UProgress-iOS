@@ -11,10 +11,7 @@ import Alamofire
 import ObjectMapper
 
 class DirectionDetailManager: DirectionDetailManagerProtocol {
-    init() {}
-    
     internal func loadDirection(userNick: String, directionId: String!, success: @escaping (_ direction: Direction) -> Void, failure: @escaping (_ error: NSError) -> Void) {
-        let direction = "\(directionId)"
         let url = "/users/\(userNick)/directions/" + directionId
         ApiRequest.sharedInstance.get(url: url, parameters: [:]).responseObject(keyPath: "direction") { (response: DataResponse<Direction>) in
             switch(response.result) {
@@ -27,7 +24,6 @@ class DirectionDetailManager: DirectionDetailManagerProtocol {
     }
     
     internal func createStep(userNick: String, directionId: String!, parameters: Dictionary<String, AnyObject>, success: @escaping (_ step: Step) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
-        let direction = "\(directionId)"
         let url = "/users/\(userNick)/directions/" + directionId + "/steps"
         ApiRequest.sharedInstance.post(url: url, parameters: ["step": parameters] as NSDictionary).responseJSON { response  in
             if response.response?.statusCode == 200 {
@@ -42,7 +38,6 @@ class DirectionDetailManager: DirectionDetailManagerProtocol {
     }
     
     internal func updateStep(userNick: String, directionId: String!, stepId: String!, parameters: Dictionary<String, AnyObject>, success: @escaping (_ step: Step) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
-        let direction = "\(directionId)"
         let url = "/users/\(userNick)/directions/" + directionId + "/steps/" + stepId
         ApiRequest.sharedInstance.put(url: url, parameters: ["step": parameters] as NSDictionary).responseJSON { response  in
             if response.response?.statusCode == 200 {

@@ -33,7 +33,7 @@ class StepTableViewCell: UITableViewCell {
         }
     }
     @IBAction func toggleStatus(_ sender: UISwitch) {
-        var status = sender.isOn
+        let status = sender.isOn
         viewController.toggleSwitcher(step: step, value: status)
     }
 }
