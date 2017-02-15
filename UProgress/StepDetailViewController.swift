@@ -14,6 +14,11 @@ class StepDetailViewController: UIViewController {
     @IBOutlet weak var viewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var viewMarginTopConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    var step: Step!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.regular)
@@ -24,6 +29,9 @@ class StepDetailViewController: UIViewController {
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.viewTap(_:)))
         self.view.addGestureRecognizer(gesture)
+        
+        titleLabel.text = step.title
+        descriptionLabel.text = step.description
     }
     
     func viewTap(_ sender:UITapGestureRecognizer) {

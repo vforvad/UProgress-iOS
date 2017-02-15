@@ -11,6 +11,7 @@ import UIKit
 
 class DirectionsDetailViewController: BaseViewController, DirectionViewActionsProtocol, DirectionsPopupProtocol {
     var direction: Direction!
+    var selectedStep: Step!
     private var directionDetailView: DirectionDetailView!
     
     @IBOutlet weak var tableView: UITableView!
@@ -29,6 +30,7 @@ class DirectionsDetailViewController: BaseViewController, DirectionViewActionsPr
     }
     
     internal func showStepDescription(step: Step) {
+        selectedStep = step
         performSegue(withIdentifier: "step_detail", sender: self)
     }
     
@@ -39,8 +41,10 @@ class DirectionsDetailViewController: BaseViewController, DirectionViewActionsPr
              viewController.direction = direction
         }
         
-        if (segue.identifier == "modal") {
+        if (segue.identifier == "step_detail") {
             let viewController = segue.destination as! StepDetailViewController
+            viewController.step = selectedStep
+            selectedStep = nil
         }
     }
     
