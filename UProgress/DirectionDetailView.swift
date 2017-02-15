@@ -93,6 +93,18 @@ UITableViewDataSource, StepCellProtocol {
         return cell as UITableViewCell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .normal, title: NSLocalizedString("delete_step", comment: "")) { action, index in
+            print("share button tapped")
+        }
+        delete.backgroundColor = UIColor.red
+        return [delete]
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         directionDetailView = DirectionDetailInfoView.instanceFromNib() as! DirectionDetailInfoView
         if self.direction != nil {
@@ -101,6 +113,7 @@ UITableViewDataSource, StepCellProtocol {
         
         return directionDetailView
     }
+    
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if self.direction != nil && directionDetailView != nil {
