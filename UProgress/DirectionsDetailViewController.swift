@@ -28,11 +28,19 @@ class DirectionsDetailViewController: BaseViewController, DirectionViewActionsPr
         performSegue(withIdentifier: "modal", sender: self)
     }
     
+    internal func showStepDescription(step: Step) {
+        performSegue(withIdentifier: "step_detail", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "modal") {
              let viewController = segue.destination as! StepFormViewController
              viewController.mainView = self
              viewController.direction = direction
+        }
+        
+        if (segue.identifier == "modal") {
+            let viewController = segue.destination as! StepDetailViewController
         }
     }
     
@@ -43,5 +51,4 @@ class DirectionsDetailViewController: BaseViewController, DirectionViewActionsPr
     internal func failedOperation(error: ServerError) {
     
     }
-    
 }

@@ -110,6 +110,10 @@ UITableViewDataSource, StepCellProtocol {
         return 200
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        actions.showStepDescription(step: steps[indexPath.row])
+    }
+    
     // MARK: Refresh Control
     func setupUIRefreshController() {
         refreshControl = UIRefreshControl()

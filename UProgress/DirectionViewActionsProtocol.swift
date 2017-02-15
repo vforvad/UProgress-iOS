@@ -11,4 +11,5 @@ import Foundation
 protocol DirectionViewActionsProtocol {
     func selectStepItem(step: Step)
     func createStep()
+    func showStepDescription(step: Step)
 }

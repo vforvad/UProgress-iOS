@@ -55,6 +55,9 @@
 		6443CBEF1E42C0DA008F15E5 /* ErrorsHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6443CBEE1E42C0DA008F15E5 /* ErrorsHandling.swift */; };
 		6443CBF11E433E9E008F15E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6443CBF01E433E9E008F15E5 /* Constants.swift */; };
 		6443CBF31E4349B5008F15E5 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6443CBF21E4349B5008F15E5 /* AuthorizationService.swift */; };
+		645800581E54AA62002366CA /* StepDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645800571E54AA62002366CA /* StepDetailViewController.swift */; };
+		645800591E54AD14002366CA /* StepDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645800571E54AA62002366CA /* StepDetailViewController.swift */; };
+		6458005A1E54AD14002366CA /* StepDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645800571E54AA62002366CA /* StepDetailViewController.swift */; };
 		645F5A0E1E3E95D0005CCBD6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */; };
 		6464C5A71E44CBAA00C79975 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6464C5A61E44CBAA00C79975 /* Button.swift */; };
 		646861881E467CF700583945 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861871E467CF700583945 /* LaunchViewController.swift */; };
@@ -186,6 +189,7 @@
 		6443CBEE1E42C0DA008F15E5 /* ErrorsHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorsHandling.swift; sourceTree = "<group>"; };
 		6443CBF01E433E9E008F15E5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6443CBF21E4349B5008F15E5 /* AuthorizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
+		645800571E54AA62002366CA /* StepDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepDetailViewController.swift; sourceTree = "<group>"; };
 		645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		645F5A0F1E3E95D4005CCBD6 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/AlamofireObjectMapper/AlamofireObjectMapper.framework"; sourceTree = "<group>"; };
 		645F5A111E3E95DB005CCBD6 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
@@ -320,6 +324,7 @@
 				642407671E51CA6800E4CF95 /* StepTableViewCell.swift */,
 				642407691E51CA7400E4CF95 /* StepTableViewCell.xib */,
 				642407731E52190B00E4CF95 /* StepCellProtocol.swift */,
+				645800571E54AA62002366CA /* StepDetailViewController.swift */,
 			);
 			name = steps;
 			sourceTree = "<group>";
@@ -975,6 +980,7 @@
 				641F25D11E422FC3008BD119 /* AuthorizationViewProtocol.swift in Sources */,
 				6483E4C91E3FAAF90072B97C /* SidebarViewController.swift in Sources */,
 				646E8EA11E48B03B003B8DFB /* ProfileViewController.swift in Sources */,
+				645800581E54AA62002366CA /* StepDetailViewController.swift in Sources */,
 				6468618C1E46827900583945 /* LaunchPresenterProtocol.swift in Sources */,
 				641F25C91E422621008BD119 /* Image.swift in Sources */,
 			);
@@ -995,6 +1001,7 @@
 				641B30A31E4B67AB00FF60CC /* Step.swift in Sources */,
 				646E8EA71E48B4A9003B8DFB /* DirectionsListCell.swift in Sources */,
 				64D930C51E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */,
+				645800591E54AD14002366CA /* StepDetailViewController.swift in Sources */,
 				64D930BB1E3E72EB007C7112 /* ApiRequest.swift in Sources */,
 				64D930C31E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
 				6424076D1E52114600E4CF95 /* String.swift in Sources */,
@@ -1027,6 +1034,7 @@
 				641B30A41E4B67AC00FF60CC /* Step.swift in Sources */,
 				646E8EA81E48B4AA003B8DFB /* DirectionsListCell.swift in Sources */,
 				64D930C61E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */,
+				6458005A1E54AD14002366CA /* StepDetailViewController.swift in Sources */,
 				64D930BC1E3E72EB007C7112 /* ApiRequest.swift in Sources */,
 				64D930C41E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
 				6424076E1E52114600E4CF95 /* String.swift in Sources */,

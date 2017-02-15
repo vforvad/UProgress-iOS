@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MzI-xD-DRF" id="tlq-O3-R5e">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -95,7 +95,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="stepId" rowHeight="44" id="RlT-t8-RW1">
-                                        <rect key="frame" x="0.0" y="55.5" width="355" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="355" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RlT-t8-RW1" id="W9G-eW-UoP">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="43"/>
@@ -116,11 +116,61 @@
                     <connections>
                         <outlet property="tableView" destination="n5h-Ed-jQN" id="z4L-Eq-Ngw"/>
                         <segue destination="NPy-C5-qXJ" kind="presentation" identifier="modal" modalPresentationStyle="overCurrentContext" id="bIR-rI-OaO"/>
+                        <segue destination="5bP-6m-iKz" kind="presentation" identifier="step_detail" modalPresentationStyle="overCurrentContext" id="ksd-Dk-Bdp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEr-3M-X17" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2844" y="-389.05547226386807"/>
+        </scene>
+        <!--Step Detail View Controller-->
+        <scene sceneID="mmz-Xt-iax">
+            <objects>
+                <viewController id="5bP-6m-iKz" customClass="StepDetailViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hOL-YR-HKN"/>
+                        <viewControllerLayoutGuide type="bottom" id="AgN-XW-bua"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u72-hO-pVj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSg-ua-QSN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C9F-K7-Zsv">
+                                        <rect key="frame" x="67" y="8" width="240" height="159"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="159" id="ndh-eW-YiA"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="C9F-K7-Zsv" firstAttribute="top" secondItem="LSg-ua-QSN" secondAttribute="top" constant="50" id="EXh-1g-jgb"/>
+                                    <constraint firstAttribute="trailing" secondItem="C9F-K7-Zsv" secondAttribute="trailing" constant="30" id="UvC-Be-OEt"/>
+                                    <constraint firstItem="C9F-K7-Zsv" firstAttribute="centerX" secondItem="LSg-ua-QSN" secondAttribute="centerX" id="bPC-Pl-cjR"/>
+                                    <constraint firstItem="C9F-K7-Zsv" firstAttribute="leading" secondItem="LSg-ua-QSN" secondAttribute="leading" constant="30" id="fiS-UQ-5PK"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="LSg-ua-QSN" firstAttribute="leading" secondItem="u72-hO-pVj" secondAttribute="leading" id="OTR-i8-yv6"/>
+                            <constraint firstAttribute="trailing" secondItem="LSg-ua-QSN" secondAttribute="trailing" id="VK4-vL-8dh"/>
+                            <constraint firstItem="LSg-ua-QSN" firstAttribute="top" secondItem="u72-hO-pVj" secondAttribute="top" id="fJq-Xn-zqc"/>
+                            <constraint firstItem="AgN-XW-bua" firstAttribute="top" secondItem="LSg-ua-QSN" secondAttribute="bottom" id="zKh-eR-qC2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainView" destination="C9F-K7-Zsv" id="0zc-LK-U25"/>
+                        <outlet property="scrollView" destination="LSg-ua-QSN" id="rj8-pm-3Mt"/>
+                        <outlet property="viewHeightConstraint" destination="ndh-eW-YiA" id="GpR-tT-WLe"/>
+                        <outlet property="viewMarginTopConstraint" destination="EXh-1g-jgb" id="g0E-BT-cTF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uu0-Eo-Fge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2844" y="463"/>
         </scene>
         <!--Step Form View Controller-->
         <scene sceneID="k1D-IS-bmE">
@@ -245,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="STG-M8-uf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3810.4000000000001" y="-488.00599700149928"/>
+            <point key="canvasLocation" x="2844" y="-1142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="flC-Gx-59G">

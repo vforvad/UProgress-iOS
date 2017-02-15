@@ -16,7 +16,7 @@ public enum Method: String {
 }
 
 class ApiRequest: NSObject {
-    var host = "http://22f75dac.ngrok.io"
+    var host = "http://188dbf35.ngrok.io"
     var keychain = KeychainSwift()
     
     class var sharedInstance: ApiRequest {
