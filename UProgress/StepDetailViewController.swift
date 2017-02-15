@@ -21,5 +21,14 @@ class StepDetailViewController: UIViewController {
         blurEffectView.frame = view.bounds
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.insertSubview(blurEffectView, at: 0)
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.viewTap(_:)))
+        self.view.addGestureRecognizer(gesture)
+    }
+    
+    func viewTap(_ sender:UITapGestureRecognizer) {
+        if sender.view != mainView {
+            self.dismiss(animated: true, completion: {})
+        }
     }
 }
