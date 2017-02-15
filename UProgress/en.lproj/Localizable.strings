@@ -35,3 +35,5 @@
 "steps_update_success" = "Step '%@' was succesfully updated";
 "steps_update_failed" = "Unfortunatelly, an error has occured";
 "delete_step" = "Delete";
+"steps_delete_success" = "Step '%@' was succesfully deleted";
+"steps_delete_failed" = "Unfortunatelly, an error has occured";

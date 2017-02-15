@@ -18,7 +18,9 @@ class DirectionsDetailViewController: BaseViewController, DirectionViewActionsPr
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        directionDetailView = DirectionDetailView(table: tableView, direction: direction, viewController: self )
+        directionDetailView = DirectionDetailView(table: tableView,
+                                                  direction: direction,
+                                                  viewController: self, view: view )
     }
     
     internal func selectStepItem(step: Step) {

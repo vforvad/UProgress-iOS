@@ -30,3 +30,5 @@
 "steps_update_success" = "Шаг %@ был успешно обновлен";
 "steps_update_failed" = "При выполнении операции произошла ошибка";
 "delete_step" = "Удалить";
+"steps_delete_success" = "Шаг '%@' был успешно удален";
+"steps_delete_failed" = "Во время удаления произошла ошибка";

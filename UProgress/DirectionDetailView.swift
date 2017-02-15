@@ -8,6 +8,7 @@
 
 import Foundation
 import Toaster
+import MBProgressHUD
 
 class DirectionDetailView: NSObject, DirectionsDetailViewProtocol, UITableViewDelegate,
 UITableViewDataSource, StepCellProtocol {
@@ -23,8 +24,9 @@ UITableViewDataSource, StepCellProtocol {
     private let navButtonSize = 30
     private var user = AuthorizationService.sharedInstance.currentUser
     private var directionId: String!
+    private var parentView: UIView!
     
-    init(table: UITableView!, direction: Direction!, viewController: BaseViewController ) {
+    init(table: UITableView!, direction: Direction!, viewController: BaseViewController, view: UIView! ) {
         super.init()
         self.viewController = viewController 
         actions = viewController as! DirectionViewActionsProtocol
@@ -32,6 +34,7 @@ UITableViewDataSource, StepCellProtocol {
         self.tableView = table
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.parentView = view
         setupUIRefreshController()
         
         tableView.estimatedRowHeight = 300
@@ -65,11 +68,11 @@ UITableViewDataSource, StepCellProtocol {
     }
     
     internal func startLoader() {
-        
+        MBProgressHUD.showAdded(to: parentView, animated: true)
     }
     
     internal func stopLoader() {
-        
+        MBProgressHUD.hide(for: parentView, animated: true)
     }
     
     internal func successDirectionLoad(direction: Direction!) {
@@ -99,7 +102,8 @@ UITableViewDataSource, StepCellProtocol {
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .normal, title: NSLocalizedString("delete_step", comment: "")) { action, index in
-            print("share button tapped")
+            let step = self.steps[index.row]
+            self.presenter.deleteStep(userId: self.user?.nick, directionId: self.directionId, stepId: String(step.id))
         }
         delete.backgroundColor = UIColor.red
         return [delete]
@@ -156,6 +160,18 @@ UITableViewDataSource, StepCellProtocol {
     }
     
     internal func failureStepUpdate(error: ServerError!) {
-        
+        Toast(text: NSLocalizedString("steps_update_failed", comment: "")).show()
+    }
+    
+    internal func successStepDelete(step: Step!){
+        let index = steps.index(where: { $0.id == step.id })
+        steps.remove(at: index!)
+        self.direction = step.direction
+        tableView.reloadData()
+        Toast(text: String.localizedStringWithFormat(NSLocalizedString("steps_delete_success", comment: ""), step.title!)).show()
+    }
+    
+    internal func failureStepDelete(error: ServerError!) {
+    
     }
 }

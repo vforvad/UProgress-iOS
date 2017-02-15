@@ -39,4 +39,17 @@ class DirectionsDetailPresenter: DirectionsDetailPresenterProtocol {
             self.view.failureStepUpdate(error: error)
         })
     }
+    
+    internal func deleteStep(userId: String!, directionId: String!, stepId: String!) {
+        self.view.startLoader()
+        model.deleteStep(userNick: userId, directionId: directionId, stepId: stepId,
+        success: { step in
+            self.view.stopLoader()
+            self.view.successStepDelete(step: step)
+        },
+        failure: { error in
+            self.view.stopLoader()
+            self.view.failureStepDelete(error: error)
+        })
+    }
 }

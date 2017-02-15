@@ -39,6 +39,10 @@ class ApiRequest: NSObject {
         return request(url: url, requestType: .put, parameters: parameters)
     }
     
+    func delete(url: String, parameters: NSDictionary) -> DataRequest {
+        return request(url: url, requestType: .delete, parameters: parameters)
+    }
+    
     func request(url: String, requestType: HTTPMethod, parameters: NSDictionary) -> DataRequest {
         var request: DataRequest!
         let tokenName = "uprogresstoken"
