@@ -25,6 +25,7 @@ UITableViewDataSource, StepCellProtocol {
     private var user = AuthorizationService.sharedInstance.currentUser
     private var directionId: String!
     private var parentView: UIView!
+    private var selectedCellIndexPath: IndexPath!
     
     init(table: UITableView!, direction: Direction!, viewController: BaseViewController, view: UIView! ) {
         super.init()
@@ -102,6 +103,7 @@ UITableViewDataSource, StepCellProtocol {
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .normal, title: NSLocalizedString("delete_step", comment: "")) { action, index in
+            self.selectedCellIndexPath = index
             let step = self.steps[index.row]
             self.presenter.deleteStep(userId: self.user?.nick, directionId: self.directionId, stepId: String(step.id))
         }
@@ -166,9 +168,9 @@ UITableViewDataSource, StepCellProtocol {
     internal func successStepDelete(step: Step!){
         let index = steps.index(where: { $0.id == step.id })
         steps.remove(at: index!)
-        self.direction = step.direction
-        tableView.reloadData()
+        self.tableView.deleteRows(at: [selectedCellIndexPath], with: UITableViewRowAnimation.bottom)
         Toast(text: String.localizedStringWithFormat(NSLocalizedString("steps_delete_success", comment: ""), step.title!)).show()
+        selectedCellIndexPath = nil
     }
     
     internal func failureStepDelete(error: ServerError!) {
