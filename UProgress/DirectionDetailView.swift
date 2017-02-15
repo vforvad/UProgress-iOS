@@ -168,6 +168,7 @@ UITableViewDataSource, StepCellProtocol {
     internal func successStepDelete(step: Step!){
         let index = steps.index(where: { $0.id == step.id })
         steps.remove(at: index!)
+        self.direction = step.direction
         self.tableView.deleteRows(at: [selectedCellIndexPath], with: UITableViewRowAnimation.bottom)
         Toast(text: String.localizedStringWithFormat(NSLocalizedString("steps_delete_success", comment: ""), step.title!)).show()
         selectedCellIndexPath = nil
