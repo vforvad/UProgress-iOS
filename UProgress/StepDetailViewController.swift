@@ -21,6 +21,7 @@ class StepDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mainView.layer.cornerRadius = 8.0
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.regular)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
@@ -30,7 +31,12 @@ class StepDetailViewController: UIViewController {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(self.viewTap(_:)))
         self.view.addGestureRecognizer(gesture)
         
+        let descriptionHeight = step.description.heightWithConstrainedWidth(width: self.descriptionLabel.frame.size.width, font: UIFont(name: "AppleSDGothicNeo-SemiBold", size: 17.0)!)
+        let titleHeight = step.title.heightWithConstrainedWidth(width: self.titleLabel.frame.size.width, font: UIFont(name: "HelveticaNeue-Bold", size: 19.0)!)
+        viewHeightConstraint.constant = descriptionHeight + titleHeight + 30
+        
         titleLabel.text = step.title
+        titleLabel.font = UIFont(name:"HelveticaNeue-Bold", size: 19.0)
         descriptionLabel.text = step.description
     }
     
