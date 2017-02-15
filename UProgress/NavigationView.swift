@@ -14,11 +14,11 @@ class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
     private var currentUser: User!
     private var items: [Dictionary<String, String>] = []
     private var signedInItems = [
-        ["title": NSLocalizedString("sidebar_directions", comment: ""), "segue": "directions"]
+        ["title": NSLocalizedString("sidebar_directions", comment: ""), "segue": "directions", "icon": "directions"]
     ]
     private var unsignedItems = [
-        ["title": NSLocalizedString("sidebar_sign_in", comment: ""), "segue": "sign_in"],
-        ["title": NSLocalizedString("sidebar_sign_up", comment: ""), "segue": "sign_up"]
+        ["title": NSLocalizedString("sidebar_sign_in", comment: ""), "segue": "sign_in", "icon": "sign_in"],
+        ["title": NSLocalizedString("sidebar_sign_up", comment: ""), "segue": "sign_up", "icon": "sign_up"]
     ]
     private var tableView: UITableView!
     private var viewController: NavigationViewProtocol!
@@ -36,6 +36,7 @@ class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
         self.tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: "ProfileViewCell", bundle: nil), forCellReuseIdentifier: "profileCell")
+        tableView.register(UINib(nibName: "DefaultNavigationCell", bundle: nil), forCellReuseIdentifier: cellIdentificator)
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,8 +47,11 @@ class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
             cell = profileCell
         }
         else {
-            cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: cellIdentificator)
-            cell.textLabel?.text = items[indexPath.row]["title"]
+            var navCell = tableView.dequeueReusableCell(withIdentifier: cellIdentificator, for: indexPath) as! DefaultNavigationCell
+            navCell.textView.text = items[indexPath.row]["title"]
+            let iconName = items[indexPath.row]["icon"]
+            navCell.iconView.image = UIImage(named: iconName!)
+            cell = navCell
         }
         return cell
     }
