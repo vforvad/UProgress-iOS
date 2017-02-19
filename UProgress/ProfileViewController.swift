@@ -10,7 +10,12 @@ import Foundation
 import UIKit
 
 class ProfileViewController: BaseViewController {
+    var user: User!
+    var profileView: ProfileView!
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileView = ProfileView(user: user, table: tableView)
     }
 }
