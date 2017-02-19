@@ -19,13 +19,24 @@ class ProfileView: NSObject, UITableViewDelegate, UITableViewDataSource {
         super.init()
         self.user = user
         self.tableView = table
+        
+        self.tableView.estimatedRowHeight = 300
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.profileItems = user.attributesDictionary()
+        
+        tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) 
-        return cell as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ProfileCell
+        cell.setData(list: profileItems[indexPath.row])
+//        cell.textLabel?.text = profileItems[indexPath.row]["value"]
+//        cell.detailTextLabel?.text = profileItems[indexPath.row]["title"]
+        return cell as! UITableViewCell
     }
     
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -36,9 +47,6 @@ class ProfileView: NSObject, UITableViewDelegate, UITableViewDataSource {
         return profileItems.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
-    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         profileHeader = ProfileHeader.instanceFromNib() as! ProfileHeader
