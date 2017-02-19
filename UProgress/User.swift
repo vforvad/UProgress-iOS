@@ -33,4 +33,28 @@ class User: Mappable {
         email <- map["email"]
         avatarUrl <- map["attachment.url"]
     }
+    
+    func getFullName() -> String {
+        var correctName: String!
+        
+        if firstName != nil && lastName != nil {
+                correctName = firstName + " " + lastName
+        } else {
+                correctName = "@" + nick
+        }
+        
+        return correctName
+    }
+    
+    func getCorrectNick() -> String {
+        var correctNick: String!
+        
+        if firstName != nil && lastName != nil {
+            correctNick = "@" + nick
+        } else {
+            correctNick = email
+        }
+        
+        return correctNick
+    }
 }

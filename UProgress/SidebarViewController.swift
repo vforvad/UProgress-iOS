@@ -60,7 +60,10 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
         
         switch identifier {
         case "profile":
-            viewController = CommonFunctions.fromStoryboard(name: "ProfileStoryboard", identifier: "ProfileViewController")
+            let profileVC = CommonFunctions.fromStoryboard(name: "ProfileStoryboard", identifier: "ProfileViewController") as! ProfileViewController
+            profileVC.user = AuthorizationService.sharedInstance.currentUser
+            viewController = profileVC
+            
         case "directions":
             viewController = CommonFunctions.fromStoryboard(name: "DirectionsStoryboard", identifier: "DirectionsListViewController")
         case "sign_in":
