@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ProfileCell: UITableViewCell {
     @IBOutlet weak var infoTitle: UILabel!

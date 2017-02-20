@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class StepDetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!

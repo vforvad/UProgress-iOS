@@ -9,6 +9,7 @@
 import Foundation
 import Toaster
 import MBProgressHUD
+import UIKit
 
 class DirectionDetailView: NSObject, DirectionsDetailViewProtocol, UITableViewDelegate,
 UITableViewDataSource, StepCellProtocol {

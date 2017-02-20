@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ProfileView: NSObject, UITableViewDelegate, UITableViewDataSource {
     private var cellIdentifier = "profileItem"

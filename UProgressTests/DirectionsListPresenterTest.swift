@@ -15,14 +15,23 @@ class DirectionsListPresenterTest: XCTestCase {
     
     class DirectionsListViewMock: DirectionViewProtocol {
         var successCalled: Bool!
-        internal func startLoader() {}
-        internal func stopLoader() {}
+    
+        
         internal func successDirectionsLoad(directions: [Direction]!) {
             successCalled  = true
         }
+        
         internal func failedDirectionsLoad(error: NSError) {
             successCalled = false
         }
+        
+        
+        internal func startLoader() {}
+        internal func stopLoader() {}
+        internal func startRefresh() {}
+        internal func stopRefresh() {}
+        internal func stopInfiniteScroll() {}
+        internal func successLoadMoreDirections(directions: [Direction]!) {}
 
     }
     
@@ -63,7 +72,7 @@ class DirectionsListPresenterTest: XCTestCase {
         let model = DirectionsManagerMock(request: true)
         let view = DirectionsListViewMock()
         let presenter = DirectionListPresenterImpl(model: model, view: view)
-        presenter.loadDirections(userNick: "vforvad", pageNumber: 1)
+        presenter.loadDirections(userNick: "vforvad")
         XCTAssertTrue(view.successCalled)
     }
     
@@ -71,7 +80,7 @@ class DirectionsListPresenterTest: XCTestCase {
         let model = DirectionsManagerMock(request: false)
         let view = DirectionsListViewMock()
         let presenter = DirectionListPresenterImpl(model: model, view: view)
-        presenter.loadDirections(userNick: "vforvad", pageNumber: 1)
+        presenter.loadDirections(userNick: "vforvad")
         XCTAssertFalse(view.successCalled)
     }
     
@@ -79,7 +88,7 @@ class DirectionsListPresenterTest: XCTestCase {
         let model = DirectionsManagerMock(request: true)
         let view = DirectionsListViewMock()
         let presenter = DirectionListPresenterImpl(model: model, view: view)
-        presenter.loadDirections(userNick: "vforvad", pageNumber: 1)
+        presenter.loadDirections(userNick: "vforvad")
         XCTAssertTrue(model.successCall)
     }
     
@@ -87,7 +96,7 @@ class DirectionsListPresenterTest: XCTestCase {
         let model = DirectionsManagerMock(request: false)
         let view = DirectionsListViewMock()
         let presenter = DirectionListPresenterImpl(model: model, view: view)
-        presenter.loadDirections(userNick: "vforvad", pageNumber: 1)
+        presenter.loadDirections(userNick: "vforvad")
         XCTAssertFalse(model.successCall)
     }
     
