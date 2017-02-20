@@ -27,6 +27,7 @@
 		641B30AB1E4BCC8600FF60CC /* DirectionDetailInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 641B30A71E4BCC4000FF60CC /* DirectionDetailInfoView.xib */; };
 		641B30AC1E4BCC8700FF60CC /* DirectionDetailInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 641B30A71E4BCC4000FF60CC /* DirectionDetailInfoView.xib */; };
 		641D44B21E5B935C005F64E9 /* circle.yml in Resources */ = {isa = PBXBuildFile; fileRef = 641D44B11E5B935C005F64E9 /* circle.yml */; };
+		641D44B41E5B965B005F64E9 /* bitrise.yml in Resources */ = {isa = PBXBuildFile; fileRef = 641D44B31E5B965B005F64E9 /* bitrise.yml */; };
 		641F25C91E422621008BD119 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25C81E422621008BD119 /* Image.swift */; };
 		641F25CB1E422BE6008BD119 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25CA1E422BE6008BD119 /* AuthorizationManager.swift */; };
 		641F25CD1E422BF2008BD119 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25CC1E422BF2008BD119 /* User.swift */; };
@@ -203,6 +204,7 @@
 		641B30A51E4BCC3100FF60CC /* DirectionDetailInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionDetailInfoView.swift; sourceTree = "<group>"; };
 		641B30A71E4BCC4000FF60CC /* DirectionDetailInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectionDetailInfoView.xib; sourceTree = "<group>"; };
 		641D44B11E5B935C005F64E9 /* circle.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = circle.yml; sourceTree = "<group>"; };
+		641D44B31E5B965B005F64E9 /* bitrise.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bitrise.yml; sourceTree = "<group>"; };
 		641F25C81E422621008BD119 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		641F25CA1E422BE6008BD119 /* AuthorizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
 		641F25CC1E422BF2008BD119 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 		6474B19A1E3D04C200C46165 = {
 			isa = PBXGroup;
 			children = (
+				641D44B31E5B965B005F64E9 /* bitrise.yml */,
 				641D44B11E5B935C005F64E9 /* circle.yml */,
 				6458006B1E54C076002366CA /* README.md */,
 				64432CC81E43DBB1003C3011 /* Localizable.strings */,
@@ -806,6 +809,7 @@
 				643C20301E47D6D90066D9BC /* DirectionsStoryboard.storyboard in Resources */,
 				645800701E54C4B1002366CA /* DefaultNavigationCell.xib in Resources */,
 				6474B1D51E3D091800C46165 /* .travis.yml in Resources */,
+				641D44B41E5B965B005F64E9 /* bitrise.yml in Resources */,
 				6474B1AC1E3D04C200C46165 /* iPhone.storyboard in Resources */,
 				641D44B21E5B935C005F64E9 /* circle.yml in Resources */,
 				6473830C1E5A25DF00F9C72E /* ProfileCell.xib in Resources */,
