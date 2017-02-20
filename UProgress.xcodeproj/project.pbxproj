@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1535171CDCE91FAE11927401 /* Pods_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B2E59EF71986B1EE57862A /* Pods_UProgressUITests.framework */; };
-		198C1F504EA67A89BB92B6FB /* Pods_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0278647014FB9AFDB08AEC /* Pods_UProgressTests.framework */; };
-		5E2ECF37024A74B8E3E15D25 /* Pods_UProgress_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726D3C86FF753C8EEDC99541 /* Pods_UProgress_UProgressUITests.framework */; };
 		64109F961E4CC473003C0914 /* DirectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64109F951E4CC473003C0914 /* DirectionDetailView.swift */; };
 		64109F981E4CD31D003C0914 /* StepFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64109F971E4CD31D003C0914 /* StepFormViewController.swift */; };
 		641B309D1E4B679F00FF60CC /* DirectionsDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E8EAD1E48BC12003B8DFB /* DirectionsDetailViewProtocol.swift */; };
@@ -48,6 +45,10 @@
 		641D44C81E5B9CC6005F64E9 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647383091E5A25C200F9C72E /* ProfileCell.swift */; };
 		641D44C91E5B9D12005F64E9 /* StepPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A91E4F8F7C006639DD /* StepPresenterProtocol.swift */; };
 		641D44CA1E5B9D12005F64E9 /* StepPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A91E4F8F7C006639DD /* StepPresenterProtocol.swift */; };
+		641D44CC1E5BA1F8005F64E9 /* Pods_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D44CB1E5BA1F8005F64E9 /* Pods_UProgressTests.framework */; };
+		641D44CE1E5BA200005F64E9 /* Pods_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D44CD1E5BA200005F64E9 /* Pods_UProgressUITests.framework */; };
+		641D44CF1E5BA20D005F64E9 /* Pods_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D44CB1E5BA1F8005F64E9 /* Pods_UProgressTests.framework */; };
+		641D44D01E5BA20D005F64E9 /* Pods_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D44CD1E5BA200005F64E9 /* Pods_UProgressUITests.framework */; };
 		641F25C91E422621008BD119 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25C81E422621008BD119 /* Image.swift */; };
 		641F25CB1E422BE6008BD119 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25CA1E422BE6008BD119 /* AuthorizationManager.swift */; };
 		641F25CD1E422BF2008BD119 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25CC1E422BF2008BD119 /* User.swift */; };
@@ -194,7 +195,6 @@
 		64F80D3D1E41FCB000E90004 /* RegistrationFragmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80D3C1E41FCB000E90004 /* RegistrationFragmentController.swift */; };
 		64F80D431E42058500E90004 /* AuthorizationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64F80D421E42058500E90004 /* AuthorizationStoryboard.storyboard */; };
 		8355BE18053B154ED4CA22C8 /* Pods_UProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD8BB09CFC827EB003C41A2 /* Pods_UProgress.framework */; };
-		9DFB990BFC345690E0598208 /* Pods_UProgress_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396F0220AA154D509C1E95B /* Pods_UProgress_UProgressTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,6 +224,8 @@
 		641B30A71E4BCC4000FF60CC /* DirectionDetailInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectionDetailInfoView.xib; sourceTree = "<group>"; };
 		641D44B11E5B935C005F64E9 /* circle.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = circle.yml; sourceTree = "<group>"; };
 		641D44B31E5B965B005F64E9 /* bitrise.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bitrise.yml; sourceTree = "<group>"; };
+		641D44CB1E5BA1F8005F64E9 /* Pods_UProgressTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgressTests.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/Pods_UProgressTests.framework"; sourceTree = "<group>"; };
+		641D44CD1E5BA200005F64E9 /* Pods_UProgressUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgressUITests.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/Pods_UProgressUITests.framework"; sourceTree = "<group>"; };
 		641F25C81E422621008BD119 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		641F25CA1E422BE6008BD119 /* AuthorizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
 		641F25CC1E422BF2008BD119 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -344,8 +346,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				198C1F504EA67A89BB92B6FB /* Pods_UProgressTests.framework in Frameworks */,
-				9DFB990BFC345690E0598208 /* Pods_UProgress_UProgressTests.framework in Frameworks */,
+				641D44CE1E5BA200005F64E9 /* Pods_UProgressUITests.framework in Frameworks */,
+				641D44CC1E5BA1F8005F64E9 /* Pods_UProgressTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,8 +355,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1535171CDCE91FAE11927401 /* Pods_UProgressUITests.framework in Frameworks */,
-				5E2ECF37024A74B8E3E15D25 /* Pods_UProgress_UProgressUITests.framework in Frameworks */,
+				641D44CF1E5BA20D005F64E9 /* Pods_UProgressTests.framework in Frameworks */,
+				641D44D01E5BA20D005F64E9 /* Pods_UProgressUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +684,8 @@
 		C677A2DD374B74FC58AC9AE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				641D44CD1E5BA200005F64E9 /* Pods_UProgressUITests.framework */,
+				641D44CB1E5BA1F8005F64E9 /* Pods_UProgressTests.framework */,
 				645F5A131E3E9F78005CCBD6 /* OHHTTPStubs.framework */,
 				645F5A111E3E95DB005CCBD6 /* OHHTTPStubs.framework */,
 				645F5A0F1E3E95D4005CCBD6 /* AlamofireObjectMapper.framework */,
