@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_UProgressTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_UProgressTestsVersionString[];
+FOUNDATION_EXPORT double Pods_UProgress_UProgressUITestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_UProgress_UProgressUITestsVersionString[];
 

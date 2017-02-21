@@ -17,11 +17,13 @@ target 'UProgress' do
   # Pods for UProgress
 
   target 'UProgressTests' do
-    inherit! :search_paths
+      use_frameworks!
+#    inherit! :search_paths
   end
 
   target 'UProgressUITests' do
-    inherit! :search_paths
+      use_frameworks!
+#    inherit! :search_paths
   end
 
 end

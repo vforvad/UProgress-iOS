@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4ABBA6900B7E6FCDABCEF5109D5DA1A0"
-               BuildableName = "Pods_UProgressUITests.framework"
-               BlueprintName = "Pods-UProgressUITests"
+               BlueprintIdentifier = "F6AAE74573D0FFE2A9C7EE65E9A8E13A"
+               BuildableName = "Pods_UProgress_UProgressTests.framework"
+               BlueprintName = "Pods-UProgress-UProgressTests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4ABBA6900B7E6FCDABCEF5109D5DA1A0"
-            BuildableName = "Pods_UProgressUITests.framework"
-            BlueprintName = "Pods-UProgressUITests"
+            BlueprintIdentifier = "F6AAE74573D0FFE2A9C7EE65E9A8E13A"
+            BuildableName = "Pods_UProgress_UProgressTests.framework"
+            BlueprintName = "Pods-UProgress-UProgressTests"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
