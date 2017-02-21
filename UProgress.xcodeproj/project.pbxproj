@@ -753,6 +753,7 @@
 				6474B1C01E3D04C200C46165 /* Resources */,
 				4E7694C041F83E24AFC65C28 /* [CP] Embed Pods Frameworks */,
 				5BEE422FAE157FE2788EA90F /* [CP] Copy Pods Resources */,
+				64C4DE101E5C7B88009B896B /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -940,6 +941,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UProgress/Pods-UProgress-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		64C4DE101E5C7B88009B896B /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UProgressUITests/Pods-UProgressUITests-frameworks.sh\"";
 		};
 		774992EFE282C9935832720B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
