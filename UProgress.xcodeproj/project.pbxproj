@@ -753,7 +753,6 @@
 				6474B1C01E3D04C200C46165 /* Resources */,
 				4E7694C041F83E24AFC65C28 /* [CP] Embed Pods Frameworks */,
 				5BEE422FAE157FE2788EA90F /* [CP] Copy Pods Resources */,
-				641D44D21E5C1459005F64E9 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -788,7 +787,6 @@
 					};
 					6474B1C11E3D04C200C46165 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = H6WZYAW7R8;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 6474B1A21E3D04C200C46165;
 					};
@@ -942,20 +940,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UProgress/Pods-UProgress-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		641D44D21E5C1459005F64E9 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${SRCROOT}/Pods/Target Support Files/Pods-UProgressUITests/Pods-UProgressUITests-frameworks.sh\"";
 		};
 		774992EFE282C9935832720B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1410,11 +1394,12 @@
 			baseConfigurationReference = 68D4A01EB56EC7D79F5B52DC /* Pods-UProgressUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = H6WZYAW7R8;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UProgressUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgressUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = UProgress;
 			};
@@ -1425,11 +1410,12 @@
 			baseConfigurationReference = 779513CA6D1DE240C7496902 /* Pods-UProgressUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = H6WZYAW7R8;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UProgressUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgressUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = UProgress;
 			};
