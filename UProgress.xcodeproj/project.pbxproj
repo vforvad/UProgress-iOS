@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B387C1AD8216D9BCFAC38C5 /* Pods_UProgress_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726D3C86FF753C8EEDC99541 /* Pods_UProgress_UProgressUITests.framework */; };
 		64109F961E4CC473003C0914 /* DirectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64109F951E4CC473003C0914 /* DirectionDetailView.swift */; };
 		64109F981E4CD31D003C0914 /* StepFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64109F971E4CD31D003C0914 /* StepFormViewController.swift */; };
 		641B309D1E4B679F00FF60CC /* DirectionsDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E8EAD1E48BC12003B8DFB /* DirectionsDetailViewProtocol.swift */; };
@@ -360,7 +359,6 @@
 			files = (
 				641D44CF1E5BA20D005F64E9 /* Pods_UProgressTests.framework in Frameworks */,
 				641D44D01E5BA20D005F64E9 /* Pods_UProgressUITests.framework in Frameworks */,
-				3B387C1AD8216D9BCFAC38C5 /* Pods_UProgress_UProgressUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
