@@ -23,7 +23,6 @@
 		641B30AA1E4BCC5A00FF60CC /* DirectionDetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641B30A51E4BCC3100FF60CC /* DirectionDetailInfoView.swift */; };
 		641B30AB1E4BCC8600FF60CC /* DirectionDetailInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 641B30A71E4BCC4000FF60CC /* DirectionDetailInfoView.xib */; };
 		641B30AC1E4BCC8700FF60CC /* DirectionDetailInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 641B30A71E4BCC4000FF60CC /* DirectionDetailInfoView.xib */; };
-		641D44B21E5B935C005F64E9 /* circle.yml in Resources */ = {isa = PBXBuildFile; fileRef = 641D44B11E5B935C005F64E9 /* circle.yml */; };
 		641D44B41E5B965B005F64E9 /* bitrise.yml in Resources */ = {isa = PBXBuildFile; fileRef = 641D44B31E5B965B005F64E9 /* bitrise.yml */; };
 		641D44B51E5B9858005F64E9 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6473830B1E5A25DF00F9C72E /* ProfileCell.xib */; };
 		641D44B61E5B9859005F64E9 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6473830B1E5A25DF00F9C72E /* ProfileCell.xib */; };
@@ -222,7 +221,6 @@
 		64109F971E4CD31D003C0914 /* StepFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepFormViewController.swift; sourceTree = "<group>"; };
 		641B30A51E4BCC3100FF60CC /* DirectionDetailInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionDetailInfoView.swift; sourceTree = "<group>"; };
 		641B30A71E4BCC4000FF60CC /* DirectionDetailInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DirectionDetailInfoView.xib; sourceTree = "<group>"; };
-		641D44B11E5B935C005F64E9 /* circle.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = circle.yml; sourceTree = "<group>"; };
 		641D44B31E5B965B005F64E9 /* bitrise.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bitrise.yml; sourceTree = "<group>"; };
 		641D44CB1E5BA1F8005F64E9 /* Pods_UProgressTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgressTests.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/Pods_UProgressTests.framework"; sourceTree = "<group>"; };
 		641D44CD1E5BA200005F64E9 /* Pods_UProgressUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgressUITests.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/Pods_UProgressUITests.framework"; sourceTree = "<group>"; };
@@ -489,7 +487,6 @@
 			isa = PBXGroup;
 			children = (
 				641D44B31E5B965B005F64E9 /* bitrise.yml */,
-				641D44B11E5B935C005F64E9 /* circle.yml */,
 				6458006B1E54C076002366CA /* README.md */,
 				64432CC81E43DBB1003C3011 /* Localizable.strings */,
 				6474B1A51E3D04C200C46165 /* UProgress */,
@@ -838,7 +835,6 @@
 				645800701E54C4B1002366CA /* DefaultNavigationCell.xib in Resources */,
 				641D44B41E5B965B005F64E9 /* bitrise.yml in Resources */,
 				6474B1AC1E3D04C200C46165 /* iPhone.storyboard in Resources */,
-				641D44B21E5B935C005F64E9 /* circle.yml in Resources */,
 				6473830C1E5A25DF00F9C72E /* ProfileCell.xib in Resources */,
 				647383001E59D7E100F9C72E /* ProfileHeader.xib in Resources */,
 				646E8E9F1E48B028003B8DFB /* ProfileStoryboard.storyboard in Resources */,
