@@ -45,10 +45,6 @@
 		641D44C81E5B9CC6005F64E9 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647383091E5A25C200F9C72E /* ProfileCell.swift */; };
 		641D44C91E5B9D12005F64E9 /* StepPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A91E4F8F7C006639DD /* StepPresenterProtocol.swift */; };
 		641D44CA1E5B9D12005F64E9 /* StepPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A91E4F8F7C006639DD /* StepPresenterProtocol.swift */; };
-		641D44CC1E5BA1F8005F64E9 /* Pods_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D44CB1E5BA1F8005F64E9 /* Pods_UProgressTests.framework */; };
-		641D44CE1E5BA200005F64E9 /* Pods_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D44CD1E5BA200005F64E9 /* Pods_UProgressUITests.framework */; };
-		641D44CF1E5BA20D005F64E9 /* Pods_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D44CB1E5BA1F8005F64E9 /* Pods_UProgressTests.framework */; };
-		641D44D01E5BA20D005F64E9 /* Pods_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D44CD1E5BA200005F64E9 /* Pods_UProgressUITests.framework */; };
 		641F25C91E422621008BD119 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25C81E422621008BD119 /* Image.swift */; };
 		641F25CB1E422BE6008BD119 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25CA1E422BE6008BD119 /* AuthorizationManager.swift */; };
 		641F25CD1E422BF2008BD119 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641F25CC1E422BF2008BD119 /* User.swift */; };
@@ -156,6 +152,10 @@
 		6483E4D31E4093F60072B97C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4D21E4093F60072B97C /* Date.swift */; };
 		6483E4D51E409A1D0072B97C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4D41E409A1D0072B97C /* String.swift */; };
 		6483E4D91E40FED00072B97C /* AuthorizationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4D81E40FED00072B97C /* AuthorizationsViewController.swift */; };
+		64C4DE131E5C8DB6009B896B /* Pods_UProgress_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C4DE121E5C8DB6009B896B /* Pods_UProgress_UProgressTests.framework */; };
+		64C4DE151E5C8DBC009B896B /* Pods_UProgress_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C4DE141E5C8DBC009B896B /* Pods_UProgress_UProgressUITests.framework */; };
+		64C4DE171E5C8DD0009B896B /* Pods_UProgress_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C4DE161E5C8DD0009B896B /* Pods_UProgress_UProgressTests.framework */; };
+		64C4DE191E5C8DD7009B896B /* Pods_UProgress_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64C4DE181E5C8DD7009B896B /* Pods_UProgress_UProgressUITests.framework */; };
 		64D1BD1C1E475DA6001DDDC5 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D1BD1B1E475DA6001DDDC5 /* ProfileViewCell.swift */; };
 		64D1BD1E1E475DB2001DDDC5 /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D1BD1D1E475DB2001DDDC5 /* ProfileViewCell.xib */; };
 		64D9309C1E3E2CEE007C7112 /* DirectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */; };
@@ -302,6 +302,10 @@
 		6483E4D41E409A1D0072B97C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		6483E4D61E40BC340072B97C /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		6483E4D81E40FED00072B97C /* AuthorizationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationsViewController.swift; sourceTree = "<group>"; };
+		64C4DE121E5C8DB6009B896B /* Pods_UProgress_UProgressTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgress_UProgressTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_UProgress_UProgressTests.framework"; sourceTree = "<group>"; };
+		64C4DE141E5C8DBC009B896B /* Pods_UProgress_UProgressUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgress_UProgressUITests.framework; path = "Pods/../build/Debug-iphoneos/Pods_UProgress_UProgressUITests.framework"; sourceTree = "<group>"; };
+		64C4DE161E5C8DD0009B896B /* Pods_UProgress_UProgressTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgress_UProgressTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_UProgress_UProgressTests.framework"; sourceTree = "<group>"; };
+		64C4DE181E5C8DD7009B896B /* Pods_UProgress_UProgressUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgress_UProgressUITests.framework; path = "Pods/../build/Debug-iphoneos/Pods_UProgress_UProgressUITests.framework"; sourceTree = "<group>"; };
 		64D1BD1B1E475DA6001DDDC5 /* ProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		64D1BD1D1E475DB2001DDDC5 /* ProfileViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewCell.xib; sourceTree = "<group>"; };
 		64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionManager.swift; sourceTree = "<group>"; };
@@ -346,8 +350,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				641D44CE1E5BA200005F64E9 /* Pods_UProgressUITests.framework in Frameworks */,
-				641D44CC1E5BA1F8005F64E9 /* Pods_UProgressTests.framework in Frameworks */,
+				64C4DE151E5C8DBC009B896B /* Pods_UProgress_UProgressUITests.framework in Frameworks */,
+				64C4DE131E5C8DB6009B896B /* Pods_UProgress_UProgressTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,8 +359,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				641D44CF1E5BA20D005F64E9 /* Pods_UProgressTests.framework in Frameworks */,
-				641D44D01E5BA20D005F64E9 /* Pods_UProgressUITests.framework in Frameworks */,
+				64C4DE191E5C8DD7009B896B /* Pods_UProgress_UProgressUITests.framework in Frameworks */,
+				64C4DE171E5C8DD0009B896B /* Pods_UProgress_UProgressTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,6 +688,10 @@
 		C677A2DD374B74FC58AC9AE1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				64C4DE181E5C8DD7009B896B /* Pods_UProgress_UProgressUITests.framework */,
+				64C4DE161E5C8DD0009B896B /* Pods_UProgress_UProgressTests.framework */,
+				64C4DE141E5C8DBC009B896B /* Pods_UProgress_UProgressUITests.framework */,
+				64C4DE121E5C8DB6009B896B /* Pods_UProgress_UProgressTests.framework */,
 				641D44CD1E5BA200005F64E9 /* Pods_UProgressUITests.framework */,
 				641D44CB1E5BA1F8005F64E9 /* Pods_UProgressTests.framework */,
 				645F5A131E3E9F78005CCBD6 /* OHHTTPStubs.framework */,
@@ -1364,6 +1372,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = H6WZYAW7R8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = UProgressTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgressTests;
@@ -1380,6 +1392,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = H6WZYAW7R8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = UProgressTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgressTests;
@@ -1395,6 +1411,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = UProgressUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgressUITests;
@@ -1411,6 +1431,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = UProgressUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgressUITests;
