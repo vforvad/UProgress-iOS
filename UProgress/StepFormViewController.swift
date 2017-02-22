@@ -8,14 +8,16 @@
 
 import Foundation
 import MBProgressHUD
+import UIKit
 
-class StepFormViewController: UIViewController, StepViewProtocol {
+class StepFormViewController: BasePopupViewController, StepViewProtocol {
     var defaultKeyboardSize: CGFloat!
     var mainView: DirectionsPopupProtocol!
     var presenter: StepPresenter!
     var direction: Direction!
     var user: User! = AuthorizationService.sharedInstance.currentUser
     
+    @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var popupTopMargin: NSLayoutConstraint!
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var descriptionField: UITextView!
@@ -24,30 +26,17 @@ class StepFormViewController: UIViewController, StepViewProtocol {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancellButton: UIButton!
     
+    override var topMargin: NSLayoutConstraint! { get { return popupTopMargin } }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
-        if CommonFunctions.DeviceData.isOrientationLandscape() {
-            if CommonFunctions.DeviceData.isIPad() {
-                self.popupTopMargin.constant = 60
-            }
-            else {
-                self.popupTopMargin.constant = self.view.frame.size.width / 5
-            }
-        }
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.regular)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.insertSubview(blurEffectView, at: 0)
         saveButton.layer.cornerRadius = 8.0
         cancellButton.layer.cornerRadius = 8.0
         
         descriptionField.layer.cornerRadius = 8.0
         descriptionField.layer.borderWidth = 0.3
         descriptionField.layer.borderColor = UIColor.lightGray.cgColor
-        
+        self.popupView.layer.cornerRadius = 8.0
         let model = DirectionDetailManager()
         presenter = StepPresenter(model: model, view: self)
         
@@ -69,15 +58,6 @@ class StepFormViewController: UIViewController, StepViewProtocol {
     }
     @IBAction func clickCancel(_ sender: Any) {
         self.dismiss(animated: true, completion: {})
-    }
-    
-    func rotated() {
-        if CommonFunctions.DeviceData.isOrientationPortrait() {
-            self.popupTopMargin.constant = self.view.frame.size.width / 2
-        }
-        else {
-            self.popupTopMargin.constant = 30
-        }
     }
     
     internal func successCreation(step: Step!) {

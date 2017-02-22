@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class StepDetailViewController: UIViewController {
+class StepDetailViewController: BasePopupViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var viewHeightConstraint: NSLayoutConstraint!
@@ -17,6 +17,9 @@ class StepDetailViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    
+    override var topMargin: NSLayoutConstraint! { get { return viewMarginTopConstraint } }
+    override var contentView: UIView! { get { return mainView } }
     
     var step: Step!
     
@@ -29,8 +32,8 @@ class StepDetailViewController: UIViewController {
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.insertSubview(blurEffectView, at: 0)
         
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.viewTap(_:)))
-        self.view.addGestureRecognizer(gesture)
+//        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.viewTap(_:)))
+//        self.view.addGestureRecognizer(gesture)
         
         let descriptionHeight = step.description.heightWithConstrainedWidth(width: self.descriptionLabel.frame.size.width, font: UIFont(name: "AppleSDGothicNeo-SemiBold", size: 17.0)!)
         let titleHeight = step.title.heightWithConstrainedWidth(width: self.titleLabel.frame.size.width, font: UIFont(name: "HelveticaNeue-Bold", size: 19.0)!)
@@ -41,9 +44,9 @@ class StepDetailViewController: UIViewController {
         descriptionLabel.text = step.description
     }
     
-    func viewTap(_ sender:UITapGestureRecognizer) {
-        if sender.view != mainView {
-            self.dismiss(animated: true, completion: {})
-        }
-    }
+//    func viewTap(_ sender:UITapGestureRecognizer) {
+//        if sender.view != mainView {
+//            self.dismiss(animated: true, completion: {})
+//        }
+//    }
 }

@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nKY-JJ-8PX" id="eR0-Go-3Sd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -93,9 +93,12 @@
                             <constraint firstItem="vAu-G9-L4O" firstAttribute="top" secondItem="NTK-Xt-a2U" secondAttribute="bottom" id="bMk-ww-tyw"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="baseView" destination="Mvf-Kn-2CR" id="k8i-kU-bHU"/>
                         <outlet property="scrollView" destination="NTK-Xt-a2U" id="7cD-43-6qw"/>
+                        <outlet property="topMarginView" destination="uDu-XA-gVg" id="2UI-UY-ebw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osa-7v-HRb" userLabel="First Responder" sceneMemberID="firstResponder"/>

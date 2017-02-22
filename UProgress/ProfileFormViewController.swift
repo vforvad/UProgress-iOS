@@ -7,27 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
-class ProfileFormViewController: UIViewController {
+class ProfileFormViewController: BasePopupViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var baseView: UIView!
-    override func viewDidLoad() {
-         super.viewDidLoad()
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.regular)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.insertSubview(blurEffectView, at: 0)
-        
-        self.baseView.layer.cornerRadius = 8.0
-        
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.viewTap(_:)))
-        self.view.addGestureRecognizer(gesture)
-    }
+    @IBOutlet weak var topMarginView: NSLayoutConstraint!
     
-    func viewTap(_ sender:UITapGestureRecognizer) {
-        if sender.view != baseView {
-            self.dismiss(animated: true, completion: {})
-        }
+    override var topMargin: NSLayoutConstraint! { get { return topMarginView } }
+    override var contentView: UIView! { get { return baseView } }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
 }

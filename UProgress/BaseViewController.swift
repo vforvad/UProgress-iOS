@@ -14,6 +14,10 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if CommonFunctions.DeviceData.isIPad() {
+            self.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+            self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

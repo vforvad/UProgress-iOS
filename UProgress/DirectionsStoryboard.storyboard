@@ -311,6 +311,7 @@
                         <outlet property="descriptionField" destination="0Lv-4q-dua" id="Mfd-ZT-o9s"/>
                         <outlet property="descriptionFieldError" destination="SHd-sY-MkD" id="MIv-gR-yg1"/>
                         <outlet property="popupTopMargin" destination="J7I-fJ-j7i" id="JPE-gx-Bg5"/>
+                        <outlet property="popupView" destination="eR6-WK-U7f" id="LlM-Xa-Bza"/>
                         <outlet property="saveButton" destination="pRo-sx-3qY" id="URY-6D-4IM"/>
                         <outlet property="titleField" destination="bu0-Ly-vcK" id="P68-gV-SVL"/>
                         <outlet property="titleFieldError" destination="aOs-ED-7M5" id="buM-dZ-vTh"/>
