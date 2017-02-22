@@ -17,12 +17,15 @@ class ProfileView: NSObject, UITableViewDelegate, UITableViewDataSource {
     private var profileHeader: ProfileHeader!
     private let navButtonSize = 30
     private var viewController: BaseViewController!
+    private var actions: ProfileViewActionsProtocol!
     
     init(user: User!, table: UITableView!, viewController: BaseViewController) {
         super.init()
         self.user = user
         self.tableView = table
         self.viewController = viewController
+        self.actions = viewController as! ProfileViewActionsProtocol
+        
         
         self.tableView.estimatedRowHeight = 300
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -47,7 +50,7 @@ class ProfileView: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
     
     func createStep() {
-    
+        actions.editUser()
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

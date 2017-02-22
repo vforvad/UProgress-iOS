@@ -47,11 +47,56 @@
                     <navigationItem key="navigationItem" id="XHE-ct-Lw1"/>
                     <connections>
                         <outlet property="tableView" destination="OEv-bi-qYR" id="oqd-3p-Tsd"/>
+                        <segue destination="xCD-Ff-7vD" kind="presentation" identifier="profile_popup" modalPresentationStyle="overCurrentContext" id="Tld-0P-6Cs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgG-yF-RHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1112.8" y="152.47376311844079"/>
+        </scene>
+        <!--Profile Form View Controller-->
+        <scene sceneID="hpQ-Oi-D5a">
+            <objects>
+                <viewController id="xCD-Ff-7vD" customClass="ProfileFormViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JqI-qQ-78G"/>
+                        <viewControllerLayoutGuide type="bottom" id="vAu-G9-L4O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bS4-MG-H32">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTK-Xt-a2U">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvf-Kn-2CR">
+                                        <rect key="frame" x="15" y="40" width="345" height="325"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="325" id="7as-pK-ViF"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Mvf-Kn-2CR" secondAttribute="bottom" constant="305" id="Ja9-lX-eth"/>
+                                    <constraint firstItem="Mvf-Kn-2CR" firstAttribute="leading" secondItem="NTK-Xt-a2U" secondAttribute="leading" constant="15" id="R39-Du-s34"/>
+                                    <constraint firstItem="Mvf-Kn-2CR" firstAttribute="top" secondItem="NTK-Xt-a2U" secondAttribute="top" constant="40" id="ZBr-Dn-S7P"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mvf-Kn-2CR" secondAttribute="trailing" constant="15" id="uDu-XA-gVg"/>
+                                    <constraint firstItem="Mvf-Kn-2CR" firstAttribute="centerX" secondItem="NTK-Xt-a2U" secondAttribute="centerX" id="zZw-xK-Ot9"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NTK-Xt-a2U" secondAttribute="trailing" id="Ts8-DU-oWx"/>
+                            <constraint firstItem="NTK-Xt-a2U" firstAttribute="top" secondItem="bS4-MG-H32" secondAttribute="top" id="VHe-iT-bll"/>
+                            <constraint firstItem="NTK-Xt-a2U" firstAttribute="leading" secondItem="bS4-MG-H32" secondAttribute="leading" id="X3p-xC-0sZ"/>
+                            <constraint firstItem="vAu-G9-L4O" firstAttribute="top" secondItem="NTK-Xt-a2U" secondAttribute="bottom" id="bMk-ww-tyw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="osa-7v-HRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016.8" y="-242.42878560719643"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z2k-K7-ats">

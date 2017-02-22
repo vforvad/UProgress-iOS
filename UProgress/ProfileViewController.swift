@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ProfileViewController: BaseViewController {
+class ProfileViewController: BaseViewController, ProfileViewActionsProtocol {
     var user: User!
     var profileView: ProfileView!
     @IBOutlet weak var tableView: UITableView!
@@ -17,5 +17,9 @@ class ProfileViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         profileView = ProfileView(user: user, table: tableView, viewController: self)
+    }
+    
+    func editUser() {
+        performSegue(withIdentifier: "profile_popup", sender: self)
     }
 }
