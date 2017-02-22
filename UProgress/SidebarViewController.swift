@@ -52,6 +52,11 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
             let tableVC = navVC.viewControllers.first as! AuthorizationsViewController
             tableVC.signIn = false
         }
+        
+        if (segue.identifier == "profile") {
+            let tableVC = navVC.viewControllers.first as! ProfileViewController
+            tableVC.user = AuthorizationService.sharedInstance.currentUser
+        }
     }
     
     private func segueForNavigationController(identifier: String!) {
