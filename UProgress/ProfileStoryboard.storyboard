@@ -93,6 +93,10 @@
                             <constraint firstItem="vAu-G9-L4O" firstAttribute="top" secondItem="NTK-Xt-a2U" secondAttribute="bottom" id="bMk-ww-tyw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="baseView" destination="Mvf-Kn-2CR" id="k8i-kU-bHU"/>
+                        <outlet property="scrollView" destination="NTK-Xt-a2U" id="7cD-43-6qw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osa-7v-HRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
