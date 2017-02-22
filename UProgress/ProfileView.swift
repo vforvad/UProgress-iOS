@@ -15,11 +15,14 @@ class ProfileView: NSObject, UITableViewDelegate, UITableViewDataSource {
     private var tableView: UITableView!
     private var profileItems = [Dictionary<String, String>]()
     private var profileHeader: ProfileHeader!
+    private let navButtonSize = 30
+    private var viewController: BaseViewController!
     
-    init(user: User!, table: UITableView!) {
+    init(user: User!, table: UITableView!, viewController: BaseViewController) {
         super.init()
         self.user = user
         self.tableView = table
+        self.viewController = viewController
         
         self.tableView.estimatedRowHeight = 300
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -30,6 +33,21 @@ class ProfileView: NSObject, UITableViewDelegate, UITableViewDataSource {
         
         tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         
+        let myBtn: UIButton = UIButton()
+        myBtn.setImage(UIImage(named: "settings_icon"), for: .normal)
+        myBtn.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: navButtonSize, height: navButtonSize))
+        myBtn.addTarget(self, action: #selector(createStep), for: .touchUpInside)
+        viewController.navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(customView: myBtn)
+            //            UIBarButtonItem(image: UIImage(image: "menu"), style: .plain, target: self, action: #selector(createStep)),
+            //            UIBarButtonItem(title: "Remove", style: .plain, target: self, action: #selector(removeDirection),
+            //                            image: UIImage(image: "menu"))
+        ]
+        
+    }
+    
+    func createStep() {
+    
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

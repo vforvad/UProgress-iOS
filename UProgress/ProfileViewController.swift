@@ -16,6 +16,6 @@ class ProfileViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileView = ProfileView(user: user, table: tableView)
+        profileView = ProfileView(user: user, table: tableView, viewController: self)
     }
 }
