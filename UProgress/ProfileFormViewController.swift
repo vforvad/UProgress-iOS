@@ -8,9 +8,13 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
-class ProfileFormViewController: BasePopupViewController {
+class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol {
+    var presenter: ProfilePresenter!
     var user: User! = AuthorizationService.sharedInstance.currentUser
+    var actions: ProfilePopupProtocol!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var topMarginView: NSLayoutConstraint!
@@ -40,10 +44,21 @@ class ProfileFormViewController: BasePopupViewController {
         super.viewWillAppear(true)
         setAppearance()
         setValues()
+        let model = ProfileManager()
+        presenter = ProfilePresenter(model: model, view: self)
     }
     
     @IBAction func saveClick(_ sender: Any) {
+        let userId: String! = String(user.id)
+        var parameters = [
+            "first_name": firstNameField.text,
+            "last_name": lastNameField.text,
+            "email": emailField.text,
+            "location": locationField.text,
+            "description": descriptionField.text
+        ]
         
+        presenter.updateProfile(userId: userId, parameters: parameters as Dictionary<String, AnyObject>)
     }
     
     @IBAction func cancelClick(_ sender: Any) {
@@ -76,5 +91,44 @@ class ProfileFormViewController: BasePopupViewController {
         emailField.text = user.email
         locationField.text = user.location
         descriptionField.text = user.description
+    }
+    
+    internal func successUpdate(user: User!) {
+        self.dismiss(animated: true, completion: {
+            self.actions.successUserUpdate(user: user)
+        })
+    }
+    
+    internal func failedUpdate(error: ServerError!) {
+        let errorsList = error.params!
+        if let titleErrorsArr = errorsList["first_name"] {
+            let errorsArr = titleErrorsArr as! [String]
+            let titleError: String! = errorsArr.joined(separator: "\n")
+            self.firstNameField.text = titleError
+            self.firstNameField.isHidden = false
+            
+        }
+        
+        if errorsList["last_name"] != nil {
+            let errorsArr = errorsList["last_name"] as! [String]
+            let descriptionError: String! = errorsArr.joined(separator: "\n")
+            self.lastNameField.text = descriptionError
+            self.lastNameField.isHidden = false
+        }
+        
+        if errorsList["email"] != nil {
+            let errorsArr = errorsList["email"] as! [String]
+            let descriptionError: String! = errorsArr.joined(separator: "\n")
+            self.emailField.text = descriptionError
+            self.emailField.isHidden = false
+        }
+    }
+    
+    internal func startLoader() {
+        MBProgressHUD.showAdded(to: view, animated: true)
+    }
+    
+    internal func stopLoader() {
+        MBProgressHUD.hide(for: view, animated: true)
     }
 }

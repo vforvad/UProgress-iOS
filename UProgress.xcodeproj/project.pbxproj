@@ -151,6 +151,14 @@
 		6483E4D31E4093F60072B97C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4D21E4093F60072B97C /* Date.swift */; };
 		6483E4D51E409A1D0072B97C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4D41E409A1D0072B97C /* String.swift */; };
 		6483E4D91E40FED00072B97C /* AuthorizationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4D81E40FED00072B97C /* AuthorizationsViewController.swift */; };
+		64860B7C1E5F568E002ACD43 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B7B1E5F568E002ACD43 /* ProfileManager.swift */; };
+		64860B7D1E5F5699002ACD43 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B7B1E5F568E002ACD43 /* ProfileManager.swift */; };
+		64860B7E1E5F5699002ACD43 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B7B1E5F568E002ACD43 /* ProfileManager.swift */; };
+		64860B801E5F56A5002ACD43 /* ProfileManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B7F1E5F56A5002ACD43 /* ProfileManagerProtocol.swift */; };
+		64860B821E5F5804002ACD43 /* ProfilePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B811E5F5804002ACD43 /* ProfilePresenterProtocol.swift */; };
+		64860B841E5F5865002ACD43 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B831E5F5865002ACD43 /* ProfilePresenter.swift */; };
+		64860B861E5F5899002ACD43 /* ProfileViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B851E5F5899002ACD43 /* ProfileViewProtocol.swift */; };
+		64860B881E5F5948002ACD43 /* ProfilePopupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B871E5F5948002ACD43 /* ProfilePopupProtocol.swift */; };
 		64944B121E5E35650093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
 		64944B131E5E3BF40093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
 		64944B141E5E3BF50093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
@@ -311,6 +319,12 @@
 		6483E4D41E409A1D0072B97C /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		6483E4D61E40BC340072B97C /* Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		6483E4D81E40FED00072B97C /* AuthorizationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationsViewController.swift; sourceTree = "<group>"; };
+		64860B7B1E5F568E002ACD43 /* ProfileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		64860B7F1E5F56A5002ACD43 /* ProfileManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileManagerProtocol.swift; sourceTree = "<group>"; };
+		64860B811E5F5804002ACD43 /* ProfilePresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenterProtocol.swift; sourceTree = "<group>"; };
+		64860B831E5F5865002ACD43 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		64860B851E5F5899002ACD43 /* ProfileViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewProtocol.swift; sourceTree = "<group>"; };
+		64860B871E5F5948002ACD43 /* ProfilePopupProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePopupProtocol.swift; sourceTree = "<group>"; };
 		64944B111E5E35650093961B /* BasePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopupViewController.swift; sourceTree = "<group>"; };
 		64C4DE121E5C8DB6009B896B /* Pods_UProgress_UProgressTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgress_UProgressTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_UProgress_UProgressTests.framework"; sourceTree = "<group>"; };
 		64C4DE141E5C8DBC009B896B /* Pods_UProgress_UProgressUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgress_UProgressUITests.framework; path = "Pods/../build/Debug-iphoneos/Pods_UProgress_UProgressUITests.framework"; sourceTree = "<group>"; };
@@ -440,6 +454,9 @@
 		646E8E9D1E48B016003B8DFB /* User */ = {
 			isa = PBXGroup;
 			children = (
+				64860B7A1E5F5680002ACD43 /* model */,
+				64860B791E5F567A002ACD43 /* view */,
+				64860B781E5F5674002ACD43 /* presenter */,
 				646E8E9E1E48B028003B8DFB /* ProfileStoryboard.storyboard */,
 				646E8EA01E48B03B003B8DFB /* ProfileViewController.swift */,
 				647382FB1E59D33200F9C72E /* ProfileView.swift */,
@@ -584,6 +601,33 @@
 				6443CBEE1E42C0DA008F15E5 /* ErrorsHandling.swift */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		64860B781E5F5674002ACD43 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				64860B811E5F5804002ACD43 /* ProfilePresenterProtocol.swift */,
+				64860B831E5F5865002ACD43 /* ProfilePresenter.swift */,
+			);
+			name = presenter;
+			sourceTree = "<group>";
+		};
+		64860B791E5F567A002ACD43 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				64860B851E5F5899002ACD43 /* ProfileViewProtocol.swift */,
+				64860B871E5F5948002ACD43 /* ProfilePopupProtocol.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		64860B7A1E5F5680002ACD43 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				64860B7B1E5F568E002ACD43 /* ProfileManager.swift */,
+				64860B7F1E5F56A5002ACD43 /* ProfileManagerProtocol.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 		64D1BD171E475BA0001DDDC5 /* model */ = {
@@ -1033,6 +1077,7 @@
 				6483E4C51E3FA9790072B97C /* NavigationView.swift in Sources */,
 				647B34A81E4F8F66006639DD /* StepPresenter.swift in Sources */,
 				6473830A1E5A25C200F9C72E /* ProfileCell.swift in Sources */,
+				64860B821E5F5804002ACD43 /* ProfilePresenterProtocol.swift in Sources */,
 				646E8EA41E48B23E003B8DFB /* DirectionsDetailViewController.swift in Sources */,
 				6458006C1E54C076002366CA /* README.md in Sources */,
 				64F0C8D21E5D947D000DD1D8 /* ProfileFormViewController.swift in Sources */,
@@ -1060,10 +1105,12 @@
 				647382FC1E59D33200F9C72E /* ProfileView.swift in Sources */,
 				646E8EB31E48BF87003B8DFB /* Step.swift in Sources */,
 				641F25D71E4232BE008BD119 /* SignInProtocol.swift in Sources */,
+				64860B7C1E5F568E002ACD43 /* ProfileManager.swift in Sources */,
 				64109F961E4CC473003C0914 /* DirectionDetailView.swift in Sources */,
 				6458006E1E54C496002366CA /* DefaultNavigationCell.swift in Sources */,
 				646E8EB01E48BCC3003B8DFB /* DirectionsDetailPresenterProtocol.swift in Sources */,
 				64D930AE1E3E4632007C7112 /* DirectionListPresenterImpl.swift in Sources */,
+				64860B881E5F5948002ACD43 /* ProfilePopupProtocol.swift in Sources */,
 				6483E4D91E40FED00072B97C /* AuthorizationsViewController.swift in Sources */,
 				6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */,
 				647B34AA1E4F8F7C006639DD /* StepPresenterProtocol.swift in Sources */,
@@ -1077,9 +1124,11 @@
 				64F0C8CC1E5D9224000DD1D8 /* ProfileViewActionsProtocol.swift in Sources */,
 				6483E4C71E3FA9E50072B97C /* NavigationViewProtocol.swift in Sources */,
 				64D1BD1C1E475DA6001DDDC5 /* ProfileViewCell.swift in Sources */,
+				64860B841E5F5865002ACD43 /* ProfilePresenter.swift in Sources */,
 				64F80D3D1E41FCB000E90004 /* RegistrationFragmentController.swift in Sources */,
 				64D930A61E3E40A7007C7112 /* DirectionModelProtocol.swift in Sources */,
 				647B34A41E4F8823006639DD /* DirectionDetailManager.swift in Sources */,
+				64860B861E5F5899002ACD43 /* ProfileViewProtocol.swift in Sources */,
 				64D9309F1E3E3C68007C7112 /* ApiRequest.swift in Sources */,
 				641B30A61E4BCC3100FF60CC /* DirectionDetailInfoView.swift in Sources */,
 				6483E4CF1E40911E0072B97C /* DirectionsListCell.swift in Sources */,
@@ -1093,6 +1142,7 @@
 				64EA8BF41E3EB9AE0088009E /* BaseViewController.swift in Sources */,
 				64F80D3B1E41FCA500E90004 /* AuthorizationFragmentController.swift in Sources */,
 				641F25D11E422FC3008BD119 /* AuthorizationViewProtocol.swift in Sources */,
+				64860B801E5F56A5002ACD43 /* ProfileManagerProtocol.swift in Sources */,
 				6483E4C91E3FAAF90072B97C /* SidebarViewController.swift in Sources */,
 				646E8EA11E48B03B003B8DFB /* ProfileViewController.swift in Sources */,
 				645800581E54AA62002366CA /* StepDetailViewController.swift in Sources */,
@@ -1129,6 +1179,7 @@
 				641B30A31E4B67AB00FF60CC /* Step.swift in Sources */,
 				64944B131E5E3BF40093961B /* BasePopupViewController.swift in Sources */,
 				646E8EA71E48B4A9003B8DFB /* DirectionsListCell.swift in Sources */,
+				64860B7D1E5F5699002ACD43 /* ProfileManager.swift in Sources */,
 				64D930C51E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */,
 				645800591E54AD14002366CA /* StepDetailViewController.swift in Sources */,
 				64D930BB1E3E72EB007C7112 /* ApiRequest.swift in Sources */,
@@ -1184,6 +1235,7 @@
 				641B30A41E4B67AC00FF60CC /* Step.swift in Sources */,
 				64944B141E5E3BF50093961B /* BasePopupViewController.swift in Sources */,
 				646E8EA81E48B4AA003B8DFB /* DirectionsListCell.swift in Sources */,
+				64860B7E1E5F5699002ACD43 /* ProfileManager.swift in Sources */,
 				64D930C61E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */,
 				6458005A1E54AD14002366CA /* StepDetailViewController.swift in Sources */,
 				64D930BC1E3E72EB007C7112 /* ApiRequest.swift in Sources */,

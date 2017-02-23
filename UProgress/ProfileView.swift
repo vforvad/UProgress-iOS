@@ -79,4 +79,10 @@ class ProfileView: NSObject, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 140
     }
+    
+    func updateUser(user: User!) {
+        self.user = user
+        self.profileItems = user.attributesDictionary()
+        self.tableView.reloadData()
+    }
 }
