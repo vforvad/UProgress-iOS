@@ -84,7 +84,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nY1-4r-EqG">
                                                         <rect key="frame" x="0.0" y="23" width="325" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RIa-JH-rqH">
@@ -96,7 +96,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaW-SR-DeV">
                                                         <rect key="frame" x="0.0" y="73.5" width="325" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ir-nQ-SgY">
@@ -108,7 +108,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jst-2f-ga8">
                                                         <rect key="frame" x="0.0" y="124" width="325" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l6t-6W-Yut">
@@ -120,7 +120,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLP-Pk-CK9">
                                                         <rect key="frame" x="0.0" y="174.5" width="325" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uJP-ec-p90">
@@ -132,12 +132,32 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxg-9W-Zzd">
-                                                <rect key="frame" x="10" y="270" width="34" height="30"/>
-                                                <state key="normal" title="Save"/>
+                                                <rect key="frame" x="10" y="270" width="80" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="LwW-fw-T4g"/>
+                                                    <constraint firstAttribute="height" constant="30" id="fsl-TN-lNl"/>
+                                                </constraints>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="saveClick:" destination="xCD-Ff-7vD" eventType="touchUpInside" id="IGu-41-Xla"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdE-4s-lSR">
-                                                <rect key="frame" x="287" y="270" width="48" height="30"/>
-                                                <state key="normal" title="Cancel"/>
+                                                <rect key="frame" x="255" y="270" width="80" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="KaZ-CY-anw"/>
+                                                    <constraint firstAttribute="height" constant="30" id="gNs-ZR-snW"/>
+                                                </constraints>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelClick:" destination="xCD-Ff-7vD" eventType="touchUpInside" id="FBh-fL-lSa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -173,7 +193,20 @@
                     </view>
                     <connections>
                         <outlet property="baseView" destination="Mvf-Kn-2CR" id="k8i-kU-bHU"/>
+                        <outlet property="cancelButton" destination="WdE-4s-lSR" id="W5z-4T-7oA"/>
+                        <outlet property="descriptionField" destination="uJP-ec-p90" id="9gl-ib-Ipk"/>
+                        <outlet property="emailField" destination="3Ir-nQ-SgY" id="YFk-Qx-4fL"/>
+                        <outlet property="emailFieldError" destination="Jst-2f-ga8" id="kVQ-Nm-BOB"/>
+                        <outlet property="firstNameField" destination="Hs2-i6-cnm" id="mR6-jd-DPD"/>
+                        <outlet property="firstNameFieldError" destination="nY1-4r-EqG" id="n0Q-GN-GKZ"/>
+                        <outlet property="lastNameField" destination="RIa-JH-rqH" id="Aft-Yx-wfb"/>
+                        <outlet property="lastNameFieldError" destination="eaW-SR-DeV" id="MdS-O8-osx"/>
+                        <outlet property="locationField" destination="l6t-6W-Yut" id="cnI-AW-Yau"/>
+                        <outlet property="locationFieldError" destination="xLP-Pk-CK9" id="Bqi-rT-bFf"/>
+                        <outlet property="saveButton" destination="hxg-9W-Zzd" id="hul-Nn-bRT"/>
                         <outlet property="scrollView" destination="NTK-Xt-a2U" id="7cD-43-6qw"/>
+                        <outlet property="stackView" destination="Xae-C1-Svg" id="mhN-SJ-InP"/>
+                        <outlet property="topMarginView" destination="uTD-23-XTk" id="2XO-r6-aWH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osa-7v-HRb" userLabel="First Responder" sceneMemberID="firstResponder"/>
