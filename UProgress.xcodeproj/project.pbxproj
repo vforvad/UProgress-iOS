@@ -159,6 +159,7 @@
 		64860B841E5F5865002ACD43 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B831E5F5865002ACD43 /* ProfilePresenter.swift */; };
 		64860B861E5F5899002ACD43 /* ProfileViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B851E5F5899002ACD43 /* ProfileViewProtocol.swift */; };
 		64860B881E5F5948002ACD43 /* ProfilePopupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B871E5F5948002ACD43 /* ProfilePopupProtocol.swift */; };
+		64860B8A1E5F6FA4002ACD43 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B891E5F6FA4002ACD43 /* Attachment.swift */; };
 		64944B121E5E35650093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
 		64944B131E5E3BF40093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
 		64944B141E5E3BF50093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
@@ -325,6 +326,7 @@
 		64860B831E5F5865002ACD43 /* ProfilePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		64860B851E5F5899002ACD43 /* ProfileViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewProtocol.swift; sourceTree = "<group>"; };
 		64860B871E5F5948002ACD43 /* ProfilePopupProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePopupProtocol.swift; sourceTree = "<group>"; };
+		64860B891E5F6FA4002ACD43 /* Attachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		64944B111E5E35650093961B /* BasePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopupViewController.swift; sourceTree = "<group>"; };
 		64C4DE121E5C8DB6009B896B /* Pods_UProgress_UProgressTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgress_UProgressTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_UProgress_UProgressTests.framework"; sourceTree = "<group>"; };
 		64C4DE141E5C8DBC009B896B /* Pods_UProgress_UProgressUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgress_UProgressUITests.framework; path = "Pods/../build/Debug-iphoneos/Pods_UProgress_UProgressUITests.framework"; sourceTree = "<group>"; };
@@ -637,6 +639,7 @@
 				641F25CC1E422BF2008BD119 /* User.swift */,
 				641F25CE1E422CC3008BD119 /* AuthorizationManagerProtocol.swift */,
 				6443CBF21E4349B5008F15E5 /* AuthorizationService.swift */,
+				64860B891E5F6FA4002ACD43 /* Attachment.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -1129,6 +1132,7 @@
 				64D930A61E3E40A7007C7112 /* DirectionModelProtocol.swift in Sources */,
 				647B34A41E4F8823006639DD /* DirectionDetailManager.swift in Sources */,
 				64860B861E5F5899002ACD43 /* ProfileViewProtocol.swift in Sources */,
+				64860B8A1E5F6FA4002ACD43 /* Attachment.swift in Sources */,
 				64D9309F1E3E3C68007C7112 /* ApiRequest.swift in Sources */,
 				641B30A61E4BCC3100FF60CC /* DirectionDetailInfoView.swift in Sources */,
 				6483E4CF1E40911E0072B97C /* DirectionsListCell.swift in Sources */,

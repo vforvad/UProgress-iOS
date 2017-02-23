@@ -49,14 +49,16 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol {
     }
     
     @IBAction func saveClick(_ sender: Any) {
+        hideErrors()
         let userId: String! = String(user.id)
-        var parameters = [
+        let parameters = [
             "first_name": firstNameField.text,
             "last_name": lastNameField.text,
             "email": emailField.text,
             "location": locationField.text,
-            "description": descriptionField.text
-        ]
+            "description": descriptionField.text,
+            "attachment": user.attachment.toDict()
+        ] as [String : Any]
         
         presenter.updateProfile(userId: userId, parameters: parameters as Dictionary<String, AnyObject>)
     }
@@ -65,12 +67,17 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol {
         self.dismiss(animated: true, completion: {})
     }
     
-    func setAppearance() {
+    func hideErrors() {
         firstNameFieldError.isHidden = true
         lastNameFieldError.isHidden = true
         emailFieldError.isHidden = true
         locationFieldError.isHidden = true
         stackView.spacing = 20.0
+    }
+    
+    func setAppearance() {
+        hideErrors()
+        
         
         descriptionField.layer.cornerRadius = 8.0
         descriptionField.layer.borderWidth = 0.3
@@ -100,27 +107,28 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol {
     }
     
     internal func failedUpdate(error: ServerError!) {
+        self.stackView.spacing = 5.0
         let errorsList = error.params!
         if let titleErrorsArr = errorsList["first_name"] {
             let errorsArr = titleErrorsArr as! [String]
             let titleError: String! = errorsArr.joined(separator: "\n")
-            self.firstNameField.text = titleError
-            self.firstNameField.isHidden = false
+            self.firstNameFieldError.text = titleError
+            self.firstNameFieldError.isHidden = false
             
         }
         
         if errorsList["last_name"] != nil {
             let errorsArr = errorsList["last_name"] as! [String]
             let descriptionError: String! = errorsArr.joined(separator: "\n")
-            self.lastNameField.text = descriptionError
-            self.lastNameField.isHidden = false
+            self.lastNameFieldError.text = descriptionError
+            self.lastNameFieldError.isHidden = false
         }
         
         if errorsList["email"] != nil {
             let errorsArr = errorsList["email"] as! [String]
             let descriptionError: String! = errorsArr.joined(separator: "\n")
-            self.emailField.text = descriptionError
-            self.emailField.isHidden = false
+            self.emailFieldError.text = descriptionError
+            self.emailFieldError.isHidden = false
         }
     }
     

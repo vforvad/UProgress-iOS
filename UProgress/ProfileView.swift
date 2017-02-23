@@ -81,6 +81,7 @@ class ProfileView: NSObject, UITableViewDelegate, UITableViewDataSource {
     }
     
     func updateUser(user: User!) {
+        AuthorizationService.sharedInstance.currentUser = user
         self.user = user
         self.profileItems = user.attributesDictionary()
         self.tableView.reloadData()

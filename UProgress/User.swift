@@ -18,6 +18,7 @@ class User: Mappable {
     var avatarUrl: String!
     var location: String!
     var description: String!
+    var attachment: Attachment!
     
     required init?() {
         
@@ -36,6 +37,7 @@ class User: Mappable {
         avatarUrl <- map["attachment.url"]
         location <- map["location"]
         description <- map["description"]
+        attachment <- map["attachment"]
     }
     
     func getFullName() -> String {
