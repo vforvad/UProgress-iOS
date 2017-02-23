@@ -160,6 +160,18 @@
 		64860B861E5F5899002ACD43 /* ProfileViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B851E5F5899002ACD43 /* ProfileViewProtocol.swift */; };
 		64860B881E5F5948002ACD43 /* ProfilePopupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B871E5F5948002ACD43 /* ProfilePopupProtocol.swift */; };
 		64860B8A1E5F6FA4002ACD43 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B891E5F6FA4002ACD43 /* Attachment.swift */; };
+		64860B8B1E5F77E4002ACD43 /* ProfileManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B7F1E5F56A5002ACD43 /* ProfileManagerProtocol.swift */; };
+		64860B8C1E5F77E5002ACD43 /* ProfileManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B7F1E5F56A5002ACD43 /* ProfileManagerProtocol.swift */; };
+		64860B8D1E5F77EB002ACD43 /* ProfileViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B851E5F5899002ACD43 /* ProfileViewProtocol.swift */; };
+		64860B8E1E5F77EB002ACD43 /* ProfileViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B851E5F5899002ACD43 /* ProfileViewProtocol.swift */; };
+		64860B8F1E5F77EE002ACD43 /* ProfilePopupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B871E5F5948002ACD43 /* ProfilePopupProtocol.swift */; };
+		64860B901E5F77EF002ACD43 /* ProfilePopupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B871E5F5948002ACD43 /* ProfilePopupProtocol.swift */; };
+		64860B911E5F77F2002ACD43 /* ProfilePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B811E5F5804002ACD43 /* ProfilePresenterProtocol.swift */; };
+		64860B921E5F77F2002ACD43 /* ProfilePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B811E5F5804002ACD43 /* ProfilePresenterProtocol.swift */; };
+		64860B931E5F77F5002ACD43 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B831E5F5865002ACD43 /* ProfilePresenter.swift */; };
+		64860B941E5F77F5002ACD43 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B831E5F5865002ACD43 /* ProfilePresenter.swift */; };
+		64860B951E5F7815002ACD43 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B891E5F6FA4002ACD43 /* Attachment.swift */; };
+		64860B961E5F7815002ACD43 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B891E5F6FA4002ACD43 /* Attachment.swift */; };
 		64944B121E5E35650093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
 		64944B131E5E3BF40093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
 		64944B141E5E3BF50093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
@@ -1163,13 +1175,16 @@
 				645800651E54B086002366CA /* DirectionViewActionsProtocol.swift in Sources */,
 				641D44C71E5B9CC5005F64E9 /* ProfileCell.swift in Sources */,
 				641D44C51E5B9CBE005F64E9 /* StepPresenter.swift in Sources */,
+				64860B951E5F7815002ACD43 /* Attachment.swift in Sources */,
 				64D930B51E3E72AE007C7112 /* DirectionModelProtocol.swift in Sources */,
 				641D44BD1E5B9B98005F64E9 /* AuthorizationService.swift in Sources */,
 				645800671E54B094002366CA /* DirectionDetailView.swift in Sources */,
 				64F0C8D31E5D9489000DD1D8 /* ProfileFormViewController.swift in Sources */,
+				64860B8F1E5F77EE002ACD43 /* ProfilePopupProtocol.swift in Sources */,
 				6458005D1E54B053002366CA /* StepViewProtocol.swift in Sources */,
 				64F0C8CF1E5D942E000DD1D8 /* ProfileViewActionsProtocol.swift in Sources */,
 				6424076F1E52114900E4CF95 /* Image.swift in Sources */,
+				64860B911E5F77F2002ACD43 /* ProfilePresenterProtocol.swift in Sources */,
 				6474B1BC1E3D04C200C46165 /* DirectionsListPresenterTest.swift in Sources */,
 				646E8EA51E48B41E003B8DFB /* DirectionsDetailViewController.swift in Sources */,
 				64D930BD1E3E72F0007C7112 /* DirectionsListViewController.swift in Sources */,
@@ -1179,6 +1194,7 @@
 				645800631E54B082002366CA /* DirectionsPopupProtocol.swift in Sources */,
 				647383031E59F15300F9C72E /* ProfileView.swift in Sources */,
 				6458005F1E54B056002366CA /* StepTableViewCell.swift in Sources */,
+				64860B8D1E5F77EB002ACD43 /* ProfileViewProtocol.swift in Sources */,
 				641B309D1E4B679F00FF60CC /* DirectionsDetailViewProtocol.swift in Sources */,
 				641B30A31E4B67AB00FF60CC /* Step.swift in Sources */,
 				64944B131E5E3BF40093961B /* BasePopupViewController.swift in Sources */,
@@ -1186,6 +1202,7 @@
 				64860B7D1E5F5699002ACD43 /* ProfileManager.swift in Sources */,
 				64D930C51E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */,
 				645800591E54AD14002366CA /* StepDetailViewController.swift in Sources */,
+				64860B8B1E5F77E4002ACD43 /* ProfileManagerProtocol.swift in Sources */,
 				64D930BB1E3E72EB007C7112 /* ApiRequest.swift in Sources */,
 				641D44B91E5B9B0F005F64E9 /* DirectionDetailManager.swift in Sources */,
 				64D930C31E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
@@ -1205,6 +1222,7 @@
 				647383071E59FDA800F9C72E /* User.swift in Sources */,
 				64D930B91E3E72B4007C7112 /* Direction.swift in Sources */,
 				64D930B31E3E72AA007C7112 /* DirectionManager.swift in Sources */,
+				64860B931E5F77F5002ACD43 /* ProfilePresenter.swift in Sources */,
 				64F0C8CD1E5D9427000DD1D8 /* ProfileViewController.swift in Sources */,
 				645800691E54B0A1002366CA /* ServerError.swift in Sources */,
 				641D44C11E5B9BA0005F64E9 /* AuthorizationManager.swift in Sources */,
@@ -1219,13 +1237,16 @@
 				645800661E54B086002366CA /* DirectionViewActionsProtocol.swift in Sources */,
 				641D44C81E5B9CC6005F64E9 /* ProfileCell.swift in Sources */,
 				641D44C61E5B9CBF005F64E9 /* StepPresenter.swift in Sources */,
+				64860B961E5F7815002ACD43 /* Attachment.swift in Sources */,
 				64D930B61E3E72AE007C7112 /* DirectionModelProtocol.swift in Sources */,
 				641D44BE1E5B9B99005F64E9 /* AuthorizationService.swift in Sources */,
 				645800681E54B095002366CA /* DirectionDetailView.swift in Sources */,
 				64F0C8D41E5D948A000DD1D8 /* ProfileFormViewController.swift in Sources */,
+				64860B901E5F77EF002ACD43 /* ProfilePopupProtocol.swift in Sources */,
 				6458005E1E54B054002366CA /* StepViewProtocol.swift in Sources */,
 				64F0C8D01E5D942E000DD1D8 /* ProfileViewActionsProtocol.swift in Sources */,
 				642407701E52114A00E4CF95 /* Image.swift in Sources */,
+				64860B921E5F77F2002ACD43 /* ProfilePresenterProtocol.swift in Sources */,
 				6474B1C71E3D04C200C46165 /* UProgressUITests.swift in Sources */,
 				646E8EA61E48B41F003B8DFB /* DirectionsDetailViewController.swift in Sources */,
 				64D930BE1E3E72F1007C7112 /* DirectionsListViewController.swift in Sources */,
@@ -1235,6 +1256,7 @@
 				645800641E54B083002366CA /* DirectionsPopupProtocol.swift in Sources */,
 				647383041E59F15400F9C72E /* ProfileView.swift in Sources */,
 				645800601E54B057002366CA /* StepTableViewCell.swift in Sources */,
+				64860B8E1E5F77EB002ACD43 /* ProfileViewProtocol.swift in Sources */,
 				641B309E1E4B679F00FF60CC /* DirectionsDetailViewProtocol.swift in Sources */,
 				641B30A41E4B67AC00FF60CC /* Step.swift in Sources */,
 				64944B141E5E3BF50093961B /* BasePopupViewController.swift in Sources */,
@@ -1242,6 +1264,7 @@
 				64860B7E1E5F5699002ACD43 /* ProfileManager.swift in Sources */,
 				64D930C61E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */,
 				6458005A1E54AD14002366CA /* StepDetailViewController.swift in Sources */,
+				64860B8C1E5F77E5002ACD43 /* ProfileManagerProtocol.swift in Sources */,
 				64D930BC1E3E72EB007C7112 /* ApiRequest.swift in Sources */,
 				641D44BA1E5B9B10005F64E9 /* DirectionDetailManager.swift in Sources */,
 				64D930C41E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
@@ -1261,6 +1284,7 @@
 				647383081E59FDA900F9C72E /* User.swift in Sources */,
 				64D930BA1E3E72B5007C7112 /* Direction.swift in Sources */,
 				64D930B41E3E72AA007C7112 /* DirectionManager.swift in Sources */,
+				64860B941E5F77F5002ACD43 /* ProfilePresenter.swift in Sources */,
 				64F0C8CE1E5D9427000DD1D8 /* ProfileViewController.swift in Sources */,
 				6458006A1E54B0A1002366CA /* ServerError.swift in Sources */,
 				641D44C21E5B9BA1005F64E9 /* AuthorizationManager.swift in Sources */,
