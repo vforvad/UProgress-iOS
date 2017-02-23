@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class ProfileFormViewController: BasePopupViewController {
-    var user: User!
+    var user: User! = AuthorizationService.sharedInstance.currentUser
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var topMarginView: NSLayoutConstraint!
@@ -73,5 +73,8 @@ class ProfileFormViewController: BasePopupViewController {
     func setValues() {
         firstNameField.text = user.firstName
         lastNameField.text = user.lastName
+        emailField.text = user.email
+        locationField.text = user.location
+        descriptionField.text = user.description
     }
 }
