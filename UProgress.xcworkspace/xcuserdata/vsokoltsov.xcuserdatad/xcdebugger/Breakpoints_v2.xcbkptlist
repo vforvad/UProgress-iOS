@@ -2227,11 +2227,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/ProfileView.swift"
-            timestampString = "509572672.824337"
+            timestampString = "509749180.625613"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "updateUser(user:)"
             landmarkType = "7">
          </BreakpointContent>
