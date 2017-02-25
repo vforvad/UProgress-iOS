@@ -57,6 +57,21 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         actions.editUser()
     }
     
+    func takePhoto() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+            imagePicker.cameraCaptureMode = .photo
+            imagePicker.modalPresentationStyle = .fullScreen
+        }
+        else {
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = .photoLibrary
+        }
+        
+        viewController.present(imagePicker, animated: true, completion: {})
+    }
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ProfileCell
         cell.setData(list: profileItems[indexPath.row])
@@ -89,5 +104,14 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         self.user = user
         self.profileItems = user.attributesDictionary()
         self.tableView.reloadData()
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        viewController.dismiss(animated: true, completion: nil)
     }
 }
