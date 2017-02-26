@@ -108,7 +108,9 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
+        viewController.dismiss(animated: true, completion: nil)
+        let image = info[UIImagePickerControllerOriginalImage]
+        self.profileHeader.avatarImage.image = image as! UIImage?
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
