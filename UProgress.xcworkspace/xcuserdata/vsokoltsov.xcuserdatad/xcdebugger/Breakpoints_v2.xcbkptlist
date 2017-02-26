@@ -2227,11 +2227,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/ProfileView.swift"
-            timestampString = "509824826.466638"
+            timestampString = "509825913.249053"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "updateUser(user:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2248,22 +2248,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
             endingLineNumber = "62"
-            landmarkName = "takePhoto(sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UProgress/ProfileView.swift"
-            timestampString = "509824826.466638"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
             landmarkName = "takePhoto(sender:)"
             landmarkType = "7">
          </BreakpointContent>

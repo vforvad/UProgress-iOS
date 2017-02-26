@@ -47,10 +47,6 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     }
     
     func setBarButton(withIcon: String!, action: Selector) -> UIBarButtonItem {
-//        let myBtn: UIButton = UIButton()
-//        myBtn.setImage(UIImage(named: withIcon), for: .normal)
-//        myBtn.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: navButtonSize, height: navButtonSize))
-//        myBtn.addTarget(self, action: action, for: .touchUpInside)
         return UIBarButtonItem(image: CommonFunctions.resizeImage(image: UIImage(named: withIcon)!, targetSize: CGSize(width: 30.0, height: 30.0)), style: UIBarButtonItemStyle.plain, target: self, action: action)
     }
     
@@ -65,15 +61,7 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
                 self.openCamera()
             }
             alert.addAction(cameraAction)
-//            imagePicker.allowsEditing = false
-//            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-//            imagePicker.cameraCaptureMode = .photo
-//            imagePicker.modalPresentationStyle = .fullScreen
         }
-//        else {
-//            imagePicker.allowsEditing = false
-//            imagePicker.sourceType = .photoLibrary
-//        }
         let gallaryAction = UIAlertAction(title: "Gallary", style: UIAlertActionStyle.default) {
             UIAlertAction in
             self.openGallery(sender: sender)
@@ -83,14 +71,7 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         }
         alert.addAction(gallaryAction)
         alert.addAction(cancelAction)
-        if CommonFunctions.DeviceData.isIphone() {
-            viewController.present(alert, animated: true, completion: {})
-        }
-        else {
-            popover = UIPopoverController(contentViewController: alert)
-            popover.present(from: sender, permittedArrowDirections: UIPopoverArrowDirection.any, animated: true)
-//            popover.presentPopoverFromRect(sender, inView: self.view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
-        }
+        displayMenu(contentView: alert, sender: sender)
     }
     
     func openCamera() {
@@ -104,11 +85,15 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     func openGallery(sender: UIBarButtonItem) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
+        displayMenu(contentView: imagePicker, sender: sender)
+    }
+    
+    func displayMenu(contentView: UIViewController!, sender: UIBarButtonItem!) {
         if CommonFunctions.DeviceData.isIphone() {
-            viewController.present(imagePicker, animated: true, completion: {})
+            viewController.present(contentView, animated: true, completion: {})
         }
         else {
-            popover=UIPopoverController(contentViewController: imagePicker)
+            popover = UIPopoverController(contentViewController: contentView)
             popover.present(from: sender, permittedArrowDirections: UIPopoverArrowDirection.any, animated: true)
         }
     }
