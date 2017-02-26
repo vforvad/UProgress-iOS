@@ -37,3 +37,9 @@
 "delete_step" = "Delete";
 "steps_delete_success" = "Step '%@' was succesfully deleted";
 "steps_delete_failed" = "Unfortunatelly, an error has occured";
+
+// PROFILE
+"profile_select_image" = "Choose image";
+"profile_image_gallery" = "Gallery";
+"profile_image_photo" = "Photo";
+"profile_image_cancel" = "Cancel";

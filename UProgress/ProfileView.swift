@@ -55,19 +55,19 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     }
     
     func takePhoto(sender: UIBarButtonItem) {
-        let alert:UIAlertController=UIAlertController(title: "Choose Image", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        let alert:UIAlertController=UIAlertController(title: NSLocalizedString("profile_select_image", comment: ""), message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.default) { UIAlertAction in
+            let cameraAction = UIAlertAction(title: NSLocalizedString("profile_image_photo", comment: ""), style: UIAlertActionStyle.default) { UIAlertAction in
                 self.openCamera()
             }
             alert.addAction(cameraAction)
         }
-        let gallaryAction = UIAlertAction(title: "Gallary", style: UIAlertActionStyle.default) {
+        let gallaryAction = UIAlertAction(title: NSLocalizedString("profile_image_gallery", comment: ""), style: UIAlertActionStyle.default) {
             UIAlertAction in
             self.openGallery(sender: sender)
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { UIAlertAction in
+        let cancelAction = UIAlertAction(title: NSLocalizedString("profile_image_cancel", comment: ""), style: UIAlertActionStyle.cancel) { UIAlertAction in
         }
         alert.addAction(gallaryAction)
         alert.addAction(cancelAction)
