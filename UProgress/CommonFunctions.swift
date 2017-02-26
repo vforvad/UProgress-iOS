@@ -60,9 +60,17 @@ struct CommonFunctions {
                     imageView.image = image
                 }
             }
-        } else {
+        }
+        else {
             imageView.image = UIImage(named: "empty_user")
         }
+    }
+    
+    static func avatarImage(imageView: UIImageView!, image: UIImage!) {
+        imageView.layer.cornerRadius = imageView.frame.size.width / 2
+        imageView.clipsToBounds = true
+        imageView.layer.borderWidth = 1
+        imageView.image = image
     }
     
     static func fromStoryboard(name: String!, identifier: String! ) -> UIViewController {

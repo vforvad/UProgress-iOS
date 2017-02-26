@@ -27,5 +27,7 @@ class ProfileHeader: UIView {
         return UINib(nibName: "ProfileHeader", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
     
-    
+    func updateAvatar(image: UIImage!) {
+        CommonFunctions.avatarImage(imageView: avatarImage, image: image)
+    }
 }

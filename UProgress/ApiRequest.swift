@@ -63,6 +63,7 @@ class ApiRequest: NSObject {
             request =  Alamofire.request(self.defineFullUrl(url: url), method: requestType, parameters: (parameters as! Parameters), headers: headers)
         }
         
+        DataRequest.addAcceptableImageContentTypes(["image/jpg", "image/png", "application/xml"])
         return request
     }
     
