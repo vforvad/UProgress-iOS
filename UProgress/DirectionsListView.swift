@@ -19,10 +19,12 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
     private var tableView: UITableView!
     private var searchBar: UISearchBar!
     private var viewController: DirectionsListViewProtocol!
+    private var realViewController: BaseViewController!
     
     init(viewController: DirectionsListViewProtocol!, table: UITableView!, searchBar: UISearchBar!) {
         super.init()
         self.viewController = viewController
+        self.realViewController = viewController as! BaseViewController
         self.tableView = table
         self.searchBar = searchBar
         self.tableView.delegate = self
@@ -38,8 +40,15 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         
         tableView.register(UINib(nibName: "DirectionsListCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         
+        if AuthorizationService.sharedInstance.currentUser != nil {
+            realViewController.navigationItem.rightBarButtonItems = [
+                CommonFunctions.makeBarButton(withIcon: "add_icon", action: #selector(DirectionsListView.createDirection))
+            ]
+        }
+        
         setupUIRefreshController()
         setupInfinteScrolling()
+        
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -141,6 +150,10 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         self.tableView.addInfiniteScroll { (scrollView) -> Void in
             self.viewController.infiniteScrollTriggered()
         }
+    }
+    
+    func createDirection() {
+    
     }
 
 }

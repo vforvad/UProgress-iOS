@@ -46,8 +46,8 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         var buttonsArr: [UIBarButtonItem]! = []
         
         if user.id == AuthorizationService.sharedInstance.currentUser.id {
-            buttonsArr.append(setBarButton(withIcon: "settings_icon", action: #selector(createStep(sender:))))
-            buttonsArr.append(setBarButton(withIcon: "camera", action: #selector(takePhoto(sender:))));
+            buttonsArr.append(CommonFunctions.makeBarButton(withIcon: "settings_icon", action: #selector(createStep(sender:))))
+            buttonsArr.append(CommonFunctions.makeBarButton(withIcon: "camera", action: #selector(takePhoto(sender:))));
         }
         
         viewController.navigationItem.rightBarButtonItems = buttonsArr

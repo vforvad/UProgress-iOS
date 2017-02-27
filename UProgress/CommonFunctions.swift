@@ -75,6 +75,10 @@ struct CommonFunctions {
         imageView.image = image
     }
     
+    static func makeBarButton(withIcon: String!, action: Selector) -> UIBarButtonItem {
+        return UIBarButtonItem(image: CommonFunctions.resizeImage(image: UIImage(named: withIcon)!, targetSize: CGSize(width: 30.0, height: 30.0)), style: UIBarButtonItemStyle.plain, target: self, action: action)
+    }
+    
     static func fromStoryboard(name: String!, identifier: String! ) -> UIViewController {
         return UIStoryboard(name: name, bundle: nil).instantiateViewController(withIdentifier: identifier)
     }

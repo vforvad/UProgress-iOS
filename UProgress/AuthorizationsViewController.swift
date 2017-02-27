@@ -114,12 +114,6 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
             detailViewController.user = currentUser
             let navCtrl = UINavigationController(rootViewController: detailViewController)
             splitViewController?.viewControllers[1] = navCtrl
-            
-//            splitViewController?.viewControllers
-//            let storyBoard : UIStoryboard = UIStoryboard(name: "iPad", bundle:nil)
-//            
-//            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "iPadBaseViewController") as! UISplitViewController
-//            self.present(nextViewController, animated:true, completion:nil)
         }
     }
     
