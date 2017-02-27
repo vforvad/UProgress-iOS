@@ -45,9 +45,16 @@ class LaunchViewController: UIViewController, LaunchViewProtocol {
     }
     
     internal func failedCurrentUserReceived(error: ServerError) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "iPad", bundle:nil)
-        
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "iPadBaseViewController") as! UISplitViewController
-        self.present(nextViewController, animated:true, completion:nil)
+        if CommonFunctions.DeviceData.isIPad() {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "iPad", bundle:nil)
+            
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "iPadBaseViewController") as! UISplitViewController
+            self.present(nextViewController, animated:true, completion:nil)
+        }
+        else {
+            var viewController = CommonFunctions.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
+            viewController.signIn = true
+            sideMenuController?.embed(centerViewController: UINavigationController(rootViewController: viewController))
+        }
     }
 }

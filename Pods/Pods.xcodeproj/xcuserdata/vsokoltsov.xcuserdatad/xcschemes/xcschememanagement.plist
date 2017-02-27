@@ -34,17 +34,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-UProgress-UProgressTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-UProgress-UProgressUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-UProgress.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-UProgressTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-UProgressUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -77,11 +77,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>22D80C467531776CEFB74C45BAD62FB2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
 		<dict>
 			<key>primary</key>
@@ -92,17 +87,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34ACBF2954FC669850638F7A6F772E64</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>38ACA430605AFB4229712A18BDDF5086</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3B870C0993DF6EDB370283AA4CD908AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,17 +97,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4ABBA6900B7E6FCDABCEF5109D5DA1A0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>51284E89F1DE7F86E293BE0B5F30C311</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7CAB3C52D5A534B1B1AA977669452485</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,7 +127,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B65DE52251DACC04341048B5712D3DC1</key>
+		<key>C9C70E1D92D181065413358798680049</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6AAE74573D0FFE2A9C7EE65E9A8E13A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

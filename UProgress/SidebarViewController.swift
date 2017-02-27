@@ -19,7 +19,8 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         NotificationCenter.default.addObserver(self, selector: #selector(SidebarViewController.signedIn(user:)), name: notificationName, object: nil)
-        NotificationCenter.default.addObserver(self, selector: Selector(("signedOut:")), name: NSNotification.Name(rawValue: "signOut"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SidebarViewController.signedOut(user:)), name: NSNotification.Name(rawValue: "signOut"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SidebarViewController.currentUserUpdate(user:)), name: NSNotification.Name(rawValue: "currentUserUpdated"), object: nil)
         navigationView = NavigationView(viewController: self, table: tableView)
     }
     
@@ -52,6 +53,11 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
             let tableVC = navVC.viewControllers.first as! AuthorizationsViewController
             tableVC.signIn = false
         }
+        
+        if (segue.identifier == "profile") {
+            let tableVC = navVC.viewControllers.first as! ProfileViewController
+            tableVC.user = AuthorizationService.sharedInstance.currentUser
+        }
     }
     
     private func segueForNavigationController(identifier: String!) {
@@ -60,7 +66,10 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
         
         switch identifier {
         case "profile":
-            viewController = CommonFunctions.fromStoryboard(name: "ProfileStoryboard", identifier: "ProfileViewController")
+            let profileVC = CommonFunctions.fromStoryboard(name: "ProfileStoryboard", identifier: "ProfileViewController") as! ProfileViewController
+            profileVC.user = AuthorizationService.sharedInstance.currentUser
+            viewController = profileVC
+            
         case "directions":
             viewController = CommonFunctions.fromStoryboard(name: "DirectionsStoryboard", identifier: "DirectionsListViewController")
         case "sign_in":
@@ -85,8 +94,14 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
         }
     }
     
-    func signedOut() {
+    func signedOut(user: Notification) {
+        navigationView.userSignedOut()
+    }
     
+    func currentUserUpdate(user: Notification) {
+        if let currentUserInfo = user.object {
+            navigationView.updateUser(user: currentUserInfo as! User)
+        }
     }
     
     deinit {

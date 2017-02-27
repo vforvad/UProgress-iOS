@@ -104,7 +104,9 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     }
     
     internal func successSignIn(currentUser: User) {
-        
+        var viewController = CommonFunctions.fromStoryboard(name: "ProfileStoryboard", identifier: "ProfileViewController") as! ProfileViewController
+        viewController.user = currentUser
+        sideMenuController?.embed(centerViewController: UINavigationController(rootViewController: viewController))
     }
     
     internal func failedSignIn(error: ServerError) {

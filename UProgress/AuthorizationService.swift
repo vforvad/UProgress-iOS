@@ -24,4 +24,11 @@ class AuthorizationService {
     func getToken() -> String {
         return self.keychain.get("uprogresstoken")!
     }
+    
+    func signOut() {
+        self.currentUser = nil
+        self.keychain.delete("uprogresstoken")
+        let notificationName = Notification.Name("signOut")
+        NotificationCenter.default.post(name: notificationName, object: nil)
+    }
 }

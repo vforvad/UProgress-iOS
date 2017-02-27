@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class StepTableViewCell: UITableViewCell {
     private var step: Step!

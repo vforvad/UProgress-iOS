@@ -16,6 +16,9 @@ class User: Mappable {
     var nick: String!
     var email: String!
     var avatarUrl: String!
+    var location: String!
+    var description: String!
+    var attachment: Attachment!
     
     required init?() {
         
@@ -32,5 +35,35 @@ class User: Mappable {
         nick <- map["nick"]
         email <- map["email"]
         avatarUrl <- map["attachment.url"]
+        location <- map["location"]
+        description <- map["description"]
+        attachment <- map["attachment"]
+    }
+    
+    func getFullName() -> String {
+        var correctName: String!
+        
+        if firstName != nil && lastName != nil {
+                correctName = firstName + " " + lastName
+        } else {
+                correctName = email
+        }
+        
+        return correctName
+    }
+    
+    func getCorrectNick() -> String {
+        return "@" + nick
+    }
+    
+    func attributesDictionary() -> [Dictionary<String, String>] {
+        var list: [Dictionary<String, String>]! = []
+        if firstName != nil && lastName != nil {
+            list.append(["title": "email", "value": email])
+        }
+        list.append(["title": "location", "value": location])
+        list.append(["title": "description", "value": description])
+        
+        return list
     }
 }

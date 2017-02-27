@@ -32,3 +32,13 @@
 "delete_step" = "Удалить";
 "steps_delete_success" = "Шаг '%@' был успешно удален";
 "steps_delete_failed" = "Во время удаления произошла ошибка";
+
+// PROFILE
+"profile_select_image" = "Выберите изображение";
+"profile_image_gallery" = "Галлерея";
+"profile_image_photo" = "Камера";
+"profile_image_cancel" = "Отмена";
+
+"profile_settings_action" = "Выберите действие";
+"profile_settings_edit" = "Редактировать";
+"profile_settings_sign_out" = "Выйти";

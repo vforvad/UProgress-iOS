@@ -16,7 +16,7 @@ public enum Method: String {
 }
 
 class ApiRequest: NSObject {
-    var host = "http://e8fd4028.ngrok.io"
+    var host = "http://0e0e33e3.ngrok.io"
     var keychain = KeychainSwift()
     
     class var sharedInstance: ApiRequest {
@@ -63,6 +63,7 @@ class ApiRequest: NSObject {
             request =  Alamofire.request(self.defineFullUrl(url: url), method: requestType, parameters: (parameters as! Parameters), headers: headers)
         }
         
+        DataRequest.addAcceptableImageContentTypes(["image/jpg", "image/png", "application/xml"])
         return request
     }
     
