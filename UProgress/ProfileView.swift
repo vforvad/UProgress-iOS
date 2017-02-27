@@ -43,11 +43,14 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         self.profileItems = user.attributesDictionary()
         
         tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        var buttonsArr: [UIBarButtonItem]! = []
         
-        viewController.navigationItem.rightBarButtonItems = [
-            setBarButton(withIcon: "settings_icon", action: "createStep"),
-            setBarButton(withIcon: "camera", action: #selector(takePhoto(sender:)))
-        ]
+        if user.id == AuthorizationService.sharedInstance.currentUser.id {
+            buttonsArr.append(setBarButton(withIcon: "settings_icon", action: #selector(createStep(sender:))))
+            buttonsArr.append(setBarButton(withIcon: "camera", action: #selector(takePhoto(sender:))));
+        }
+        
+        viewController.navigationItem.rightBarButtonItems = buttonsArr
         
         let model = AttachmentManager()
         presenter = AttachmentPresenter(model: model, view: self)
@@ -58,8 +61,27 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         return UIBarButtonItem(image: CommonFunctions.resizeImage(image: UIImage(named: withIcon)!, targetSize: CGSize(width: 30.0, height: 30.0)), style: UIBarButtonItemStyle.plain, target: self, action: action)
     }
     
-    func createStep() {
-        actions.editUser()
+    func createStep(sender: UIBarButtonItem) {
+//        actions.editUser()
+        let alert:UIAlertController=UIAlertController(title: NSLocalizedString("profile_settings_action", comment: ""), message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        let editAction = UIAlertAction(title: NSLocalizedString("profile_settings_edit", comment: ""), style: UIAlertActionStyle.default) { UIAlertAction in
+                self.actions.editUser()
+            }
+        
+        let signOutAction = UIAlertAction(title: NSLocalizedString("profile_settings_sign_out", comment: ""), style: UIAlertActionStyle.default) {
+            UIAlertAction in
+            
+        }
+        
+        let cancelAction = UIAlertAction(title: NSLocalizedString("profile_image_cancel", comment: ""), style: UIAlertActionStyle.cancel) { UIAlertAction in
+            alert.dismiss(animated: true, completion: {})
+        }
+        
+        alert.addAction(editAction)
+        alert.addAction(signOutAction)
+        alert.addAction(cancelAction)
+        displayMenu(contentView: alert, sender: sender)
     }
     
     func takePhoto(sender: UIBarButtonItem) {

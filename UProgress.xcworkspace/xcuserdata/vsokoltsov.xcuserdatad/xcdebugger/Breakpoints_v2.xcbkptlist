@@ -599,11 +599,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/CommonFunctions.swift"
-            timestampString = "509876806.344105"
+            timestampString = "509890547.767367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "isIphone()"
             landmarkType = "7">
          </BreakpointContent>
@@ -951,11 +951,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/CommonFunctions.swift"
-            timestampString = "509876806.344105"
+            timestampString = "509890547.767367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "customizeTextField(field:placeholder:image:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2211,11 +2211,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/ProfileView.swift"
-            timestampString = "509876491.86999"
+            timestampString = "509890629.393597"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "updateUser(user:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2227,11 +2227,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/ProfileView.swift"
-            timestampString = "509876491.86999"
+            timestampString = "509890629.393597"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "takePhoto(sender:)"
             landmarkType = "7">
          </BreakpointContent>

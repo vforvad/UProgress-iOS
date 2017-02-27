@@ -43,3 +43,7 @@
 "profile_image_gallery" = "Gallery";
 "profile_image_photo" = "Photo";
 "profile_image_cancel" = "Cancel";
+
+"profile_settings_action" = "Choose an action";
+"profile_settings_edit" = "Edit";
+"profile_settings_sign_out" = "Sign out";

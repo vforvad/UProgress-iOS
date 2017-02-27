@@ -15,7 +15,6 @@ import MBProgressHUD
 struct CommonFunctions {
     static func customizeTextField(field: UITextField!, placeholder: String!, image: String!) {
         field.backgroundColor = UIColor.clear
-//        let str = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName:Constants.Colors.authViewPlaceholder])
         field.layer.masksToBounds = true
         field.placeholder = placeholder
         field.leftViewMode = UITextFieldViewMode.always
