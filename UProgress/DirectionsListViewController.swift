@@ -97,7 +97,7 @@ DirectionPopupActions {
     }
     
     internal func successOperation(direction: Direction) {
-    
+        viewInstance.addDirection(direction: direction)
     }
     
     internal func failedOperation(error: ServerError) {

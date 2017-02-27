@@ -1,4 +1,3 @@
-//
 //  DirectionListPresenterImpl.swift
 //  UProgress
 //
@@ -19,6 +18,7 @@ class DirectionListPresenterImpl: DirectionsListPresenter {
         self.model = model
         self.view = view
     }
+    
     
     internal func loadDirections(userNick: String!) {
         view.startLoader()

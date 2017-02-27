@@ -153,5 +153,10 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
     func createDirection(sender: UIBarButtonItem) {
        viewController.createDirection()
     }
+    
+    func addDirection(direction: Direction) {
+        itemsList.insert(direction, at: 0)
+        self.tableView.reloadData()
+    }
 
 }

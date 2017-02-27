@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
-class DirectionsFormViewController: BasePopupViewController {
+class DirectionsFormViewController: BasePopupViewController, DirectionFormProtocol {
     var actions: DirectionPopupActions!
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var stackView: UIStackView!
@@ -26,6 +27,8 @@ class DirectionsFormViewController: BasePopupViewController {
     override var topMargin: NSLayoutConstraint! { get { return topMarginBaseView } }
     override var contentView: UIView! { get { return baseView } }
     
+    private var presenter: DirectionFormPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -39,6 +42,8 @@ class DirectionsFormViewController: BasePopupViewController {
         descriptionField.layer.borderWidth = 0.3
         descriptionField.layer.borderColor = UIColor.lightGray.cgColor
         self.baseView.layer.cornerRadius = 8.0
+        let model = DirectionManager()
+        presenter = DirectionFormPresenter(model: model, view: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,9 +53,44 @@ class DirectionsFormViewController: BasePopupViewController {
         stackView.spacing = 5.0
     }
     @IBAction func clickSave(_ sender: Any) {
+        titleFieldError.isHidden = true
+        descriptionFieldError.isHidden = true
+        presenter.createDirection(userNick: AuthorizationService.sharedInstance.currentUser.nick,
+                                  parameters: ["title": titleField.text, "description": descriptionField.text]
+        )
         
     }
     @IBAction func clickCancel(_ sender: Any) {
         self.dismiss(animated: true, completion: {})
+    }
+    
+    internal func successCreation(direction: Direction) {
+        actions.successOperation(direction: direction)
+        self.dismiss(animated: true, completion: {})
+    }
+    
+    internal func failedCreation(error: ServerError) {
+        let errorsList = error.params!
+        if let titleErrorsArr = errorsList["title"] {
+            let errorsArr = titleErrorsArr as! [String]
+            let titleError: String! = errorsArr.joined(separator: "\n")
+            self.titleFieldError.text = titleError
+            self.titleFieldError.isHidden = false
+        }
+        
+        if errorsList["description"] != nil {
+            let errorsArr = errorsList["description"] as! [String]
+            let descriptionError: String! = errorsArr.joined(separator: "\n")
+            self.descriptionFieldError.text = descriptionError
+            self.descriptionFieldError.isHidden = false
+        }
+    }
+    
+    internal func startLoader() {
+        MBProgressHUD.showAdded(to: view, animated: true)
+    }
+    
+    internal func stopLoader() {
+        MBProgressHUD.hide(for: view, animated: true)
     }
 }
