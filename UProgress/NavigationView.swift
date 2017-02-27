@@ -76,6 +76,7 @@ class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
     public func userSignedOut() {
         currentUser = nil
         signedInItems.remove(at: 0)
+        items = unsignedItems
         tableView.reloadData()
     }
     

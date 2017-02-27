@@ -18,7 +18,7 @@ class BaseViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
             self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         }
-        NotificationCenter.default.addObserver(self, selector: Selector(("signedOut:")), name: NSNotification.Name(rawValue: "signOut"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BaseViewController.signedOut(user:)), name: NSNotification.Name(rawValue: "signOut"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,7 +33,9 @@ class BaseViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func signedOut() {
-        
+    func signedOut(user: Notification) {
+        let viewController = CommonFunctions.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
+        viewController.signIn = true
+        sideMenuController?.embed(centerViewController: UINavigationController(rootViewController: viewController))
     }
 }
