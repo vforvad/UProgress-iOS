@@ -36,6 +36,9 @@ class DirectionsListPresenterTest: XCTestCase {
     }
     
     class DirectionsManagerMock: DirectionModelProtocol {
+        internal func createDirection(userNick: String, parameters: Dictionary<String, Any>, success: @escaping (Direction) -> Void, failure: @escaping (ServerError) -> Void) {
+            }
+
         var successCall: Bool!
         var successRequest = false
         
