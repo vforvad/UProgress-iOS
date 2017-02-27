@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 import Alamofire
 import ObjectMapper
+import MBProgressHUD
 
-class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegate, UITableViewDataSource, UINavigationControllerDelegate {
+class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegate, UITableViewDataSource, UINavigationControllerDelegate, AttachmentViewProtocol {
     private var cellIdentifier = "profileItem"
     private var user: User!
     private var tableView: UITableView!
@@ -22,6 +23,8 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     private var actions: ProfileViewActionsProtocol!
     private let imagePicker = UIImagePickerController()
     private var popover:UIPopoverController!
+    private var presenter: AttachmentPresenter!
+    private var uploadedImage: UIImage!
     
     init(user: User!, table: UITableView!, viewController: BaseViewController) {
         super.init()
@@ -46,6 +49,9 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
             setBarButton(withIcon: "camera", action: #selector(takePhoto(sender:)))
         ]
         
+        let model = AttachmentManager()
+        presenter = AttachmentPresenter(model: model, view: self)
+        
     }
     
     func setBarButton(withIcon: String!, action: Selector) -> UIBarButtonItem {
@@ -58,12 +64,14 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     
     func takePhoto(sender: UIBarButtonItem) {
         let alert:UIAlertController=UIAlertController(title: NSLocalizedString("profile_select_image", comment: ""), message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let cameraAction = UIAlertAction(title: NSLocalizedString("profile_image_photo", comment: ""), style: UIAlertActionStyle.default) { UIAlertAction in
                 self.openCamera()
             }
             alert.addAction(cameraAction)
         }
+        
         let gallaryAction = UIAlertAction(title: NSLocalizedString("profile_image_gallery", comment: ""), style: UIAlertActionStyle.default) {
             UIAlertAction in
             self.openGallery(sender: sender)
@@ -71,6 +79,7 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         
         let cancelAction = UIAlertAction(title: NSLocalizedString("profile_image_cancel", comment: ""), style: UIAlertActionStyle.cancel) { UIAlertAction in
         }
+        
         alert.addAction(gallaryAction)
         alert.addAction(cancelAction)
         displayMenu(contentView: alert, sender: sender)
@@ -138,41 +147,37 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
                                didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         viewController.dismiss(animated: true, completion: nil)
         let image = info[UIImagePickerControllerOriginalImage]
-        self.profileHeader.avatarImage.image = image as! UIImage?
-        Alamofire.upload(multipartFormData: { formData in
-            let imageData = UIImageJPEGRepresentation(image! as! UIImage, 0.9)!
-            let tix = Date().ticks
-            let imageName = "\(tix)"
-            formData.append(imageData, withName: "file", fileName: imageName, mimeType: "image/jpg")
-            formData.append((String("User")?.data(using: String.Encoding.utf8))!, withName: "attachable_type")
-            formData.append(String(self.user.id).data(using: String.Encoding.utf8)!, withName: "attachable_id")
-        }, to: "\(ApiRequest.sharedInstance.host)/api/v1/attachments", encodingCompletion: { (result) in
-            switch result {
-            case .success(let upload, _, _):
-                upload.validate().responseJSON(completionHandler: { response in
-                    if let result = response.result.value {
-                        // Get the json response. From this, we can get all things we send back to the app.
-                        let JSON = result as! Dictionary<String, AnyObject>
-                        let attachment = Mapper<Attachment>().map(JSONObject: JSON["attachment"])
-                        var user = AuthorizationService.sharedInstance.currentUser
-                        user?.attachment = attachment
-                        user?.avatarUrl = attachment?.url
-                        AuthorizationService.sharedInstance.currentUser = user
-                        let notificationName = Notification.Name("currentUserUpdated")
-                        NotificationCenter.default.post(name: notificationName, object: AuthorizationService.sharedInstance.currentUser)
-//                        self.imageServerLocation = JSON.object(forKey: "filepath") as? String
-//                        debugPrint(response)
-                    }
-                })
-//                self.profileHeader.updateAvatar(image: image as! UIImage!)
-            case .failure(let error):
-                print(error)
-            }
-        
-        })
+        uploadedImage = image as! UIImage!
+        presenter.uploadProfileImage(image: image as! UIImage!, attachableId: user.id, attachableType: "User")
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         viewController.dismiss(animated: true, completion: nil)
+    }
+    
+    internal func successAttachmentUpload(attachment: Attachment) {
+        var user = AuthorizationService.sharedInstance.currentUser
+        user?.attachment = attachment
+        user?.avatarUrl = attachment.url
+        if let selectedImage = uploadedImage {
+            self.profileHeader.updateAvatar(image: selectedImage)
+        } else {
+            CommonFunctions.avatarImage(imageView: profileHeader.avatarImage, url: attachment.url)
+        }
+        AuthorizationService.sharedInstance.currentUser = user
+        let notificationName = Notification.Name("currentUserUpdated")
+        NotificationCenter.default.post(name: notificationName, object: AuthorizationService.sharedInstance.currentUser)
+    }
+    
+    internal func failedAttachmentUpload(error: ServerError) {
+        
+    }
+    
+    internal func stopLoader() {
+        MBProgressHUD.hide(for: viewController.view, animated: true)
+    }
+    
+    internal func startLoader() {
+        MBProgressHUD.showAdded(to: viewController.view, animated: true)
     }
 }
