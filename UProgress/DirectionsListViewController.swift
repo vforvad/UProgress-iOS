@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 import MBProgressHUD
 
-class DirectionsListViewController: BaseViewController, DirectionViewProtocol, DirectionsListViewProtocol {
+class DirectionsListViewController: BaseViewController, DirectionViewProtocol, DirectionsListViewProtocol,
+DirectionPopupActions {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -88,7 +89,19 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
             let detailViewController = segue.destination as! DirectionsDetailViewController
             detailViewController.direction = selectedDirection
         }
+        if segue.identifier == "directions_form" {
+            let formViewController = segue.destination as! DirectionsFormViewController
+            formViewController.actions = self
+        }
         selectedDirection = nil
+    }
+    
+    internal func successOperation(direction: Direction) {
+    
+    }
+    
+    internal func failedOperation(error: ServerError) {
+    
     }
 }
 

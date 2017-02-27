@@ -21,14 +21,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U7I-2H-gEg">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7I-2H-gEg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9P-yL-t3e">
-                                        <rect key="frame" x="30" y="30" width="314" height="300"/>
+                                        <rect key="frame" x="30" y="30" width="314" height="265"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NMr-ea-s72">
+                                                <rect key="frame" x="10" y="10" width="294" height="195"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W4W-Wb-g5Y">
+                                                        <rect key="frame" x="0.0" y="0.0" width="294" height="26"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRi-yT-qi9">
+                                                        <rect key="frame" x="0.0" y="26" width="294" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="96Z-vz-Qdg">
+                                                        <rect key="frame" x="0.0" y="46.5" width="294" height="128"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmM-LR-xwa">
+                                                        <rect key="frame" x="0.0" y="174.5" width="294" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBW-kg-laS">
+                                                <rect key="frame" x="204" y="215" width="100" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="J2h-wM-dEQ"/>
+                                                    <constraint firstAttribute="height" constant="30" id="s2E-w4-Y3o"/>
+                                                </constraints>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clickCancel:" destination="lc9-hz-YLd" eventType="touchUpInside" id="tPa-rt-P1P"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ep-sc-ftL">
+                                                <rect key="frame" x="10" y="215" width="100" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="aXx-3k-R6V"/>
+                                                    <constraint firstAttribute="width" constant="100" id="gKg-bw-SD2"/>
+                                                </constraints>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clickSave:" destination="lc9-hz-YLd" eventType="touchUpInside" id="Ryo-gK-7t1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="3Mo-46-f5p"/>
+                                            <constraint firstAttribute="bottom" secondItem="gBW-kg-laS" secondAttribute="bottom" constant="20" id="0S7-Xq-Qha"/>
+                                            <constraint firstAttribute="trailing" secondItem="gBW-kg-laS" secondAttribute="trailing" constant="10" id="1aG-xq-IHI"/>
+                                            <constraint firstAttribute="height" constant="265" id="3Mo-46-f5p"/>
+                                            <constraint firstAttribute="trailing" secondItem="NMr-ea-s72" secondAttribute="trailing" constant="10" id="3lN-2F-XYw"/>
+                                            <constraint firstItem="NMr-ea-s72" firstAttribute="leading" secondItem="L9P-yL-t3e" secondAttribute="leading" constant="10" id="7So-kV-dbd"/>
+                                            <constraint firstAttribute="bottom" secondItem="8Ep-sc-ftL" secondAttribute="bottom" constant="20" id="BaK-PR-M6h"/>
+                                            <constraint firstItem="NMr-ea-s72" firstAttribute="top" secondItem="L9P-yL-t3e" secondAttribute="top" constant="10" id="CPH-DV-V1U"/>
+                                            <constraint firstItem="8Ep-sc-ftL" firstAttribute="top" secondItem="NMr-ea-s72" secondAttribute="bottom" constant="10" id="i9s-yR-XpW"/>
+                                            <constraint firstItem="8Ep-sc-ftL" firstAttribute="leading" secondItem="L9P-yL-t3e" secondAttribute="leading" constant="10" id="qpU-hD-Ldi"/>
+                                            <constraint firstItem="gBW-kg-laS" firstAttribute="top" secondItem="NMr-ea-s72" secondAttribute="bottom" constant="10" id="wt1-XK-gWO"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -36,6 +105,7 @@
                                     <constraint firstItem="L9P-yL-t3e" firstAttribute="centerX" secondItem="U7I-2H-gEg" secondAttribute="centerX" id="APW-iu-baY"/>
                                     <constraint firstItem="L9P-yL-t3e" firstAttribute="top" secondItem="U7I-2H-gEg" secondAttribute="top" constant="30" id="NYj-BZ-xhi"/>
                                     <constraint firstItem="L9P-yL-t3e" firstAttribute="leading" secondItem="U7I-2H-gEg" secondAttribute="leading" constant="30" id="cSJ-nc-Kzn"/>
+                                    <constraint firstAttribute="bottom" secondItem="L9P-yL-t3e" secondAttribute="bottom" constant="350" id="gJw-09-7mL"/>
                                     <constraint firstAttribute="trailing" secondItem="L9P-yL-t3e" secondAttribute="trailing" constant="30" id="u1j-qh-DbA"/>
                                 </constraints>
                             </scrollView>
@@ -43,11 +113,21 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="U7I-2H-gEg" secondAttribute="trailing" id="2Jp-bC-iZK"/>
                             <constraint firstItem="U7I-2H-gEg" firstAttribute="leading" secondItem="LO1-pA-uQJ" secondAttribute="leading" id="2x3-vD-iL7"/>
-                            <constraint firstItem="U7I-2H-gEg" firstAttribute="width" secondItem="LO1-pA-uQJ" secondAttribute="width" id="N3Y-q4-rLV"/>
                             <constraint firstItem="PWE-T0-VsA" firstAttribute="top" secondItem="U7I-2H-gEg" secondAttribute="bottom" id="ivn-x0-dri"/>
                             <constraint firstItem="U7I-2H-gEg" firstAttribute="top" secondItem="LO1-pA-uQJ" secondAttribute="top" id="z5c-ON-bfv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="baseView" destination="L9P-yL-t3e" id="7wO-Bt-1l2"/>
+                        <outlet property="cancellButton" destination="gBW-kg-laS" id="w5o-Ev-iKK"/>
+                        <outlet property="descriptionField" destination="96Z-vz-Qdg" id="TgN-1U-Mgk"/>
+                        <outlet property="descriptionFieldError" destination="FmM-LR-xwa" id="1om-x2-KXW"/>
+                        <outlet property="saveButton" destination="8Ep-sc-ftL" id="vyv-8e-33s"/>
+                        <outlet property="stackView" destination="NMr-ea-s72" id="pXx-k3-gRc"/>
+                        <outlet property="titleField" destination="W4W-Wb-g5Y" id="z2A-b6-GHZ"/>
+                        <outlet property="titleFieldError" destination="RRi-yT-qi9" id="YTL-75-RmF"/>
+                        <outlet property="topMarginBaseView" destination="NYj-BZ-xhi" id="3Td-jF-mm3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHm-sU-KtX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
