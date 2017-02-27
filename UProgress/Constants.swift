@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
     static let authDefaultSpacing = 20.0 as! CGFloat
