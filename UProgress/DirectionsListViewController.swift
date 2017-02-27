@@ -79,6 +79,10 @@ class DirectionsListViewController: BaseViewController, DirectionViewProtocol, D
         viewInstance.stopInfiniteScroll()
     }
     
+    internal func createDirection() {
+        performSegue(withIdentifier: "directions_form", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "detail" {
             let detailViewController = segue.destination as! DirectionsDetailViewController
