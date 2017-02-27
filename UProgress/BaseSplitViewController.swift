@@ -13,12 +13,20 @@ class BaseSplitViewController: UISplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let user = AuthorizationService.sharedInstance.currentUser
+        var navCtrl: UINavigationController!
+        
         if (user != nil) {
             let detailViewController = CommonFunctions.fromStoryboard(name: "DirectionsStoryboard", identifier: "DirectionsListViewController") as! DirectionsListViewController
-//            navigationController.setUser(user: user!)
-            let navCtrl = UINavigationController(rootViewController: detailViewController)
-            self.viewControllers[1] = navCtrl
-            self.preferredDisplayMode = .allVisible
+            navCtrl = UINavigationController(rootViewController: detailViewController)
+            
         }
+        else {
+            let authVC = CommonFunctions.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
+            authVC.signIn = true
+            navCtrl = UINavigationController(rootViewController: authVC)
+        }
+        
+        self.viewControllers[1] = navCtrl
+        self.preferredDisplayMode = .allVisible
     }
 }

@@ -34,8 +34,16 @@ class BaseViewController: UIViewController {
     }
     
     func signedOut(user: Notification) {
-        let viewController = CommonFunctions.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
-        viewController.signIn = true
-        sideMenuController?.embed(centerViewController: UINavigationController(rootViewController: viewController))
+        if CommonFunctions.DeviceData.isIphone() {
+            let viewController = CommonFunctions.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
+            viewController.signIn = true
+            sideMenuController?.embed(centerViewController: UINavigationController(rootViewController: viewController))
+        }
+        else {
+            let detailViewController = CommonFunctions.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
+            detailViewController.signIn = true
+            let navCtrl = UINavigationController(rootViewController: detailViewController)
+            splitViewController?.viewControllers[1] = navCtrl
+        }
     }
 }

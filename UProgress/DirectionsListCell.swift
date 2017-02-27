@@ -28,7 +28,12 @@ class DirectionsListCell: UITableViewCell {
     
     public func setData(direction: Direction!) {
         self.direction = direction
-        self.percentValue.text = String(direction.percentsResult)
+        if let percents = direction.percentsResult {
+            self.percentValue.text = String(percents)
+        }
+        else {
+            self.percentValue.text = String(0)
+        }
         self.titleValue.text = direction.title
         self.descriptionLabel.text = direction.description
         self.updatedAtValue.text = direction.updatedAt.relativeTime
