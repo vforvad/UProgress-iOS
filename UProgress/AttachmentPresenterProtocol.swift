@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol AttachmentPresenterProtocol {
     func uploadProfileImage(image: UIImage!, attachableId: Int!, attachableType: String!)
