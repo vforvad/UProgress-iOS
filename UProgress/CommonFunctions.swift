@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 import AlamofireImage
+import MBProgressHUD
 
 struct CommonFunctions {
     static func customizeTextField(field: UITextField!, placeholder: String!, image: String!) {
@@ -52,12 +53,14 @@ struct CommonFunctions {
     
     static func avatarImage(imageView: UIImageView!, url: String?) {
         if let avatarUrl =  url {
+            MBProgressHUD.showAdded(to: imageView, animated: true)
             Alamofire.request(avatarUrl).responseImage{ response in
                 if let image = response.result.value {
                     imageView.layer.cornerRadius = imageView.frame.size.width / 2
                     imageView.clipsToBounds = true
                     imageView.layer.borderWidth = 1
                     imageView.image = image
+                    MBProgressHUD.hide(for: imageView, animated: true)
                 }
             }
         }
