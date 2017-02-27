@@ -71,7 +71,7 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         
         let signOutAction = UIAlertAction(title: NSLocalizedString("profile_settings_sign_out", comment: ""), style: UIAlertActionStyle.default) {
             UIAlertAction in
-            
+            self.signOut()
         }
         
         let cancelAction = UIAlertAction(title: NSLocalizedString("profile_image_cancel", comment: ""), style: UIAlertActionStyle.cancel) { UIAlertAction in
@@ -105,6 +105,10 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         alert.addAction(gallaryAction)
         alert.addAction(cancelAction)
         displayMenu(contentView: alert, sender: sender)
+    }
+    
+    func signOut() {
+        AuthorizationService.sharedInstance.signOut()
     }
     
     func openCamera() {

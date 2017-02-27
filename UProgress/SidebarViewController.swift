@@ -19,7 +19,7 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         NotificationCenter.default.addObserver(self, selector: #selector(SidebarViewController.signedIn(user:)), name: notificationName, object: nil)
-        NotificationCenter.default.addObserver(self, selector: Selector(("signedOut:")), name: NSNotification.Name(rawValue: "signOut"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SidebarViewController.signedOut(user:)), name: NSNotification.Name(rawValue: "signOut"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(SidebarViewController.currentUserUpdate(user:)), name: NSNotification.Name(rawValue: "currentUserUpdated"), object: nil)
         navigationView = NavigationView(viewController: self, table: tableView)
     }
@@ -94,8 +94,8 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
         }
     }
     
-    func signedOut() {
-    
+    func signedOut(user: Notification) {
+        navigationView.userSignedOut()
     }
     
     func currentUserUpdate(user: Notification) {

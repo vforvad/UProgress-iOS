@@ -18,6 +18,7 @@ class BaseViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
             self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         }
+        NotificationCenter.default.addObserver(self, selector: Selector(("signedOut:")), name: NSNotification.Name(rawValue: "signOut"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,5 +31,9 @@ class BaseViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func signedOut() {
+        
     }
 }

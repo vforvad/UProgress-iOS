@@ -73,6 +73,12 @@ class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
         tableView.reloadData()
     }
     
+    public func userSignedOut() {
+        currentUser = nil
+        signedInItems.remove(at: 0)
+        tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if isProfileCell(item: items[indexPath.row]) {
             return 80
