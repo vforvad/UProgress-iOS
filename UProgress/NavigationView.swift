@@ -14,7 +14,8 @@ class NavigationView: NSObject, UITableViewDelegate, UITableViewDataSource {
     private var currentUser: User!
     private var items: [Dictionary<String, String>] = []
     private var signedInItems = [
-        ["title": NSLocalizedString("sidebar_directions", comment: ""), "segue": "directions", "icon": "directions"]
+        ["title": NSLocalizedString("sidebar_directions", comment: ""), "segue": "directions", "icon": "directions"],
+        ["title": NSLocalizedString("sidebar_statistics", comment: ""), "segue": "statistics", "icon": "statistics_icon"]
     ]
     private var unsignedItems = [
         ["title": NSLocalizedString("sidebar_sign_in", comment: ""), "segue": "sign_in", "icon": "sign_in"],

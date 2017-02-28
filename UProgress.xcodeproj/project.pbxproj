@@ -269,6 +269,10 @@
 		64D930C61E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AB1E3E45EE007C7112 /* DirectionsListPresenter.swift */; };
 		64D930C71E3E7311007C7112 /* DirectionListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */; };
 		64D930C81E3E7312007C7112 /* DirectionListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */; };
+		64DA9CFD1E6567E4008D24AD /* StatisticsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DA9CFC1E6567E4008D24AD /* StatisticsStoryboard.storyboard */; };
+		64DA9CFF1E656817008D24AD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */; };
+		64DA9D001E656817008D24AD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */; };
+		64DA9D011E656817008D24AD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */; };
 		64E015181E3E023E0055DFD5 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E015171E3E023E0055DFD5 /* Direction.swift */; };
 		64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */; };
 		64EA8BF41E3EB9AE0088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
@@ -424,6 +428,8 @@
 		64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionListPresenterImpl.swift; sourceTree = "<group>"; };
 		64D930AF1E3E4DA1007C7112 /* DirectionsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListView.swift; sourceTree = "<group>"; };
 		64D930B11E3E4EF2007C7112 /* DirectionsListViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListViewProtocol.swift; sourceTree = "<group>"; };
+		64DA9CFC1E6567E4008D24AD /* StatisticsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatisticsStoryboard.storyboard; sourceTree = "<group>"; };
+		64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		64E015171E3E023E0055DFD5 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -628,6 +634,7 @@
 		6474B1A51E3D04C200C46165 /* UProgress */ = {
 			isa = PBXGroup;
 			children = (
+				64DA9CFB1E6567D4008D24AD /* Statistics */,
 				64A108111E64138700BBD065 /* Attachment */,
 				646E8EA21E48B22E003B8DFB /* DirectionsDetail */,
 				646E8E9D1E48B016003B8DFB /* User */,
@@ -844,6 +851,15 @@
 			name = presenter;
 			sourceTree = "<group>";
 		};
+		64DA9CFB1E6567D4008D24AD /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				64DA9CFC1E6567E4008D24AD /* StatisticsStoryboard.storyboard */,
+				64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
 		64EA8BF21E3EB9970088009E /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1011,6 +1027,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64DA9CFD1E6567E4008D24AD /* StatisticsStoryboard.storyboard in Resources */,
 				64432CC61E43DBB1003C3011 /* Localizable.strings in Resources */,
 				64F80D431E42058500E90004 /* AuthorizationStoryboard.storyboard in Resources */,
 				641B30A81E4BCC4000FF60CC /* DirectionDetailInfoView.xib in Resources */,
@@ -1262,6 +1279,7 @@
 				64F80D3D1E41FCB000E90004 /* RegistrationFragmentController.swift in Sources */,
 				64A108481E64655300BBD065 /* DirectionsFormViewController.swift in Sources */,
 				64D930A61E3E40A7007C7112 /* DirectionModelProtocol.swift in Sources */,
+				64DA9CFF1E656817008D24AD /* StatisticsViewController.swift in Sources */,
 				647B34A41E4F8823006639DD /* DirectionDetailManager.swift in Sources */,
 				64860B861E5F5899002ACD43 /* ProfileViewProtocol.swift in Sources */,
 				64860B8A1E5F6FA4002ACD43 /* Attachment.swift in Sources */,
@@ -1346,6 +1364,7 @@
 				64A108391E6459F800BBD065 /* AuthorizationViewProtocol.swift in Sources */,
 				64A108231E6415C100BBD065 /* AttachmentPresenterProtocol.swift in Sources */,
 				64D930C31E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
+				64DA9D001E656817008D24AD /* StatisticsViewController.swift in Sources */,
 				6424076D1E52114600E4CF95 /* String.swift in Sources */,
 				642407751E52197000E4CF95 /* StepCellProtocol.swift in Sources */,
 				64D930BF1E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */,
@@ -1432,6 +1451,7 @@
 				64A1083A1E6459F900BBD065 /* AuthorizationViewProtocol.swift in Sources */,
 				64A108241E6415C100BBD065 /* AttachmentPresenterProtocol.swift in Sources */,
 				64D930C41E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
+				64DA9D011E656817008D24AD /* StatisticsViewController.swift in Sources */,
 				6424076E1E52114600E4CF95 /* String.swift in Sources */,
 				642407761E52197100E4CF95 /* StepCellProtocol.swift in Sources */,
 				64D930C01E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */,

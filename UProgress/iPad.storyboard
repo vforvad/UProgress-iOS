@@ -92,6 +92,7 @@
                         <segue destination="Kje-xO-UBa" kind="showDetail" identifier="sign_in" id="A30-AA-UX1"/>
                         <segue destination="Vh6-tG-odW" kind="showDetail" identifier="directions" id="zN1-6k-nXF"/>
                         <segue destination="Mvt-rn-JHq" kind="showDetail" identifier="profile" id="dzy-dr-Gq3"/>
+                        <segue destination="8sl-XS-vEG" kind="showDetail" identifier="statistics" id="xs8-Ns-tJb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRh-F6-LP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -127,7 +128,7 @@
                 <viewControllerPlaceholder storyboardName="AuthorizationStoryboard" id="Kje-xO-UBa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05a-47-aS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1641" y="-1186"/>
+            <point key="canvasLocation" x="694" y="-85"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qvF-VK-iRu">
@@ -153,7 +154,7 @@
                 <viewControllerPlaceholder storyboardName="DirectionsStoryboard" id="Vh6-tG-odW" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PT5-6t-4Pf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="-84"/>
+            <point key="canvasLocation" x="993" y="-85"/>
         </scene>
         <!--ProfileStoryboard-->
         <scene sceneID="o01-67-Ktg">
@@ -162,6 +163,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ln0-8D-0nY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1245" y="-85"/>
+        </scene>
+        <!--StatisticsStoryboard-->
+        <scene sceneID="oYp-mm-ZTr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StatisticsStoryboard" id="8sl-XS-vEG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q1b-eB-tT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362" y="-85"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
