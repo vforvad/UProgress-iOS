@@ -5,6 +5,9 @@ PODS:
   - AlamofireObjectMapper (4.0.1):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
+  - Charts (3.0.1):
+    - Charts/Core (= 3.0.1)
+  - Charts/Core (3.0.1)
   - KeychainSwift (7.0.0)
   - MBProgressHUD (1.0.0)
   - ObjectMapper (2.2.2)
@@ -16,6 +19,7 @@ PODS:
 DEPENDENCIES:
   - AlamofireImage
   - AlamofireObjectMapper (~> 4.0)
+  - Charts
   - KeychainSwift (~> 7.0)
   - MBProgressHUD
   - ObjectMapper (~> 2.2)
@@ -28,6 +32,7 @@ SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   KeychainSwift: b6947435dd78cc442c64a84ae648dd0e871cf448
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
@@ -36,6 +41,6 @@ SPEC CHECKSUMS:
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
   UIScrollView-InfiniteScroll: d26885be71caca7485cdb37eab513a8f89036bb0
 
-PODFILE CHECKSUM: 2ccaba30dae9b28f2af55985dbe51c90014befad
+PODFILE CHECKSUM: 2ea77d66b8ed230469b5d3b5e3841b19eb63109e
 
 COCOAPODS: 1.2.0

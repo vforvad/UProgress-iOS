@@ -293,7 +293,9 @@
 		64F80D3B1E41FCA500E90004 /* AuthorizationFragmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80D3A1E41FCA500E90004 /* AuthorizationFragmentController.swift */; };
 		64F80D3D1E41FCB000E90004 /* RegistrationFragmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80D3C1E41FCB000E90004 /* RegistrationFragmentController.swift */; };
 		64F80D431E42058500E90004 /* AuthorizationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64F80D421E42058500E90004 /* AuthorizationStoryboard.storyboard */; };
+		74A21D2AF6AE0CB303F88674 /* Pods_UProgress_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396F0220AA154D509C1E95B /* Pods_UProgress_UProgressTests.framework */; };
 		8355BE18053B154ED4CA22C8 /* Pods_UProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD8BB09CFC827EB003C41A2 /* Pods_UProgress.framework */; };
+		CAD6B9F786B674324A426955 /* Pods_UProgress_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726D3C86FF753C8EEDC99541 /* Pods_UProgress_UProgressUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -472,6 +474,7 @@
 			files = (
 				64C4DE151E5C8DBC009B896B /* Pods_UProgress_UProgressUITests.framework in Frameworks */,
 				64C4DE131E5C8DB6009B896B /* Pods_UProgress_UProgressTests.framework in Frameworks */,
+				74A21D2AF6AE0CB303F88674 /* Pods_UProgress_UProgressTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +484,7 @@
 			files = (
 				64C4DE191E5C8DD7009B896B /* Pods_UProgress_UProgressUITests.framework in Frameworks */,
 				64C4DE171E5C8DD0009B896B /* Pods_UProgress_UProgressTests.framework in Frameworks */,
+				CAD6B9F786B674324A426955 /* Pods_UProgress_UProgressUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
