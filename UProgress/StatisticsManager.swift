@@ -11,8 +11,8 @@ import Alamofire
 import ObjectMapper
 
 class StatisticsManager: StatisticsManagerProtocol {
-    internal func loadStatistics(userId: String!, success: @escaping (_ statistics: StatisticsInfo) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
-        let url = "/users/\(userId)"
+    internal func loadStatistics(userId: String, success: @escaping (_ statistics: StatisticsInfo) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
+        let url = "/users/\(userId)/statistics"
         ApiRequest.sharedInstance.get(url: url, parameters: [:]).responseJSON { response in
             if response.response?.statusCode == 200 {
                 let statObject = response.result.value! as! Dictionary<String, Any>

@@ -12,6 +12,11 @@ class StatisticsPresenter: StatisticsPresenterProtocol {
     private var model: StatisticsManagerProtocol!
     private var view: StatisticsViewProtocol!
     
+    init(model: StatisticsManagerProtocol!, view: StatisticsViewProtocol) {
+        self.model = model
+        self.view = view
+    }
+    
     internal func loadStatistics(userId: String!) {
         view.startLoader()
         model.loadStatistics(userId: userId,

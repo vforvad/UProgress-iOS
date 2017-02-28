@@ -36,6 +36,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HLP-Xc-Zck"/>
+                    <connections>
+                        <outlet property="pieChart" destination="P13-8r-zFF" id="dRj-Xd-dZP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUD-rj-pqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
