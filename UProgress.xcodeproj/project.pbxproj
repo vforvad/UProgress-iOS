@@ -273,6 +273,10 @@
 		64DA9CFF1E656817008D24AD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */; };
 		64DA9D001E656817008D24AD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */; };
 		64DA9D011E656817008D24AD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */; };
+		64DA9D021E656BFF008D24AD /* StatisticsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DA9CFC1E6567E4008D24AD /* StatisticsStoryboard.storyboard */; };
+		64DA9D031E656C00008D24AD /* StatisticsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DA9CFC1E6567E4008D24AD /* StatisticsStoryboard.storyboard */; };
+		64DA9D041E657391008D24AD /* BaseSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861931E46AC9800583945 /* BaseSplitViewController.swift */; };
+		64DA9D051E657391008D24AD /* BaseSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861931E46AC9800583945 /* BaseSplitViewController.swift */; };
 		64E015181E3E023E0055DFD5 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E015171E3E023E0055DFD5 /* Direction.swift */; };
 		64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */; };
 		64EA8BF41E3EB9AE0088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
@@ -1054,6 +1058,7 @@
 			files = (
 				641B30AB1E4BCC8600FF60CC /* DirectionDetailInfoView.xib in Resources */,
 				641D44B51E5B9858005F64E9 /* ProfileCell.xib in Resources */,
+				64DA9D021E656BFF008D24AD /* StatisticsStoryboard.storyboard in Resources */,
 				645800611E54B061002366CA /* StepTableViewCell.xib in Resources */,
 				647383051E59F15700F9C72E /* ProfileHeader.xib in Resources */,
 				64A1082D1E6455B000BBD065 /* LaunchStoryboard.storyboard in Resources */,
@@ -1067,6 +1072,7 @@
 			files = (
 				641B30AC1E4BCC8700FF60CC /* DirectionDetailInfoView.xib in Resources */,
 				641D44B61E5B9859005F64E9 /* ProfileCell.xib in Resources */,
+				64DA9D031E656C00008D24AD /* StatisticsStoryboard.storyboard in Resources */,
 				645800621E54B061002366CA /* StepTableViewCell.xib in Resources */,
 				647383061E59F15700F9C72E /* ProfileHeader.xib in Resources */,
 				64A1082E1E6455B100BBD065 /* LaunchStoryboard.storyboard in Resources */,
@@ -1380,6 +1386,7 @@
 				642407711E52114D00E4CF95 /* Button.swift in Sources */,
 				64A108331E6459D800BBD065 /* NavigationViewController.swift in Sources */,
 				64A108591E647A1100BBD065 /* DirectionFormPresenterProtocol.swift in Sources */,
+				64DA9D041E657391008D24AD /* BaseSplitViewController.swift in Sources */,
 				64A1083F1E645A2500BBD065 /* AuthorizationFragmentController.swift in Sources */,
 				64A1081F1E64153F00BBD065 /* AttachmentViewProtocol.swift in Sources */,
 				641B309F1E4B67A200FF60CC /* DirectionsDetailPresenter.swift in Sources */,
@@ -1467,6 +1474,7 @@
 				642407721E52114D00E4CF95 /* Button.swift in Sources */,
 				64A108341E6459D900BBD065 /* NavigationViewController.swift in Sources */,
 				64A1085A1E647A1100BBD065 /* DirectionFormPresenterProtocol.swift in Sources */,
+				64DA9D051E657391008D24AD /* BaseSplitViewController.swift in Sources */,
 				64A108401E645A2600BBD065 /* AuthorizationFragmentController.swift in Sources */,
 				64A108201E64153F00BBD065 /* AttachmentViewProtocol.swift in Sources */,
 				641B30A01E4B67A300FF60CC /* DirectionsDetailPresenter.swift in Sources */,

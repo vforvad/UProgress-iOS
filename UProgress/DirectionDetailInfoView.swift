@@ -31,7 +31,12 @@ class DirectionDetailInfoView: UIView {
     public func setDirection(direction: Direction!) {
         self.direction = direction
         self.directionTitle.text = direction.title
-        self.directionRate.text =  String(direction.percentsResult)
+        if let percent = direction.percentsResult {
+            self.directionRate.text =  String(percent)
+        }
+        else {
+            self.directionRate.text =  String(0)
+        }
         self.descriptionText.text = direction.description
     }
     
