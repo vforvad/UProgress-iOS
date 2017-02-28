@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +21,19 @@
                     <view key="view" contentMode="scaleToFill" id="p2R-rc-44c">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P13-8r-zFF" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="26" y="74" width="343" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P13-8r-zFF" firstAttribute="leading" secondItem="p2R-rc-44c" secondAttribute="leadingMargin" constant="10" id="Mgp-rm-RTK"/>
+                            <constraint firstItem="P13-8r-zFF" firstAttribute="trailing" secondItem="p2R-rc-44c" secondAttribute="trailingMargin" constant="10" id="UIO-xY-yVa"/>
+                            <constraint firstItem="zRE-za-Qhd" firstAttribute="top" secondItem="P13-8r-zFF" secondAttribute="bottom" constant="10" id="jcp-rt-eFl"/>
+                            <constraint firstItem="P13-8r-zFF" firstAttribute="top" secondItem="AKt-DN-7dv" secondAttribute="bottom" constant="10" id="z3L-tE-sEy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HLP-Xc-Zck"/>
                 </viewController>
