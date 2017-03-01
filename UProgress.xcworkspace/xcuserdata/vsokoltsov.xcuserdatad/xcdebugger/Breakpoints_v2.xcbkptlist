@@ -2323,28 +2323,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/StatisticsViewController.swift"
-            timestampString = "510065946.91503"
+            timestampString = "510074195.934831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "prepare(for:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UProgress/StatisticsViewController.swift"
-            timestampString = "510065946.91503"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "successStatisticsLoad(statistics:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

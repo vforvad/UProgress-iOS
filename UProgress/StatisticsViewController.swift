@@ -16,6 +16,8 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
     @IBOutlet weak var baseView: UIView!
     var pieChart: PieChartView!
     var pieChatViewController: PieChartViewController!
+    var switchChartIcon: UIBarButtonItem!
+    var pieChartDisplayed: Bool! = true
     
     @IBOutlet weak var pieChartView: UIView!
     
@@ -24,32 +26,35 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
         let model = StatisticsManager()
         let presenter = StatisticsPresenter(model: model, view: self)
         presenter.loadStatistics(userId: AuthorizationService.sharedInstance.currentUser.nick)
+        
+        var buttonsArr: [UIBarButtonItem]! = []
+        switchChartIcon = customBarButtonItem(iconName: "pie_chart_icon", action: #selector(switchChartView(sender:)))
+        buttonsArr.append(customBarButtonItem(iconName: "chart_type_icon", action: #selector(switchChartType(sender:))))
+        buttonsArr.append(switchChartIcon)
+        self.navigationItem.rightBarButtonItems = buttonsArr
+    }
+    
+    func switchChartView(sender: UIBarButtonItem!) {
+        pieChartDisplayed = !pieChartDisplayed
+        var iconName: String!
+        
+        if pieChartDisplayed! {
+            iconName = "pie_chart_icon"
+        }
+        else {
+            iconName = "bar_chart_icon"
+        }
+        let button: UIButton = switchChartIcon.customView as! UIButton
+        button.setImage(UIImage(named: iconName), for: .normal)
+        switchChartIcon.customView = button
+    }
+    
+    func switchChartType(sender: UIBarButtonItem!) {
+        
     }
     
     internal func successStatisticsLoad(statistics: StatisticsInfo!) {
         pieChatViewController.setData(statistics: statistics.directionSteps)
-//        var dataEntries: [PieChartDataEntry] = []
-//        var colors: [NSUIColor] = []
-//        for var i in (0..<statistics.directionSteps.count) {
-//            let item: StatisticsItem! = statistics.directionSteps[i]
-//            let dataEntry = PieChartDataEntry(value: item.value, label: item.label)
-//            dataEntries.append(dataEntry)
-//            colors.append(UIColor(item.color))
-//            
-//        }
-//        let chartDataSet = PieChartDataSet(values: dataEntries, label: "Test")
-//        chartDataSet.setColors(colors, alpha: 1.0)
-//        let chartData = PieChartData(dataSet: chartDataSet)
-//        pieChart.data = chartData
-//        self.baseView.addSubview(pieChart)
-//        let visitorCounts = getVisitorCountsFromDatabase()
-//        for i in 0..<visitorCounts.count {
-//            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(visitorCounts[i].count))
-//            dataEntries.append(dataEntry)
-//        }
-//        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Visitor count")
-//        let chartData = BarChartData(dataSet: chartDataSet)
-//        barView.data = chartData
     }
     
     internal func failedStatisticsLoad(error: ServerError!) {
@@ -57,7 +62,7 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
     }
     
     internal func startLoader() {
-    
+        
     }
     
     internal func stopLoader() {
@@ -68,5 +73,12 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
         if segue.identifier == "pieChart" {
             pieChatViewController = segue.destination as! PieChartViewController
         }
+    }
+    func customBarButtonItem(iconName: String!, action: Selector) -> UIBarButtonItem {
+        let btn1 = UIButton(type: .custom)
+        btn1.setImage(UIImage(named: iconName), for: .normal)
+        btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        btn1.addTarget(self, action: #selector(switchChartView(sender:)), for: .touchUpInside)
+        return UIBarButtonItem(customView: btn1)
     }
 }
