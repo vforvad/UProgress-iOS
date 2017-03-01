@@ -24,12 +24,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KIF.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>KeychainSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Nimble.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -77,17 +87,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0921CC2F4398BE9A4F1CEACB30684B56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0F4549A492D63E05DF13FF8480739FF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>2F5622F3B18DF497981AB58C6D1FC72F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>350E174C7661CBA4DCFD4342C37BE30D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,6 +127,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>898C4182891DCF5CC594EB02B2032D4F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8DA13C645382B350095A86F833332F26</key>
 		<dict>
 			<key>primary</key>
@@ -138,6 +153,11 @@
 			<true/>
 		</dict>
 		<key>D212219500ED9FAF49B7305FA2FBF3BE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2D88DCA246E08CCE5EA6DA911D90618</key>
 		<dict>
 			<key>primary</key>
 			<true/>
