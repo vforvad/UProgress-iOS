@@ -22,22 +22,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P13-8r-zFF" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="26" y="74" width="343" height="583"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s48-UJ-Tf8">
+                                <rect key="frame" x="26" y="74" width="323" height="583"/>
+                                <connections>
+                                    <segue destination="AGa-WL-tYf" kind="embed" identifier="pieChart" id="RNz-r3-PDm"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="P13-8r-zFF" firstAttribute="leading" secondItem="p2R-rc-44c" secondAttribute="leadingMargin" constant="10" id="Mgp-rm-RTK"/>
-                            <constraint firstItem="P13-8r-zFF" firstAttribute="trailing" secondItem="p2R-rc-44c" secondAttribute="trailingMargin" constant="10" id="UIO-xY-yVa"/>
-                            <constraint firstItem="zRE-za-Qhd" firstAttribute="top" secondItem="P13-8r-zFF" secondAttribute="bottom" constant="10" id="jcp-rt-eFl"/>
-                            <constraint firstItem="P13-8r-zFF" firstAttribute="top" secondItem="AKt-DN-7dv" secondAttribute="bottom" constant="10" id="z3L-tE-sEy"/>
+                            <constraint firstItem="zRE-za-Qhd" firstAttribute="top" secondItem="s48-UJ-Tf8" secondAttribute="bottom" constant="10" id="1iJ-k3-9kk"/>
+                            <constraint firstItem="s48-UJ-Tf8" firstAttribute="top" secondItem="AKt-DN-7dv" secondAttribute="bottom" constant="10" id="gj0-fO-elm"/>
+                            <constraint firstItem="s48-UJ-Tf8" firstAttribute="centerX" secondItem="p2R-rc-44c" secondAttribute="centerX" id="iNT-3v-CSZ"/>
+                            <constraint firstItem="s48-UJ-Tf8" firstAttribute="leading" secondItem="p2R-rc-44c" secondAttribute="leadingMargin" constant="10" id="q40-Lb-PMs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HLP-Xc-Zck"/>
                     <connections>
-                        <outlet property="pieChart" destination="P13-8r-zFF" id="dRj-Xd-dZP"/>
+                        <outlet property="pieChartView" destination="s48-UJ-Tf8" id="QP0-2s-6aw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUD-rj-pqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -61,6 +63,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y3u-uo-lcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101.59999999999999" y="174.96251874062969"/>
+        </scene>
+        <!--Pie Chart View Controller-->
+        <scene sceneID="ktH-qp-3C1">
+            <objects>
+                <viewController id="AGa-WL-tYf" customClass="PieChartViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BiJ-j6-cxg">
+                        <rect key="frame" x="0.0" y="0.0" width="323" height="583"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQB-1U-waR" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="0.0" width="323" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wQB-1U-waR" firstAttribute="leading" secondItem="BiJ-j6-cxg" secondAttribute="leading" id="NX1-O7-2Rg"/>
+                            <constraint firstAttribute="bottom" secondItem="wQB-1U-waR" secondAttribute="bottom" id="UCK-k1-fjC"/>
+                            <constraint firstAttribute="trailing" secondItem="wQB-1U-waR" secondAttribute="trailing" id="nDE-27-ZN1"/>
+                            <constraint firstItem="wQB-1U-waR" firstAttribute="top" secondItem="BiJ-j6-cxg" secondAttribute="top" id="psJ-MF-LUr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pieChart" destination="wQB-1U-waR" id="wVl-dA-gbh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8P-ey-6oE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="-75.112443778110944"/>
         </scene>
     </scenes>
 </document>
