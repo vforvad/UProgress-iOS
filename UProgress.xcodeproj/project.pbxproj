@@ -196,6 +196,8 @@
 		64944B121E5E35650093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
 		64944B131E5E3BF40093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
 		64944B141E5E3BF50093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
+		649C33D41E66D04C00665C48 /* DirectionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643C202F1E47D6D90066D9BC /* DirectionsStoryboard.storyboard */; };
+		649C33D51E66D04E00665C48 /* DirectionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643C202F1E47D6D90066D9BC /* DirectionsStoryboard.storyboard */; };
 		64A108161E6413A500BBD065 /* AttachmentManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A108151E6413A500BBD065 /* AttachmentManagerProtocol.swift */; };
 		64A108181E6413B400BBD065 /* AttachmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A108171E6413B400BBD065 /* AttachmentManager.swift */; };
 		64A108191E6413B800BBD065 /* AttachmentManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A108151E6413A500BBD065 /* AttachmentManagerProtocol.swift */; };
@@ -1122,6 +1124,7 @@
 				641B30AB1E4BCC8600FF60CC /* DirectionDetailInfoView.xib in Resources */,
 				641D44B51E5B9858005F64E9 /* ProfileCell.xib in Resources */,
 				64DA9D021E656BFF008D24AD /* StatisticsStoryboard.storyboard in Resources */,
+				649C33D41E66D04C00665C48 /* DirectionsStoryboard.storyboard in Resources */,
 				645800611E54B061002366CA /* StepTableViewCell.xib in Resources */,
 				647383051E59F15700F9C72E /* ProfileHeader.xib in Resources */,
 				64A1082D1E6455B000BBD065 /* LaunchStoryboard.storyboard in Resources */,
@@ -1136,6 +1139,7 @@
 				641B30AC1E4BCC8700FF60CC /* DirectionDetailInfoView.xib in Resources */,
 				641D44B61E5B9859005F64E9 /* ProfileCell.xib in Resources */,
 				64DA9D031E656C00008D24AD /* StatisticsStoryboard.storyboard in Resources */,
+				649C33D51E66D04E00665C48 /* DirectionsStoryboard.storyboard in Resources */,
 				645800621E54B061002366CA /* StepTableViewCell.xib in Resources */,
 				647383061E59F15700F9C72E /* ProfileHeader.xib in Resources */,
 				64A1082E1E6455B100BBD065 /* LaunchStoryboard.storyboard in Resources */,

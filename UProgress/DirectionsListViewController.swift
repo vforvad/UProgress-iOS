@@ -105,5 +105,9 @@ DirectionPopupActions {
     internal func failedOperation(error: ServerError) {
     
     }
+    
+    func getViewInstance() -> DirectionsListView {
+        return viewInstance
+    }
 }
 

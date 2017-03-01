@@ -18,6 +18,7 @@ public enum Method: String {
 class ApiRequest: NSObject {
     var host = "http://0e0e33e3.ngrok.io"
     var keychain = KeychainSwift()
+    var mockedUrl: String!
     
     class var sharedInstance: ApiRequest {
         struct Singleton {
@@ -68,6 +69,9 @@ class ApiRequest: NSObject {
     }
     
     func defineFullUrl(url: String!) -> String {
+        if let mock = mockedUrl {
+            return mock
+        }
         return "\(host)/api/v1\(url!)"
     }
 }
