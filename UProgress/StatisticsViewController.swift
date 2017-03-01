@@ -14,12 +14,14 @@ import UIColor_Hex_Swift
 
 class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
     @IBOutlet weak var baseView: UIView!
-    var pieChart: PieChartView!
     var pieChatViewController: PieChartViewController!
+    var barChartViewController: BarChartViewController!
     var switchChartIcon: UIBarButtonItem!
     var pieChartDisplayed: Bool! = true
+    var statisticsInfo: StatisticsInfo!
     
     @IBOutlet weak var pieChartView: UIView!
+    @IBOutlet weak var barChartView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,11 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
         buttonsArr.append(customBarButtonItem(iconName: "chart_type_icon", action: #selector(switchChartType(sender:))))
         buttonsArr.append(switchChartIcon)
         self.navigationItem.rightBarButtonItems = buttonsArr
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        barChartView.isHidden = true
     }
     
     func switchChartView(sender: UIBarButtonItem!) {
@@ -47,14 +54,17 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
         let button: UIButton = switchChartIcon.customView as! UIButton
         button.setImage(UIImage(named: iconName), for: .normal)
         switchChartIcon.customView = button
+        displayStatistics()
     }
     
     func switchChartType(sender: UIBarButtonItem!) {
-        
+        displayStatistics()
     }
     
     internal func successStatisticsLoad(statistics: StatisticsInfo!) {
-        pieChatViewController.setData(statistics: statistics.directionSteps)
+        self.statisticsInfo = statistics
+        displayStatistics()
+//        pieChatViewController.setData(statistics: statistics.directionSteps)
     }
     
     internal func failedStatisticsLoad(error: ServerError!) {
@@ -73,6 +83,10 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
         if segue.identifier == "pieChart" {
             pieChatViewController = segue.destination as! PieChartViewController
         }
+        
+        if segue.identifier == "barChart" {
+            barChartViewController = segue.destination as! BarChartViewController
+        }
     }
     func customBarButtonItem(iconName: String!, action: Selector) -> UIBarButtonItem {
         let btn1 = UIButton(type: .custom)
@@ -80,5 +94,17 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
         btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         btn1.addTarget(self, action: #selector(switchChartView(sender:)), for: .touchUpInside)
         return UIBarButtonItem(customView: btn1)
+    }
+    private func displayStatistics() {
+        if pieChartDisplayed! {
+            barChartView.isHidden = true
+            pieChartView.isHidden = false
+            pieChatViewController.setData(statistics: statisticsInfo.directionSteps)
+        }
+        else {
+            barChartView.isHidden = false
+            pieChartView.isHidden = true
+            barChartViewController.setData(statistics: statisticsInfo.directionSteps)
+        }
     }
 }

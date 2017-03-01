@@ -28,6 +28,13 @@
                                     <segue destination="AGa-WL-tYf" kind="embed" identifier="pieChart" id="RNz-r3-PDm"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OkQ-jT-ElV">
+                                <rect key="frame" x="26" y="74" width="323" height="583"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="QPR-wi-1KM" kind="embed" identifier="barChart" id="1D5-tO-wi7"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -39,7 +46,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="HLP-Xc-Zck"/>
                     <connections>
-                        <outlet property="pieChartView" destination="s48-UJ-Tf8" id="QP0-2s-6aw"/>
+                        <outlet property="barChartView" destination="OkQ-jT-ElV" id="1VC-qn-VmB"/>
+                        <outlet property="pieChartView" destination="s48-UJ-Tf8" id="pbc-gi-wSa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUD-rj-pqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,6 +99,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R8P-ey-6oE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1868" y="-75.112443778110944"/>
+        </scene>
+        <!--Bar Chart View Controller-->
+        <scene sceneID="GUy-OI-UNL">
+            <objects>
+                <viewController id="QPR-wi-1KM" customClass="BarChartViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3cU-MU-CFj">
+                        <rect key="frame" x="0.0" y="0.0" width="323" height="583"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYx-9D-4MB" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="0.0" width="323" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mYx-9D-4MB" firstAttribute="top" secondItem="3cU-MU-CFj" secondAttribute="top" id="6X1-gB-OQO"/>
+                            <constraint firstAttribute="bottom" secondItem="mYx-9D-4MB" secondAttribute="bottom" id="Iyv-Xa-4kV"/>
+                            <constraint firstItem="mYx-9D-4MB" firstAttribute="leading" secondItem="3cU-MU-CFj" secondAttribute="leading" id="Wrr-jd-sty"/>
+                            <constraint firstAttribute="trailing" secondItem="mYx-9D-4MB" secondAttribute="trailing" id="gGd-LL-bMs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barChartView" destination="mYx-9D-4MB" id="NhA-ft-RCg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTm-og-gNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="535.68215892053979"/>
         </scene>
     </scenes>
 </document>
