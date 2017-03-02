@@ -28,9 +28,8 @@
                                     <segue destination="AGa-WL-tYf" kind="embed" identifier="pieChart" id="RNz-r3-PDm"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OkQ-jT-ElV">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkQ-jT-ElV">
                                 <rect key="frame" x="26" y="74" width="323" height="583"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="QPR-wi-1KM" kind="embed" identifier="barChart" id="1D5-tO-wi7"/>
                                 </connections>
@@ -38,10 +37,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zRE-za-Qhd" firstAttribute="top" secondItem="s48-UJ-Tf8" secondAttribute="bottom" constant="10" id="1iJ-k3-9kk"/>
-                            <constraint firstItem="s48-UJ-Tf8" firstAttribute="top" secondItem="AKt-DN-7dv" secondAttribute="bottom" constant="10" id="gj0-fO-elm"/>
-                            <constraint firstItem="s48-UJ-Tf8" firstAttribute="centerX" secondItem="p2R-rc-44c" secondAttribute="centerX" id="iNT-3v-CSZ"/>
-                            <constraint firstItem="s48-UJ-Tf8" firstAttribute="leading" secondItem="p2R-rc-44c" secondAttribute="leadingMargin" constant="10" id="q40-Lb-PMs"/>
+                            <constraint firstItem="OkQ-jT-ElV" firstAttribute="leading" secondItem="s48-UJ-Tf8" secondAttribute="leading" id="NXc-nb-gDM"/>
+                            <constraint firstItem="OkQ-jT-ElV" firstAttribute="leading" secondItem="p2R-rc-44c" secondAttribute="leadingMargin" constant="10" id="T6U-VL-BDF"/>
+                            <constraint firstItem="OkQ-jT-ElV" firstAttribute="centerX" secondItem="p2R-rc-44c" secondAttribute="centerX" id="Wzh-dM-E0i"/>
+                            <constraint firstItem="s48-UJ-Tf8" firstAttribute="centerX" secondItem="p2R-rc-44c" secondAttribute="centerX" id="auo-sD-Mc0"/>
+                            <constraint firstItem="s48-UJ-Tf8" firstAttribute="top" secondItem="AKt-DN-7dv" secondAttribute="bottom" constant="10" id="h1c-7L-PXd"/>
+                            <constraint firstItem="zRE-za-Qhd" firstAttribute="top" secondItem="s48-UJ-Tf8" secondAttribute="bottom" constant="10" id="pcb-Qe-zS7"/>
+                            <constraint firstItem="OkQ-jT-ElV" firstAttribute="top" secondItem="AKt-DN-7dv" secondAttribute="bottom" constant="10" id="vCE-VG-v4y"/>
+                            <constraint firstItem="zRE-za-Qhd" firstAttribute="top" secondItem="OkQ-jT-ElV" secondAttribute="bottom" constant="10" id="y2B-6v-Fml"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HLP-Xc-Zck"/>
@@ -76,6 +79,10 @@
         <scene sceneID="ktH-qp-3C1">
             <objects>
                 <viewController id="AGa-WL-tYf" customClass="PieChartViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oqh-I8-B8J"/>
+                        <viewControllerLayoutGuide type="bottom" id="mT7-Bq-GRX"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BiJ-j6-cxg">
                         <rect key="frame" x="0.0" y="0.0" width="323" height="583"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,6 +111,10 @@
         <scene sceneID="GUy-OI-UNL">
             <objects>
                 <viewController id="QPR-wi-1KM" customClass="BarChartViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H0c-DR-Cmd"/>
+                        <viewControllerLayoutGuide type="bottom" id="A89-4Z-m4I"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3cU-MU-CFj">
                         <rect key="frame" x="0.0" y="0.0" width="323" height="583"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -30,7 +30,7 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
         presenter.loadStatistics(userId: AuthorizationService.sharedInstance.currentUser.nick)
         
         var buttonsArr: [UIBarButtonItem]! = []
-        switchChartIcon = customBarButtonItem(iconName: "pie_chart_icon", action: #selector(switchChartView(sender:)))
+        switchChartIcon = customBarButtonItem(iconName: "bar_chart_icon", action: #selector(switchChartView(sender:)))
         buttonsArr.append(customBarButtonItem(iconName: "chart_type_icon", action: #selector(switchChartType(sender:))))
         buttonsArr.append(switchChartIcon)
         self.navigationItem.rightBarButtonItems = buttonsArr
@@ -46,10 +46,10 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
         var iconName: String!
         
         if pieChartDisplayed! {
-            iconName = "pie_chart_icon"
+            iconName = "bar_chart_icon"
         }
         else {
-            iconName = "bar_chart_icon"
+            iconName = "pie_chart_icon"
         }
         let button: UIButton = switchChartIcon.customView as! UIButton
         button.setImage(UIImage(named: iconName), for: .normal)
