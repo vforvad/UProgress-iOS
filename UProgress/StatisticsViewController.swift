@@ -114,11 +114,11 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
     }
     
     internal func startLoader() {
-        
+        MBProgressHUD.showAdded(to: view, animated: true)
     }
     
     internal func stopLoader() {
-    
+        MBProgressHUD.hide(for: view, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

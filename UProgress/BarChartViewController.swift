@@ -19,18 +19,19 @@ class BarChartViewController: UIViewController {
     
     func setData(statistics: [StatisticsItem]!) {
         var dataEntries: [BarChartDataEntry] = []
+        var labels: [String]! = []
         var colors: [NSUIColor] = []
         for var i in (0..<statistics.count) {
             let item: StatisticsItem! = statistics[i]
             let dataEntry = BarChartDataEntry(x: Double(i), y: item.value)
-//                /PieChartDataEntry(value: item.value, label: item.label)
+            labels.append(item.label)
             dataEntries.append(dataEntry)
             colors.append(UIColor(item.color))
-//
         }
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Test")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "")
         chartDataSet.setColors(colors, alpha: 1.0)
         let chartData = BarChartData(dataSet: chartDataSet)
         barChartView.data = chartData
+        barChartView.animate(xAxisDuration: 0.5, yAxisDuration: 0.5)
     }
 }

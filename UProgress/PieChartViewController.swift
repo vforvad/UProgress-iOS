@@ -28,9 +28,10 @@ class PieChartViewController: UIViewController {
             colors.append(UIColor(item.color))
             
         }
-        let chartDataSet = PieChartDataSet(values: dataEntries, label: "Test")
+        let chartDataSet = PieChartDataSet(values: dataEntries, label: "")
         chartDataSet.setColors(colors, alpha: 1.0)
         let chartData = PieChartData(dataSet: chartDataSet)
         pieChart.data = chartData
+        pieChart.animate(xAxisDuration: 0.5, yAxisDuration: 0.5)
     }
 }
