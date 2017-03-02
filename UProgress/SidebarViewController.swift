@@ -58,6 +58,10 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
             let tableVC = navVC.viewControllers.first as! ProfileViewController
             tableVC.user = AuthorizationService.sharedInstance.currentUser
         }
+        
+        if (segue.identifier == "statistics") {
+            let tableVC = navVC.viewControllers.first as! StatisticsViewController
+        }
     }
     
     private func segueForNavigationController(identifier: String!) {
@@ -80,6 +84,8 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
             let authViewController = CommonFunctions.fromStoryboard(name: "AuthorizationStoryboard", identifier: "AuthorizationViewController") as! AuthorizationsViewController
             authViewController.signIn = false
             viewController = authViewController as UIViewController
+        case "statistics":
+            viewController = CommonFunctions.fromStoryboard(name: "StatisticsStoryboard", identifier: "StatisticsViewController")
         default:
             viewController = CommonFunctions.fromStoryboard(identifier: "DirectionsListViewController")
         }

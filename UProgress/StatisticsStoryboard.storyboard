@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eWW-VO-LjF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Statistics View Controller-->
+        <scene sceneID="lw1-Km-hW2">
+            <objects>
+                <viewController storyboardIdentifier="StatisticsViewController" id="ydy-dn-YlZ" customClass="StatisticsViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AKt-DN-7dv"/>
+                        <viewControllerLayoutGuide type="bottom" id="zRE-za-Qhd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p2R-rc-44c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s48-UJ-Tf8">
+                                <rect key="frame" x="26" y="74" width="323" height="583"/>
+                                <connections>
+                                    <segue destination="AGa-WL-tYf" kind="embed" identifier="pieChart" id="RNz-r3-PDm"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkQ-jT-ElV">
+                                <rect key="frame" x="26" y="74" width="323" height="583"/>
+                                <connections>
+                                    <segue destination="QPR-wi-1KM" kind="embed" identifier="barChart" id="1D5-tO-wi7"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OkQ-jT-ElV" firstAttribute="leading" secondItem="s48-UJ-Tf8" secondAttribute="leading" id="NXc-nb-gDM"/>
+                            <constraint firstItem="OkQ-jT-ElV" firstAttribute="leading" secondItem="p2R-rc-44c" secondAttribute="leadingMargin" constant="10" id="T6U-VL-BDF"/>
+                            <constraint firstItem="OkQ-jT-ElV" firstAttribute="centerX" secondItem="p2R-rc-44c" secondAttribute="centerX" id="Wzh-dM-E0i"/>
+                            <constraint firstItem="s48-UJ-Tf8" firstAttribute="centerX" secondItem="p2R-rc-44c" secondAttribute="centerX" id="auo-sD-Mc0"/>
+                            <constraint firstItem="s48-UJ-Tf8" firstAttribute="top" secondItem="AKt-DN-7dv" secondAttribute="bottom" constant="10" id="h1c-7L-PXd"/>
+                            <constraint firstItem="zRE-za-Qhd" firstAttribute="top" secondItem="s48-UJ-Tf8" secondAttribute="bottom" constant="10" id="pcb-Qe-zS7"/>
+                            <constraint firstItem="OkQ-jT-ElV" firstAttribute="top" secondItem="AKt-DN-7dv" secondAttribute="bottom" constant="10" id="vCE-VG-v4y"/>
+                            <constraint firstItem="zRE-za-Qhd" firstAttribute="top" secondItem="OkQ-jT-ElV" secondAttribute="bottom" constant="10" id="y2B-6v-Fml"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HLP-Xc-Zck"/>
+                    <connections>
+                        <outlet property="barChartView" destination="OkQ-jT-ElV" id="1VC-qn-VmB"/>
+                        <outlet property="pieChartView" destination="s48-UJ-Tf8" id="pbc-gi-wSa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iUD-rj-pqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040.8" y="174.96251874062969"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="55E-K4-iX0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eWW-VO-LjF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="viK-dj-Aym">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ydy-dn-YlZ" kind="relationship" relationship="rootViewController" id="Chs-1I-dhk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y3u-uo-lcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.59999999999999" y="174.96251874062969"/>
+        </scene>
+        <!--Pie Chart View Controller-->
+        <scene sceneID="ktH-qp-3C1">
+            <objects>
+                <viewController id="AGa-WL-tYf" customClass="PieChartViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oqh-I8-B8J"/>
+                        <viewControllerLayoutGuide type="bottom" id="mT7-Bq-GRX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BiJ-j6-cxg">
+                        <rect key="frame" x="0.0" y="0.0" width="323" height="583"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQB-1U-waR" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="0.0" width="323" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wQB-1U-waR" firstAttribute="leading" secondItem="BiJ-j6-cxg" secondAttribute="leading" id="NX1-O7-2Rg"/>
+                            <constraint firstAttribute="bottom" secondItem="wQB-1U-waR" secondAttribute="bottom" id="UCK-k1-fjC"/>
+                            <constraint firstAttribute="trailing" secondItem="wQB-1U-waR" secondAttribute="trailing" id="nDE-27-ZN1"/>
+                            <constraint firstItem="wQB-1U-waR" firstAttribute="top" secondItem="BiJ-j6-cxg" secondAttribute="top" id="psJ-MF-LUr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pieChart" destination="wQB-1U-waR" id="wVl-dA-gbh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8P-ey-6oE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="-75.112443778110944"/>
+        </scene>
+        <!--Bar Chart View Controller-->
+        <scene sceneID="GUy-OI-UNL">
+            <objects>
+                <viewController id="QPR-wi-1KM" customClass="BarChartViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H0c-DR-Cmd"/>
+                        <viewControllerLayoutGuide type="bottom" id="A89-4Z-m4I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3cU-MU-CFj">
+                        <rect key="frame" x="0.0" y="0.0" width="323" height="583"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYx-9D-4MB" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="0.0" width="323" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mYx-9D-4MB" firstAttribute="top" secondItem="3cU-MU-CFj" secondAttribute="top" id="6X1-gB-OQO"/>
+                            <constraint firstAttribute="bottom" secondItem="mYx-9D-4MB" secondAttribute="bottom" id="Iyv-Xa-4kV"/>
+                            <constraint firstItem="mYx-9D-4MB" firstAttribute="leading" secondItem="3cU-MU-CFj" secondAttribute="leading" id="Wrr-jd-sty"/>
+                            <constraint firstAttribute="trailing" secondItem="mYx-9D-4MB" secondAttribute="trailing" id="gGd-LL-bMs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barChartView" destination="mYx-9D-4MB" id="NhA-ft-RCg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTm-og-gNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1868" y="535.68215892053979"/>
+        </scene>
+    </scenes>
+</document>

@@ -88,6 +88,8 @@ DirectionPopupActions {
         if segue.identifier == "detail" {
             let detailViewController = segue.destination as! DirectionsDetailViewController
             detailViewController.direction = selectedDirection
+            detailViewController.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+            detailViewController.navigationItem.leftItemsSupplementBackButton = true
         }
         if segue.identifier == "directions_form" {
             let formViewController = segue.destination as! DirectionsFormViewController
@@ -102,6 +104,10 @@ DirectionPopupActions {
     
     internal func failedOperation(error: ServerError) {
     
+    }
+    
+    func getViewInstance() -> DirectionsListView {
+        return viewInstance
     }
 }
 

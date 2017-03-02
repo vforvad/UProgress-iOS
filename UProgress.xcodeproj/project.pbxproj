@@ -136,6 +136,7 @@
 		6474B1B11E3D04C200C46165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AF1E3D04C200C46165 /* LaunchScreen.storyboard */; };
 		6474B1BC1E3D04C200C46165 /* DirectionsListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1BB1E3D04C200C46165 /* DirectionsListPresenterTest.swift */; };
 		6474B1C71E3D04C200C46165 /* UProgressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1C61E3D04C200C46165 /* UProgressUITests.swift */; };
+		6476C90C1E68C5190076922F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6476C90B1E68C5190076922F /* .gitignore */; };
 		647B34A41E4F8823006639DD /* DirectionDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A31E4F8823006639DD /* DirectionDetailManager.swift */; };
 		647B34A61E4F8839006639DD /* DirectionDetailManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A51E4F8839006639DD /* DirectionDetailManagerProtocol.swift */; };
 		647B34A81E4F8F66006639DD /* StepPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A71E4F8F66006639DD /* StepPresenter.swift */; };
@@ -172,9 +173,40 @@
 		64860B941E5F77F5002ACD43 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B831E5F5865002ACD43 /* ProfilePresenter.swift */; };
 		64860B951E5F7815002ACD43 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B891E5F6FA4002ACD43 /* Attachment.swift */; };
 		64860B961E5F7815002ACD43 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B891E5F6FA4002ACD43 /* Attachment.swift */; };
+		649369AC1E65CBB200B4C58F /* StatisticsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369AB1E65CBB200B4C58F /* StatisticsItem.swift */; };
+		649369AE1E65CC4D00B4C58F /* StatisticsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369AD1E65CC4D00B4C58F /* StatisticsInfo.swift */; };
+		649369B01E65CCF400B4C58F /* StatisticsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369AF1E65CCF400B4C58F /* StatisticsManagerProtocol.swift */; };
+		649369B21E65CD1E00B4C58F /* StatisticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369B11E65CD1E00B4C58F /* StatisticsManager.swift */; };
+		649369B31E65CD9D00B4C58F /* StatisticsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369AF1E65CCF400B4C58F /* StatisticsManagerProtocol.swift */; };
+		649369B41E65CD9D00B4C58F /* StatisticsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369AF1E65CCF400B4C58F /* StatisticsManagerProtocol.swift */; };
+		649369B51E65CDA000B4C58F /* StatisticsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369AD1E65CC4D00B4C58F /* StatisticsInfo.swift */; };
+		649369B61E65CDA000B4C58F /* StatisticsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369AD1E65CC4D00B4C58F /* StatisticsInfo.swift */; };
+		649369B71E65CDA300B4C58F /* StatisticsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369AB1E65CBB200B4C58F /* StatisticsItem.swift */; };
+		649369B81E65CDA400B4C58F /* StatisticsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369AB1E65CBB200B4C58F /* StatisticsItem.swift */; };
+		649369B91E65CDA700B4C58F /* StatisticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369B11E65CD1E00B4C58F /* StatisticsManager.swift */; };
+		649369BA1E65CDA700B4C58F /* StatisticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369B11E65CD1E00B4C58F /* StatisticsManager.swift */; };
+		649369BC1E65CF6500B4C58F /* StatisticsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369BB1E65CF6500B4C58F /* StatisticsViewProtocol.swift */; };
+		649369BD1E65CF9A00B4C58F /* StatisticsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369BB1E65CF6500B4C58F /* StatisticsViewProtocol.swift */; };
+		649369BE1E65CF9A00B4C58F /* StatisticsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369BB1E65CF6500B4C58F /* StatisticsViewProtocol.swift */; };
+		649369C01E65CFB900B4C58F /* StatisticsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369BF1E65CFB900B4C58F /* StatisticsPresenter.swift */; };
+		649369C21E65CFC800B4C58F /* StatisticsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369C11E65CFC800B4C58F /* StatisticsPresenterProtocol.swift */; };
+		649369C31E65CFD700B4C58F /* StatisticsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369C11E65CFC800B4C58F /* StatisticsPresenterProtocol.swift */; };
+		649369C41E65CFD800B4C58F /* StatisticsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369C11E65CFC800B4C58F /* StatisticsPresenterProtocol.swift */; };
+		649369C51E65CFDA00B4C58F /* StatisticsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369BF1E65CFB900B4C58F /* StatisticsPresenter.swift */; };
+		649369C61E65CFDB00B4C58F /* StatisticsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369BF1E65CFB900B4C58F /* StatisticsPresenter.swift */; };
 		64944B121E5E35650093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
 		64944B131E5E3BF40093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
 		64944B141E5E3BF50093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
+		649C33D41E66D04C00665C48 /* DirectionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643C202F1E47D6D90066D9BC /* DirectionsStoryboard.storyboard */; };
+		649C33D51E66D04E00665C48 /* DirectionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643C202F1E47D6D90066D9BC /* DirectionsStoryboard.storyboard */; };
+		649C33D91E66D64B00665C48 /* KIF+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C33D81E66D64B00665C48 /* KIF+Extensions.swift */; };
+		649C33DC1E66D68800665C48 /* BH.m in Sources */ = {isa = PBXBuildFile; fileRef = 649C33DB1E66D68800665C48 /* BH.m */; };
+		649C33DE1E66F78700665C48 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C33DD1E66F78700665C48 /* PieChartViewController.swift */; };
+		649C33DF1E66F79A00665C48 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C33DD1E66F78700665C48 /* PieChartViewController.swift */; };
+		649C33E01E66F79B00665C48 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C33DD1E66F78700665C48 /* PieChartViewController.swift */; };
+		649C33E21E671E0400665C48 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C33E11E671E0400665C48 /* BarChartViewController.swift */; };
+		649C33E31E671FCC00665C48 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C33E11E671E0400665C48 /* BarChartViewController.swift */; };
+		649C33E41E671FCD00665C48 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C33E11E671E0400665C48 /* BarChartViewController.swift */; };
 		64A108161E6413A500BBD065 /* AttachmentManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A108151E6413A500BBD065 /* AttachmentManagerProtocol.swift */; };
 		64A108181E6413B400BBD065 /* AttachmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A108171E6413B400BBD065 /* AttachmentManager.swift */; };
 		64A108191E6413B800BBD065 /* AttachmentManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A108151E6413A500BBD065 /* AttachmentManagerProtocol.swift */; };
@@ -269,6 +301,14 @@
 		64D930C61E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AB1E3E45EE007C7112 /* DirectionsListPresenter.swift */; };
 		64D930C71E3E7311007C7112 /* DirectionListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */; };
 		64D930C81E3E7312007C7112 /* DirectionListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */; };
+		64DA9CFD1E6567E4008D24AD /* StatisticsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DA9CFC1E6567E4008D24AD /* StatisticsStoryboard.storyboard */; };
+		64DA9CFF1E656817008D24AD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */; };
+		64DA9D001E656817008D24AD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */; };
+		64DA9D011E656817008D24AD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */; };
+		64DA9D021E656BFF008D24AD /* StatisticsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DA9CFC1E6567E4008D24AD /* StatisticsStoryboard.storyboard */; };
+		64DA9D031E656C00008D24AD /* StatisticsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DA9CFC1E6567E4008D24AD /* StatisticsStoryboard.storyboard */; };
+		64DA9D041E657391008D24AD /* BaseSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861931E46AC9800583945 /* BaseSplitViewController.swift */; };
+		64DA9D051E657391008D24AD /* BaseSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861931E46AC9800583945 /* BaseSplitViewController.swift */; };
 		64E015181E3E023E0055DFD5 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E015171E3E023E0055DFD5 /* Direction.swift */; };
 		64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */; };
 		64EA8BF41E3EB9AE0088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
@@ -285,7 +325,9 @@
 		64F80D3B1E41FCA500E90004 /* AuthorizationFragmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80D3A1E41FCA500E90004 /* AuthorizationFragmentController.swift */; };
 		64F80D3D1E41FCB000E90004 /* RegistrationFragmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80D3C1E41FCB000E90004 /* RegistrationFragmentController.swift */; };
 		64F80D431E42058500E90004 /* AuthorizationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64F80D421E42058500E90004 /* AuthorizationStoryboard.storyboard */; };
+		74A21D2AF6AE0CB303F88674 /* Pods_UProgress_UProgressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F396F0220AA154D509C1E95B /* Pods_UProgress_UProgressTests.framework */; };
 		8355BE18053B154ED4CA22C8 /* Pods_UProgress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD8BB09CFC827EB003C41A2 /* Pods_UProgress.framework */; };
+		CAD6B9F786B674324A426955 /* Pods_UProgress_UProgressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 726D3C86FF753C8EEDC99541 /* Pods_UProgress_UProgressUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -376,6 +418,7 @@
 		6474B1C21E3D04C200C46165 /* UProgressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UProgressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6474B1C61E3D04C200C46165 /* UProgressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UProgressUITests.swift; sourceTree = "<group>"; };
 		6474B1C81E3D04C200C46165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6476C90B1E68C5190076922F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		647B34A31E4F8823006639DD /* DirectionDetailManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionDetailManager.swift; sourceTree = "<group>"; };
 		647B34A51E4F8839006639DD /* DirectionDetailManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionDetailManagerProtocol.swift; sourceTree = "<group>"; };
 		647B34A71E4F8F66006639DD /* StepPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepPresenter.swift; sourceTree = "<group>"; };
@@ -399,7 +442,19 @@
 		64860B851E5F5899002ACD43 /* ProfileViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewProtocol.swift; sourceTree = "<group>"; };
 		64860B871E5F5948002ACD43 /* ProfilePopupProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePopupProtocol.swift; sourceTree = "<group>"; };
 		64860B891E5F6FA4002ACD43 /* Attachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		649369AB1E65CBB200B4C58F /* StatisticsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsItem.swift; sourceTree = "<group>"; };
+		649369AD1E65CC4D00B4C58F /* StatisticsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsInfo.swift; sourceTree = "<group>"; };
+		649369AF1E65CCF400B4C58F /* StatisticsManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsManagerProtocol.swift; sourceTree = "<group>"; };
+		649369B11E65CD1E00B4C58F /* StatisticsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsManager.swift; sourceTree = "<group>"; };
+		649369BB1E65CF6500B4C58F /* StatisticsViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewProtocol.swift; sourceTree = "<group>"; };
+		649369BF1E65CFB900B4C58F /* StatisticsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsPresenter.swift; sourceTree = "<group>"; };
+		649369C11E65CFC800B4C58F /* StatisticsPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsPresenterProtocol.swift; sourceTree = "<group>"; };
 		64944B111E5E35650093961B /* BasePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopupViewController.swift; sourceTree = "<group>"; };
+		649C33D81E66D64B00665C48 /* KIF+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KIF+Extensions.swift"; sourceTree = "<group>"; };
+		649C33DA1E66D68700665C48 /* UProgressUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UProgressUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		649C33DB1E66D68800665C48 /* BH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BH.m; sourceTree = "<group>"; };
+		649C33DD1E66F78700665C48 /* PieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
+		649C33E11E671E0400665C48 /* BarChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
 		64A108151E6413A500BBD065 /* AttachmentManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentManagerProtocol.swift; sourceTree = "<group>"; };
 		64A108171E6413B400BBD065 /* AttachmentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentManager.swift; sourceTree = "<group>"; };
 		64A1081D1E64153F00BBD065 /* AttachmentViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentViewProtocol.swift; sourceTree = "<group>"; };
@@ -424,6 +479,8 @@
 		64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionListPresenterImpl.swift; sourceTree = "<group>"; };
 		64D930AF1E3E4DA1007C7112 /* DirectionsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListView.swift; sourceTree = "<group>"; };
 		64D930B11E3E4EF2007C7112 /* DirectionsListViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListViewProtocol.swift; sourceTree = "<group>"; };
+		64DA9CFC1E6567E4008D24AD /* StatisticsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatisticsStoryboard.storyboard; sourceTree = "<group>"; };
+		64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		64E015171E3E023E0055DFD5 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -462,6 +519,7 @@
 			files = (
 				64C4DE151E5C8DBC009B896B /* Pods_UProgress_UProgressUITests.framework in Frameworks */,
 				64C4DE131E5C8DB6009B896B /* Pods_UProgress_UProgressTests.framework in Frameworks */,
+				74A21D2AF6AE0CB303F88674 /* Pods_UProgress_UProgressTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +529,7 @@
 			files = (
 				64C4DE191E5C8DD7009B896B /* Pods_UProgress_UProgressUITests.framework in Frameworks */,
 				64C4DE171E5C8DD0009B896B /* Pods_UProgress_UProgressTests.framework in Frameworks */,
+				CAD6B9F786B674324A426955 /* Pods_UProgress_UProgressUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,6 +662,7 @@
 		6474B19A1E3D04C200C46165 = {
 			isa = PBXGroup;
 			children = (
+				6476C90B1E68C5190076922F /* .gitignore */,
 				641D44B31E5B965B005F64E9 /* bitrise.yml */,
 				6458006B1E54C076002366CA /* README.md */,
 				64432CC81E43DBB1003C3011 /* Localizable.strings */,
@@ -628,6 +688,7 @@
 		6474B1A51E3D04C200C46165 /* UProgress */ = {
 			isa = PBXGroup;
 			children = (
+				64DA9CFB1E6567D4008D24AD /* Statistics */,
 				64A108111E64138700BBD065 /* Attachment */,
 				646E8EA21E48B22E003B8DFB /* DirectionsDetail */,
 				646E8E9D1E48B016003B8DFB /* User */,
@@ -660,6 +721,9 @@
 			children = (
 				6474B1C61E3D04C200C46165 /* UProgressUITests.swift */,
 				6474B1C81E3D04C200C46165 /* Info.plist */,
+				649C33D81E66D64B00665C48 /* KIF+Extensions.swift */,
+				649C33DB1E66D68800665C48 /* BH.m */,
+				649C33DA1E66D68700665C48 /* UProgressUITests-Bridging-Header.h */,
 			);
 			path = UProgressUITests;
 			sourceTree = "<group>";
@@ -711,6 +775,38 @@
 			children = (
 				64860B7B1E5F568E002ACD43 /* ProfileManager.swift */,
 				64860B7F1E5F56A5002ACD43 /* ProfileManagerProtocol.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		649369A81E65CAFC00B4C58F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				64DA9CFC1E6567E4008D24AD /* StatisticsStoryboard.storyboard */,
+				64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */,
+				649369BB1E65CF6500B4C58F /* StatisticsViewProtocol.swift */,
+				649C33DD1E66F78700665C48 /* PieChartViewController.swift */,
+				649C33E11E671E0400665C48 /* BarChartViewController.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		649369A91E65CB0300B4C58F /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				649369BF1E65CFB900B4C58F /* StatisticsPresenter.swift */,
+				649369C11E65CFC800B4C58F /* StatisticsPresenterProtocol.swift */,
+			);
+			name = presenter;
+			sourceTree = "<group>";
+		};
+		649369AA1E65CB0A00B4C58F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				649369AB1E65CBB200B4C58F /* StatisticsItem.swift */,
+				649369AD1E65CC4D00B4C58F /* StatisticsInfo.swift */,
+				649369AF1E65CCF400B4C58F /* StatisticsManagerProtocol.swift */,
+				649369B11E65CD1E00B4C58F /* StatisticsManager.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -842,6 +938,16 @@
 				64A108571E647A1100BBD065 /* DirectionFormPresenterProtocol.swift */,
 			);
 			name = presenter;
+			sourceTree = "<group>";
+		};
+		64DA9CFB1E6567D4008D24AD /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				649369AA1E65CB0A00B4C58F /* model */,
+				649369A91E65CB0300B4C58F /* presenter */,
+				649369A81E65CAFC00B4C58F /* view */,
+			);
+			name = Statistics;
 			sourceTree = "<group>";
 		};
 		64EA8BF21E3EB9970088009E /* Navigation */ = {
@@ -980,6 +1086,7 @@
 					};
 					6474B1C11E3D04C200C46165 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 6474B1A21E3D04C200C46165;
 					};
@@ -1011,6 +1118,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64DA9CFD1E6567E4008D24AD /* StatisticsStoryboard.storyboard in Resources */,
 				64432CC61E43DBB1003C3011 /* Localizable.strings in Resources */,
 				64F80D431E42058500E90004 /* AuthorizationStoryboard.storyboard in Resources */,
 				641B30A81E4BCC4000FF60CC /* DirectionDetailInfoView.xib in Resources */,
@@ -1021,6 +1129,7 @@
 				6474B1AE1E3D04C200C46165 /* Assets.xcassets in Resources */,
 				643C20301E47D6D90066D9BC /* DirectionsStoryboard.storyboard in Resources */,
 				645800701E54C4B1002366CA /* DefaultNavigationCell.xib in Resources */,
+				6476C90C1E68C5190076922F /* .gitignore in Resources */,
 				641D44B41E5B965B005F64E9 /* bitrise.yml in Resources */,
 				6474B1AC1E3D04C200C46165 /* iPhone.storyboard in Resources */,
 				6473830C1E5A25DF00F9C72E /* ProfileCell.xib in Resources */,
@@ -1037,6 +1146,8 @@
 			files = (
 				641B30AB1E4BCC8600FF60CC /* DirectionDetailInfoView.xib in Resources */,
 				641D44B51E5B9858005F64E9 /* ProfileCell.xib in Resources */,
+				64DA9D021E656BFF008D24AD /* StatisticsStoryboard.storyboard in Resources */,
+				649C33D41E66D04C00665C48 /* DirectionsStoryboard.storyboard in Resources */,
 				645800611E54B061002366CA /* StepTableViewCell.xib in Resources */,
 				647383051E59F15700F9C72E /* ProfileHeader.xib in Resources */,
 				64A1082D1E6455B000BBD065 /* LaunchStoryboard.storyboard in Resources */,
@@ -1050,6 +1161,8 @@
 			files = (
 				641B30AC1E4BCC8700FF60CC /* DirectionDetailInfoView.xib in Resources */,
 				641D44B61E5B9859005F64E9 /* ProfileCell.xib in Resources */,
+				64DA9D031E656C00008D24AD /* StatisticsStoryboard.storyboard in Resources */,
+				649C33D51E66D04E00665C48 /* DirectionsStoryboard.storyboard in Resources */,
 				645800621E54B061002366CA /* StepTableViewCell.xib in Resources */,
 				647383061E59F15700F9C72E /* ProfileHeader.xib in Resources */,
 				64A1082E1E6455B100BBD065 /* LaunchStoryboard.storyboard in Resources */,
@@ -1218,7 +1331,9 @@
 				6443CBEF1E42C0DA008F15E5 /* ErrorsHandling.swift in Sources */,
 				6483E4CB1E3FE0490072B97C /* CommonFunctions.swift in Sources */,
 				64A1084C1E64735500BBD065 /* DirectionPopupActions.swift in Sources */,
+				649369B01E65CCF400B4C58F /* StatisticsManagerProtocol.swift in Sources */,
 				6426C7741E4DFE3100F37701 /* DirectionsPopupProtocol.swift in Sources */,
+				649369AC1E65CBB200B4C58F /* StatisticsItem.swift in Sources */,
 				642407681E51CA6800E4CF95 /* StepTableViewCell.swift in Sources */,
 				646E8EAE1E48BC12003B8DFB /* DirectionsDetailViewProtocol.swift in Sources */,
 				6483E4D51E409A1D0072B97C /* String.swift in Sources */,
@@ -1226,14 +1341,17 @@
 				6464C5A71E44CBAA00C79975 /* Button.swift in Sources */,
 				6474B1A91E3D04C200C46165 /* DirectionsListViewController.swift in Sources */,
 				6468618A1E46826700583945 /* LaunchPresenter.swift in Sources */,
+				649369AE1E65CC4D00B4C58F /* StatisticsInfo.swift in Sources */,
 				641F25D51E42309D008BD119 /* AuthorizationPresenterProtocol.swift in Sources */,
 				647382FE1E59D7C700F9C72E /* ProfileHeader.swift in Sources */,
+				649C33E21E671E0400665C48 /* BarChartViewController.swift in Sources */,
 				646861881E467CF700583945 /* LaunchViewController.swift in Sources */,
 				64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */,
 				642407741E52190B00E4CF95 /* StepCellProtocol.swift in Sources */,
 				641F25CD1E422BF2008BD119 /* User.swift in Sources */,
 				6426C7781E4DFED900F37701 /* DirectionViewActionsProtocol.swift in Sources */,
 				64A108221E6415C100BBD065 /* AttachmentPresenterProtocol.swift in Sources */,
+				649369C01E65CFB900B4C58F /* StatisticsPresenter.swift in Sources */,
 				64D9309C1E3E2CEE007C7112 /* DirectionManager.swift in Sources */,
 				647382FC1E59D33200F9C72E /* ProfileView.swift in Sources */,
 				646E8EB31E48BF87003B8DFB /* Step.swift in Sources */,
@@ -1244,6 +1362,7 @@
 				646E8EB01E48BCC3003B8DFB /* DirectionsDetailPresenterProtocol.swift in Sources */,
 				64D930AE1E3E4632007C7112 /* DirectionListPresenterImpl.swift in Sources */,
 				64860B881E5F5948002ACD43 /* ProfilePopupProtocol.swift in Sources */,
+				649C33DE1E66F78700665C48 /* PieChartViewController.swift in Sources */,
 				6483E4D91E40FED00072B97C /* AuthorizationsViewController.swift in Sources */,
 				6474B1A71E3D04C200C46165 /* AppDelegate.swift in Sources */,
 				647B34AA1E4F8F7C006639DD /* StepPresenterProtocol.swift in Sources */,
@@ -1262,9 +1381,11 @@
 				64F80D3D1E41FCB000E90004 /* RegistrationFragmentController.swift in Sources */,
 				64A108481E64655300BBD065 /* DirectionsFormViewController.swift in Sources */,
 				64D930A61E3E40A7007C7112 /* DirectionModelProtocol.swift in Sources */,
+				64DA9CFF1E656817008D24AD /* StatisticsViewController.swift in Sources */,
 				647B34A41E4F8823006639DD /* DirectionDetailManager.swift in Sources */,
 				64860B861E5F5899002ACD43 /* ProfileViewProtocol.swift in Sources */,
 				64860B8A1E5F6FA4002ACD43 /* Attachment.swift in Sources */,
+				649369BC1E65CF6500B4C58F /* StatisticsViewProtocol.swift in Sources */,
 				64D9309F1E3E3C68007C7112 /* ApiRequest.swift in Sources */,
 				641B30A61E4BCC3100FF60CC /* DirectionDetailInfoView.swift in Sources */,
 				6483E4CF1E40911E0072B97C /* DirectionsListCell.swift in Sources */,
@@ -1278,6 +1399,7 @@
 				6483E4D31E4093F60072B97C /* Date.swift in Sources */,
 				64EA8BF41E3EB9AE0088009E /* BaseViewController.swift in Sources */,
 				64A108501E64750100BBD065 /* DirectionFormProtocol.swift in Sources */,
+				649369B21E65CD1E00B4C58F /* StatisticsManager.swift in Sources */,
 				64F80D3B1E41FCA500E90004 /* AuthorizationFragmentController.swift in Sources */,
 				64A108161E6413A500BBD065 /* AttachmentManagerProtocol.swift in Sources */,
 				641F25D11E422FC3008BD119 /* AuthorizationViewProtocol.swift in Sources */,
@@ -1286,6 +1408,7 @@
 				6483E4C91E3FAAF90072B97C /* SidebarViewController.swift in Sources */,
 				646E8EA11E48B03B003B8DFB /* ProfileViewController.swift in Sources */,
 				645800581E54AA62002366CA /* StepDetailViewController.swift in Sources */,
+				649369C21E65CFC800B4C58F /* StatisticsPresenterProtocol.swift in Sources */,
 				6468618C1E46827900583945 /* LaunchPresenterProtocol.swift in Sources */,
 				641F25C91E422621008BD119 /* Image.swift in Sources */,
 			);
@@ -1306,7 +1429,9 @@
 				645800671E54B094002366CA /* DirectionDetailView.swift in Sources */,
 				64F0C8D31E5D9489000DD1D8 /* ProfileFormViewController.swift in Sources */,
 				64A108511E64750100BBD065 /* DirectionFormProtocol.swift in Sources */,
+				649369B91E65CDA700B4C58F /* StatisticsManager.swift in Sources */,
 				64860B8F1E5F77EE002ACD43 /* ProfilePopupProtocol.swift in Sources */,
+				649C33DF1E66F79A00665C48 /* PieChartViewController.swift in Sources */,
 				6458005D1E54B053002366CA /* StepViewProtocol.swift in Sources */,
 				64F0C8CF1E5D942E000DD1D8 /* ProfileViewActionsProtocol.swift in Sources */,
 				64A1083B1E645A0700BBD065 /* LaunchPresenterProtocol.swift in Sources */,
@@ -1322,6 +1447,7 @@
 				647383011E59F15000F9C72E /* ProfileHeader.swift in Sources */,
 				645800631E54B082002366CA /* DirectionsPopupProtocol.swift in Sources */,
 				64A108291E6455A700BBD065 /* LaunchViewController.swift in Sources */,
+				649C33E31E671FCC00665C48 /* BarChartViewController.swift in Sources */,
 				64A108411E645A2C00BBD065 /* RegistrationFragmentController.swift in Sources */,
 				647383031E59F15300F9C72E /* ProfileView.swift in Sources */,
 				6458005F1E54B056002366CA /* StepTableViewCell.swift in Sources */,
@@ -1336,16 +1462,19 @@
 				64944B131E5E3BF40093961B /* BasePopupViewController.swift in Sources */,
 				646E8EA71E48B4A9003B8DFB /* DirectionsListCell.swift in Sources */,
 				64860B7D1E5F5699002ACD43 /* ProfileManager.swift in Sources */,
+				649369B71E65CDA300B4C58F /* StatisticsItem.swift in Sources */,
 				64D930C51E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */,
 				645800591E54AD14002366CA /* StepDetailViewController.swift in Sources */,
 				64A108491E64655500BBD065 /* DirectionsFormViewController.swift in Sources */,
 				64860B8B1E5F77E4002ACD43 /* ProfileManagerProtocol.swift in Sources */,
 				64D930BB1E3E72EB007C7112 /* ApiRequest.swift in Sources */,
+				649369B31E65CD9D00B4C58F /* StatisticsManagerProtocol.swift in Sources */,
 				64A108431E645A3F00BBD065 /* AuthorizationPresenterProtocol.swift in Sources */,
 				641D44B91E5B9B0F005F64E9 /* DirectionDetailManager.swift in Sources */,
 				64A108391E6459F800BBD065 /* AuthorizationViewProtocol.swift in Sources */,
 				64A108231E6415C100BBD065 /* AttachmentPresenterProtocol.swift in Sources */,
 				64D930C31E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
+				64DA9D001E656817008D24AD /* StatisticsViewController.swift in Sources */,
 				6424076D1E52114600E4CF95 /* String.swift in Sources */,
 				642407751E52197000E4CF95 /* StepCellProtocol.swift in Sources */,
 				64D930BF1E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */,
@@ -1356,15 +1485,19 @@
 				64A108351E6459EB00BBD065 /* AuthorizationPresenter.swift in Sources */,
 				641B30A91E4BCC5A00FF60CC /* DirectionDetailInfoView.swift in Sources */,
 				64A108271E6415EC00BBD065 /* AttachmentPresenter.swift in Sources */,
+				649369BD1E65CF9A00B4C58F /* StatisticsViewProtocol.swift in Sources */,
 				641D44BF1E5B9B9C005F64E9 /* AuthorizationManagerProtocol.swift in Sources */,
 				6424076B1E52114300E4CF95 /* Date.swift in Sources */,
 				642407711E52114D00E4CF95 /* Button.swift in Sources */,
 				64A108331E6459D800BBD065 /* NavigationViewController.swift in Sources */,
 				64A108591E647A1100BBD065 /* DirectionFormPresenterProtocol.swift in Sources */,
+				649369C51E65CFDA00B4C58F /* StatisticsPresenter.swift in Sources */,
+				64DA9D041E657391008D24AD /* BaseSplitViewController.swift in Sources */,
 				64A1083F1E645A2500BBD065 /* AuthorizationFragmentController.swift in Sources */,
 				64A1081F1E64153F00BBD065 /* AttachmentViewProtocol.swift in Sources */,
 				641B309F1E4B67A200FF60CC /* DirectionsDetailPresenter.swift in Sources */,
 				646861951E47370200583945 /* CommonFunctions.swift in Sources */,
+				649369B51E65CDA000B4C58F /* StatisticsInfo.swift in Sources */,
 				64A108191E6413B800BBD065 /* AttachmentManagerProtocol.swift in Sources */,
 				647383071E59FDA800F9C72E /* User.swift in Sources */,
 				64D930B91E3E72B4007C7112 /* Direction.swift in Sources */,
@@ -1374,6 +1507,7 @@
 				64F0C8CD1E5D9427000DD1D8 /* ProfileViewController.swift in Sources */,
 				645800691E54B0A1002366CA /* ServerError.swift in Sources */,
 				641D44C11E5B9BA0005F64E9 /* AuthorizationManager.swift in Sources */,
+				649369C31E65CFD700B4C58F /* StatisticsPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1392,6 +1526,7 @@
 				645800681E54B095002366CA /* DirectionDetailView.swift in Sources */,
 				64F0C8D41E5D948A000DD1D8 /* ProfileFormViewController.swift in Sources */,
 				64A108521E64750100BBD065 /* DirectionFormProtocol.swift in Sources */,
+				649369BA1E65CDA700B4C58F /* StatisticsManager.swift in Sources */,
 				64860B901E5F77EF002ACD43 /* ProfilePopupProtocol.swift in Sources */,
 				6458005E1E54B054002366CA /* StepViewProtocol.swift in Sources */,
 				64F0C8D01E5D942E000DD1D8 /* ProfileViewActionsProtocol.swift in Sources */,
@@ -1422,17 +1557,21 @@
 				64944B141E5E3BF50093961B /* BasePopupViewController.swift in Sources */,
 				646E8EA81E48B4AA003B8DFB /* DirectionsListCell.swift in Sources */,
 				64860B7E1E5F5699002ACD43 /* ProfileManager.swift in Sources */,
+				649369B81E65CDA400B4C58F /* StatisticsItem.swift in Sources */,
 				64D930C61E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */,
 				6458005A1E54AD14002366CA /* StepDetailViewController.swift in Sources */,
 				64A1084A1E64655600BBD065 /* DirectionsFormViewController.swift in Sources */,
 				64860B8C1E5F77E5002ACD43 /* ProfileManagerProtocol.swift in Sources */,
 				64D930BC1E3E72EB007C7112 /* ApiRequest.swift in Sources */,
+				649369B41E65CD9D00B4C58F /* StatisticsManagerProtocol.swift in Sources */,
 				64A108441E645A4000BBD065 /* AuthorizationPresenterProtocol.swift in Sources */,
 				641D44BA1E5B9B10005F64E9 /* DirectionDetailManager.swift in Sources */,
 				64A1083A1E6459F900BBD065 /* AuthorizationViewProtocol.swift in Sources */,
 				64A108241E6415C100BBD065 /* AttachmentPresenterProtocol.swift in Sources */,
 				64D930C41E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
+				64DA9D011E656817008D24AD /* StatisticsViewController.swift in Sources */,
 				6424076E1E52114600E4CF95 /* String.swift in Sources */,
+				649C33D91E66D64B00665C48 /* KIF+Extensions.swift in Sources */,
 				642407761E52197100E4CF95 /* StepCellProtocol.swift in Sources */,
 				64D930C01E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */,
 				64D930C81E3E7312007C7112 /* DirectionListPresenterImpl.swift in Sources */,
@@ -1442,15 +1581,21 @@
 				64A108361E6459EB00BBD065 /* AuthorizationPresenter.swift in Sources */,
 				641B30AA1E4BCC5A00FF60CC /* DirectionDetailInfoView.swift in Sources */,
 				64A108281E6415EC00BBD065 /* AttachmentPresenter.swift in Sources */,
+				649369BE1E65CF9A00B4C58F /* StatisticsViewProtocol.swift in Sources */,
 				641D44C01E5B9B9D005F64E9 /* AuthorizationManagerProtocol.swift in Sources */,
 				6424076C1E52114300E4CF95 /* Date.swift in Sources */,
+				649C33DC1E66D68800665C48 /* BH.m in Sources */,
 				642407721E52114D00E4CF95 /* Button.swift in Sources */,
 				64A108341E6459D900BBD065 /* NavigationViewController.swift in Sources */,
 				64A1085A1E647A1100BBD065 /* DirectionFormPresenterProtocol.swift in Sources */,
+				649C33E41E671FCD00665C48 /* BarChartViewController.swift in Sources */,
+				649369C61E65CFDB00B4C58F /* StatisticsPresenter.swift in Sources */,
+				64DA9D051E657391008D24AD /* BaseSplitViewController.swift in Sources */,
 				64A108401E645A2600BBD065 /* AuthorizationFragmentController.swift in Sources */,
 				64A108201E64153F00BBD065 /* AttachmentViewProtocol.swift in Sources */,
 				641B30A01E4B67A300FF60CC /* DirectionsDetailPresenter.swift in Sources */,
 				646861961E47370300583945 /* CommonFunctions.swift in Sources */,
+				649369B61E65CDA000B4C58F /* StatisticsInfo.swift in Sources */,
 				64A1081A1E6413B900BBD065 /* AttachmentManagerProtocol.swift in Sources */,
 				647383081E59FDA900F9C72E /* User.swift in Sources */,
 				64D930BA1E3E72B5007C7112 /* Direction.swift in Sources */,
@@ -1460,6 +1605,8 @@
 				64F0C8CE1E5D9427000DD1D8 /* ProfileViewController.swift in Sources */,
 				6458006A1E54B0A1002366CA /* ServerError.swift in Sources */,
 				641D44C21E5B9BA1005F64E9 /* AuthorizationManager.swift in Sources */,
+				649C33E01E66F79B00665C48 /* PieChartViewController.swift in Sources */,
+				649369C41E65CFD800B4C58F /* StatisticsPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1686,6 +1833,7 @@
 			baseConfigurationReference = 3DAF568722EA6F1921D97601 /* Pods-UProgress-UProgressUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1696,6 +1844,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgressUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "UProgressUITests/UProgressUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = UProgress;
 			};
@@ -1706,6 +1856,7 @@
 			baseConfigurationReference = 6D5C3E99CC7E7FD863502E7F /* Pods-UProgress-UProgressUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1716,6 +1867,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgressUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "UProgressUITests/UProgressUITests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = UProgress;
 			};

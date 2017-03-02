@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class BaseSplitViewController: UISplitViewController {
+class BaseSplitViewController: UISplitViewController, UISplitViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.delegate = self
         let user = AuthorizationService.sharedInstance.currentUser
         var navCtrl: UINavigationController!
         
@@ -28,5 +29,10 @@ class BaseSplitViewController: UISplitViewController {
         
         self.viewControllers[1] = navCtrl
         self.preferredDisplayMode = .allVisible
+
+    }
+    
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController!, ontoPrimaryViewController primaryViewController: UIViewController!) -> Bool{
+        return true
     }
 }

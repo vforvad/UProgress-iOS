@@ -12,7 +12,6 @@ import XCTest
 
 class DirectionsListPresenterTest: XCTestCase {
     
-    
     class DirectionsListViewMock: DirectionViewProtocol {
         var successCalled: Bool!
     

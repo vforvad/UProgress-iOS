@@ -93,6 +93,14 @@
             </objects>
             <point key="canvasLocation" x="1371" y="-805"/>
         </scene>
+        <!--StatisticsViewController-->
+        <scene sceneID="weV-a8-N62">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StatisticsStoryboard" referencedIdentifier="StatisticsViewController" id="Pyl-gs-29P" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aap-De-1oQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="-692"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="jg5-Eg-WgC">
             <objects>
