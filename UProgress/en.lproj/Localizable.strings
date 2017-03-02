@@ -48,3 +48,10 @@
 "profile_settings_action" = "Choose an action";
 "profile_settings_edit" = "Edit";
 "profile_settings_sign_out" = "Sign out";
+
+
+// STATISTISCS
+"statistics_directions" = "Directions";
+"statistics_steps" = "Steps";
+"statistics_directions_steps" = "Directions steps";
+"statistics_title" = "Chose scope";

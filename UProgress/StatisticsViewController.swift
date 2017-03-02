@@ -19,6 +19,10 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
     var switchChartIcon: UIBarButtonItem!
     var pieChartDisplayed: Bool! = true
     var statisticsInfo: StatisticsInfo!
+    private let imagePicker = UIImagePickerController()
+    private var scopeId: String! = "directions"
+    private var popover:UIPopoverController!
+    
     
     @IBOutlet weak var pieChartView: UIView!
     @IBOutlet weak var barChartView: UIView!
@@ -58,7 +62,45 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
     }
     
     func switchChartType(sender: UIBarButtonItem!) {
-        displayStatistics()
+         let alert:UIAlertController=UIAlertController(title: NSLocalizedString("statistics_title", comment: ""), message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        let directionsAction = UIAlertAction(title: NSLocalizedString("statistics_directions", comment: ""), style: UIAlertActionStyle.default) { UIAlertAction in
+            self.scopeId = "directions"
+            self.displayStatistics()
+        }
+        
+        let stepsActions = UIAlertAction(title: NSLocalizedString("statistics_steps", comment: ""), style: UIAlertActionStyle.default) {
+            UIAlertAction in
+            self.scopeId = "steps"
+            self.displayStatistics()
+        }
+        
+        let directionsSteps = UIAlertAction(title: NSLocalizedString("statistics_directions_steps", comment: ""), style: UIAlertActionStyle.default) {
+            UIAlertAction in
+            self.scopeId = "directionsSteps"
+            self.displayStatistics()
+        }
+        
+        let cancelAction = UIAlertAction(title: NSLocalizedString("profile_image_cancel", comment: ""), style: UIAlertActionStyle.cancel) { UIAlertAction in
+        }
+        
+        alert.addAction(directionsAction)
+        alert.addAction(stepsActions)
+        alert.addAction(directionsSteps)
+        alert.addAction(cancelAction)
+        displayMenu(contentView: alert, sender: sender)
+        
+    }
+    
+    
+    func displayMenu(contentView: UIViewController!, sender: UIBarButtonItem!) {
+        if CommonFunctions.DeviceData.isIphone() {
+            self.present(contentView, animated: true, completion: {})
+        }
+        else {
+            popover = UIPopoverController(contentViewController: contentView)
+            popover.present(from: sender, permittedArrowDirections: UIPopoverArrowDirection.any, animated: true)
+        }
     }
     
     internal func successStatisticsLoad(statistics: StatisticsInfo!) {
@@ -92,19 +134,34 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
         let btn1 = UIButton(type: .custom)
         btn1.setImage(UIImage(named: iconName), for: .normal)
         btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        btn1.addTarget(self, action: #selector(switchChartView(sender:)), for: .touchUpInside)
+        btn1.addTarget(self, action: action, for: .touchUpInside)
         return UIBarButtonItem(customView: btn1)
     }
     private func displayStatistics() {
         if pieChartDisplayed! {
             barChartView.isHidden = true
             pieChartView.isHidden = false
-            pieChatViewController.setData(statistics: statisticsInfo.directionSteps)
+            pieChatViewController.setData(statistics: getScope(statistics: statisticsInfo))
         }
         else {
             barChartView.isHidden = false
             pieChartView.isHidden = true
-            barChartViewController.setData(statistics: statisticsInfo.directionSteps)
+            barChartViewController.setData(statistics: getScope(statistics: statisticsInfo))
         }
     }
+    
+    private func getScope(statistics: StatisticsInfo!) -> [StatisticsItem]! {
+        switch(self.scopeId) {
+        case "directions":
+            return statistics.directions
+        case "steps":
+            return statistics.steps
+        case "directionsSteps":
+            return statistics.directionSteps
+        default:
+            return statistics.directions
+        }
+    }
+    
+    
 }

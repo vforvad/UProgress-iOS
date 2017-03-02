@@ -43,3 +43,9 @@
 "profile_settings_action" = "Выберите действие";
 "profile_settings_edit" = "Редактировать";
 "profile_settings_sign_out" = "Выйти";
+
+// STATISTISCS
+"statistics_directions" = "Направления";
+"statistics_steps" = "Шаги";
+"statistics_directions_steps" = "Шаги направлений";
+"statistics_title" = "Выборка";
