@@ -19,14 +19,16 @@ target 'UProgress' do
 
   target 'UProgressTests' do
       use_frameworks!
-      
-#    inherit! :search_paths
+      pod 'Quick'
+      pod 'Nimble'
+      pod 'Mockingjay'
   end
 
   target 'UProgressUITests' do
       use_frameworks!
-      pod 'KIF'
+      pod 'Quick'
       pod 'Nimble'
+      pod 'Mockingjay'
 #    inherit! :search_paths
   end
 
