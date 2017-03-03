@@ -65,6 +65,8 @@
 		642407741E52190B00E4CF95 /* StepCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642407731E52190B00E4CF95 /* StepCellProtocol.swift */; };
 		642407751E52197000E4CF95 /* StepCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642407731E52190B00E4CF95 /* StepCellProtocol.swift */; };
 		642407761E52197100E4CF95 /* StepCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642407731E52190B00E4CF95 /* StepCellProtocol.swift */; };
+		64259D1C1E697E72008F7E2F /* DirectionsManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64259D1B1E697E72008F7E2F /* DirectionsManagerSpec.swift */; };
+		64259D1F1E697E97008F7E2F /* directions.json in Resources */ = {isa = PBXBuildFile; fileRef = 64259D1E1E697E97008F7E2F /* directions.json */; };
 		6426C7741E4DFE3100F37701 /* DirectionsPopupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6426C7731E4DFE3100F37701 /* DirectionsPopupProtocol.swift */; };
 		6426C7781E4DFED900F37701 /* DirectionViewActionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6426C7771E4DFED900F37701 /* DirectionViewActionsProtocol.swift */; };
 		643C20301E47D6D90066D9BC /* DirectionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643C202F1E47D6D90066D9BC /* DirectionsStoryboard.storyboard */; };
@@ -369,6 +371,8 @@
 		642407671E51CA6800E4CF95 /* StepTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTableViewCell.swift; sourceTree = "<group>"; };
 		642407691E51CA7400E4CF95 /* StepTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepTableViewCell.xib; sourceTree = "<group>"; };
 		642407731E52190B00E4CF95 /* StepCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCellProtocol.swift; sourceTree = "<group>"; };
+		64259D1B1E697E72008F7E2F /* DirectionsManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsManagerSpec.swift; sourceTree = "<group>"; };
+		64259D1E1E697E97008F7E2F /* directions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = directions.json; sourceTree = "<group>"; };
 		6426C7731E4DFE3100F37701 /* DirectionsPopupProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsPopupProtocol.swift; sourceTree = "<group>"; };
 		6426C7771E4DFED900F37701 /* DirectionViewActionsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionViewActionsProtocol.swift; sourceTree = "<group>"; };
 		643C202F1E47D6D90066D9BC /* DirectionsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectionsStoryboard.storyboard; sourceTree = "<group>"; };
@@ -566,6 +570,30 @@
 			name = steps;
 			sourceTree = "<group>";
 		};
+		64259D191E697E5E008F7E2F /* DirectionsList */ = {
+			isa = PBXGroup;
+			children = (
+				64259D1A1E697E65008F7E2F /* model */,
+			);
+			name = DirectionsList;
+			sourceTree = "<group>";
+		};
+		64259D1A1E697E65008F7E2F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				64259D1B1E697E72008F7E2F /* DirectionsManagerSpec.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		64259D1D1E697E7C008F7E2F /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				64259D1E1E697E97008F7E2F /* directions.json */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
 		646861861E467CE700583945 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -710,6 +738,8 @@
 		6474B1BA1E3D04C200C46165 /* UProgressTests */ = {
 			isa = PBXGroup;
 			children = (
+				64259D1D1E697E7C008F7E2F /* Fixtures */,
+				64259D191E697E5E008F7E2F /* DirectionsList */,
 				6474B1BB1E3D04C200C46165 /* DirectionsListPresenterTest.swift */,
 				6474B1BD1E3D04C200C46165 /* Info.plist */,
 			);
@@ -1144,6 +1174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64259D1F1E697E97008F7E2F /* directions.json in Resources */,
 				641B30AB1E4BCC8600FF60CC /* DirectionDetailInfoView.xib in Resources */,
 				641D44B51E5B9858005F64E9 /* ProfileCell.xib in Resources */,
 				64DA9D021E656BFF008D24AD /* StatisticsStoryboard.storyboard in Resources */,
@@ -1458,6 +1489,7 @@
 				64A1082F1E6457E900BBD065 /* AuthorizationsViewController.swift in Sources */,
 				641B30A31E4B67AB00FF60CC /* Step.swift in Sources */,
 				64A108451E645A4600BBD065 /* Constants.swift in Sources */,
+				64259D1C1E697E72008F7E2F /* DirectionsManagerSpec.swift in Sources */,
 				64A1084D1E64735500BBD065 /* DirectionPopupActions.swift in Sources */,
 				64944B131E5E3BF40093961B /* BasePopupViewController.swift in Sources */,
 				646E8EA71E48B4A9003B8DFB /* DirectionsListCell.swift in Sources */,
