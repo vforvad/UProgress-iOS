@@ -16,6 +16,10 @@ class ServerError: NSObject {
     var formErrors: NSDictionary!
     var parentController: UIViewController?
     
+    override init() {
+        super.init()
+    }
+    
     init(parameters: NSError) {
         self.status = parameters.code
         self.desc = parameters.localizedDescription

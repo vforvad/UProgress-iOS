@@ -1,0 +1,33 @@
+{
+    "id":  1,
+    "title":  "Domainer",
+    "description":  
+    "The JSON program is down, reboot the online pixel so we can connect the SCSI feed!",
+    "finished_steps_count":  2,
+    "percents_result":  40,
+    "updated_at":  "2016-12-31T19:18:01.148Z",
+    "slug":  "treeflex",
+    "steps":  
+        [{"id":  1,
+         "title":  "Retro plaid portland synth bicycle rights.",
+         "description":  
+         "Semiotics echo sartorial truffaut. Tousled banh mi blue bottle. Typewriter direct trade kitsch leggings. Occupy iphone pabst sartorial goth skateboard messenger bag. Humblebrag butcher marfa gluten-free.",
+         "direction_id":  1,
+         "is_done":  false,
+         "updated_at":  "2016-12-31T19:17:44.543Z"},
+         {"id":  2,
+         "title":  "Cardigan mustache slow-carb chartreuse five dollar toast flexitarian.",
+         "description":  
+         "Fixie synth celiac pug bushwick. Chambray pug messenger bag lomo cliche literally keffiyeh truffaut. Godard irony chillwave post-ironic readymade pabst selvage.",
+         "direction_id":  1,
+         "is_done":  false,
+         "updated_at":  "2016-12-31T19:17:44.551Z"},
+         {"id":  3,
+         "title":  
+         "Stumptown cardigan bushwick banh mi paleo you probably haven't heard of them semiotics dreamcatcher.",
+         "description":  
+         "Quinoa tilde photo booth. Synth austin cray. Letterpress swag chicharrones direct trade. Paleo godard readymade forage. Gastropub neutra lumbersexual cred.",
+         "direction_id":  1,
+         "is_done":  true,
+         "updated_at":  "2016-12-31T19:17:56.286Z"}]
+}

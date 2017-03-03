@@ -14,6 +14,7 @@ class DirectionsListPresenterTest: XCTestCase {
     
     class DirectionsListViewMock: DirectionViewProtocol {
         var successCalled: Bool!
+        var successLoadMoreDirections: Bool!
     
         
         internal func successDirectionsLoad(directions: [Direction]!) {
@@ -30,36 +31,13 @@ class DirectionsListPresenterTest: XCTestCase {
         internal func startRefresh() {}
         internal func stopRefresh() {}
         internal func stopInfiniteScroll() {}
-        internal func successLoadMoreDirections(directions: [Direction]!) {}
+        internal func successLoadMoreDirections(directions: [Direction]!) {
+            successLoadMoreDirections = true
+        }
 
     }
     
-    class DirectionsManagerMock: DirectionModelProtocol {
-        internal func createDirection(userNick: String, parameters: Dictionary<String, Any>, success: @escaping (Direction) -> Void, failure: @escaping (ServerError) -> Void) {
-            }
-
-        var successCall: Bool!
-        var successRequest = false
-        
-        init(request: Bool) {
-            self.successRequest = request
-        }
-        
-        internal func loadDirectionsList(userNick: String, pageNumber: Int, success: @escaping ([Direction]) -> Void, failure: @escaping (NSError) -> Void) {
-            var directions: [Direction]! = [Direction()!]
-            if successRequest {
-                successCall = true
-                success(directions)
-            }
-            else {
-                successCall = false
-                failure(NSError())
-            }
-            
-        }
-
     
-    }
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -102,4 +80,11 @@ class DirectionsListPresenterTest: XCTestCase {
         XCTAssertFalse(model.successCall)
     }
     
+    func testSuccessCalledMoreDirections() {
+        let model = DirectionsManagerMock(request: true)
+        let view = DirectionsListViewMock()
+        let presenter = DirectionListPresenterImpl(model: model, view: view)
+        presenter.loadMoreDirections(userNick: "vforvad")
+        XCTAssertTrue(view.successLoadMoreDirections)
+    }
 }
