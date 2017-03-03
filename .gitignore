@@ -1,5 +1,2 @@
 .DS_Store
 Pods/
-Podfile.lock
-*.xcworkspacedata
-*.xcuserstate
