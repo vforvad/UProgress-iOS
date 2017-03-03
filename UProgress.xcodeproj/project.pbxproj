@@ -140,6 +140,7 @@
 		6474B1B11E3D04C200C46165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AF1E3D04C200C46165 /* LaunchScreen.storyboard */; };
 		6474B1BC1E3D04C200C46165 /* DirectionsListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1BB1E3D04C200C46165 /* DirectionsListPresenterTest.swift */; };
 		6474B1C71E3D04C200C46165 /* UProgressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1C61E3D04C200C46165 /* UProgressUITests.swift */; };
+		6476C90C1E68C5190076922F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6476C90B1E68C5190076922F /* .gitignore */; };
 		647B34A41E4F8823006639DD /* DirectionDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A31E4F8823006639DD /* DirectionDetailManager.swift */; };
 		647B34A61E4F8839006639DD /* DirectionDetailManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A51E4F8839006639DD /* DirectionDetailManagerProtocol.swift */; };
 		647B34A81E4F8F66006639DD /* StepPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647B34A71E4F8F66006639DD /* StepPresenter.swift */; };
@@ -423,6 +424,7 @@
 		6474B1C21E3D04C200C46165 /* UProgressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UProgressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6474B1C61E3D04C200C46165 /* UProgressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UProgressUITests.swift; sourceTree = "<group>"; };
 		6474B1C81E3D04C200C46165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6476C90B1E68C5190076922F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		647B34A31E4F8823006639DD /* DirectionDetailManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionDetailManager.swift; sourceTree = "<group>"; };
 		647B34A51E4F8839006639DD /* DirectionDetailManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionDetailManagerProtocol.swift; sourceTree = "<group>"; };
 		647B34A71E4F8F66006639DD /* StepPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepPresenter.swift; sourceTree = "<group>"; };
@@ -1146,6 +1148,7 @@
 				6474B1AE1E3D04C200C46165 /* Assets.xcassets in Resources */,
 				643C20301E47D6D90066D9BC /* DirectionsStoryboard.storyboard in Resources */,
 				645800701E54C4B1002366CA /* DefaultNavigationCell.xib in Resources */,
+				6476C90C1E68C5190076922F /* .gitignore in Resources */,
 				641D44B41E5B965B005F64E9 /* bitrise.yml in Resources */,
 				6474B1AC1E3D04C200C46165 /* iPhone.storyboard in Resources */,
 				6473830C1E5A25DF00F9C72E /* ProfileCell.xib in Resources */,
