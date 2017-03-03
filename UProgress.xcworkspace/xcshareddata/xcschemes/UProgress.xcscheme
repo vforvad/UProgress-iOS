@@ -47,6 +47,11 @@
                BlueprintName = "UProgressUITests"
                ReferencedContainer = "container:UProgress.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "DirectionManagerSpec">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>
