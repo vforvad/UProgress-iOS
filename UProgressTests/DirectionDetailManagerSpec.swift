@@ -14,6 +14,7 @@ import Mockingjay
 class DirectionDetailManagerSpec: QuickSpec {
     let model = DirectionDetailManager()
     var detailDirection: Direction!
+    var createStepError: ServerError!
     
     override func spec() {
         super.spec()
@@ -51,13 +52,59 @@ class DirectionDetailManagerSpec: QuickSpec {
         }
         
         describe("createStep()") {
+            var createdStep: Step!
+            
             context("with valid attributes") {
-                it("creates new step") {
+                beforeEach {
+                    let path = Bundle(for: type(of: self)).path(forResource: "new_step", ofType: "json")!
+                    let data = NSData(contentsOfFile: path)!
+                    self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/users/vforvad/directions/1/steps"), jsonData(data as Data))
+                    let params = ["title": "Title", "description": "Description"]
+                    
+                    waitUntil(action: { done in
+                        self.model.createStep(userNick: "vforvad", directionId: "1", parameters: params as Dictionary<String, AnyObject>,
+                            success: { step in
+                                createdStep = step
+                                done()
+                        },
+                            failure: { error in
+                                                    
+                        })
+                        
+                    })
+                }
                 
+                it("creates new step") {
+                    expect(createdStep).toEventuallyNot(beNil())
                 }
             }
             
             context("with invalid atrributes") {
+                beforeEach {
+                    self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/users/vforvad/directions/1/steps"), json(["errors": ["title": "Can't be blank"]], status: 403, headers: [:]))
+                    let params = ["title": "Title", "description": "Description"]
+                    
+                    waitUntil(action: { done in
+                        self.model.createStep(userNick: "vforvad", directionId: "1", parameters: params as Dictionary<String, AnyObject>,
+                            success: { step in
+                                                
+                        },
+                            failure: { error in
+                            self.createStepError = error
+                            done()
+                                                
+                        })
+                        
+                    })
+                }
+                
+                it("does not create a new step") {
+                    expect(self.createStepError).toEventuallyNot(beNil())
+                }
+                
+                it("have a particular error key") {
+                    expect(self.createStepError.params?["title"]).toEventuallyNot(beNil())
+                }
             }
         }
         

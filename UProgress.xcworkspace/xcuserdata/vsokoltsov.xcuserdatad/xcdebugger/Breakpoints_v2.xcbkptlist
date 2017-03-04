@@ -2419,11 +2419,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgressTests/DirectionsManagerSpec.swift"
-            timestampString = "510242980.016406"
+            timestampString = "510261841.660848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "spec()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2435,11 +2435,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgressTests/DirectionDetailManagerSpec.swift"
-            timestampString = "510243492.153671"
+            timestampString = "510261841.660848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "spec()"
             landmarkType = "7">
          </BreakpointContent>

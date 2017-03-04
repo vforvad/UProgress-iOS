@@ -72,6 +72,7 @@
 		64259D261E699AB9008F7E2F /* detail_direction.json in Resources */ = {isa = PBXBuildFile; fileRef = 64259D251E699AB9008F7E2F /* detail_direction.json */; };
 		64259D281E699B4A008F7E2F /* new_direction.json in Resources */ = {isa = PBXBuildFile; fileRef = 64259D271E699B4A008F7E2F /* new_direction.json */; };
 		64259D2B1E69B129008F7E2F /* DirectionDetailManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64259D2A1E69B129008F7E2F /* DirectionDetailManagerSpec.swift */; };
+		64259D2D1E69B571008F7E2F /* new_step.json in Resources */ = {isa = PBXBuildFile; fileRef = 64259D2C1E69B571008F7E2F /* new_step.json */; };
 		6426C7741E4DFE3100F37701 /* DirectionsPopupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6426C7731E4DFE3100F37701 /* DirectionsPopupProtocol.swift */; };
 		6426C7781E4DFED900F37701 /* DirectionViewActionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6426C7771E4DFED900F37701 /* DirectionViewActionsProtocol.swift */; };
 		643C20301E47D6D90066D9BC /* DirectionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643C202F1E47D6D90066D9BC /* DirectionsStoryboard.storyboard */; };
@@ -383,6 +384,7 @@
 		64259D251E699AB9008F7E2F /* detail_direction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = detail_direction.json; sourceTree = "<group>"; };
 		64259D271E699B4A008F7E2F /* new_direction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = new_direction.json; sourceTree = "<group>"; };
 		64259D2A1E69B129008F7E2F /* DirectionDetailManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionDetailManagerSpec.swift; sourceTree = "<group>"; };
+		64259D2C1E69B571008F7E2F /* new_step.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = new_step.json; sourceTree = "<group>"; };
 		6426C7731E4DFE3100F37701 /* DirectionsPopupProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsPopupProtocol.swift; sourceTree = "<group>"; };
 		6426C7771E4DFED900F37701 /* DirectionViewActionsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionViewActionsProtocol.swift; sourceTree = "<group>"; };
 		643C202F1E47D6D90066D9BC /* DirectionsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectionsStoryboard.storyboard; sourceTree = "<group>"; };
@@ -604,6 +606,7 @@
 				64259D1E1E697E97008F7E2F /* directions.json */,
 				64259D251E699AB9008F7E2F /* detail_direction.json */,
 				64259D271E699B4A008F7E2F /* new_direction.json */,
+				64259D2C1E69B571008F7E2F /* new_step.json */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -1207,6 +1210,7 @@
 			files = (
 				64259D1F1E697E97008F7E2F /* directions.json in Resources */,
 				64259D281E699B4A008F7E2F /* new_direction.json in Resources */,
+				64259D2D1E69B571008F7E2F /* new_step.json in Resources */,
 				641B30AB1E4BCC8600FF60CC /* DirectionDetailInfoView.xib in Resources */,
 				641D44B51E5B9858005F64E9 /* ProfileCell.xib in Resources */,
 				64259D261E699AB9008F7E2F /* detail_direction.json in Resources */,

@@ -86,8 +86,7 @@ class DirectionManagerSpec: QuickSpec {
                 var errorObject: ServerError!
                 
                 beforeEach {
-                    
-                    let error = NSError(domain: "Unprocessable entity", code: 403, userInfo: ["errors": ["title": "Can't be blank"]])
+    
                     self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/users/vforvad/directions"), json(["errors": ["title": "Can't be blank"]], status: 403, headers: [:]))
                     waitUntil(action: { done in
                         model.createDirection(userNick: "vforvad", parameters: ["direction": ["title": "Title", "description": "Description"]],
