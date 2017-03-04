@@ -172,7 +172,29 @@ class DirectionDetailManagerSpec: QuickSpec {
         }
         
         describe("deleteStep()") {
+            var deletedStep: Step!
             
+            beforeEach {
+                let path = Bundle(for: type(of: self)).path(forResource: "new_step", ofType: "json")!
+                let data = NSData(contentsOfFile: path)!
+                self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/users/vforvad/directions/1/steps/1"), jsonData(data as Data))
+                
+                waitUntil(action: { done in
+                    self.model.deleteStep(userNick: "vforvad", directionId: "1", stepId: "1",
+                        success: { step in
+                            deletedStep = step
+                            done()
+                    },
+                        failure: { error in
+                                            
+                    })
+                    
+                })
+            }
+            
+            it("return deleted step") {
+                expect(deletedStep).toEventuallyNot(beNil())
+            }
         }
     }
 }
