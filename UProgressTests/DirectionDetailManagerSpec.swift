@@ -120,11 +120,11 @@ class DirectionDetailManagerSpec: QuickSpec {
                     
                     waitUntil(action: { done in
                         self.model.updateStep(userNick: "vforvad", directionId: "1", stepId: "1", parameters: params as Dictionary<String, AnyObject>,
-                                              success: { step in
-                                                updatedStep = step
-                                                done()
+                        success: { step in
+                            updatedStep = step
+                            done()
                         },
-                                              failure: { error in
+                        failure: { error in
                                                 
                         })
                         
@@ -149,12 +149,12 @@ class DirectionDetailManagerSpec: QuickSpec {
                     
                     waitUntil(action: { done in
                         self.model.updateStep(userNick: "vforvad", directionId: "1", stepId: "1", parameters: params as Dictionary<String, AnyObject>,
-                                              success: { step in
+                        success: { step in
                                                 
                         },
-                                              failure: { error in
-                                                updateStepError = error
-                                                done()
+                        failure: { error in
+                            updateStepError = error
+                            done()
                                                 
                         })
                         
