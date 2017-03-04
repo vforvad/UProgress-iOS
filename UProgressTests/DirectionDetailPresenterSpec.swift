@@ -56,6 +56,23 @@ class DirectionDetailPresenterSpec: QuickSpec {
             
             context("failure operation") {
                 let model = DirectionDetailManagerMock(request: false)
+                beforeEach {
+                    let presenter = DirectionsDetailPresenter(model: model, view: self.view)
+                    presenter.loadDirection(userNick: "vforvad", directionId: "1")
+                }
+                
+                context("model") {
+                    it("receives success callback") {
+                        expect(model.loadDirection).to(beFalsy())
+                    }
+                }
+                
+                context("view") {
+                    it("receives success callback") {
+                        expect(self.view.directionLoad).to(beFalsy())
+                    }
+                }
+
             }
         }
         
