@@ -23,9 +23,11 @@ class DirectionDetailManagerMock: DirectionDetailManagerProtocol {
         
         if successRequest! {
             loadDirection = true
+            success(Direction()!)
         }
         else {
             loadDirection = false
+            failure(NSError())
         }
     }
     
