@@ -109,7 +109,66 @@ class DirectionDetailManagerSpec: QuickSpec {
         }
         
         describe("updateStep()") {
+            var updatedStep: Step!
             
+            context("with valid attributes") {
+                beforeEach {
+                    let path = Bundle(for: type(of: self)).path(forResource: "new_step", ofType: "json")!
+                    let data = NSData(contentsOfFile: path)!
+                    self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/users/vforvad/directions/1/steps/1"), jsonData(data as Data))
+                    let params = ["title": "step 3", "description": "Description"]
+                    
+                    waitUntil(action: { done in
+                        self.model.updateStep(userNick: "vforvad", directionId: "1", stepId: "1", parameters: params as Dictionary<String, AnyObject>,
+                                              success: { step in
+                                                updatedStep = step
+                                                done()
+                        },
+                                              failure: { error in
+                                                
+                        })
+                        
+                    })
+                }
+                
+                it("return updated step") {
+                    expect(updatedStep).toEventuallyNot(beNil())
+                }
+                
+                it("has attributes of the new step") {
+                    expect(updatedStep.title).to(equal("step 3"))
+                }
+            }
+            
+            context("with invalid attributes") {
+                var updateStepError: ServerError!
+                
+                beforeEach {
+                    self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/users/vforvad/directions/1/steps/1"), json(["errors": ["title": "Can't be blank"]], status: 403, headers: [:]))
+                    let params = ["title": "Title", "description": "Description"]
+                    
+                    waitUntil(action: { done in
+                        self.model.updateStep(userNick: "vforvad", directionId: "1", stepId: "1", parameters: params as Dictionary<String, AnyObject>,
+                                              success: { step in
+                                                
+                        },
+                                              failure: { error in
+                                                updateStepError = error
+                                                done()
+                                                
+                        })
+                        
+                    })
+                }
+                
+                it("receved errors dictionary") {
+                    expect(updateStepError).toEventuallyNot(beNil())
+                }
+                
+                it("key for title error is present") {
+                    expect(updateStepError.params!["title"]).toEventuallyNot(beNil())
+                }
+            }
         }
         
         describe("deleteStep()") {
