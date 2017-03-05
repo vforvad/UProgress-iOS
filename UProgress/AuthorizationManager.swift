@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import KeychainSwift
+import ObjectMapper
 
 class AuthorizationManager: AuthorizationManagerProtocol {
     var keychain = KeychainSwift()
@@ -41,8 +42,8 @@ class AuthorizationManager: AuthorizationManagerProtocol {
         ApiRequest.sharedInstance.post(url: "/sessions", parameters: ["user": params] as NSDictionary).responseJSON { response in
             
             if response.response?.statusCode == 200 {
-                let dictionary = response.result.value as! Dictionary<String, AnyObject>
-                self.writeToken(token: dictionary["token"]! as! String)
+                let dictionary = response.result.value as! Dictionary<String, String>
+                self.writeToken(token: dictionary["token"]!)
                 self.currentUser(success: success, failure: failure)
             }
             else {
@@ -54,16 +55,17 @@ class AuthorizationManager: AuthorizationManagerProtocol {
     }
     
     func currentUser(success: @escaping (User) -> Void, failure: @escaping (ServerError) -> Void) {
-        ApiRequest.sharedInstance.get(url: "/sessions/current", parameters: [:]).responseObject(keyPath: "current_user") { (response: DataResponse<User>) in
+        ApiRequest.sharedInstance.get(url: "/sessions/current", parameters: [:]).responseJSON { response in
             if response.response?.statusCode == 200 {
-                let user = response.result.value! as User
+                let userObject = response.result.value! as! Dictionary<String, Any>
+                let user = Mapper<User>().map(JSONObject: userObject["current_user"])
                 AuthorizationService.sharedInstance.currentUser = user
                 let notificationName = Notification.Name("signedIn")
                 NotificationCenter.default.post(name: notificationName, object: user)
-                success(user)
+                success(user!)
             } else {
-                let error = response.result.error as? NSError
-                failure(ServerError(parameters: error!))
+                let authErrors = response.result.value! as! Dictionary<String, Any>
+                failure(ServerError(status: response.response!.statusCode, description: "Token expired"))
             }
         }
     }

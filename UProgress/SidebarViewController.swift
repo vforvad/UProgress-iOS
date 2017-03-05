@@ -95,8 +95,10 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
     
     func signedIn(user: Notification) {
         if let currentUserInfo = user.object {
-            AuthorizationService.sharedInstance.currentUser = currentUserInfo as! User
-            navigationView.setUser(user: AuthorizationService.sharedInstance.currentUser)
+            AuthorizationService.sharedInstance.currentUser = currentUserInfo as? User
+            if AuthorizationService.sharedInstance.currentUser != nil {
+                navigationView.setUser(user: AuthorizationService.sharedInstance.currentUser)
+            }
         }
     }
     
