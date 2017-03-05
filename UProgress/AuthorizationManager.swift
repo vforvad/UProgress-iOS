@@ -64,8 +64,8 @@ class AuthorizationManager: AuthorizationManagerProtocol {
                 NotificationCenter.default.post(name: notificationName, object: user)
                 success(user!)
             } else {
-                let authErrors = response.result.value! as! Dictionary<String, Any>
-                failure(ServerError(status: response.response!.statusCode, description: "Token expired"))
+//                let authErrors = response.result.value! as! Dictionary<String, Any>
+                failure(ServerError(status: response.response?.statusCode, description: "Token expired"))
             }
         }
     }

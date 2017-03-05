@@ -11,7 +11,7 @@ import UIKit
 
 class ServerError: NSObject {
     var desc: String = ""
-    var status: Int = 0
+    var status: Int?
     var params: Dictionary<String, AnyObject>?
     var formErrors: NSDictionary!
     var parentController: UIViewController?
@@ -25,7 +25,7 @@ class ServerError: NSObject {
         self.desc = parameters.localizedDescription
     }
     
-    init(status: Int, description: String) {
+    init(status: Int?, description: String) {
         self.status = status
         self.desc = description
     }

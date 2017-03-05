@@ -2322,22 +2322,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UProgressTests/DirectionsManagerSpec.swift"
-            timestampString = "510261841.660848"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "spec()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "UProgressTests/DirectionDetailManagerSpec.swift"
             timestampString = "510261841.660848"
             startingColumnNumber = "9223372036854775807"
@@ -2361,6 +2345,22 @@
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "signUp(signUpParameters:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/AuthorizationManager.swift"
+            timestampString = "510443373.738113"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "currentUser(success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

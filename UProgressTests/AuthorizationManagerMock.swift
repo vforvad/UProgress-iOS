@@ -21,7 +21,7 @@ class AuthorizationManagerMock: AuthorizationManagerProtocol {
     func signIn(signInParameters: Dictionary<String, AnyObject>, success: @escaping (_ currentUser: User) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
         if successRequest! {
             signIn = true
-            success(User())
+            success(User()!)
         }
         else {
             signIn = false
@@ -32,7 +32,7 @@ class AuthorizationManagerMock: AuthorizationManagerProtocol {
     func signUp(signUpParameters: Dictionary<String, AnyObject>, success: @escaping (_ currentUser: User) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
         if successRequest! {
             signUp = true
-            success(User())
+            success(User()!)
         }
         else {
             signUp = false
@@ -43,7 +43,7 @@ class AuthorizationManagerMock: AuthorizationManagerProtocol {
     func currentUser(success: @escaping (User) -> Void, failure: @escaping (ServerError) -> Void) {
         if successRequest! {
             userReceived = true
-            success(User())
+            success(User()!)
         }
         else {
             userReceived = false

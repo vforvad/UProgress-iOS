@@ -12,7 +12,7 @@ import Nimble
 import Mockingjay
 import Alamofire
 
-class DirectionManagerSpec: QuickSpec {
+class DirectionManagerSpec: BaseTest {
     override func spec() {
         super.spec()
         var directionsList: [Direction]!

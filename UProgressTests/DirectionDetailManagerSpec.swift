@@ -11,7 +11,7 @@ import Quick
 import Nimble
 import Mockingjay
 
-class DirectionDetailManagerSpec: QuickSpec {
+class DirectionDetailManagerSpec: BaseTest {
     let model = DirectionDetailManager()
     var detailDirection: Direction!
     var createStepError: ServerError!
