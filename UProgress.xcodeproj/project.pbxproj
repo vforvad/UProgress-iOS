@@ -1949,6 +1949,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgressTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RESET_LAUNCH_VIEW = NO;
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UProgress.app/UProgress";
 			};
@@ -1969,6 +1970,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgressTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RESET_LAUNCH_VIEW = NO;
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UProgress.app/UProgress";
 			};

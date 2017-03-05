@@ -13,6 +13,7 @@ class LaunchViewController: UIViewController, LaunchViewProtocol {
     var isMainControllerVisible = false
     var presenter: LaunchPresenter!
     let runLauncher = Bundle.main.infoDictionary!["RESET_LAUNCH_VIEW"] as? Bool
+    let envValue = (ProcessInfo.processInfo.environment["RESET_LAUNCH_VIEW"] != nil) as Bool
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,8 @@ class LaunchViewController: UIViewController, LaunchViewProtocol {
         let presenter = LaunchPresenter(model: model, view: self)
         NavigationViewController.isMainControllerVisible = false
         self.navigationController?.isNavigationBarHidden = true
-        if runLauncher == nil {
+        let dic = ProcessInfo.processInfo.environment
+        if !envValue {
             presenter.currentUser()
         }
     }
