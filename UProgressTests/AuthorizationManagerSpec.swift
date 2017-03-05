@@ -30,15 +30,13 @@ class AuthorizationManagerSpec: QuickSpec {
         }
         
         describe("signIn()") {
-            beforeEach {
-                let path = Bundle(for: type(of: self)).path(forResource: "token", ofType: "json")!
-                let data = NSData(contentsOfFile: path)!
-                self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/sessions"), jsonData(data as Data))
-            }
             
             context("with valid attributes") {
                 beforeEach {
-//                    waitUntil(action: { done in
+                    let path = Bundle(for: type(of: self)).path(forResource: "token", ofType: "json")!
+                    let data = NSData(contentsOfFile: path)!
+                    self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/sessions"), jsonData(data as Data))
+                    
                         self.model.signIn(signInParameters: ["email": "111@mail.ru" as AnyObject],
                         success: { user in
                             self.currentUser = user
@@ -46,29 +44,70 @@ class AuthorizationManagerSpec: QuickSpec {
                         failure: { error in
                         
                         })
-                        
-//                    })
+                    
                 }
                 
                 it("user exists") {
                     expect(self.currentUser).toEventuallyNot(beNil(), timeout: 10.0)
                 }
-                
-//                it("direction have particular id") {
-//                    expect(self.detailDirection.id).to(equal(1))
-//                }
+
             }
             
             context("with invalid attributes") {
+                beforeEach {
+                    self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/sessions"), json(["errors": ["email": "Can't be blank"]], status: 403, headers: [:]))
+                    self.model.signIn(signInParameters: ["email": "111@mail.ru" as AnyObject],
+                                      success: { user in
+                                        self.currentUser = user
+                    },
+                                      failure: { error in
+                                       self.errors = error
+                    })
+                }
                 
+                it("receive error") {
+                    expect(self.errors).toEventuallyNot(beNil(), timeout: 10.0)
+                }
             }
         }
         
         describe("signUp()") {
-            beforeEach {
-                let path = Bundle(for: type(of: self)).path(forResource: "token", ofType: "json")!
-                let data = NSData(contentsOfFile: path)!
-                self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/registrations"), jsonData(data as Data))
+            context("with valid attributes") {
+                beforeEach {
+                    let path = Bundle(for: type(of: self)).path(forResource: "token", ofType: "json")!
+                    let data = NSData(contentsOfFile: path)!
+                    self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/registrations"), jsonData(data as Data))
+                    
+                    self.model.signIn(signInParameters: ["email": "111@mail.ru" as AnyObject],
+                                      success: { user in
+                                        self.currentUser = user
+                    },
+                                      failure: { error in
+                                        
+                    })
+                    
+                }
+                
+                it("receives current user") {
+                    expect(self.currentUser).toEventuallyNot(beNil(), timeout: 10.0)
+                }
+            }
+            
+            context("with invalid attributes") {
+                beforeEach {
+                    self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/registrations"), json(["errors": ["email": "Can't be blank"]], status: 403, headers: [:]))
+                    self.model.signIn(signInParameters: ["email": "" as AnyObject],
+                                      success: { user in
+                                        self.currentUser = user
+                    },
+                                      failure: { error in
+                                        self.errors = error
+                    })
+                }
+                
+                it("receive error") {
+                    expect(self.errors).toEventuallyNot(beNil(), timeout: 10.0)
+                }
             }
         }
         

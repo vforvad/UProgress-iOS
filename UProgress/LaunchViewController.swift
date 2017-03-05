@@ -21,7 +21,7 @@ class LaunchViewController: UIViewController, LaunchViewProtocol {
         let presenter = LaunchPresenter(model: model, view: self)
         NavigationViewController.isMainControllerVisible = false
         self.navigationController?.isNavigationBarHidden = true
-        let dic = ProcessInfo.processInfo.environment
+        
         if !envValue {
             presenter.currentUser()
         }
