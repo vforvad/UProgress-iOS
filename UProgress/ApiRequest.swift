@@ -16,7 +16,7 @@ public enum Method: String {
 }
 
 class ApiRequest: NSObject {
-    var host = "http://0e0e33e3.ngrok.io"
+    var host = Bundle.main.infoDictionary!["API_ENDPOINT"] as! String
     var keychain = KeychainSwift()
     var mockedUrl: String!
     
