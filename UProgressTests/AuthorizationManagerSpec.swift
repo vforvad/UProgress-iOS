@@ -112,7 +112,18 @@ class AuthorizationManagerSpec: QuickSpec {
         }
         
         describe("currentUser()") {
-        
+            beforeEach {
+                self.model.currentUser(
+                success: { user in
+                    self.currentUser = user
+                },
+                failure: { error in
+                
+                })
+            }
+            it("receives current user") {
+                expect(self.currentUser).toEventuallyNot(beNil(), timeout: 10.0)
+            }
         }
     }
 }
