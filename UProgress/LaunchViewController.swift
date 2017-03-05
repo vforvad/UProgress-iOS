@@ -16,8 +16,8 @@ class LaunchViewController: UIViewController, LaunchViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var model = AuthorizationManager()
-        var presenter = LaunchPresenter(model: model, view: self)
+        let model = AuthorizationManager()
+        let presenter = LaunchPresenter(model: model, view: self)
         NavigationViewController.isMainControllerVisible = false
         self.navigationController?.isNavigationBarHidden = true
         if runLauncher == nil {
