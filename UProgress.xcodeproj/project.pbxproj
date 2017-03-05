@@ -181,6 +181,7 @@
 		64860B941E5F77F5002ACD43 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B831E5F5865002ACD43 /* ProfilePresenter.swift */; };
 		64860B951E5F7815002ACD43 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B891E5F6FA4002ACD43 /* Attachment.swift */; };
 		64860B961E5F7815002ACD43 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860B891E5F6FA4002ACD43 /* Attachment.swift */; };
+		64885E561E6C19BD0060FF98 /* StepPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64885E551E6C19BD0060FF98 /* StepPresenterSpec.swift */; };
 		649369AC1E65CBB200B4C58F /* StatisticsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369AB1E65CBB200B4C58F /* StatisticsItem.swift */; };
 		649369AE1E65CC4D00B4C58F /* StatisticsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369AD1E65CC4D00B4C58F /* StatisticsInfo.swift */; };
 		649369B01E65CCF400B4C58F /* StatisticsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649369AF1E65CCF400B4C58F /* StatisticsManagerProtocol.swift */; };
@@ -460,6 +461,7 @@
 		64860B851E5F5899002ACD43 /* ProfileViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewProtocol.swift; sourceTree = "<group>"; };
 		64860B871E5F5948002ACD43 /* ProfilePopupProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePopupProtocol.swift; sourceTree = "<group>"; };
 		64860B891E5F6FA4002ACD43 /* Attachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		64885E551E6C19BD0060FF98 /* StepPresenterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepPresenterSpec.swift; sourceTree = "<group>"; };
 		649369AB1E65CBB200B4C58F /* StatisticsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsItem.swift; sourceTree = "<group>"; };
 		649369AD1E65CC4D00B4C58F /* StatisticsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsInfo.swift; sourceTree = "<group>"; };
 		649369AF1E65CCF400B4C58F /* StatisticsManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsManagerProtocol.swift; sourceTree = "<group>"; };
@@ -929,6 +931,7 @@
 			isa = PBXGroup;
 			children = (
 				64B4C18D1E6AAFC60005137E /* DirectionDetailPresenterSpec.swift */,
+				64885E551E6C19BD0060FF98 /* StepPresenterSpec.swift */,
 			);
 			name = presenter;
 			sourceTree = "<group>";
@@ -1567,6 +1570,7 @@
 				64A108391E6459F800BBD065 /* AuthorizationViewProtocol.swift in Sources */,
 				64A108231E6415C100BBD065 /* AttachmentPresenterProtocol.swift in Sources */,
 				64259D2B1E69B129008F7E2F /* DirectionDetailManagerSpec.swift in Sources */,
+				64885E561E6C19BD0060FF98 /* StepPresenterSpec.swift in Sources */,
 				64D930C31E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
 				64DA9D001E656817008D24AD /* StatisticsViewController.swift in Sources */,
 				6424076D1E52114600E4CF95 /* String.swift in Sources */,

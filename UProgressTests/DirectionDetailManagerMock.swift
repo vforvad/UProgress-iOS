@@ -11,7 +11,7 @@ import Foundation
 class DirectionDetailManagerMock: DirectionDetailManagerProtocol {
     var successRequest: Bool!
     var loadDirection: Bool!
-    var createDirection: Bool!
+    var createStep: Bool!
     var updateStep: Bool!
     var deleteStep: Bool!
     
@@ -34,11 +34,11 @@ class DirectionDetailManagerMock: DirectionDetailManagerProtocol {
     func createStep(userNick: String, directionId: String!, parameters: Dictionary<String, AnyObject>, success: @escaping (_ step: Step) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
         
         if successRequest! {
-            createDirection = true
+            createStep = true
             success(Step()!)
         }
         else {
-            createDirection = false
+            createStep = false
             failure(ServerError())
         }
     }
