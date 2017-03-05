@@ -12,8 +12,8 @@ class DirectionDetailManagerMock: DirectionDetailManagerProtocol {
     var successRequest: Bool!
     var loadDirection: Bool!
     var createDirection: Bool!
-    var updateDirection: Bool!
-    var deleteDirection: Bool!
+    var updateStep: Bool!
+    var deleteStep: Bool!
     
     init(request: Bool) {
         self.successRequest = request
@@ -35,29 +35,35 @@ class DirectionDetailManagerMock: DirectionDetailManagerProtocol {
         
         if successRequest! {
             createDirection = true
+            success(Step()!)
         }
         else {
             createDirection = false
+            failure(ServerError())
         }
     }
     
     func updateStep(userNick: String, directionId: String!, stepId: String!, parameters: Dictionary<String, AnyObject>, success: @escaping (_ step: Step) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
         
         if successRequest! {
-            updateDirection = true
+            updateStep = true
+            success(Step()!)
         }
         else {
-            updateDirection = false
+            updateStep = false
+            failure(ServerError())
         }
     }
     
     func deleteStep(userNick: String, directionId: String!, stepId: String!, success: @escaping (_ step: Step) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
         
         if successRequest! {
-            deleteDirection = true
+            deleteStep = true
+            success(Step()!)
         }
         else {
-           deleteDirection = false
+           deleteStep = false
+            failure(ServerError())
         }
     }
 }

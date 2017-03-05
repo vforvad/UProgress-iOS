@@ -62,13 +62,13 @@ class DirectionDetailPresenterSpec: QuickSpec {
                 }
                 
                 context("model") {
-                    it("receives success callback") {
+                    it("receives failed callback") {
                         expect(model.loadDirection).to(beFalsy())
                     }
                 }
                 
                 context("view") {
-                    it("receives success callback") {
+                    it("receives failed callback") {
                         expect(self.view.directionLoad).to(beFalsy())
                     }
                 }
@@ -77,11 +77,86 @@ class DirectionDetailPresenterSpec: QuickSpec {
         }
         
         describe("updateStep()") {
+            context("with valid attributes") {
+                let model = DirectionDetailManagerMock(request: true)
+                beforeEach {
+                    let presenter = DirectionsDetailPresenter(model: model, view: self.view)
+                    presenter.updateStep(userId: "vforvad", directionId: "1", stepId: "1", parameters: ["title": "title" as AnyObject])
+                }
+                
+                context("model") {
+                    it("receives success callback") {
+                        expect(model.updateStep).to(beTruthy())
+                    }
+                }
+                
+                context("view") {
+                    it("receives success callback") {
+                        expect(self.view.stepUpdate).to(beTruthy())
+                    }
+                }
+            }
             
+            context("with invalid attributes") {
+                let model = DirectionDetailManagerMock(request: false)
+                beforeEach {
+                    let presenter = DirectionsDetailPresenter(model: model, view: self.view)
+                    presenter.updateStep(userId: "vforvad", directionId: "1", stepId: "1", parameters: ["title": "" as AnyObject])
+                }
+                
+                context("model") {
+                    it("receives failed callback") {
+                        expect(model.updateStep).to(beFalsy())
+                    }
+                }
+                
+                context("view") {
+                    it("receives failed callback") {
+                        expect(self.view.stepUpdate).to(beFalsy())
+                    }
+                }
+            }
         }
         
         describe("deleteStep()") {
+            context("success") {
+                let model = DirectionDetailManagerMock(request: true)
+                beforeEach {
+                    let presenter = DirectionsDetailPresenter(model: model, view: self.view)
+                    presenter.deleteStep(userId: "vforvad", directionId: "1", stepId: "1")
+                }
+                context("model") {
+                    it("receives success callback") {
+                        expect(model.deleteStep).to(beTruthy())
+                    }
+                }
+                
+                context("view") {
+                    it("receives success callback") {
+                        expect(self.view.stepDelete).to(beTruthy())
+                    }
+                }
+            }
             
+            context("failure") {
+                let model = DirectionDetailManagerMock(request: false)
+                beforeEach {
+                    let presenter = DirectionsDetailPresenter(model: model, view: self.view)
+                    presenter.deleteStep(userId: "vforvad", directionId: "1", stepId: "1")
+                }
+                
+                context("model") {
+                    it("receives success callback") {
+                        expect(model.deleteStep).to(beFalsy())
+                    }
+                }
+                
+                context("view") {
+                    it("receives success callback") {
+                        expect(self.view.stepDelete).to(beFalsy())
+                    }
+                }
+            }
         }
     }
 }
