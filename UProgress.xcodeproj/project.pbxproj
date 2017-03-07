@@ -55,6 +55,8 @@
 		642350F71E6EC082001791E1 /* ProfileManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642350F61E6EC082001791E1 /* ProfileManagerSpec.swift */; };
 		642350F91E6EE475001791E1 /* ProfileManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642350F81E6EE475001791E1 /* ProfileManagerMock.swift */; };
 		642350FC1E6EE53C001791E1 /* ProfileManagerPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642350FB1E6EE53C001791E1 /* ProfileManagerPresenterSpec.swift */; };
+		642351001E6EEF30001791E1 /* StatisticsManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642350FF1E6EEF30001791E1 /* StatisticsManagerSpec.swift */; };
+		642351021E6EEFCB001791E1 /* statistics.json in Resources */ = {isa = PBXBuildFile; fileRef = 642351011E6EEFCB001791E1 /* statistics.json */; };
 		642407681E51CA6800E4CF95 /* StepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642407671E51CA6800E4CF95 /* StepTableViewCell.swift */; };
 		6424076A1E51CA7400E4CF95 /* StepTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 642407691E51CA7400E4CF95 /* StepTableViewCell.xib */; };
 		6424076B1E52114300E4CF95 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6483E4D21E4093F60072B97C /* Date.swift */; };
@@ -396,6 +398,8 @@
 		642350F61E6EC082001791E1 /* ProfileManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileManagerSpec.swift; sourceTree = "<group>"; };
 		642350F81E6EE475001791E1 /* ProfileManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileManagerMock.swift; sourceTree = "<group>"; };
 		642350FB1E6EE53C001791E1 /* ProfileManagerPresenterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileManagerPresenterSpec.swift; sourceTree = "<group>"; };
+		642350FF1E6EEF30001791E1 /* StatisticsManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsManagerSpec.swift; sourceTree = "<group>"; };
+		642351011E6EEFCB001791E1 /* statistics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = statistics.json; sourceTree = "<group>"; };
 		642407671E51CA6800E4CF95 /* StepTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTableViewCell.swift; sourceTree = "<group>"; };
 		642407691E51CA7400E4CF95 /* StepTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StepTableViewCell.xib; sourceTree = "<group>"; };
 		642407731E52190B00E4CF95 /* StepCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCellProtocol.swift; sourceTree = "<group>"; };
@@ -627,6 +631,22 @@
 			name = presenter;
 			sourceTree = "<group>";
 		};
+		642350FD1E6EEF1C001791E1 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				642350FE1E6EEF23001791E1 /* model */,
+			);
+			name = Statistics;
+			sourceTree = "<group>";
+		};
+		642350FE1E6EEF23001791E1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				642350FF1E6EEF30001791E1 /* StatisticsManagerSpec.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		642407661E51CA5000E4CF95 /* steps */ = {
 			isa = PBXGroup;
 			children = (
@@ -668,6 +688,7 @@
 				64259D2C1E69B571008F7E2F /* new_step.json */,
 				64885E5B1E6C1D2A0060FF98 /* token.json */,
 				64885E5D1E6C1EC30060FF98 /* current_user.json */,
+				642351011E6EEFCB001791E1 /* statistics.json */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -834,6 +855,7 @@
 		6474B1BA1E3D04C200C46165 /* UProgressTests */ = {
 			isa = PBXGroup;
 			children = (
+				642350FD1E6EEF1C001791E1 /* Statistics */,
 				642350F41E6EBFF5001791E1 /* User */,
 				64885E571E6C1BCD0060FF98 /* Authorization */,
 				64259D291E69B10F008F7E2F /* DirectionsDetail */,
@@ -1324,6 +1346,7 @@
 				64885E611E6C21C10060FF98 /* iPad.storyboard in Resources */,
 				64885E5F1E6C21BC0060FF98 /* iPhone.storyboard in Resources */,
 				641B30AB1E4BCC8600FF60CC /* DirectionDetailInfoView.xib in Resources */,
+				642351021E6EEFCB001791E1 /* statistics.json in Resources */,
 				641D44B51E5B9858005F64E9 /* ProfileCell.xib in Resources */,
 				64259D261E699AB9008F7E2F /* detail_direction.json in Resources */,
 				64DA9D021E656BFF008D24AD /* StatisticsStoryboard.storyboard in Resources */,
@@ -1673,6 +1696,7 @@
 				6424076D1E52114600E4CF95 /* String.swift in Sources */,
 				642407751E52197000E4CF95 /* StepCellProtocol.swift in Sources */,
 				64D930BF1E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */,
+				642351001E6EEF30001791E1 /* StatisticsManagerSpec.swift in Sources */,
 				64D930C71E3E7311007C7112 /* DirectionListPresenterImpl.swift in Sources */,
 				641D44BB1E5B9B12005F64E9 /* DirectionDetailManagerProtocol.swift in Sources */,
 				6458005B1E54B04E002366CA /* StepFormViewController.swift in Sources */,
