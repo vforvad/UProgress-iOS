@@ -52,7 +52,35 @@ class ProfileManagerSpec: BaseTest {
             }
             
             context("with invalid attributes") {
-            
+                beforeEach {
+                    let path = Bundle(for: type(of: self)).path(forResource: "current_user", ofType: "json")!
+                    let data = NSData(contentsOfFile: path)!
+                    self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/users/vforvad"), json(["errors": ["email": "Can't be blank"]], status: 403, headers: [:]))
+                    
+                    let params = ["email": "", "nick": "vforvad"]
+                    
+                    
+                    waitUntil(action: { done in
+                        self.model.updateProfile(userId: "vforvad", profileParameters: params as Dictionary<String, AnyObject>,
+                                                 success: { user in
+                                                    
+                                                    
+                        },
+                                                 failure: { error in
+                                                    self.updateError = error
+                                                    done()
+                        })
+                        
+                    })
+                }
+                
+                it("receives error") {
+                    expect(self.updateError).toEventuallyNot(beNil())
+                }
+                
+                it("errors object is not empty") {
+                    expect(self.updateError.params?["email"]).toEventuallyNot(beNil())
+                }
             }
         }
     }
