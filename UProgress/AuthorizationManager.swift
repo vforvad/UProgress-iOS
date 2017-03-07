@@ -47,8 +47,8 @@ class AuthorizationManager: AuthorizationManagerProtocol {
                 self.currentUser(success: success, failure: failure)
             }
             else {
-                let error = response.result.value as! NSDictionary
-                let errorMessage = error.object(forKey: "errors") as! NSDictionary
+                let error = response.result.value as? NSDictionary
+                let errorMessage = error?.object(forKey: "errors") as! NSDictionary
                 failure(ServerError(status: response.response!.statusCode, parameters: errorMessage))
             }
         }

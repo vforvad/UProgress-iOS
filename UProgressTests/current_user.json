@@ -1,7 +1,7 @@
 {
     "current_user": {
         "id": 123456,
-        "email": "vforvad@gmail.com",
+        "email": "example@mail.com",
         "nick": "vforvad",
         "created_at": "2016-12-31T19:18:01.148Z",
         "updated_at": "2016-12-31T19:18:01.148Z",
