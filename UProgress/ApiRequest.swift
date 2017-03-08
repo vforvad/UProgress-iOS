@@ -15,8 +15,21 @@ public enum Method: String {
     case GET, HEAD, POST, PUT, PATCH, DELETE
 }
 
+class ApiEndpoint {
+    let data: NSDictionary!
+    
+    init() {
+        let path = Bundle(for: type(of: self)).path(forResource: "Info", ofType: "plist")!
+        data = NSDictionary(contentsOfFile: path)!
+    }
+    
+    func getHost() -> String {
+        return data["API_ENDPOINT"] as! String
+    }
+}
+    
 class ApiRequest: NSObject {
-    var host = Bundle.main.infoDictionary!["API_ENDPOINT"] as! String
+    var host = ApiEndpoint().getHost()
     var keychain = KeychainSwift()
     var mockedUrl: String!
     
@@ -24,7 +37,6 @@ class ApiRequest: NSObject {
         struct Singleton {
             static let instance: ApiRequest = ApiRequest()
         }
-        
         return Singleton.instance
     }
     

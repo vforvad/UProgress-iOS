@@ -8,6 +8,9 @@ PODS:
   - Charts (3.0.1):
     - Charts/Core (= 3.0.1)
   - Charts/Core (3.0.1)
+  - Embassy (3.0.1)
+  - EnvoyAmbassador (3.0.0):
+    - Embassy (~> 3.0)
   - KeychainSwift (7.0.0)
   - KIF (3.5.1):
     - KIF/Core (= 3.5.1)
@@ -33,6 +36,8 @@ DEPENDENCIES:
   - AlamofireImage
   - AlamofireObjectMapper (~> 4.0)
   - Charts
+  - Embassy
+  - EnvoyAmbassador
   - KeychainSwift (~> 7.0)
   - KIF
   - MBProgressHUD
@@ -50,6 +55,8 @@ SPEC CHECKSUMS:
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
+  Embassy: a84d4c72455ce0f1f90fa4acbf81b4f0658f6aad
+  EnvoyAmbassador: 624f3c5a1ff24b09535180992b0de59f207888a4
   KeychainSwift: b6947435dd78cc442c64a84ae648dd0e871cf448
   KIF: 082eb65279e51c3092923802849eb796a04982ab
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -63,6 +70,6 @@ SPEC CHECKSUMS:
   UIScrollView-InfiniteScroll: d26885be71caca7485cdb37eab513a8f89036bb0
   URITemplate: a5acb3f76c6a2338116fde88b658d83f91bbac45
 
-PODFILE CHECKSUM: ab263ce47f7d35c9a41f9bb12659ace8028caef3
+PODFILE CHECKSUM: ab56c16a1f410cc7f4ea635e887e600c1c64b7db
 
 COCOAPODS: 1.2.0

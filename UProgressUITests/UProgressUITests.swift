@@ -7,70 +7,77 @@
 //
 
 import XCTest
+//import Mockingjay
+import KeychainSwift
 
 class UProgressUITests: XCTestCase {
-        
+    var app: XCUIApplication!
+    
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        
+        app = XCUIApplication()
+        app.launch()
+        
+//        KeychainSwift().set("123456", forKey: "uprogresstoken")
+//        let path = Bundle(for: type(of: self)).path(forResource: "current_user", ofType: "json")!
+//
+//        let data = NSData(contentsOfFile: path)!
+//        MockingjayProtocol.addStub(matcher: uri("\(ApiRequest.sharedInstance.host)/api/v1/sessions/current"), builder: jsonData(data as Data))
+//        
+//        let imagePath = Bundle(for: type(of: self)).path(forResource: "shut_up_and_take_my_money", ofType: "jpg")!
+//        let imageData = NSData(contentsOfFile: imagePath)!
+//        self.stub(uri("http://1234/image.jpg"), jsonData(imageData as Data))
+//        
+//        let p = Bundle(for: type(of: self)).path(forResource: "directions", ofType: "json")!
+//        let d = NSData(contentsOfFile: p)!
+//        self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/users/vforvad/directions?page=1"), jsonData(d as Data))
+//        
+//        let pathSignIn = Bundle(for: type(of: self)).path(forResource: "token", ofType: "json")!
+//        let dataSignIn = NSData(contentsOfFile: pathSignIn)!
+//        self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/sessions"), jsonData(dataSignIn as Data))
+//        stub(condition: isPath("/api/v1/sessions"),response: { _ in
+//            let stubPath = OHPathForFile("token.json", type(of: self))
+//            return OHHTTPStubsResponse(fileAtPath: stubPath!, statusCode: 200, headers: ["Content-Type": "application/json"])
+//        })
+        
+//        stub(condition: isHost("\(ApiRequest.sharedInstance.host)/api/v1/current"), response: { _ in
+//            let stubPath = OHPathForFile("current_user.json", type(of: self))
+//            return fixture(filePath: stubPath!, headers: ["Content-Type" as NSObject: "application/json" as AnyObject])
+//        })
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        /*
-         EXAMPLE JSON SCHEME
-        {
-            directions: [
-            {
-            "id"=>318,
-            "title"=>"Direction new",
-            "description"=>"Salsa mlwkmdlkawlkdmlawkdml",
-            "created_at"=>Mon, 27 Feb 2017 15:28:56 UTC +00:00,
-            "updated_at"=>Mon, 27 Feb 2017 15:28:56 UTC +00:00,
-            "user_id"=>21,
-            "slug"=>"direction_new",
-            "steps_count"=>0,
-            "finished_steps_count"=>0
-            },
-            {
-            "id"=>317,
-            "title"=>"Direction new",
-            "description"=>"Salsa mlwkmdlkawlkdmlawkdml",
-            "created_at"=>Mon, 27 Feb 2017 15:24:03 UTC +00:00,
-            "updated_at"=>Mon, 27 Feb 2017 15:24:03 UTC +00:00,
-            "user_id"=>21,
-            "slug"=>"direction_new",
-            "steps_count"=>0,
-            "finished_steps_count"=>0
-            },
-            {
-            "id"=>316,
-            "title"=>"114",
-            "description"=>"112",
-            "created_at"=>Fri, 06 Jan 2017 19:03:02 UTC +00:00,
-            "updated_at"=>Sun, 19 Feb 2017 15:23:42 UTC +00:00,
-            "user_id"=>21,
-            "slug"=>"114",
-            "steps_count"=>2,
-            "finished_steps_count"=>0
-            }
-            ]    
-        }
-         */
+    func testEmailFieldExists() {
+        let textField = app.textFields["Email"]
+        XCTAssert(textField.exists)
     }
     
+    func testPasswordFieldExists() {
+        let passwordField = app.secureTextFields["Password"]
+        XCTAssert(passwordField.exists)
+    }
+    
+    func testSuccessAuthorizationFlow() {
+//        stub(condition: isPath("/api/v1/sessions"),response: { _ in
+//            let stubPath = OHPathForFile("token.json", type(of: self))
+//            return OHHTTPStubsResponse(fileAtPath: stubPath!, statusCode: 200, headers: ["Content-Type": "application/json"])
+//        })
+        
+        let emailField = app.textFields["Email"]
+        let passwordField = app.secureTextFields["Password"]
+        let button = app.buttons["Sign in!"]
+        
+        emailField.tap()
+        emailField.typeText("example@mail.com")
+        passwordField.tap()
+        passwordField.typeText("password")
+        button.tap()
+        waitForExpectations(timeout: 10, handler: nil)
+        XCTAssert(app.staticTexts["example@mail.com"].exists)
+    }
 }
