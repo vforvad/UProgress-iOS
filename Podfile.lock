@@ -13,12 +13,21 @@ PODS:
     - KIF/Core (= 3.5.1)
   - KIF/Core (3.5.1)
   - MBProgressHUD (1.0.0)
+  - Mockingjay (2.0.0):
+    - Mockingjay/Core (= 2.0.0)
+    - Mockingjay/XCTest (= 2.0.0)
+  - Mockingjay/Core (2.0.0):
+    - URITemplate (~> 2.0)
+  - Mockingjay/XCTest (2.0.0):
+    - Mockingjay/Core
   - Nimble (6.0.1)
   - ObjectMapper (2.2.2)
+  - Quick (1.1.0)
   - SideMenuController (0.2.4)
   - Toaster (2.0.1)
   - UIColor_Hex_Swift (3.0.2)
   - UIScrollView-InfiniteScroll (1.0.0)
+  - URITemplate (2.0.0)
 
 DEPENDENCIES:
   - AlamofireImage
@@ -27,8 +36,10 @@ DEPENDENCIES:
   - KeychainSwift (~> 7.0)
   - KIF
   - MBProgressHUD
+  - Mockingjay
   - Nimble
   - ObjectMapper (~> 2.2)
+  - Quick
   - SideMenuController
   - Toaster (~> 2.0)
   - UIColor_Hex_Swift (~> 3.0.2)
@@ -42,13 +53,16 @@ SPEC CHECKSUMS:
   KeychainSwift: b6947435dd78cc442c64a84ae648dd0e871cf448
   KIF: 082eb65279e51c3092923802849eb796a04982ab
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  Mockingjay: 7122a3fc0597aa63438e4cd9b71b7bc8aac05b87
   Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
   ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   SideMenuController: b463d2b3aa58e2afe57f57a07938fa9a647894ca
   Toaster: be65cd48e93a525b2a9cc4bd25a2bfc900e02d9f
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
   UIScrollView-InfiniteScroll: d26885be71caca7485cdb37eab513a8f89036bb0
+  URITemplate: a5acb3f76c6a2338116fde88b658d83f91bbac45
 
-PODFILE CHECKSUM: cf50a5336da32db4a48fcb5d27fd623c3979fb70
+PODFILE CHECKSUM: ab263ce47f7d35c9a41f9bb12659ace8028caef3
 
 COCOAPODS: 1.2.0

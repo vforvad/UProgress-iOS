@@ -12,7 +12,6 @@ class UProgressUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
-        ApiRequest.sharedInstance.mockedUrl = "http://www.mocky.io/v2/58b6976911000038109c41c6"
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
         

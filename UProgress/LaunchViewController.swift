@@ -12,14 +12,19 @@ import SideMenuController
 class LaunchViewController: UIViewController, LaunchViewProtocol {
     var isMainControllerVisible = false
     var presenter: LaunchPresenter!
+    let runLauncher = Bundle.main.infoDictionary!["RESET_LAUNCH_VIEW"] as? Bool
+    let envValue = (ProcessInfo.processInfo.environment["RESET_LAUNCH_VIEW"] != nil) as Bool
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var model = AuthorizationManager()
-        var presenter = LaunchPresenter(model: model, view: self)
+        let model = AuthorizationManager()
+        let presenter = LaunchPresenter(model: model, view: self)
         NavigationViewController.isMainControllerVisible = false
         self.navigationController?.isNavigationBarHidden = true
-        presenter.currentUser()
+        
+        if !envValue {
+            presenter.currentUser()
+        }
     }
     
     internal func startLoader() {

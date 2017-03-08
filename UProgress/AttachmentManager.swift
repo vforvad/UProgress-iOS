@@ -24,20 +24,13 @@ class AttachmentManager: AttachmentManagerProtocol {
             case .success(let upload, _, _):
                 upload.validate().responseJSON(completionHandler: { response in
                     if let result = response.result.value {
-                        // Get the json response. From this, we can get all things we send back to the app.
                         let JSON = result as! Dictionary<String, AnyObject>
                         let attachment = Mapper<Attachment>().map(JSONObject: JSON["attachment"])
                         success(attachment!)
-//                        var user = AuthorizationService.sharedInstance.currentUser
-//                        user?.attachment = attachment
-//                        user?.avatarUrl = attachment?.url
-//                        AuthorizationService.sharedInstance.currentUser = user
-//                        let notificationName = Notification.Name("currentUserUpdated")
-//                        NotificationCenter.default.post(name: notificationName, object: AuthorizationService.sharedInstance.currentUser)
                     }
                 })
             case .failure(let error):
-                
+                // TODO - handle error case
                 print(error)
             }
             

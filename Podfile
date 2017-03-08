@@ -19,7 +19,9 @@ target 'UProgress' do
 
   target 'UProgressTests' do
       use_frameworks!
-      
+      pod 'Quick'
+      pod 'Nimble'
+      pod 'Mockingjay'
 #    inherit! :search_paths
   end
 
