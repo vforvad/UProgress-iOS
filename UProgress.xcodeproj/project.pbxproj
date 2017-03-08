@@ -110,6 +110,10 @@
 		645800701E54C4B1002366CA /* DefaultNavigationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6458006F1E54C4B1002366CA /* DefaultNavigationCell.xib */; };
 		645F5A0E1E3E95D0005CCBD6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 645F5A0D1E3E95D0005CCBD6 /* Alamofire.framework */; };
 		6464C5A71E44CBAA00C79975 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6464C5A61E44CBAA00C79975 /* Button.swift */; };
+		646841C51E6FF40E001F00D7 /* StatisticsManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646841C31E6FF40E001F00D7 /* StatisticsManagerMock.swift */; };
+		646841C61E6FF40E001F00D7 /* StatisticsPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646841C41E6FF40E001F00D7 /* StatisticsPresenterSpec.swift */; };
+		646841C91E6FF524001F00D7 /* AttachmentManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646841C81E6FF524001F00D7 /* AttachmentManagerSpec.swift */; };
+		646841CB1E6FF62C001F00D7 /* attachment.json in Resources */ = {isa = PBXBuildFile; fileRef = 646841CA1E6FF62C001F00D7 /* attachment.json */; };
 		646861881E467CF700583945 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861871E467CF700583945 /* LaunchViewController.swift */; };
 		6468618A1E46826700583945 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861891E46826700583945 /* LaunchPresenter.swift */; };
 		6468618C1E46827900583945 /* LaunchPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6468618B1E46827900583945 /* LaunchPresenterProtocol.swift */; };
@@ -429,6 +433,10 @@
 		645F5A111E3E95DB005CCBD6 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "../../Library/Developer/Xcode/DerivedData/UProgress-aykykkssnptaplcikgscotabfqrx/Build/Products/Debug-iphonesimulator/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
 		645F5A131E3E9F78005CCBD6 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "Pods/../build/Debug-iphoneos/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
 		6464C5A61E44CBAA00C79975 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		646841C31E6FF40E001F00D7 /* StatisticsManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsManagerMock.swift; sourceTree = "<group>"; };
+		646841C41E6FF40E001F00D7 /* StatisticsPresenterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsPresenterSpec.swift; sourceTree = "<group>"; };
+		646841C81E6FF524001F00D7 /* AttachmentManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentManagerSpec.swift; sourceTree = "<group>"; };
+		646841CA1E6FF62C001F00D7 /* attachment.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = attachment.json; sourceTree = "<group>"; };
 		646861871E467CF700583945 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		646861891E46826700583945 /* LaunchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
 		6468618B1E46827900583945 /* LaunchPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -634,6 +642,7 @@
 		642350FD1E6EEF1C001791E1 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				6423510F1E6FF2FD001791E1 /* presenter */,
 				642350FE1E6EEF23001791E1 /* model */,
 			);
 			name = Statistics;
@@ -642,9 +651,26 @@
 		642350FE1E6EEF23001791E1 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				646841C31E6FF40E001F00D7 /* StatisticsManagerMock.swift */,
 				642350FF1E6EEF30001791E1 /* StatisticsManagerSpec.swift */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		6423510E1E6FF2EE001791E1 /* Attachment */ = {
+			isa = PBXGroup;
+			children = (
+				646841C71E6FF517001F00D7 /* model */,
+			);
+			name = Attachment;
+			sourceTree = "<group>";
+		};
+		6423510F1E6FF2FD001791E1 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				646841C41E6FF40E001F00D7 /* StatisticsPresenterSpec.swift */,
+			);
+			name = presenter;
 			sourceTree = "<group>";
 		};
 		642407661E51CA5000E4CF95 /* steps */ = {
@@ -689,6 +715,7 @@
 				64885E5B1E6C1D2A0060FF98 /* token.json */,
 				64885E5D1E6C1EC30060FF98 /* current_user.json */,
 				642351011E6EEFCB001791E1 /* statistics.json */,
+				646841CA1E6FF62C001F00D7 /* attachment.json */,
 			);
 			name = Fixtures;
 			sourceTree = "<group>";
@@ -709,6 +736,14 @@
 				64B4C18B1E6AAFA80005137E /* model */,
 			);
 			name = DirectionsDetail;
+			sourceTree = "<group>";
+		};
+		646841C71E6FF517001F00D7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				646841C81E6FF524001F00D7 /* AttachmentManagerSpec.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 		646861861E467CE700583945 /* Launch */ = {
@@ -855,6 +890,7 @@
 		6474B1BA1E3D04C200C46165 /* UProgressTests */ = {
 			isa = PBXGroup;
 			children = (
+				6423510E1E6FF2EE001791E1 /* Attachment */,
 				642350FD1E6EEF1C001791E1 /* Statistics */,
 				642350F41E6EBFF5001791E1 /* User */,
 				64885E571E6C1BCD0060FF98 /* Authorization */,
@@ -1339,6 +1375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				646841CB1E6FF62C001F00D7 /* attachment.json in Resources */,
 				64259D1F1E697E97008F7E2F /* directions.json in Resources */,
 				64259D281E699B4A008F7E2F /* new_direction.json in Resources */,
 				64885E5E1E6C1EC30060FF98 /* current_user.json in Resources */,
@@ -1672,6 +1709,7 @@
 				64A1082F1E6457E900BBD065 /* AuthorizationsViewController.swift in Sources */,
 				641B30A31E4B67AB00FF60CC /* Step.swift in Sources */,
 				64A108451E645A4600BBD065 /* Constants.swift in Sources */,
+				646841C91E6FF524001F00D7 /* AttachmentManagerSpec.swift in Sources */,
 				64259D1C1E697E72008F7E2F /* DirectionsManagerSpec.swift in Sources */,
 				64A1084D1E64735500BBD065 /* DirectionPopupActions.swift in Sources */,
 				64944B131E5E3BF40093961B /* BasePopupViewController.swift in Sources */,
@@ -1696,6 +1734,7 @@
 				6424076D1E52114600E4CF95 /* String.swift in Sources */,
 				642407751E52197000E4CF95 /* StepCellProtocol.swift in Sources */,
 				64D930BF1E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */,
+				646841C61E6FF40E001F00D7 /* StatisticsPresenterSpec.swift in Sources */,
 				642351001E6EEF30001791E1 /* StatisticsManagerSpec.swift in Sources */,
 				64D930C71E3E7311007C7112 /* DirectionListPresenterImpl.swift in Sources */,
 				641D44BB1E5B9B12005F64E9 /* DirectionDetailManagerProtocol.swift in Sources */,
@@ -1714,6 +1753,7 @@
 				64A108331E6459D800BBD065 /* NavigationViewController.swift in Sources */,
 				64A108591E647A1100BBD065 /* DirectionFormPresenterProtocol.swift in Sources */,
 				649369C51E65CFDA00B4C58F /* StatisticsPresenter.swift in Sources */,
+				646841C51E6FF40E001F00D7 /* StatisticsManagerMock.swift in Sources */,
 				64DA9D041E657391008D24AD /* BaseSplitViewController.swift in Sources */,
 				64A1083F1E645A2500BBD065 /* AuthorizationFragmentController.swift in Sources */,
 				64B4C18A1E6AAE540005137E /* DirectionDetailManagerMock.swift in Sources */,

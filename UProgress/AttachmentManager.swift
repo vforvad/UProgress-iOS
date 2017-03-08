@@ -30,7 +30,7 @@ class AttachmentManager: AttachmentManagerProtocol {
                     }
                 })
             case .failure(let error):
-                
+                // TODO - handle error case
                 print(error)
             }
             
