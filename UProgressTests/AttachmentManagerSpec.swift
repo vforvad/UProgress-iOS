@@ -26,7 +26,6 @@ class AttachmentManagerSpec: BaseTest {
                     let imagePath = Bundle(for: type(of: self)).path(forResource: "shut_up_and_take_my_money", ofType: "jpg")!
                     self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/attachments"), jsonData(data as Data))
                     
-//                    waitUntil(timeout: 10, action: { done in
                         var image = UIImage(contentsOfFile: imagePath)
                         self.model.uploadImage(image: image, attachableId: 1, attachableType: "User",
                         success: { attachment in
@@ -35,8 +34,7 @@ class AttachmentManagerSpec: BaseTest {
                         failure: { error in
                             
                         })
-                        
-//                    })
+                    
                 }
                 
                 it("receives attachment") {
