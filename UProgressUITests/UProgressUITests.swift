@@ -42,7 +42,7 @@ class UProgressUITests: BaseUITest {
         XCTAssert(passwordField.exists)
     }
     
-    func testSuccessAuthorizationFlow() {
+    func testFailedAuthorizationFlow() {
         router["/api/v1/sessions"] = DelayResponse(JSONResponse(statusCode: 403, handler: { _ -> Any in
             return [
                 "errors": [
