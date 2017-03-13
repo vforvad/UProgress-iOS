@@ -42,10 +42,8 @@ class UProgressUITests: XCTestCase {
         eventLoopThreadCondition = NSCondition()
         eventLoopThread.start()
         
-        // Run event loop
-//        loop.runForever()
         app = XCUIApplication()
-//        app.launchEnvironment["\(ApiRequest.shared)]
+        app.launchEnvironment["UITests"] = "True"
         app.launch()
         
         continueAfterFailure = false

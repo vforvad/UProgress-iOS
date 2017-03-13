@@ -3,7 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
+	<dict>
+		<key>UProgressUITests copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>29</integer>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>6474B1A21E3D04C200C46165</key>
@@ -17,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>6474B1C11E3D04C200C46165</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64F3FC6F1E76E00D00D3F55B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -4,20 +4,36 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-UProgress-UProgressTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
+		</dict>
+		<key>Pods-UProgress-UProgressUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>19</integer>
+		</dict>
 		<key>Pods-UProgress.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
+			<key>orderHint</key>
+			<integer>15</integer>
 		</dict>
 		<key>Pods-UProgressTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
+			<key>orderHint</key>
+			<integer>20</integer>
 		</dict>
 		<key>Pods-UProgressUITests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<true/>
+			<key>orderHint</key>
+			<integer>21</integer>
 		</dict>
 		<key>UProgress.xcscheme_^#shared#^_</key>
 		<dict>

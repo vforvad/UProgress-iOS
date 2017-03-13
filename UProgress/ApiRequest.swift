@@ -24,8 +24,14 @@ class ApiEndpoint {
     }
     
     func getHost() -> String {
-        return "http://localhost:8080"
-//            data["API_ENDPOINT"] as! String
+        var host: String!
+        if (ProcessInfo.processInfo.environment["UITests"] != nil) {
+            host = "http://localhost:8080"
+        }
+        else {
+            host = data["API_ENDPOINT"] as! String
+        }
+        return host
     }
 }
     
