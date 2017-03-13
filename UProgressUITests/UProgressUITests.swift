@@ -7,8 +7,6 @@
 //
 
 import XCTest
-//import Mockingjay
-import KeychainSwift
 import Embassy
 import EnvoyAmbassador
 
@@ -16,16 +14,14 @@ class UProgressUITests: BaseUITest {
     
     override func setUp() {
         super.setUpWithHandler() {
-            super.router["/api/v1/sessions/current"] = DataResponse(
-                statusCode: 403,
-                statusMessage: "unauthorized",
-                contentType: "application/json",
-                headers: [("Content-Type", "application/json")]
-            ) { environ -> Data in
-                return Data(String(describing: ["user": ""]).utf8)
+            super.setUpWithHandler() {
+                super.router["/api/v1/sessions/current"] = JSONResponse(statusCode: 403, handler: { eviron -> Any in
+                    return [
+                        "user": ""
+                    ]
+                })
             }
         }
-        
     }
     
     override func tearDown() {
@@ -43,7 +39,7 @@ class UProgressUITests: BaseUITest {
     }
     
     func testFailedAuthorizationFlow() {
-        router["/api/v1/sessions"] = DelayResponse(JSONResponse(statusCode: 403, handler: { _ -> Any in
+        super.router["/api/v1/sessions"] = DelayResponse(JSONResponse(statusCode: 403, handler: { _ -> Any in
             return [
                 "errors": [
                     "email": ["Can't be blank"]
@@ -65,5 +61,38 @@ class UProgressUITests: BaseUITest {
         XCTAssert(self.app.staticTexts["Can't be blank"].exists)
 
         
+    }
+    
+    func testSuccessAuthorizationFlow() {
+        super.router["/api/v1/sessions/([a-zA-Z])"] = JSONResponse(statusCode: 200, handler: { _ -> Any in
+            return [
+                "current_user": [
+                    "id": 1,
+                    "email": "example@mail.com",
+                    "nick": "aaa",
+                    "attachment": [
+                        "url": "http://lurkmore.so/images/thumb/2/2d/Trollface_HD.png/250px-Trollface_HD.png"
+                    ]
+                ]
+            ]
+        })
+        
+        super.router["/api/v1/sessions"] = JSONResponse(statusCode: 200, handler: { _ -> Any in
+            return [
+                "token": "12345"
+            ]
+        })
+        
+        let emailField = app.textFields["Email"]
+        let passwordField = app.secureTextFields["Password"]
+        let button = app.buttons["Sign in!"]
+        
+        emailField.tap()
+        emailField.typeText("example@mail.com")
+        passwordField.tap()
+        passwordField.typeText("password")
+        button.tap()
+        sleep(5)
+        XCTAssert(self.app.staticTexts["@aaa"].exists)
     }
 }

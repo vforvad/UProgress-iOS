@@ -28,17 +28,6 @@ class BaseUITest: XCTestCase {
         eventLoop = try! SelectorEventLoop(selector: try! KqueueSelector())
         router = Router()
         server = DefaultHTTPServer(eventLoop: eventLoop, port: 8080, app: router.app)
-        router["/api/v1/sessions/current"] = DataResponse(
-            statusCode: 200,
-            statusMessage: "unauthorized",
-            contentType: "application/json",
-            headers: [("Content-Type", "application/json")]
-        ) { environ -> Data in
-            return Data(String(describing: ["current_user": [
-                "id": 1,
-                "nick": "aaa"
-                ]]).utf8)
-        }
         
         // Start HTTP server to listen on the port
         try! server.start()
@@ -62,6 +51,11 @@ class BaseUITest: XCTestCase {
         server.stopAndWait()
         eventLoopThreadCondition.lock()
         eventLoop.stop()
+        while eventLoop.running {
+            if !eventLoopThreadCondition.wait(until: NSDate().addingTimeInterval(10) as Date) {
+                fatalError("Join eventLoopThread timeout")
+            }
+        }
     }
     
     @objc private func runEventLoop() {

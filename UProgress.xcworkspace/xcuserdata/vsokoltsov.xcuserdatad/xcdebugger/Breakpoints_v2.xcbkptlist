@@ -1107,11 +1107,11 @@
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "UProgress.AuthorizationManager.(signIn (signInParameters : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, success : (UProgress.User) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "UProgress"
+                  symbolName = "UProgressUITests.AuthorizationManager.(signIn (signInParameters : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, success : (UProgressUITests.User) -&gt; (), failure : (UProgressUITests.ServerError) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "UProgressUITests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/AuthorizationManager.swift"
-                  timestampString = "511104667.261744"
+                  timestampString = "511131066.981051"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
@@ -1122,11 +1122,11 @@
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "UProgress.AuthorizationManager.(signIn (signInParameters : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, success : (UProgress.User) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "UProgress"
+                  symbolName = "UProgressUITests.AuthorizationManager.(signIn (signInParameters : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, success : (UProgressUITests.User) -&gt; (), failure : (UProgressUITests.ServerError) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "UProgressUITests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/AuthorizationManager.swift"
-                  timestampString = "511104667.265524"
+                  timestampString = "511131066.984446"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
@@ -2482,13 +2482,173 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UProgressUITests/UProgressUITests.swift"
-            timestampString = "511111133.286613"
+            filePath = "UProgress/AuthorizationManager.swift"
+            timestampString = "511122291.614977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "setUp()"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "currentUser(success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/AuthorizationManager.swift"
+            timestampString = "511122669.361225"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "signIn(signInParameters:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/AuthorizationManager.swift"
+            timestampString = "511122750.358277"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "currentUser(success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/AuthorizationManager.swift"
+            timestampString = "511131552.214518"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "currentUser(success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgress.AuthorizationManager.currentUser (success : (UProgress.User) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()"
+                  moduleName = "UProgress"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/AuthorizationManager.swift"
+                  timestampString = "511131628.727767"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgress.AuthorizationManager.(currentUser (success : (UProgress.User) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "UProgress"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/AuthorizationManager.swift"
+                  timestampString = "511131628.730735"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/AuthorizationManager.swift"
+            timestampString = "511131559.00854"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "signIn(signInParameters:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgress.AuthorizationManager.signIn (signInParameters : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, success : (UProgress.User) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()"
+                  moduleName = "UProgress"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/AuthorizationManager.swift"
+                  timestampString = "511133398.708258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "370">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgress.AuthorizationManager.(signIn (signInParameters : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, success : (UProgress.User) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "UProgress"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/AuthorizationManager.swift"
+                  timestampString = "511133398.71135"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/AuthorizationsViewController.swift"
+            timestampString = "511133503.313609"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "successSignIn(currentUser:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/UProgressUITests.swift"
+            timestampString = "511134137.888864"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "testSuccessAuthorizationFlow()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
