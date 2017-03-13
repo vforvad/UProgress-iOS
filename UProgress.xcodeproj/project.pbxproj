@@ -366,6 +366,7 @@
 		64F0C8D31E5D9489000DD1D8 /* ProfileFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F0C8D11E5D947D000DD1D8 /* ProfileFormViewController.swift */; };
 		64F0C8D41E5D948A000DD1D8 /* ProfileFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F0C8D11E5D947D000DD1D8 /* ProfileFormViewController.swift */; };
 		64F3FC691E76C92200D3F55B /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309E1E3E3C68007C7112 /* ApiRequest.swift */; };
+		64F3FCF31E76ECF100D3F55B /* BaseUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F3FCF21E76ECF100D3F55B /* BaseUITest.swift */; };
 		64F80D3B1E41FCA500E90004 /* AuthorizationFragmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80D3A1E41FCA500E90004 /* AuthorizationFragmentController.swift */; };
 		64F80D3D1E41FCB000E90004 /* RegistrationFragmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80D3C1E41FCB000E90004 /* RegistrationFragmentController.swift */; };
 		64F80D431E42058500E90004 /* AuthorizationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64F80D421E42058500E90004 /* AuthorizationStoryboard.storyboard */; };
@@ -568,6 +569,7 @@
 		64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		64F0C8CB1E5D9224000DD1D8 /* ProfileViewActionsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewActionsProtocol.swift; sourceTree = "<group>"; };
 		64F0C8D11E5D947D000DD1D8 /* ProfileFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileFormViewController.swift; sourceTree = "<group>"; };
+		64F3FCF21E76ECF100D3F55B /* BaseUITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUITest.swift; sourceTree = "<group>"; };
 		64F80D3A1E41FCA500E90004 /* AuthorizationFragmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationFragmentController.swift; sourceTree = "<group>"; };
 		64F80D3C1E41FCB000E90004 /* RegistrationFragmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationFragmentController.swift; sourceTree = "<group>"; };
 		64F80D421E42058500E90004 /* AuthorizationStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AuthorizationStoryboard.storyboard; sourceTree = "<group>"; };
@@ -960,6 +962,7 @@
 				649C33D81E66D64B00665C48 /* KIF+Extensions.swift */,
 				649C33DB1E66D68800665C48 /* BH.m */,
 				649C33DA1E66D68700665C48 /* UProgressUITests-Bridging-Header.h */,
+				64F3FCF21E76ECF100D3F55B /* BaseUITest.swift */,
 			);
 			path = UProgressUITests;
 			sourceTree = "<group>";
@@ -1849,6 +1852,7 @@
 				64860B961E5F7815002ACD43 /* Attachment.swift in Sources */,
 				64D930B61E3E72AE007C7112 /* DirectionModelProtocol.swift in Sources */,
 				641D44BE1E5B9B99005F64E9 /* AuthorizationService.swift in Sources */,
+				64F3FCF31E76ECF100D3F55B /* BaseUITest.swift in Sources */,
 				645800681E54B095002366CA /* DirectionDetailView.swift in Sources */,
 				64F0C8D41E5D948A000DD1D8 /* ProfileFormViewController.swift in Sources */,
 				64A108521E64750100BBD065 /* DirectionFormProtocol.swift in Sources */,

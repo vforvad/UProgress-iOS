@@ -2483,11 +2483,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgressUITests/UProgressUITests.swift"
-            timestampString = "511110056.970019"
+            timestampString = "511111133.286613"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "setUp()"
             landmarkType = "7">
          </BreakpointContent>
