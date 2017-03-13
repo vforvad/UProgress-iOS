@@ -332,7 +332,6 @@
 		64D930B91E3E72B4007C7112 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E015171E3E023E0055DFD5 /* Direction.swift */; };
 		64D930BA1E3E72B5007C7112 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E015171E3E023E0055DFD5 /* Direction.swift */; };
 		64D930BB1E3E72EB007C7112 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309E1E3E3C68007C7112 /* ApiRequest.swift */; };
-		64D930BC1E3E72EB007C7112 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309E1E3E3C68007C7112 /* ApiRequest.swift */; };
 		64D930BD1E3E72F0007C7112 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
 		64D930BE1E3E72F1007C7112 /* DirectionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1A81E3D04C200C46165 /* DirectionsListViewController.swift */; };
 		64D930BF1E3E72F4007C7112 /* DirectionViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930A91E3E452E007C7112 /* DirectionViewProtocol.swift */; };
@@ -366,6 +365,7 @@
 		64F0C8D21E5D947D000DD1D8 /* ProfileFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F0C8D11E5D947D000DD1D8 /* ProfileFormViewController.swift */; };
 		64F0C8D31E5D9489000DD1D8 /* ProfileFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F0C8D11E5D947D000DD1D8 /* ProfileFormViewController.swift */; };
 		64F0C8D41E5D948A000DD1D8 /* ProfileFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F0C8D11E5D947D000DD1D8 /* ProfileFormViewController.swift */; };
+		64F3FC691E76C92200D3F55B /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9309E1E3E3C68007C7112 /* ApiRequest.swift */; };
 		64F80D3B1E41FCA500E90004 /* AuthorizationFragmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80D3A1E41FCA500E90004 /* AuthorizationFragmentController.swift */; };
 		64F80D3D1E41FCB000E90004 /* RegistrationFragmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F80D3C1E41FCB000E90004 /* RegistrationFragmentController.swift */; };
 		64F80D431E42058500E90004 /* AuthorizationStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64F80D421E42058500E90004 /* AuthorizationStoryboard.storyboard */; };
@@ -1840,6 +1840,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64F3FC691E76C92200D3F55B /* ApiRequest.swift in Sources */,
 				64EA8BF91E3F24710088009E /* BaseViewController.swift in Sources */,
 				645800661E54B086002366CA /* DirectionViewActionsProtocol.swift in Sources */,
 				641D44C81E5B9CC6005F64E9 /* ProfileCell.swift in Sources */,
@@ -1887,7 +1888,6 @@
 				6458005A1E54AD14002366CA /* StepDetailViewController.swift in Sources */,
 				64A1084A1E64655600BBD065 /* DirectionsFormViewController.swift in Sources */,
 				64860B8C1E5F77E5002ACD43 /* ProfileManagerProtocol.swift in Sources */,
-				64D930BC1E3E72EB007C7112 /* ApiRequest.swift in Sources */,
 				649369B41E65CD9D00B4C58F /* StatisticsManagerProtocol.swift in Sources */,
 				64A108441E645A4000BBD065 /* AuthorizationPresenterProtocol.swift in Sources */,
 				641D44BA1E5B9B10005F64E9 /* DirectionDetailManager.swift in Sources */,

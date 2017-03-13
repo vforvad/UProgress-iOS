@@ -16,7 +16,7 @@ public enum Method: String {
 }
 
 class ApiEndpoint {
-    let data: NSDictionary!
+    var data: NSDictionary!
     
     init() {
         let path = Bundle(for: type(of: self)).path(forResource: "Info", ofType: "plist")!
@@ -24,7 +24,8 @@ class ApiEndpoint {
     }
     
     func getHost() -> String {
-        return data["API_ENDPOINT"] as! String
+        return "http://localhost:8080"
+//            data["API_ENDPOINT"] as! String
     }
 }
     

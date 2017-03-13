@@ -9,20 +9,50 @@
 import XCTest
 //import Mockingjay
 import KeychainSwift
+import Embassy
+import EnvoyAmbassador
 
 class UProgressUITests: XCTestCase {
     var app: XCUIApplication!
+    var eventLoopThreadCondition: NSCondition!
+    var eventLoopThread: Thread!
+    var eventLoop: EventLoop!
+    var server: HTTPServer!
+    var router: Router!
     
     override func setUp() {
         super.setUp()
-        continueAfterFailure = false
+        eventLoop = try! SelectorEventLoop(selector: try! KqueueSelector())
+        router = Router()
+        server = DefaultHTTPServer(eventLoop: eventLoop, port: 8080, app: router.app)
         
+        router["/api/v1/sessions/current"] = DataResponse(
+            statusCode: 403,
+            statusMessage: "unauthorized",
+            contentType: "application/json",
+            headers: [("Content-Type", "application/json")]
+        ) { environ -> Data in
+            return Data(String(describing: ["user": ""]).utf8)
+        }
+        
+        // Start HTTP server to listen on the port
+        try! server.start()
+        
+        eventLoopThread = Thread(target: self, selector: #selector(runEventLoop), object: nil)
+        eventLoopThreadCondition = NSCondition()
+        eventLoopThread.start()
+        
+        // Run event loop
+//        loop.runForever()
         app = XCUIApplication()
+//        app.launchEnvironment["\(ApiRequest.shared)]
         app.launch()
+        
+        continueAfterFailure = false
+    
         
 //        KeychainSwift().set("123456", forKey: "uprogresstoken")
 //        let path = Bundle(for: type(of: self)).path(forResource: "current_user", ofType: "json")!
-//
 //        let data = NSData(contentsOfFile: path)!
 //        MockingjayProtocol.addStub(matcher: uri("\(ApiRequest.sharedInstance.host)/api/v1/sessions/current"), builder: jsonData(data as Data))
 //        
@@ -50,6 +80,9 @@ class UProgressUITests: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
+        server.stopAndWait()
+        eventLoopThreadCondition.lock()
+        eventLoop.stop()
     }
     
     func testEmailFieldExists() {
@@ -63,10 +96,14 @@ class UProgressUITests: XCTestCase {
     }
     
     func testSuccessAuthorizationFlow() {
-//        stub(condition: isPath("/api/v1/sessions"),response: { _ in
-//            let stubPath = OHPathForFile("token.json", type(of: self))
-//            return OHHTTPStubsResponse(fileAtPath: stubPath!, statusCode: 200, headers: ["Content-Type": "application/json"])
-//        })
+        router["/api/v1/sessions"] = DelayResponse(JSONResponse(statusCode: 403, handler: { _ -> Any in
+            return [
+                "errors": [
+                    "email": ["Can't be blank"]
+                ]
+            ]
+        }))
+
         
         let emailField = app.textFields["Email"]
         let passwordField = app.secureTextFields["Password"]
@@ -77,7 +114,16 @@ class UProgressUITests: XCTestCase {
         passwordField.tap()
         passwordField.typeText("password")
         button.tap()
-        waitForExpectations(timeout: 10, handler: nil)
-        XCTAssert(app.staticTexts["example@mail.com"].exists)
+        sleep(5)
+        XCTAssert(self.app.staticTexts["Can't be blank"].exists)
+
+        
+    }
+    
+    @objc private func runEventLoop() {
+        eventLoop.runForever()
+        eventLoopThreadCondition.lock()
+        eventLoopThreadCondition.signal()
+        eventLoopThreadCondition.unlock()
     }
 }

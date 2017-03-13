@@ -5,7 +5,7 @@
 	<key>RESET_LAUNCH_VIEW</key>
 	<false/>
 	<key>API_ENDPOINT</key>
-	<string>$(API_ENDPOINT)</string>
+	<string>http://localhost:8080</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

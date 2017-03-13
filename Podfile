@@ -32,6 +32,8 @@ target 'UProgress' do
       pod 'Mockingjay'
       pod 'Embassy'
       pod 'EnvoyAmbassador'
+      pod 'Kakapo'
+      pod 'Swifter'
 #    inherit! :search_paths
   end
 
