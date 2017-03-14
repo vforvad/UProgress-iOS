@@ -49,3 +49,7 @@
 "statistics_steps" = "Шаги";
 "statistics_directions_steps" = "Шаги направлений";
 "statistics_title" = "Выборка";
+
+// DIRECTIONS
+"directions_title" = "Название";
+"directions_description" = "Описание";

@@ -55,3 +55,7 @@
 "statistics_steps" = "Steps";
 "statistics_directions_steps" = "Directions steps";
 "statistics_title" = "Chose scope";
+
+// DIRECTIONS
+"directions_title" = "Title";
+"directions_description" = "Description";

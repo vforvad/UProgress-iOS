@@ -77,6 +77,30 @@ class DirectionsListViewControllerTest: BaseUITest {
         XCTAssertFalse(app.staticTexts["Domainer 2"].exists)
     }
     
+    func testExistanceOfDirectionsPopup() {
+        app.navigationBars.buttons.element(boundBy: 1).tap()
+        XCTAssert(app.textFields["Title"].exists)
+        XCTAssert(app.textViews["Description"].exists)
+    }
+    
+    func testFailedCreationOfDirection() {
+        super.router["/api/v1/users/aaa/directions"] = JSONResponse(statusCode: 422, handler: { eviron -> Any in
+            return [
+                "errors": [
+                    "title": ["Can't be blank"],
+                    "description": ["Can't be blank"]
+                ]
+            ]
+        })
+        
+        app.navigationBars.buttons.element(boundBy: 1).tap()
+        
+        let save = app.buttons["Save"]
+        save.tap()
+        sleep(5)
+        XCTAssert(app.staticTexts["Can't be blank"].exists)
+    }
+    
     override func tearDown() {
         super.tearDown()
     }
