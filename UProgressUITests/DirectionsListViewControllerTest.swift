@@ -101,6 +101,40 @@ class DirectionsListViewControllerTest: BaseUITest {
         XCTAssert(app.staticTexts["Can't be blank"].exists)
     }
     
+    func testSuccessCreationOfDirection() {
+        super.router["/api/v1/users/aaa/directions"] = JSONResponse(statusCode: 200, handler: { eviron -> Any in
+            return [
+                "direction": [
+                    "id": 1,
+                    "title": "New direction",
+                    "description": "New description",
+                    "finished_steps_count": 0,
+                    "percents_result": 0,
+                    "updated_at": "2016-12-31T19:18:01.148Z",
+                    "slug": "new_direction"
+                ]
+            ]
+        })
+        app.navigationBars.buttons.element(boundBy: 1).tap()
+        
+        let save = app.buttons["Save"]
+        let title = app.textFields["Title"]
+        let description = app.textViews["Description"]
+        
+        title.tap()
+        title.typeText("New direction")
+        
+        UIPasteboard.general.string = "New description"
+        description.doubleTap()
+        app.menuItems["Paste"].tap()
+        
+        save.tap()
+        
+        sleep(5)
+        
+        XCTAssert(app.staticTexts["New direction"].exists)
+    }
+    
     override func tearDown() {
         super.tearDown()
     }

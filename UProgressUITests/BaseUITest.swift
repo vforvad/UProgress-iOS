@@ -51,6 +51,7 @@ class BaseUITest: XCTestCase {
         server.stopAndWait()
         eventLoopThreadCondition.lock()
         eventLoop.stop()
+        XCUIApplication().terminate()
 //        while eventLoop.running {
 //            if !eventLoopThreadCondition.wait(until: NSDate().addingTimeInterval(10) as Date) {
 //                fatalError("Join eventLoopThread timeout")
