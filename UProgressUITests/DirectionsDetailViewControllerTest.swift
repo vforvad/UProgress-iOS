@@ -200,12 +200,28 @@ class DirectionsDetailViewControllerTest: BaseUITest {
             ]
         })
         
-        let cell = app.tables.cells.staticTexts["Step 1"]
         let switchElement = app.tables.switches["Step 1"]
         switchElement.tap()
         
         sleep(2)
         
         XCTAssert(app.staticTexts["55"].exists)
+    }
+    
+    func testFailedMarkingAsUpdated() {
+        super.router["/api/v1/users/aaa/directions/[1-9]"] = JSONResponse(statusCode: 422, handler: { eviron -> Any in
+            return [
+                "errors": [
+                    "is_done": "Failed to updated"
+                ]
+            ]
+        })
+        
+        let switchElement = app.tables.switches["Step 1"]
+        switchElement.tap()
+        
+        sleep(2)
+        
+        XCTAssert(app.staticTexts["40"].exists)
     }
 }

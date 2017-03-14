@@ -3342,7 +3342,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgressUITests/DirectionsDetailViewControllerTest.swift"
-            timestampString = "511220751.59314"
+            timestampString = "511222756.104632"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "testSuccessMarkStepAsUpdated()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/DirectionsDetailViewControllerTest.swift"
+            timestampString = "511222756.104632"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "204"
@@ -3358,27 +3374,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgressUITests/DirectionsDetailViewControllerTest.swift"
-            timestampString = "511220751.59314"
+            timestampString = "511222756.104632"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
-            landmarkName = "testSuccessMarkStepAsUpdated()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UProgressUITests/DirectionsDetailViewControllerTest.swift"
-            timestampString = "511220802.258754"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "testSuccessMarkStepAsUpdated()"
             landmarkType = "7">
          </BreakpointContent>
