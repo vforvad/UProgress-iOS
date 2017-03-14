@@ -224,4 +224,36 @@ class DirectionsDetailViewControllerTest: BaseUITest {
         
         XCTAssert(app.staticTexts["40"].exists)
     }
+    
+    func testSuccessStepDelete() {
+        super.router["/api/v1/users/aaa/directions/[1-9]"] = JSONResponse(statusCode: 200, handler: { eviron -> Any in
+            return [
+                "step": [
+                    "id": 2,
+                    "title": "Step 1",
+                    "description": "New description",
+                    "direction_id": 1,
+                    "is_done": true,
+                    "updated_at": "2016-12-31T19:17:44.551Z",
+                    "direction": [
+                        "id": 1,
+                        "title": "Domainer",
+                        "description": "The JSON program is down, reboot the online pixel so we can connect the SCSI feed!",
+                        "finished_steps_count": 2,
+                        "percents_result": 55,
+                        "updated_at": "2016-12-31T19:18:01.148Z",
+                        "slug": "treeflex"
+                    ]
+                ]
+            ]
+        })
+        
+        let cell = app.tables.cells.staticTexts["Step 1"]
+        cell.swipeLeft()
+        app.buttons["Delete"].tap()
+        
+        sleep(2)
+        
+        XCTAssertFalse(app.staticTexts["Step 1"].exists)
+    }
 }
