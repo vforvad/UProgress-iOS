@@ -345,6 +345,7 @@
 		64DA9D051E657391008D24AD /* BaseSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861931E46AC9800583945 /* BaseSplitViewController.swift */; };
 		64E015181E3E023E0055DFD5 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E015171E3E023E0055DFD5 /* Direction.swift */; };
 		64E4A6501E77DB320063C4A9 /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A64F1E77DB320063C4A9 /* XCUIElement.swift */; };
+		64E4A6521E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A6511E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift */; };
 		64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */; };
 		64EA8BF41E3EB9AE0088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
 		64EA8BF81E3F24700088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
@@ -549,6 +550,7 @@
 		64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		64E015171E3E023E0055DFD5 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		64E4A64F1E77DB320063C4A9 /* XCUIElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
+		64E4A6511E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListViewControllerTest.swift; sourceTree = "<group>"; };
 		64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		64F0C8CB1E5D9224000DD1D8 /* ProfileViewActionsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewActionsProtocol.swift; sourceTree = "<group>"; };
@@ -931,6 +933,7 @@
 				649C33DA1E66D68700665C48 /* UProgressUITests-Bridging-Header.h */,
 				64F3FCF21E76ECF100D3F55B /* BaseUITest.swift */,
 				64E4A64F1E77DB320063C4A9 /* XCUIElement.swift */,
+				64E4A6511E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift */,
 			);
 			path = UProgressUITests;
 			sourceTree = "<group>";
@@ -1837,6 +1840,7 @@
 				645800601E54B057002366CA /* StepTableViewCell.swift in Sources */,
 				64A1081C1E6413BD00BBD065 /* AttachmentManager.swift in Sources */,
 				64860B8E1E5F77EB002ACD43 /* ProfileViewProtocol.swift in Sources */,
+				64E4A6521E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift in Sources */,
 				641B309E1E4B679F00FF60CC /* DirectionsDetailViewProtocol.swift in Sources */,
 				64A1082C1E6455AB00BBD065 /* LaunchViewProtocol.swift in Sources */,
 				64A108301E6457EA00BBD065 /* AuthorizationsViewController.swift in Sources */,

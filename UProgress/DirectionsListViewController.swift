@@ -16,7 +16,7 @@ DirectionPopupActions {
     @IBOutlet weak var searchBar: UISearchBar!
     var selectedDirection: Direction!
     var itemsList:[Direction]! = []
-    private let userNick = "vforvad"
+    private let userNick = AuthorizationService.sharedInstance.currentUser?.nick
     private let manager = DirectionManager()
     private var presenter: DirectionListPresenterImpl!
     private var viewInstance: DirectionsListView!
