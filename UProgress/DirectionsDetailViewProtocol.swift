@@ -12,7 +12,7 @@ protocol DirectionsDetailViewProtocol {
     func startLoader()
     func stopLoader()
     func successDirectionLoad(direction: Direction!)
-    func failedDirectionLoad(error: NSError)
+    func failedDirectionLoad(error: ServerError)
     func successStepUpdate(step: Step!)
     func failureStepUpdate(error: ServerError!)
     func successStepDelete(step: Step!)

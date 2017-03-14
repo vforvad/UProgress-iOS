@@ -346,6 +346,7 @@
 		64E015181E3E023E0055DFD5 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E015171E3E023E0055DFD5 /* Direction.swift */; };
 		64E4A6501E77DB320063C4A9 /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A64F1E77DB320063C4A9 /* XCUIElement.swift */; };
 		64E4A6521E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A6511E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift */; };
+		64E4A6541E786C5E0063C4A9 /* DirectionsDetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A6531E786C5E0063C4A9 /* DirectionsDetailViewControllerTest.swift */; };
 		64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */; };
 		64EA8BF41E3EB9AE0088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
 		64EA8BF81E3F24700088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
@@ -551,6 +552,7 @@
 		64E015171E3E023E0055DFD5 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		64E4A64F1E77DB320063C4A9 /* XCUIElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
 		64E4A6511E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListViewControllerTest.swift; sourceTree = "<group>"; };
+		64E4A6531E786C5E0063C4A9 /* DirectionsDetailViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsDetailViewControllerTest.swift; sourceTree = "<group>"; };
 		64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		64F0C8CB1E5D9224000DD1D8 /* ProfileViewActionsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewActionsProtocol.swift; sourceTree = "<group>"; };
@@ -934,6 +936,7 @@
 				64F3FCF21E76ECF100D3F55B /* BaseUITest.swift */,
 				64E4A64F1E77DB320063C4A9 /* XCUIElement.swift */,
 				64E4A6511E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift */,
+				64E4A6531E786C5E0063C4A9 /* DirectionsDetailViewControllerTest.swift */,
 			);
 			path = UProgressUITests;
 			sourceTree = "<group>";
@@ -1814,6 +1817,7 @@
 				64860B961E5F7815002ACD43 /* Attachment.swift in Sources */,
 				64D930B61E3E72AE007C7112 /* DirectionModelProtocol.swift in Sources */,
 				641D44BE1E5B9B99005F64E9 /* AuthorizationService.swift in Sources */,
+				64E4A6541E786C5E0063C4A9 /* DirectionsDetailViewControllerTest.swift in Sources */,
 				64F3FCF31E76ECF100D3F55B /* BaseUITest.swift in Sources */,
 				645800681E54B095002366CA /* DirectionDetailView.swift in Sources */,
 				64F0C8D41E5D948A000DD1D8 /* ProfileFormViewController.swift in Sources */,

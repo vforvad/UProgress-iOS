@@ -11,14 +11,16 @@ import Alamofire
 import ObjectMapper
 
 class DirectionDetailManager: DirectionDetailManagerProtocol {
-    internal func loadDirection(userNick: String, directionId: String!, success: @escaping (_ direction: Direction) -> Void, failure: @escaping (_ error: NSError) -> Void) {
+    internal func loadDirection(userNick: String, directionId: String!, success: @escaping (_ direction: Direction) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
         let url = "/users/\(userNick)/directions/" + directionId
-        ApiRequest.sharedInstance.get(url: url, parameters: [:]).responseObject(keyPath: "direction") { (response: DataResponse<Direction>) in
-            switch(response.result) {
-            case .success(let value):
-                success(value)
-            case .failure(let errorValue):
-                failure(errorValue as NSError)
+        ApiRequest.sharedInstance.get(url: url, parameters: [:]).responseJSON{ response in
+            if response.response?.statusCode == 200 {
+                let directionObject = response.result.value! as! Dictionary<String, Any>
+                let direction = Mapper<Direction>().map(JSONObject: directionObject["direction"])
+                success(direction!)
+            } else {
+                let stepError = response.result.value! as! Dictionary<String, Any>
+                failure(ServerError(status: response.response!.statusCode, parameters: stepError["errors"] as! NSDictionary))
             }
         }
     }
