@@ -10,17 +10,15 @@ import XCTest
 import Embassy
 import EnvoyAmbassador
 
-class UProgressUITests: BaseUITest {
+class AuthorizationViewControllerTest: BaseUITest {
     
     override func setUp() {
         super.setUpWithHandler() {
-            super.setUpWithHandler() {
                 super.router["/api/v1/sessions/current"] = JSONResponse(statusCode: 403, handler: { eviron -> Any in
                     return [
                         "user": ""
                     ]
                 })
-            }
         }
     }
     

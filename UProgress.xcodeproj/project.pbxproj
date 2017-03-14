@@ -155,7 +155,7 @@
 		6474B1AE1E3D04C200C46165 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AD1E3D04C200C46165 /* Assets.xcassets */; };
 		6474B1B11E3D04C200C46165 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474B1AF1E3D04C200C46165 /* LaunchScreen.storyboard */; };
 		6474B1BC1E3D04C200C46165 /* DirectionsListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1BB1E3D04C200C46165 /* DirectionsListPresenterTest.swift */; };
-		6474B1C71E3D04C200C46165 /* UProgressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1C61E3D04C200C46165 /* UProgressUITests.swift */; };
+		6474B1C71E3D04C200C46165 /* AuthorizationViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6474B1C61E3D04C200C46165 /* AuthorizationViewControllerTest.swift */; };
 		64754E911E6CB29A00F9D3B0 /* AuthorizationManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64754E901E6CB29A00F9D3B0 /* AuthorizationManagerMock.swift */; };
 		64754E941E6CB61D00F9D3B0 /* AuthorizationPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64754E931E6CB61D00F9D3B0 /* AuthorizationPresenterSpec.swift */; };
 		64754E961E6CBE3900F9D3B0 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64754E951E6CBE3900F9D3B0 /* BaseTest.swift */; };
@@ -475,7 +475,7 @@
 		6474B1BB1E3D04C200C46165 /* DirectionsListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsListPresenterTest.swift; sourceTree = "<group>"; };
 		6474B1BD1E3D04C200C46165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6474B1C21E3D04C200C46165 /* UProgressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UProgressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6474B1C61E3D04C200C46165 /* UProgressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UProgressUITests.swift; sourceTree = "<group>"; };
+		6474B1C61E3D04C200C46165 /* AuthorizationViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewControllerTest.swift; sourceTree = "<group>"; };
 		6474B1C81E3D04C200C46165 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64754E901E6CB29A00F9D3B0 /* AuthorizationManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationManagerMock.swift; sourceTree = "<group>"; };
 		64754E931E6CB61D00F9D3B0 /* AuthorizationPresenterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenterSpec.swift; sourceTree = "<group>"; };
@@ -924,7 +924,7 @@
 		6474B1C51E3D04C200C46165 /* UProgressUITests */ = {
 			isa = PBXGroup;
 			children = (
-				6474B1C61E3D04C200C46165 /* UProgressUITests.swift */,
+				6474B1C61E3D04C200C46165 /* AuthorizationViewControllerTest.swift */,
 				6474B1C81E3D04C200C46165 /* Info.plist */,
 				649C33D81E66D64B00665C48 /* KIF+Extensions.swift */,
 				649C33DB1E66D68800665C48 /* BH.m */,
@@ -1822,7 +1822,7 @@
 				64A1083C1E645A0700BBD065 /* LaunchPresenterProtocol.swift in Sources */,
 				642407701E52114A00E4CF95 /* Image.swift in Sources */,
 				64860B921E5F77F2002ACD43 /* ProfilePresenterProtocol.swift in Sources */,
-				6474B1C71E3D04C200C46165 /* UProgressUITests.swift in Sources */,
+				6474B1C71E3D04C200C46165 /* AuthorizationViewControllerTest.swift in Sources */,
 				64A1083E1E645A0D00BBD065 /* SignInProtocol.swift in Sources */,
 				646E8EA61E48B41F003B8DFB /* DirectionsDetailViewController.swift in Sources */,
 				64D930BE1E3E72F1007C7112 /* DirectionsListViewController.swift in Sources */,

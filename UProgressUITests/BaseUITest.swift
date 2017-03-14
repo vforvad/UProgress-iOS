@@ -51,13 +51,11 @@ class BaseUITest: XCTestCase {
         server.stopAndWait()
         eventLoopThreadCondition.lock()
         eventLoop.stop()
-        eventLoopThread.cancel()
-        router = nil
-        while eventLoop.running {
-            if !eventLoopThreadCondition.wait(until: NSDate().addingTimeInterval(10) as Date) {
-                fatalError("Join eventLoopThread timeout")
-            }
-        }
+//        while eventLoop.running {
+//            if !eventLoopThreadCondition.wait(until: NSDate().addingTimeInterval(10) as Date) {
+//                fatalError("Join eventLoopThread timeout")
+//            }
+//        }
     }
     
     @objc private func runEventLoop() {
