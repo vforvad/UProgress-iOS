@@ -108,12 +108,29 @@ class DirectionsDetailViewControllerTest: BaseUITest {
         XCTAssert(app.staticTexts["Step 2"].exists)
     }
     
-    func testExistanceOfStepPopup() {        
+    func testExistanceOfStepPopup() {
         app.navigationBars.buttons.element(boundBy: 2).tap()
         sleep(1)
         XCTAssert(app.textFields["Title"].exists)
         XCTAssert(app.textViews["Description"].exists)
         XCTAssert(app.buttons["Save"].exists)
         XCTAssert(app.buttons["Cancel"].exists)
+    }
+    
+    func testFailedStepCreation() {
+        super.router["/api/v1/users/aaa/directions/[1-9]"] = JSONResponse(statusCode: 422, handler: { eviron -> Any in
+            return [
+                "errors": [
+                    "title": ["Can't be blank"]
+                ]
+            ]
+        })
+        
+        app.navigationBars.buttons.element(boundBy: 2).tap()
+        app.buttons["Save"].tap()
+        
+        sleep(5)
+        
+        XCTAssert(app.staticTexts["Can't be blank"].exists)
     }
 }
