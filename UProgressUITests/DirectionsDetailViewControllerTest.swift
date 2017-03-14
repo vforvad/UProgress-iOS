@@ -133,4 +133,38 @@ class DirectionsDetailViewControllerTest: BaseUITest {
         
         XCTAssert(app.staticTexts["Can't be blank"].exists)
     }
+    
+    func testSuccessStepCreation() {
+        super.router["/api/v1/users/aaa/directions/[1-9]"] = JSONResponse(statusCode: 200, handler: { eviron -> Any in
+            return [
+                "step": [
+                    "id": 2,
+                    "title": "New step",
+                    "description": "New description",
+                    "direction_id": 1,
+                    "is_done": false,
+                    "updated_at": "2016-12-31T19:17:44.551Z"
+                ]
+            ]
+        })
+        
+        app.navigationBars.buttons.element(boundBy: 2).tap()
+        
+        let save = app.buttons["Save"]
+        let title = app.textFields["Title"]
+        let description = app.textViews["Description"]
+        
+        title.tap()
+        title.typeText("New step")
+        
+        UIPasteboard.general.string = "New description"
+        description.doubleTap()
+        app.menuItems["Paste"].tap()
+        
+        save.tap()
+
+        sleep(5)
+        
+        XCTAssert(app.staticTexts["New step"].exists)
+    }
 }
