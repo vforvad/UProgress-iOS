@@ -95,7 +95,7 @@ class DirectionsDetailViewControllerTest: BaseUITest {
         }
         let cell = app.tables.cells.staticTexts["Domainer"]
         cell.tap()
-        sleep(10)
+        sleep(2)
     }
     
     override func tearDown() {
@@ -106,5 +106,14 @@ class DirectionsDetailViewControllerTest: BaseUITest {
         XCTAssert(app.staticTexts["Domainer"].exists)
         XCTAssert(app.staticTexts["Step 1"].exists)
         XCTAssert(app.staticTexts["Step 2"].exists)
+    }
+    
+    func testExistanceOfStepPopup() {        
+        app.navigationBars.buttons.element(boundBy: 2).tap()
+        sleep(1)
+        XCTAssert(app.textFields["Title"].exists)
+        XCTAssert(app.textViews["Description"].exists)
+        XCTAssert(app.buttons["Save"].exists)
+        XCTAssert(app.buttons["Cancel"].exists)
     }
 }

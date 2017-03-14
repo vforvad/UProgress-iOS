@@ -10,7 +10,7 @@ import Foundation
 import MBProgressHUD
 import UIKit
 
-class StepFormViewController: BasePopupViewController, StepViewProtocol {
+class StepFormViewController: BasePopupViewController, StepViewProtocol, UITextViewDelegate {
     var defaultKeyboardSize: CGFloat!
     var mainView: DirectionsPopupProtocol!
     var presenter: StepPresenter!
@@ -33,6 +33,10 @@ class StepFormViewController: BasePopupViewController, StepViewProtocol {
         saveButton.layer.cornerRadius = 8.0
         cancellButton.layer.cornerRadius = 8.0
         
+        titleField.placeholder = NSLocalizedString("directions_title", comment: "")
+        descriptionField.text = NSLocalizedString("directions_description", comment: "")
+        descriptionField.textColor = UIColor.lightGray
+        descriptionField.delegate = self
         descriptionField.layer.cornerRadius = 8.0
         descriptionField.layer.borderWidth = 0.3
         descriptionField.layer.borderColor = UIColor.lightGray.cgColor
@@ -90,5 +94,20 @@ class StepFormViewController: BasePopupViewController, StepViewProtocol {
     
     internal func stopLoader() {
         MBProgressHUD.hide(for: view, animated: true)
+    }
+    
+    // MARK: UITextViewDelegate methods
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if descriptionField.textColor == UIColor.lightGray {
+            descriptionField.text = nil
+            descriptionField.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if descriptionField.text.isEmpty {
+            descriptionField.text = NSLocalizedString("directions_description", comment: "")
+            descriptionField.textColor = UIColor.lightGray
+        }
     }
 }
