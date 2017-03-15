@@ -3390,13 +3390,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgressUITests/ProfileViewControllerTest.swift"
-            timestampString = "511272641.534469"
+            timestampString = "511274069.587595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "testAppearingOfUserUpdatePopup()"
-            landmarkType = "7">
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "ProfileViewControllerTest"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3406,11 +3406,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgressUITests/ProfileViewControllerTest.swift"
-            timestampString = "511272641.534469"
+            timestampString = "511274069.587595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "testAppearingOfUserUpdatePopup()"
             landmarkType = "7">
          </BreakpointContent>
@@ -3438,12 +3438,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/ProfileFormViewController.swift"
-            timestampString = "511273204.496154"
+            timestampString = "511273685.553262"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "setValues()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/Attachment.swift"
+            timestampString = "511274380.525806"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "toDict()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -20,7 +20,10 @@ class ProfileViewControllerTest: BaseUITest {
                         "email": "example@mail.com",
                         "nick": "aaa",
                         "attachment": [
-                            "url": "http://lurkmore.so/images/thumb/2/2d/Trollface_HD.png/250px-Trollface_HD.png"
+                            "id": 1,
+                            "url": "http://lurkmore.so/images/thumb/2/2d/Trollface_HD.png/250px-Trollface_HD.png",
+                            "attachable_type": "User",
+                            "attachable_id": 1
                         ]
                     ]
                 ]
@@ -50,5 +53,38 @@ class ProfileViewControllerTest: BaseUITest {
         XCTAssert(app.textFields["Email"].exists)
         XCTAssert(app.textFields["Location"].exists)
         XCTAssert(app.textViews["Few words about yourself"].exists)
+    }
+    
+    func testSuccessUserProfileUpdate() {
+        
+        super.router["/api/v1/users/1"] = JSONResponse(statusCode: 200, handler: { eviron -> Any in
+            return [
+                "current_user": [
+                    "id": 1,
+                    "email": "example1@mail.com",
+                    "nick": "aaa",
+                    "attachment": [
+                        "id": 1,
+                        "attachable_id": 1,
+                        "url": "http://lurkmore.so/images/thumb/2/2d/Trollface_HD.png/250px-Trollface_HD.png",
+                        "attachable_type": "User"
+                    ]
+                ]
+            ]
+        })
+        
+        app.navigationBars.buttons.element(boundBy: 2).tap()
+        app.sheets["Choose an action"].buttons["Edit"].tap()
+        
+        let email = app.textFields["Email"];
+        
+        email.tap()
+        email.typeText("example1@mail.com")
+        
+        app.buttons["Save"].tap()
+        
+        sleep(1)
+        
+        XCTAssert(app.staticTexts["example1@mail.com"].exists)
     }
 }
