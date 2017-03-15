@@ -20,21 +20,27 @@ class AuthorizationPresenter: AuthorizationPresenterProtocol {
     }
     
     internal func signIn(parameters: Dictionary<String, AnyObject>) {
+        self.view.startLoader()
         model.signIn(signInParameters: parameters,
         success: { user in
+            self.view.stopLoader()
             self.view.successSignIn(currentUser: user)
         },
         failure: { error in
+            self.view.stopLoader()
             self.view.failedSignIn(error: error)
         })
     }
     
     internal func signUp(parameters: Dictionary<String, AnyObject>) {
+        self.view.startLoader()
         model.signUp(signUpParameters: parameters,
         success: { user in
+            self.view.stopLoader()
             self.view.successSignIn(currentUser: user)            
         },
         failure: { error in
+            self.view.stopLoader()
             self.view.failedSignUp(error: error)
         })
     }

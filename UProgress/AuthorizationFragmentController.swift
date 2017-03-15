@@ -44,7 +44,6 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
     
     @IBAction func signIn(_ sender: Any) {
         hideErrors()
-        signInButton.loadingIndicator(show: true)
         let dictionary = ["email": emailField.text!, "password": passwordField.text!]
         parentVC.signInRequest(parameters: dictionary as Dictionary<String, AnyObject> )
     }

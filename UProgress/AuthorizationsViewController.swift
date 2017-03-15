@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 class AuthorizationsViewController: BaseViewController, SignInProtocol, AuthorizationViewProtocol {
     public var signIn: Bool!
@@ -142,5 +143,13 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     deinit {
         NotificationCenter.default.removeObserver(self);
+    }
+    
+    internal func startLoader() {
+        MBProgressHUD.showAdded(to: view, animated: true)
+    }
+    
+    internal func stopLoader() {
+        MBProgressHUD.hide(for: view, animated: true)
     }
 }

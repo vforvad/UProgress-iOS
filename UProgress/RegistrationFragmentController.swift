@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CDAlertView
 
 class RegistrationFragmentController: BaseViewController, ErrorsHandling {
     var parentVC: SignInProtocol!
@@ -60,6 +61,16 @@ class RegistrationFragmentController: BaseViewController, ErrorsHandling {
     }
     
     internal func handleErrors(errors: ServerError) {
+        switch(errors.status!) {
+        case 400 ... 499:
+            handleFormErrors(errors: errors)
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
+    }
+    
+    private func handleFormErrors(errors: ServerError) {
         stackView.spacing = Constants.authErrorSpacing
         
         let errorsList = errors.params!
