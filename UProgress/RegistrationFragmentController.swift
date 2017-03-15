@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CDAlertView
 
-class RegistrationFragmentController: BaseViewController, ErrorsHandling {
+class RegistrationFragmentController: BaseViewController, ErrorsHandling, UITextFieldDelegate {
     var parentVC: SignInProtocol!
     
     @IBOutlet weak var stackView: UIStackView!
@@ -32,6 +32,12 @@ class RegistrationFragmentController: BaseViewController, ErrorsHandling {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.view.layer.cornerRadius = 10.0
+        
+        emailField.delegate = self
+        passwordField.delegate = self
+        passwordConfirmationField.delegate = self
+        nickField.delegate = self
+        
         signUpButton.setTitle(NSLocalizedString("auth_sign_up", comment: ""), for: UIControlState.normal)
         signUpButton.layer.cornerRadius = 5.0
         emailErrors.isHidden = true
@@ -102,5 +108,25 @@ class RegistrationFragmentController: BaseViewController, ErrorsHandling {
             self.nickErrors.text = nickError
             self.nickErrors.isHidden = false
         }
+    }
+    
+    // MARK: UITextFieldDelegate methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if (textField === emailField) {
+            emailField.resignFirstResponder()
+            passwordField.becomeFirstResponder()
+        }
+        if textField == passwordField {
+            passwordField.resignFirstResponder()
+            passwordConfirmationField.becomeFirstResponder()
+        }
+        if textField == passwordConfirmationField {
+            passwordConfirmationField.resignFirstResponder()
+            nickField.becomeFirstResponder()
+        }
+        if textField == nickField {
+            self.signUp(signUpButton)
+        }
+        return true
     }
 }

@@ -348,6 +348,9 @@
 		64E4A6521E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A6511E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift */; };
 		64E4A6541E786C5E0063C4A9 /* DirectionsDetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A6531E786C5E0063C4A9 /* DirectionsDetailViewControllerTest.swift */; };
 		64E4A6561E7961650063C4A9 /* ProfileViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A6551E7961650063C4A9 /* ProfileViewControllerTest.swift */; };
+		64E4A6581E79A5010063C4A9 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A6571E79A5010063C4A9 /* UIScrollView.swift */; };
+		64E4A6591E79A5090063C4A9 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A6571E79A5010063C4A9 /* UIScrollView.swift */; };
+		64E4A65A1E79A50A0063C4A9 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A6571E79A5010063C4A9 /* UIScrollView.swift */; };
 		64EA8BEF1E3EB2CA0088009E /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */; };
 		64EA8BF41E3EB9AE0088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
 		64EA8BF81E3F24700088009E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */; };
@@ -555,6 +558,7 @@
 		64E4A6511E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListViewControllerTest.swift; sourceTree = "<group>"; };
 		64E4A6531E786C5E0063C4A9 /* DirectionsDetailViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsDetailViewControllerTest.swift; sourceTree = "<group>"; };
 		64E4A6551E7961650063C4A9 /* ProfileViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerTest.swift; sourceTree = "<group>"; };
+		64E4A6571E79A5010063C4A9 /* UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
 		64EA8BEE1E3EB2CA0088009E /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		64EA8BF31E3EB9AE0088009E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		64F0C8CB1E5D9224000DD1D8 /* ProfileViewActionsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewActionsProtocol.swift; sourceTree = "<group>"; };
@@ -1232,6 +1236,7 @@
 				6483E4D41E409A1D0072B97C /* String.swift */,
 				641F25C81E422621008BD119 /* Image.swift */,
 				6464C5A61E44CBAA00C79975 /* Button.swift */,
+				64E4A6571E79A5010063C4A9 /* UIScrollView.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1670,6 +1675,7 @@
 				64D930B01E3E4DA1007C7112 /* DirectionsListView.swift in Sources */,
 				64A108541E6479FE00BBD065 /* DirectionFormPresenter.swift in Sources */,
 				64E015181E3E023E0055DFD5 /* Direction.swift in Sources */,
+				64E4A6581E79A5010063C4A9 /* UIScrollView.swift in Sources */,
 				641F25CB1E422BE6008BD119 /* AuthorizationManager.swift in Sources */,
 				64D930AC1E3E45EE007C7112 /* DirectionsListPresenter.swift in Sources */,
 				6483E4D31E4093F60072B97C /* Date.swift in Sources */,
@@ -1745,6 +1751,7 @@
 				64259D1C1E697E72008F7E2F /* DirectionsManagerSpec.swift in Sources */,
 				64A1084D1E64735500BBD065 /* DirectionPopupActions.swift in Sources */,
 				64944B131E5E3BF40093961B /* BasePopupViewController.swift in Sources */,
+				64E4A6591E79A5090063C4A9 /* UIScrollView.swift in Sources */,
 				646E8EA71E48B4A9003B8DFB /* DirectionsListCell.swift in Sources */,
 				642350FC1E6EE53C001791E1 /* ProfileManagerPresenterSpec.swift in Sources */,
 				64860B7D1E5F5699002ACD43 /* ProfileManager.swift in Sources */,
@@ -1858,6 +1865,7 @@
 				64944B141E5E3BF50093961B /* BasePopupViewController.swift in Sources */,
 				646E8EA81E48B4AA003B8DFB /* DirectionsListCell.swift in Sources */,
 				64860B7E1E5F5699002ACD43 /* ProfileManager.swift in Sources */,
+				64E4A65A1E79A50A0063C4A9 /* UIScrollView.swift in Sources */,
 				649369B81E65CDA400B4C58F /* StatisticsItem.swift in Sources */,
 				64E4A6501E77DB320063C4A9 /* XCUIElement.swift in Sources */,
 				64D930C61E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */,

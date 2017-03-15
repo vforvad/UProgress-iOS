@@ -29,12 +29,16 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling, UITex
         hideErrors()
         self.view.backgroundColor = UIColor.white
         self.view.layer.cornerRadius = 10.0
+        
         signInButton.setTitle(NSLocalizedString("auth_sign_in", comment: ""), for: UIControlState.normal)
         signInButton.layer.cornerRadius = 5.0
+        
         emailField.delegate = self
         passwordField.delegate = self
+        
         emailField.isUserInteractionEnabled = true
         passwordField.isUserInteractionEnabled = true
+        
         CommonFunctions.customizeTextField(field: self.emailField, placeholder: NSLocalizedString("auth_email", comment: ""), image: "email_icon")
         CommonFunctions.customizeTextField(field: self.passwordField, placeholder: NSLocalizedString("auth_password", comment: ""), image: "password_icon")
     }
@@ -89,9 +93,10 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling, UITex
     
     
     // MARK: UITextFieldDelegate methods
-    func textFieldShouldReturn(_ textField: UITextField!) -> Bool{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         if (textField === emailField) {
             emailField.resignFirstResponder()
+            parentVC.scrollToField(view: passwordField)
             passwordField.becomeFirstResponder()
         }
         
