@@ -87,4 +87,24 @@ class ProfileViewControllerTest: BaseUITest {
         
         XCTAssert(app.staticTexts["example1@mail.com"].exists)
     }
+    
+    func testFailedUserProfileUpdate() {
+        
+        super.router["/api/v1/users/1"] = JSONResponse(statusCode: 422, handler: { eviron -> Any in
+            return [
+                "errors": [
+                    "email": ["Can't be blank"]
+                ]
+            ]
+        })
+        
+        app.navigationBars.buttons.element(boundBy: 2).tap()
+        app.sheets["Choose an action"].buttons["Edit"].tap()
+        
+        app.buttons["Save"].tap()
+        
+        sleep(1)
+        
+        XCTAssert(app.staticTexts["Can't be blank"].exists)
+    }
 }
