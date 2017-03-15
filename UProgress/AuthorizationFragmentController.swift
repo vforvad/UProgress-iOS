@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CDAlertView
 
 class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
     var parentVC: SignInProtocol!
@@ -50,6 +51,23 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
     
     func handleErrors(errors: ServerError) {
         signInButton.loadingIndicator(show: false)
+        switch(errors.status!) {
+        case 400 ... 499:
+            handleFormErrors(errors: errors)
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
+    }
+    
+    private func hideErrors() {
+        emailErrors.isHidden = true
+        passwordErrors.isHidden = true
+        stackView.spacing = Constants.authDefaultSpacing
+    }
+    
+    private func handleFormErrors(errors: ServerError) {
+        signInButton.loadingIndicator(show: false)
         stackView.spacing = Constants.authErrorSpacing
         let errorsList = errors.params!
         if let emailErrorsArr = errorsList["email"] {
@@ -57,7 +75,7 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
             let emailError: String! = errorsArr.joined(separator: "\n")
             self.emailErrors.text = emailError
             self.emailErrors.isHidden = false
-
+            
         }
         
         if errorsList["password"] != nil {
@@ -66,11 +84,5 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
             self.passwordErrors.text = passwordError
             self.passwordErrors.isHidden = false
         }
-    }
-    
-    private func hideErrors() {
-        emailErrors.isHidden = true
-        passwordErrors.isHidden = true
-        stackView.spacing = Constants.authDefaultSpacing
     }
 }

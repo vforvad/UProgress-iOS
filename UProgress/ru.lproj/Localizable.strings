@@ -56,3 +56,7 @@
 
 // PROFILE
 "profile_about" = "О себе";
+
+// ERROR
+"error_title" = "Ошибка сервера";
+"server_not_respond" = "К сожалению, сервер не отвечает. Повторите запрос позже";

@@ -5,6 +5,7 @@ PODS:
   - AlamofireObjectMapper (4.0.1):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
+  - CDAlertView (0.5.1)
   - Charts (3.0.1):
     - Charts/Core (= 3.0.1)
   - Charts/Core (3.0.1)
@@ -37,6 +38,7 @@ PODS:
 DEPENDENCIES:
   - AlamofireImage
   - AlamofireObjectMapper (~> 4.0)
+  - CDAlertView
   - Charts
   - Embassy
   - EnvoyAmbassador
@@ -58,6 +60,7 @@ SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
   AlamofireObjectMapper: 842d2eed43a4d0593ff0110d54ac86a170c4519c
+  CDAlertView: b5577a5b279183360becc2b5a940518cd90b3659
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   Embassy: a84d4c72455ce0f1f90fa4acbf81b4f0658f6aad
   EnvoyAmbassador: 624f3c5a1ff24b09535180992b0de59f207888a4
@@ -76,6 +79,6 @@ SPEC CHECKSUMS:
   UIScrollView-InfiniteScroll: d26885be71caca7485cdb37eab513a8f89036bb0
   URITemplate: a5acb3f76c6a2338116fde88b658d83f91bbac45
 
-PODFILE CHECKSUM: a5f5d71acd52f549e1871d83a8c67c2e0d535526
+PODFILE CHECKSUM: ba7eb1c76f8250e9d11af49f933e0c23cb7c072f
 
 COCOAPODS: 1.2.0

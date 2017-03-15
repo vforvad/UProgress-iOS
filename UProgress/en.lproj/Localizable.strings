@@ -62,3 +62,7 @@
 
 // PROFILE
 "profile_about" = "Few words about yourself";
+
+// ERROR
+"error_title" = "Server error";
+"server_not_respond" = "Unfortunatelly, server does not respond. Please try request later";

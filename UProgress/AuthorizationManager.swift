@@ -40,16 +40,14 @@ class AuthorizationManager: AuthorizationManagerProtocol {
         var params = signInParameters
         params.updateValue(self.deviseInormation(provider: "UProgress"), forKey: "authorization")
         ApiRequest.sharedInstance.post(url: "/sessions", parameters: ["user": params] as NSDictionary).responseJSON { response in
-            
             if response.response?.statusCode == 200 {
                 let dictionary = response.result.value as! Dictionary<String, String>
                 self.writeToken(token: dictionary["token"]!)
                 self.currentUser(success: success, failure: failure)
             }
             else {
-                let error = response.result.value as? NSDictionary
-                let errorMessage = error?.object(forKey: "errors") as! NSDictionary
-                failure(ServerError(status: response.response!.statusCode, parameters: errorMessage))
+                let error = response.result.value as? Dictionary<String, AnyObject>
+                failure(ServerError(status: response.response!.statusCode, parameters: error))
             }
         }
     }

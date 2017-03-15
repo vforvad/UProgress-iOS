@@ -14,6 +14,10 @@ import KeychainSwift
 public enum Method: String {
     case GET, HEAD, POST, PUT, PATCH, DELETE
 }
+    
+enum ServerException: Error {
+    case DoesNotContainErrors
+}
 
 class ApiEndpoint {
     var data: NSDictionary!
