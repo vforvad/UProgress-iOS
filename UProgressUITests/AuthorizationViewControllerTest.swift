@@ -55,7 +55,7 @@ class AuthorizationViewControllerTest: BaseUITest {
         passwordField.tap()
         passwordField.typeText("password")
         button.tap()
-        sleep(5)
+        sleep(1)
         XCTAssert(self.app.staticTexts["Can't be blank"].exists)
 
         
@@ -90,7 +90,7 @@ class AuthorizationViewControllerTest: BaseUITest {
         passwordField.tap()
         passwordField.typeText("password")
         button.tap()
-        sleep(5)
+        sleep(1)
         XCTAssert(self.app.staticTexts["@aaa"].exists)
     }
     
@@ -128,7 +128,7 @@ class AuthorizationViewControllerTest: BaseUITest {
         app.swipeUp()
         app.swipeUp()
         button.tap()
-        sleep(5)
+        sleep(1)
         XCTAssert(self.app.staticTexts["@aaa"].exists)
     }
     
@@ -153,9 +153,8 @@ class AuthorizationViewControllerTest: BaseUITest {
         passwordField.tap()
         passwordField.typeText("password")
         app.swipeUp()
-        app.swipeUp()
         button.tap()
-        sleep(5)
+        sleep(1)
         XCTAssert(self.app.staticTexts["Can't be blank"].exists)
     }
 }

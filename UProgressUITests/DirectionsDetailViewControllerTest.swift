@@ -95,7 +95,6 @@ class DirectionsDetailViewControllerTest: BaseUITest {
         }
         let cell = app.tables.cells.staticTexts["Domainer"]
         cell.tap()
-        sleep(2)
     }
     
     override func tearDown() {
@@ -129,7 +128,7 @@ class DirectionsDetailViewControllerTest: BaseUITest {
         app.navigationBars.buttons.element(boundBy: 2).tap()
         app.buttons["Save"].tap()
         
-        sleep(5)
+        sleep(1)
         
         XCTAssert(app.staticTexts["Can't be blank"].exists)
     }
@@ -163,7 +162,7 @@ class DirectionsDetailViewControllerTest: BaseUITest {
         
         save.tap()
 
-        sleep(5)
+        sleep(1)
         
         XCTAssert(app.staticTexts["New step"].exists)
     }
@@ -203,7 +202,7 @@ class DirectionsDetailViewControllerTest: BaseUITest {
         let switchElement = app.tables.switches["Step 1"]
         switchElement.tap()
         
-        sleep(2)
+        sleep(1)
         
         XCTAssert(app.staticTexts["55"].exists)
     }
@@ -220,7 +219,7 @@ class DirectionsDetailViewControllerTest: BaseUITest {
         let switchElement = app.tables.switches["Step 1"]
         switchElement.tap()
         
-        sleep(2)
+        sleep(1)
         
         XCTAssert(app.staticTexts["40"].exists)
     }
@@ -252,7 +251,7 @@ class DirectionsDetailViewControllerTest: BaseUITest {
         cell.swipeLeft()
         app.buttons["Delete"].tap()
         
-        sleep(2)
+        sleep(1)
         
         XCTAssertFalse(app.staticTexts["Step 1"].exists)
     }
@@ -270,7 +269,7 @@ class DirectionsDetailViewControllerTest: BaseUITest {
         cell.swipeLeft()
         app.buttons["Delete"].tap()
         
-        sleep(2)
+        sleep(1)
         
         XCTAssert(app.staticTexts["Step 1"].exists)
     }

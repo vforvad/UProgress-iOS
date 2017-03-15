@@ -48,7 +48,7 @@ class AuthorizationManagerSpec: QuickSpec {
                 }
                 
                 it("user exists") {
-                    expect(self.currentUser).toEventuallyNot(beNil(), timeout: 10.0)
+                    expect(self.currentUser).toEventuallyNot(beNil(), timeout: 1.0)
                 }
 
             }
@@ -66,7 +66,7 @@ class AuthorizationManagerSpec: QuickSpec {
                 }
                 
                 it("receive error") {
-                    expect(self.errors).toEventuallyNot(beNil(), timeout: 10.0)
+                    expect(self.errors).toEventuallyNot(beNil(), timeout: 1.0)
                 }
             }
         }
@@ -89,7 +89,7 @@ class AuthorizationManagerSpec: QuickSpec {
                 }
                 
                 it("receives current user") {
-                    expect(self.currentUser).toEventuallyNot(beNil(), timeout: 10.0)
+                    expect(self.currentUser).toEventuallyNot(beNil(), timeout: 1.0)
                 }
             }
             
@@ -106,7 +106,7 @@ class AuthorizationManagerSpec: QuickSpec {
                 }
                 
                 it("receive error") {
-                    expect(self.errors).toEventuallyNot(beNil(), timeout: 10.0)
+                    expect(self.errors).toEventuallyNot(beNil(), timeout: 1.0)
                 }
             }
         }
@@ -122,7 +122,7 @@ class AuthorizationManagerSpec: QuickSpec {
                 })
             }
             it("receives current user") {
-                expect(self.currentUser).toEventuallyNot(beNil(), timeout: 10.0)
+                expect(self.currentUser).toEventuallyNot(beNil(), timeout: 1.0)
             }
         }
     }

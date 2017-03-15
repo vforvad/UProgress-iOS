@@ -97,7 +97,7 @@ class DirectionsListViewControllerTest: BaseUITest {
         
         let save = app.buttons["Save"]
         save.tap()
-        sleep(5)
+        sleep(1)
         XCTAssert(app.staticTexts["Can't be blank"].exists)
     }
     
@@ -130,7 +130,7 @@ class DirectionsListViewControllerTest: BaseUITest {
         
         save.tap()
         
-        sleep(5)
+        sleep(1)
         
         XCTAssert(app.staticTexts["New direction"].exists)
     }
