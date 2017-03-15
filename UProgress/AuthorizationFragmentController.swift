@@ -101,6 +101,7 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling, UITex
         }
         
         if textField == passwordField {
+            parentVC.scrollToField(view: signInButton)
             self.signIn(signInButton)
         }
         return true

@@ -114,17 +114,21 @@ class RegistrationFragmentController: BaseViewController, ErrorsHandling, UIText
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         if (textField === emailField) {
             emailField.resignFirstResponder()
+            parentVC.scrollToField(view: passwordField)
             passwordField.becomeFirstResponder()
         }
         if textField == passwordField {
             passwordField.resignFirstResponder()
+            parentVC.scrollToField(view: passwordConfirmationField)
             passwordConfirmationField.becomeFirstResponder()
         }
         if textField == passwordConfirmationField {
             passwordConfirmationField.resignFirstResponder()
+            parentVC.scrollToField(view: nickField)
             nickField.becomeFirstResponder()
         }
         if textField == nickField {
+            parentVC.scrollToField(view: signUpButton)
             self.signUp(signUpButton)
         }
         return true
