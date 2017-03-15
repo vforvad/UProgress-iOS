@@ -27,6 +27,9 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         super.viewDidLoad()
         view.backgroundColor = UIColor("#f6f7f8")
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -151,5 +154,10 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     internal func stopLoader() {
         MBProgressHUD.hide(for: view, animated: true)
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 }
