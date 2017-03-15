@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6474B1A21E3D04C200C46165"
-               BuildableName = "UProgress.app"
-               BlueprintName = "UProgress"
-               ReferencedContainer = "container:UProgress.xcodeproj">
+               BlueprintIdentifier = "501857D7DB1E5586EB2CB5A3C48391A5"
+               BuildableName = "Pods_UProgress_UProgressTests.framework"
+               BlueprintName = "Pods-UProgress-UProgressTests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,26 +26,9 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "NO">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6474B1B61E3D04C200C46165"
-               BuildableName = "UProgressTests.xctest"
-               BlueprintName = "UProgressTests"
-               ReferencedContainer = "container:UProgress.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "API_ENDPOINT"
-            value = "http://localhost:3000"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -59,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6474B1A21E3D04C200C46165"
-            BuildableName = "UProgress.app"
-            BlueprintName = "UProgress"
-            ReferencedContainer = "container:UProgress.xcodeproj">
+            BlueprintIdentifier = "501857D7DB1E5586EB2CB5A3C48391A5"
+            BuildableName = "Pods_UProgress_UProgressTests.framework"
+            BlueprintName = "Pods-UProgress-UProgressTests"
+            ReferencedContainer = "container:Pods/Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -78,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6474B1A21E3D04C200C46165"
-            BuildableName = "UProgress.app"
-            BlueprintName = "UProgress"
-            ReferencedContainer = "container:UProgress.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

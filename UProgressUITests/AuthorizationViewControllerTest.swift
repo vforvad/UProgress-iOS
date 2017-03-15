@@ -55,7 +55,7 @@ class AuthorizationViewControllerTest: BaseUITest {
         passwordField.tap()
         passwordField.typeText("password")
         button.tap()
-        sleep(1)
+        sleep(2)
         XCTAssert(self.app.staticTexts["Can't be blank"].exists)
 
         
