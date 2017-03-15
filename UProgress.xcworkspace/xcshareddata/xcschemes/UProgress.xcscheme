@@ -38,6 +38,24 @@
                ReferencedContainer = "container:UProgress.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6474B1C11E3D04C200C46165"
+               BuildableName = "UProgressUITests.xctest"
+               BlueprintName = "UProgressUITests"
+               ReferencedContainer = "container:UProgress.xcodeproj">
+            </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "DirectionsDetailViewControllerTest">
+               </Test>
+               <Test
+                  Identifier = "DirectionsListViewControllerTest">
+               </Test>
+            </SkippedTests>
+         </TestableReference>
       </Testables>
       <EnvironmentVariables>
          <EnvironmentVariable
