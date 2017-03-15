@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CDAlertView
 
-class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
+class AuthorizationFragmentController: BaseViewController, ErrorsHandling, UITextFieldDelegate {
     var parentVC: SignInProtocol!
     
     @IBOutlet weak var stackView: UIStackView!
@@ -31,6 +31,8 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
         self.view.layer.cornerRadius = 10.0
         signInButton.setTitle(NSLocalizedString("auth_sign_in", comment: ""), for: UIControlState.normal)
         signInButton.layer.cornerRadius = 5.0
+        emailField.delegate = self
+        passwordField.delegate = self
         emailField.isUserInteractionEnabled = true
         passwordField.isUserInteractionEnabled = true
         CommonFunctions.customizeTextField(field: self.emailField, placeholder: NSLocalizedString("auth_email", comment: ""), image: "email_icon")
@@ -83,5 +85,19 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
             self.passwordErrors.text = passwordError
             self.passwordErrors.isHidden = false
         }
+    }
+    
+    
+    // MARK: UITextFieldDelegate methods
+    func textFieldShouldReturn(_ textField: UITextField!) -> Bool{
+        if (textField === emailField) {
+            emailField.resignFirstResponder()
+            passwordField.becomeFirstResponder()
+        }
+        
+        if textField == passwordField {
+            self.signIn(signInButton)
+        }
+        return true
     }
 }
