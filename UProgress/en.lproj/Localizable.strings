@@ -59,3 +59,6 @@
 // DIRECTIONS
 "directions_title" = "Title";
 "directions_description" = "Description";
+
+// PROFILE
+"profile_about" = "Few words about yourself";

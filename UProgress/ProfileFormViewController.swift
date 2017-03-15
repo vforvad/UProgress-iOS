@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MBProgressHUD
 
-class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol {
+class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, UITextViewDelegate {
     var presenter: ProfilePresenter!
     var user: User! = AuthorizationService.sharedInstance.currentUser
     var actions: ProfilePopupProtocol!
@@ -46,6 +46,8 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol {
         setValues()
         let model = ProfileManager()
         presenter = ProfilePresenter(model: model, view: self)
+        
+        self.descriptionField.delegate = self
     }
     
     @IBAction func saveClick(_ sender: Any) {
@@ -78,7 +80,6 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol {
     func setAppearance() {
         hideErrors()
         
-        
         descriptionField.layer.cornerRadius = 8.0
         descriptionField.layer.borderWidth = 0.3
         descriptionField.layer.borderColor = UIColor.lightGray.cgColor
@@ -87,6 +88,7 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol {
         lastNameField.placeholder = "Last name"
         emailField.placeholder = "Email"
         locationField.placeholder = "Location"
+        descriptionField.text = NSLocalizedString("profile_about", comment: "")
         
         saveButton.layer.cornerRadius = 4.0
         cancelButton.layer.cornerRadius = 4.0
@@ -97,7 +99,13 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol {
         lastNameField.text = user.lastName
         emailField.text = user.email
         locationField.text = user.location
-        descriptionField.text = user.description
+        if let desc = user.description {
+            descriptionField.text = desc
+        }
+        else {
+            descriptionField.text = NSLocalizedString("profile_about", comment: "")
+            descriptionField.textColor = UIColor.lightGray
+        }
     }
     
     internal func successUpdate(user: User!) {
@@ -138,5 +146,20 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol {
     
     internal func stopLoader() {
         MBProgressHUD.hide(for: view, animated: true)
+    }
+    
+    // MARK: UITextViewDelegate methods
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if descriptionField.textColor == UIColor.lightGray {
+            descriptionField.text = nil
+            descriptionField.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if descriptionField.text.isEmpty {
+            descriptionField.text = NSLocalizedString("profile_about", comment: "")
+            descriptionField.textColor = UIColor.lightGray
+        }
     }
 }
