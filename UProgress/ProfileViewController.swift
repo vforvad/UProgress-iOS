@@ -16,6 +16,18 @@ class ProfileViewController: BaseViewController, ProfileViewActionsProtocol, Pro
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor("#B1E8AE")
+//        navigationController?.setNavigationBarHidden(false, animated: true)
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        navigationController?.navigationBar.shadowImage = UIImage()
+//        navigationController?.navigationBar.isTranslucent = true
+//        let profileHeader = ProfileHeader.instanceFromNib() as! ProfileHeader
+//        profileHeader.setData(user: user)
+//        navigationController?.navigationBar.topItem?.titleView = profileHeader
+//        let height: CGFloat = 300 //whatever height you want
+//        let bounds = self.navigationController!.navigationBar.bounds
+//        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height + height)
+        
         profileView = ProfileView(user: user, table: tableView, viewController: self)
     }
     

@@ -159,7 +159,7 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 140
+        return 220
     }
     
     func updateUser(user: User!) {
