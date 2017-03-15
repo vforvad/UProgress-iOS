@@ -19,7 +19,7 @@ class DirectionDetailManagerMock: DirectionDetailManagerProtocol {
         self.successRequest = request
     }
     
-    func loadDirection(userNick: String, directionId: String!, success: @escaping (_ direction: Direction) -> Void, failure: @escaping (_ error: NSError) -> Void) {
+    func loadDirection(userNick: String, directionId: String!, success: @escaping (_ direction: Direction) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
         
         if successRequest! {
             loadDirection = true
@@ -27,7 +27,7 @@ class DirectionDetailManagerMock: DirectionDetailManagerProtocol {
         }
         else {
             loadDirection = false
-            failure(NSError())
+            failure(ServerError())
         }
     }
     

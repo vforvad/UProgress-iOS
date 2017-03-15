@@ -48,7 +48,7 @@ class AuthorizationManagerSpec: QuickSpec {
                 }
                 
                 it("user exists") {
-                    expect(self.currentUser).toEventuallyNot(beNil(), timeout: 10.0)
+                    expect(self.currentUser).toEventuallyNot(beNil(), timeout: 1.0)
                 }
 
             }
@@ -57,16 +57,16 @@ class AuthorizationManagerSpec: QuickSpec {
                 beforeEach {
                     self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/sessions"), json(["errors": ["email": "Can't be blank"]], status: 403, headers: [:]))
                     self.model.signIn(signInParameters: ["email": "111@mail.ru" as AnyObject],
-                                      success: { user in
-                                        self.currentUser = user
+                    success: { user in
+                        self.currentUser = user
                     },
-                                      failure: { error in
-                                       self.errors = error
+                    failure: { error in
+                        self.errors = error
                     })
                 }
                 
                 it("receive error") {
-                    expect(self.errors).toEventuallyNot(beNil(), timeout: 10.0)
+                    expect(self.errors).toEventuallyNot(beNil(), timeout: 1.0)
                 }
             }
         }
@@ -79,17 +79,17 @@ class AuthorizationManagerSpec: QuickSpec {
                     self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/registrations"), jsonData(data as Data))
                     
                     self.model.signIn(signInParameters: ["email": "111@mail.ru" as AnyObject],
-                                      success: { user in
-                                        self.currentUser = user
+                    success: { user in
+                        self.currentUser = user
                     },
-                                      failure: { error in
+                    failure: { error in
                                         
                     })
                     
                 }
                 
                 it("receives current user") {
-                    expect(self.currentUser).toEventuallyNot(beNil(), timeout: 10.0)
+                    expect(self.currentUser).toEventuallyNot(beNil(), timeout: 1.0)
                 }
             }
             
@@ -106,7 +106,7 @@ class AuthorizationManagerSpec: QuickSpec {
                 }
                 
                 it("receive error") {
-                    expect(self.errors).toEventuallyNot(beNil(), timeout: 10.0)
+                    expect(self.errors).toEventuallyNot(beNil(), timeout: 1.0)
                 }
             }
         }
@@ -122,7 +122,7 @@ class AuthorizationManagerSpec: QuickSpec {
                 })
             }
             it("receives current user") {
-                expect(self.currentUser).toEventuallyNot(beNil(), timeout: 10.0)
+                expect(self.currentUser).toEventuallyNot(beNil(), timeout: 1.0)
             }
         }
     }

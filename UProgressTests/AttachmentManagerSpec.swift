@@ -38,7 +38,7 @@ class AttachmentManagerSpec: BaseTest {
                 }
                 
                 it("receives attachment") {
-                    expect(self.loadedAttachment).toEventuallyNot(beNil(), timeout: 10.0)
+                    expect(self.loadedAttachment).toEventuallyNot(beNil(), timeout: 1.0)
                 }
                 
             }

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MBProgressHUD
 
-class DirectionsFormViewController: BasePopupViewController, DirectionFormProtocol {
+class DirectionsFormViewController: BasePopupViewController, DirectionFormProtocol, UITextViewDelegate {
     var actions: DirectionPopupActions!
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var stackView: UIStackView!
@@ -51,7 +51,14 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
         titleFieldError.isHidden = true
         descriptionFieldError.isHidden = true
         stackView.spacing = 5.0
+        
+        descriptionField.delegate = self
+        titleField.placeholder = NSLocalizedString("directions_title", comment: "")
+        
+        descriptionField.text = NSLocalizedString("directions_description", comment: "")
+        descriptionField.textColor = UIColor.lightGray
     }
+    
     @IBAction func clickSave(_ sender: Any) {
         titleFieldError.isHidden = true
         descriptionFieldError.isHidden = true
@@ -92,5 +99,20 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
     
     internal func stopLoader() {
         MBProgressHUD.hide(for: view, animated: true)
+    }
+    
+    // MARK: UITextViewDelegate methods
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if descriptionField.textColor == UIColor.lightGray {
+            descriptionField.text = nil
+            descriptionField.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if descriptionField.text.isEmpty {
+            descriptionField.text = NSLocalizedString("directions_descriptions", comment: "")
+            descriptionField.textColor = UIColor.lightGray
+        }
     }
 }

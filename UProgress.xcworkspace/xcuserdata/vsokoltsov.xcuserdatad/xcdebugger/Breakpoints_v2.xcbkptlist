@@ -89,22 +89,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UProgress/ApiRequest.swift"
-            timestampString = "510053820.848182"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "defineFullUrl(url:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "UProgress/DirectionsListViewController.swift"
             timestampString = "510054799.661717"
             startingColumnNumber = "9223372036854775807"
@@ -132,31 +116,31 @@
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "UProgress.DirectionManager.loadDirectionsList (userNick : Swift.String, pageNumber : Swift.Int) -&gt; Alamofire.DataRequest"
+                  symbolName = "UProgress.DirectionManager.loadDirectionsList (userNick : Swift.String, pageNumber : Swift.Int, success : (Swift.Array&lt;UProgress.Direction&gt;) -&gt; (), failure : (__ObjC.NSError) -&gt; ()) -&gt; ()"
                   moduleName = "UProgress"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/DirectionManager.swift"
-                  timestampString = "507419005.307813"
+                  timestampString = "511178296.537054"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "31">
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "60">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "UProgressTests.DirectionManager.loadDirectionsList (userNick : Swift.String, pageNumber : Swift.Int) -&gt; Alamofire.DataRequest"
-                  moduleName = "UProgressTests"
+                  symbolName = "UProgress.DirectionManager.(loadDirectionsList (userNick : Swift.String, pageNumber : Swift.Int, success : (Swift.Array&lt;UProgress.Direction&gt;) -&gt; (), failure : (__ObjC.NSError) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "UProgress"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/DirectionManager.swift"
-                  timestampString = "507419006.528739"
+                  timestampString = "511178296.540669"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "31">
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "165">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1118,6 +1102,38 @@
             endingLineNumber = "51"
             landmarkName = "signIn(signInParameters:success:failure:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgressUITests.AuthorizationManager.(signIn (signInParameters : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, success : (UProgressUITests.User) -&gt; (), failure : (UProgressUITests.ServerError) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "UProgressUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/AuthorizationManager.swift"
+                  timestampString = "511131066.981051"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1982">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgressUITests.AuthorizationManager.(signIn (signInParameters : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, success : (UProgressUITests.User) -&gt; (), failure : (UProgressUITests.ServerError) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "UProgressUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/AuthorizationManager.swift"
+                  timestampString = "511131066.984446"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "3137">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1751,11 +1767,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/StepFormViewController.swift"
-            timestampString = "509493385.230146"
+            timestampString = "511213057.857749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "successCreation(step:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1767,11 +1783,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/StepFormViewController.swift"
-            timestampString = "509493385.230146"
+            timestampString = "511213057.857749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "failureCreation(error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1783,11 +1799,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/StepFormViewController.swift"
-            timestampString = "509493385.230146"
+            timestampString = "511213057.857749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "clickSave(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1799,11 +1815,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/DirectionDetailManager.swift"
-            timestampString = "508718124.226322"
+            timestampString = "511210980.826712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "createStep(userNick:directionId:parameters:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1815,11 +1831,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/DirectionDetailManager.swift"
-            timestampString = "508718124.226322"
+            timestampString = "511210980.826712"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "createStep(userNick:directionId:parameters:success:failure:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1831,11 +1847,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/StepFormViewController.swift"
-            timestampString = "509493385.230146"
+            timestampString = "511213057.857749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "stopLoader()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2163,11 +2179,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/DirectionsFormViewController.swift"
-            timestampString = "509901792.868109"
+            timestampString = "511202048.74588"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "stopLoader()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2202,22 +2218,6 @@
             endingLineNumber = "12"
             landmarkName = "StatisticsInfo"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UProgressUITests/UProgressUITests.swift"
-            timestampString = "510415046.130444"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "setUp()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2361,6 +2361,1105 @@
             startingLineNumber = "68"
             endingLineNumber = "68"
             landmarkName = "currentUser(success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/ApiRequest.swift"
+            timestampString = "511110012.766861"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "put(url:parameters:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/ApiRequest.swift"
+            timestampString = "511110012.766861"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "post(url:parameters:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/Request.swift"
+            timestampString = "511100680.906163"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "response"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/Request.swift"
+            timestampString = "511100683.316341"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init(request:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/AuthorizationManager.swift"
+            timestampString = "511104745.22943"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "signIn(signInParameters:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/ApiEndpoint.swift"
+            timestampString = "511108487.496627"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getHost()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/ApiEndpoint.swift"
+            timestampString = "511108500.444389"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getHost()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/AuthorizationManager.swift"
+            timestampString = "511122291.614977"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "currentUser(success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/AuthorizationManager.swift"
+            timestampString = "511122669.361225"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "signIn(signInParameters:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/AuthorizationManager.swift"
+            timestampString = "511122750.358277"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "currentUser(success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/AuthorizationManager.swift"
+            timestampString = "511131552.214518"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "currentUser(success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgress.AuthorizationManager.currentUser (success : (UProgress.User) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()"
+                  moduleName = "UProgress"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/AuthorizationManager.swift"
+                  timestampString = "511131628.727767"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "31">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgress.AuthorizationManager.(currentUser (success : (UProgress.User) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "UProgress"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/AuthorizationManager.swift"
+                  timestampString = "511131628.730735"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/AuthorizationManager.swift"
+            timestampString = "511131559.00854"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "signIn(signInParameters:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgress.AuthorizationManager.signIn (signInParameters : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, success : (UProgress.User) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()"
+                  moduleName = "UProgress"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/AuthorizationManager.swift"
+                  timestampString = "511133398.708258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "370">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgress.AuthorizationManager.(signIn (signInParameters : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, success : (UProgress.User) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "UProgress"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/AuthorizationManager.swift"
+                  timestampString = "511133398.71135"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/AuthorizationsViewController.swift"
+            timestampString = "511133503.313609"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "successSignIn(currentUser:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/UProgressUITests.swift"
+            timestampString = "511175147.198626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "testSuccessAuthorizationFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/UProgressUITests.swift"
+            timestampString = "511175147.198626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "testSuccessRegistrationFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/UProgressUITests.swift"
+            timestampString = "511175147.198626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "testSuccessRegistrationFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/UProgressUITests.swift"
+            timestampString = "511175147.198626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "testSuccessRegistrationFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/UProgressUITests.swift"
+            timestampString = "511175147.198626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "testSuccessRegistrationFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/UProgressUITests.swift"
+            timestampString = "511175147.198626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "testSuccessRegistrationFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/UProgressUITests.swift"
+            timestampString = "511175147.198626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "testSuccessRegistrationFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/UProgressUITests.swift"
+            timestampString = "511175147.198626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "testSuccessRegistrationFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/UProgressUITests.swift"
+            timestampString = "511175147.198626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "testSuccessRegistrationFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/UProgressUITests.swift"
+            timestampString = "511175147.198626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "testSuccessRegistrationFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/UProgressUITests.swift"
+            timestampString = "511175147.198626"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "testSuccessRegistrationFlow()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/BaseUITest.swift"
+            timestampString = "511173321.305884"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "tearDown()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/UProgressUITests.swift"
+            timestampString = "511175121.261494"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "UProgressUITests"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgressUITests.UProgressUITests.__deallocating_deinit"
+                  moduleName = "UProgressUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgressUITests/UProgressUITests.swift"
+                  timestampString = "511175121.269292"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgressUITests.UProgressUITests.init (invocation : Swift.Optional&lt;__ObjC.NSInvocation&gt;) -&gt; UProgressUITests.UProgressUITests"
+                  moduleName = "UProgressUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgressUITests/UProgressUITests.swift"
+                  timestampString = "511175121.273207"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "50">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgressUITests.UProgressUITests.__allocating_init (invocation : Swift.Optional&lt;__ObjC.NSInvocation&gt;) -&gt; UProgressUITests.UProgressUITests"
+                  moduleName = "UProgressUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgressUITests/UProgressUITests.swift"
+                  timestampString = "511175121.277749"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgressUITests.UProgressUITests.init (selector : ObjectiveC.Selector) -&gt; UProgressUITests.UProgressUITests"
+                  moduleName = "UProgressUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgressUITests/UProgressUITests.swift"
+                  timestampString = "511175121.281209"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgressUITests.UProgressUITests.__allocating_init (selector : ObjectiveC.Selector) -&gt; UProgressUITests.UProgressUITests"
+                  moduleName = "UProgressUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgressUITests/UProgressUITests.swift"
+                  timestampString = "511175121.28395"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgressUITests.UProgressUITests.init () -&gt; UProgressUITests.UProgressUITests"
+                  moduleName = "UProgressUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgressUITests/UProgressUITests.swift"
+                  timestampString = "511175121.287701"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "21">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgressUITests.UProgressUITests.__allocating_init () -&gt; UProgressUITests.UProgressUITests"
+                  moduleName = "UProgressUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgressUITests/UProgressUITests.swift"
+                  timestampString = "511175121.291609"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/DirectionsListViewControllerTest.swift"
+            timestampString = "511178507.644016"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "testDirectionsListPresence()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/DirectionsListViewControllerTest.swift"
+            timestampString = "511177662.182838"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "setUp()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/DirectionsListViewControllerTest.swift"
+            timestampString = "511177753.250979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "setUp()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/DirectionsListViewControllerTest.swift"
+            timestampString = "511177991.002135"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "setUp()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/DirectionManager.swift"
+            timestampString = "511178211.806383"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "createDirection(userNick:parameters:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/DirectionsListViewControllerTest.swift"
+            timestampString = "511202603.003483"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "testExistanceOfDirectionsPopup()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/DirectionsFormViewController.swift"
+            timestampString = "511202048.74588"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/DirectionsListViewControllerTest.swift"
+            timestampString = "511202603.003483"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "testExistanceOfDirectionsPopup()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/DirectionManager.swift"
+            timestampString = "511202779.955669"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "createDirection(userNick:parameters:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/ApiRequest.swift"
+            timestampString = "511204556.633653"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getHost()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/LaunchViewController.swift"
+            timestampString = "511204798.7975"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "successCurrentUserReceived()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/LaunchViewController.swift"
+            timestampString = "511204800.37151"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "failedCurrentUserReceived(error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/LaunchPresenter.swift"
+            timestampString = "511204843.307971"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "currentUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/LaunchPresenter.swift"
+            timestampString = "511204844.468541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "currentUser()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/DirectionsListViewControllerTest.swift"
+            timestampString = "511207863.463456"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "testSuccessCreationOfDirection()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/DirectionDetailManager.swift"
+            timestampString = "511211027.763998"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "loadDirection(userNick:directionId:success:failure:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/DirectionDetailManager.swift"
+            timestampString = "511211494.576687"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "loadDirection(userNick:directionId:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgress.DirectionDetailManager.loadDirection (userNick : Swift.String, directionId : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;, success : (UProgress.Direction) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()"
+                  moduleName = "UProgress"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/DirectionDetailManager.swift"
+                  timestampString = "511211651.836346"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "582">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgress.DirectionDetailManager.(loadDirection (userNick : Swift.String, directionId : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;, success : (UProgress.Direction) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "UProgress"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/DirectionDetailManager.swift"
+                  timestampString = "511211651.845593"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/DirectionDetailManager.swift"
+            timestampString = "511214012.21008"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "createStep(userNick:directionId:parameters:success:failure:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgress.DirectionDetailManager.createStep (userNick : Swift.String, directionId : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;, parameters : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, success : (UProgress.Step) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()"
+                  moduleName = "UProgress"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/DirectionDetailManager.swift"
+                  timestampString = "511214898.580593"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "743">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UProgress.DirectionDetailManager.(createStep (userNick : Swift.String, directionId : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;, parameters : Swift.Dictionary&lt;Swift.String, Swift.AnyObject&gt;, success : (UProgress.Step) -&gt; (), failure : (UProgress.ServerError) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "UProgress"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vsokoltsov/ios_projects/UProgress/UProgress/DirectionDetailManager.swift"
+                  timestampString = "511214898.584304"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/DirectionsDetailViewControllerTest.swift"
+            timestampString = "511262818.2736"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "testDetailStepInformation()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/DirectionsDetailViewControllerTest.swift"
+            timestampString = "511262818.2736"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "testDetailStepInformation()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/DirectionsDetailViewControllerTest.swift"
+            timestampString = "511262818.2736"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
+            landmarkName = "testSuccessMarkStepAsUpdated()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/DirectionsDetailViewControllerTest.swift"
+            timestampString = "511262818.2736"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "testSuccessMarkStepAsUpdated()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/DirectionsDetailViewControllerTest.swift"
+            timestampString = "511262818.2736"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "testSuccessMarkStepAsUpdated()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/ProfileViewControllerTest.swift"
+            timestampString = "511274069.587595"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "ProfileViewControllerTest"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgressUITests/ProfileViewControllerTest.swift"
+            timestampString = "511274069.587595"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "testAppearingOfUserUpdatePopup()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/ProfileFormViewController.swift"
+            timestampString = "511273285.070288"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "setAppearance()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/ProfileFormViewController.swift"
+            timestampString = "511273685.553262"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "setValues()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UProgress/Attachment.swift"
+            timestampString = "511274380.525806"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "toDict()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

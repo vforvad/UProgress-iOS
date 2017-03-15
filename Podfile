@@ -29,6 +29,11 @@ target 'UProgress' do
       use_frameworks!
       pod 'KIF'
       pod 'Nimble'
+      pod 'Mockingjay'
+      pod 'Embassy'
+      pod 'EnvoyAmbassador'
+      pod 'Kakapo'
+      pod 'Swifter'
 #    inherit! :search_paths
   end
 

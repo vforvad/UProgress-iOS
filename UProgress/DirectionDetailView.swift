@@ -83,7 +83,7 @@ UITableViewDataSource, StepCellProtocol {
         tableView.reloadData()
     }
     
-    internal func failedDirectionLoad(error: NSError) {
+    internal func failedDirectionLoad(error: ServerError) {
         
     }
     

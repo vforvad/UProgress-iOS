@@ -22,7 +22,7 @@ class DirectionDetailPresenterSpec: QuickSpec {
         internal func startLoader() {}
         internal func stopLoader() {}
         internal func successDirectionLoad(direction: Direction!) { directionLoad = true }
-        internal func failedDirectionLoad(error: NSError) { directionLoad = false }
+        internal func failedDirectionLoad(error: ServerError) { directionLoad = false }
         internal func successStepUpdate(step: Step!) { stepUpdate = true }
         internal func failureStepUpdate(error: ServerError!) { stepUpdate = false }
         internal func successStepDelete(step: Step!) { stepDelete = true }
