@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MBProgressHUD
 
-class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, UITextViewDelegate {
+class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, UITextViewDelegate, UITextFieldDelegate {
     var presenter: ProfilePresenter!
     var user: User! = AuthorizationService.sharedInstance.currentUser
     var actions: ProfilePopupProtocol!
@@ -47,6 +47,10 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
         let model = ProfileManager()
         presenter = ProfilePresenter(model: model, view: self)
         
+        self.firstNameField.delegate = self
+        self.lastNameField.delegate = self
+        self.emailField.delegate = self
+        self.locationField.delegate = self
         self.descriptionField.delegate = self
     }
     
@@ -162,5 +166,35 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
             descriptionField.text = NSLocalizedString("profile_about", comment: "")
             descriptionField.textColor = UIColor.lightGray
         }
+    }
+    
+
+    
+    // MARK: UITextFieldDelegate methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if textField === firstNameField {
+            firstNameField.resignFirstResponder()
+            self.scrollView.scrollToView(view: lastNameField, animated: true)
+            lastNameField.becomeFirstResponder()
+        }
+        
+        if textField == lastNameField {
+            lastNameField.resignFirstResponder()
+            self.scrollView.scrollToView(view: emailField, animated: true)
+            emailField.becomeFirstResponder()
+        }
+        
+        if textField == emailField {
+            emailField.resignFirstResponder()
+            self.scrollView.scrollToView(view: locationField, animated: true)
+            locationField.becomeFirstResponder()
+        }
+        
+        if textField == locationField {
+            locationField.resignFirstResponder()
+            self.scrollView.scrollToView(view: descriptionField, animated: true)
+            descriptionField.becomeFirstResponder()
+        }
+        return true
     }
 }
