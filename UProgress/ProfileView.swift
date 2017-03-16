@@ -41,6 +41,8 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         self.tableView.dataSource = self
         self.profileItems = user.attributesDictionary()
         
+        tableView.backgroundColor = UIColor("#f6f7f8")
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         var buttonsArr: [UIBarButtonItem]! = []
         
@@ -126,7 +128,7 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ProfileCell
         cell.setData(list: profileItems[indexPath.row])
-        return cell as! UITableViewCell
+        return cell as UITableViewCell
     }
     
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -155,7 +157,7 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         self.tableView.reloadData()
     }
     
-    func imagePickerController(_ picker: UIImagePickerController,
+    private func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         viewController.dismiss(animated: true, completion: nil)
         let image = info[UIImagePickerControllerOriginalImage]
@@ -168,7 +170,7 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     }
     
     internal func successAttachmentUpload(attachment: Attachment) {
-        var user = AuthorizationService.sharedInstance.currentUser
+        let user = AuthorizationService.sharedInstance.currentUser
         user?.attachment = attachment
         user?.avatarUrl = attachment.url
         if let selectedImage = uploadedImage {
