@@ -46,4 +46,11 @@ class BaseViewController: UIViewController {
             splitViewController?.viewControllers[1] = navCtrl
         }
     }
+    
+    func setColoredTitle(title: String) {
+        self.title = title
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = titleDict as! [String : Any]
+
+    }
 }

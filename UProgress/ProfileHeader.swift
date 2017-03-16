@@ -22,6 +22,9 @@ class ProfileHeader: UIView {
         CommonFunctions.avatarImage(imageView: avatarImage, url: user.avatarUrl)
         userName.text = user.getFullName()
         userNick.text = user.getCorrectNick()
+        userName.textColor = UIColor.white
+        userNick.textColor = UIColor.white
+        
     }
     
     class func instanceFromNib() -> UIView {

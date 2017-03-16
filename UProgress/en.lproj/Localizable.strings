@@ -62,6 +62,7 @@
 "directions_description" = "Description";
 
 // PROFILE
+"profile_title" = "Profile";
 "profile_about" = "Few words about yourself";
 
 // ERROR

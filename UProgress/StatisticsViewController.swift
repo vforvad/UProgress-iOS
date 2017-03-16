@@ -28,9 +28,7 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = NSLocalizedString("statistics_title_page", comment: "")
-        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = titleDict as! [String : Any]
+        super.setColoredTitle(title: NSLocalizedString("statistics_title_page", comment: ""))
         let model = StatisticsManager()
         let presenter = StatisticsPresenter(model: model, view: self)
         presenter.loadStatistics(userId: AuthorizationService.sharedInstance.currentUser.nick)
