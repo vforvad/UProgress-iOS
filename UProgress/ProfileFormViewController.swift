@@ -146,11 +146,11 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
     }
     
     internal func startLoader() {
-        MBProgressHUD.showAdded(to: view, animated: true)
+        MBProgressHUD.showAdded(to: self.view, animated: true)
     }
     
     internal func stopLoader() {
-        MBProgressHUD.hide(for: view, animated: true)
+        MBProgressHUD.hide(for: self.view, animated: true)
     }
     
     // MARK: UITextViewDelegate methods

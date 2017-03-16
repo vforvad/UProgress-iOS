@@ -157,7 +157,7 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         self.tableView.reloadData()
     }
     
-    private func imagePickerController(_ picker: UIImagePickerController,
+    func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         viewController.dismiss(animated: true, completion: nil)
         let image = info[UIImagePickerControllerOriginalImage]
