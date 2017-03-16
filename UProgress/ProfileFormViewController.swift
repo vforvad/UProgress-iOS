@@ -62,8 +62,8 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
             "last_name": lastNameField.text,
             "email": emailField.text,
             "location": locationField.text,
-            "description": descriptionField.text,
-            "attachment": user.attachment.toDict()
+            "description": getDescription(),
+            "attachment": user.attachment?.toDict()
         ] as [String : Any]
         
         presenter.updateProfile(userId: userId, parameters: parameters as Dictionary<String, AnyObject>)
@@ -104,8 +104,8 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
         lastNameField.text = user.lastName
         emailField.text = user.email
         locationField.text = user.location
-        if let desc = user.description {
-            descriptionField.text = desc
+        if user.description != nil && !user.description.isEmpty {
+            descriptionField.text = user.description
         }
         else {
             descriptionField.text = NSLocalizedString("profile_about", comment: "")
@@ -196,5 +196,12 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
             descriptionField.becomeFirstResponder()
         }
         return true
+    }
+    
+    func getDescription() -> String? {
+        if descriptionField.text == NSLocalizedString("profile_about", comment: "") {
+            return nil
+        }
+        return descriptionField.text
     }
 }

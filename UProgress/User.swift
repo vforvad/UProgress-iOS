@@ -65,7 +65,7 @@ class User: Mappable {
             list.append(["title": "location", "value": location])
         }
         
-        if description != nil {
+        if description != nil && !description.isEmpty {
             list.append(["title": "description", "value": description])
         }
         return list
