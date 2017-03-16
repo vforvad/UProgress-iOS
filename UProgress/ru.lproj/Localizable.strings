@@ -52,6 +52,7 @@
 "statistics_title" = "Выборка";
 
 // DIRECTIONS
+"directions_page_title" = "Направления";
 "directions_title" = "Название";
 "directions_description" = "Описание";
 

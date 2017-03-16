@@ -25,6 +25,7 @@ DirectionPopupActions {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.setColoredTitle(title: NSLocalizedString("directions_page_title", comment: ""))
         viewInstance = DirectionsListView(viewController: self, table: tableView, searchBar: searchBar)
         presenter = DirectionListPresenterImpl(model: manager, view: self)
         presenter.loadDirections(userNick: userNick)
