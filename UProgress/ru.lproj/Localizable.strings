@@ -45,6 +45,7 @@
 "profile_settings_sign_out" = "Выйти";
 
 // STATISTISCS
+"statistics_title_page" = "Статистика";
 "statistics_directions" = "Направления";
 "statistics_steps" = "Шаги";
 "statistics_directions_steps" = "Шаги направлений";
