@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MBProgressHUD
+import CDAlertView
 
 class DirectionsFormViewController: BasePopupViewController, DirectionFormProtocol, UITextViewDelegate, UITextFieldDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
@@ -69,7 +70,7 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
         titleFieldError.isHidden = true
         descriptionFieldError.isHidden = true
         presenter.createDirection(userNick: AuthorizationService.sharedInstance.currentUser.nick,
-                                  parameters: ["title": titleField.text, "description": descriptionField.text]
+                                  parameters: ["title": titleField.text, "description": getDescription()]
         )
         
     }
@@ -83,16 +84,26 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
     }
     
     internal func failedCreation(error: ServerError) {
-        let errorsList = error.params!
-        if let titleErrorsArr = errorsList["title"] {
+        switch(error.status!) {
+        case 400 ... 499:
+            handleFormErrors(error: error)
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
+    }
+    
+    private func handleFormErrors(error: ServerError) {
+        let errorsList = error.params!["errors"]
+        if let titleErrorsArr = errorsList?["title"] {
             let errorsArr = titleErrorsArr as! [String]
             let titleError: String! = errorsArr.joined(separator: "\n")
             self.titleFieldError.text = titleError
             self.titleFieldError.isHidden = false
         }
         
-        if errorsList["description"] != nil {
-            let errorsArr = errorsList["description"] as! [String]
+        if errorsList?["description"]! != nil {
+            let errorsArr = errorsList?["description"] as! [String]
             let descriptionError: String! = errorsArr.joined(separator: "\n")
             self.descriptionFieldError.text = descriptionError
             self.descriptionFieldError.isHidden = false
@@ -117,7 +128,7 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if descriptionField.text.isEmpty {
-            descriptionField.text = NSLocalizedString("directions_descriptions", comment: "")
+            descriptionField.text = NSLocalizedString("directions_description", comment: "")
             descriptionField.textColor = UIColor.lightGray
         }
     }
@@ -130,5 +141,13 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
             descriptionField.becomeFirstResponder()
         }
         return true
+    }
+    
+    
+    private func getDescription() -> String? {
+        if descriptionField.text! == NSLocalizedString("directions_description", comment: "") {
+            return nil
+        }
+        return descriptionField.text
     }
 }
