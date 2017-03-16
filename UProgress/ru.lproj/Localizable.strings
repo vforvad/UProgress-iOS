@@ -55,6 +55,7 @@
 "directions_page_title" = "Направления";
 "directions_title" = "Название";
 "directions_description" = "Описание";
+"directions_empty" = "К сожалению, сейчас у вас нет направлений.";
 
 // PROFILE
 "profile_title" = "Профиль";

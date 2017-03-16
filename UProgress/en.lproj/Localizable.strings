@@ -61,6 +61,7 @@
 "directions_page_title" = "Directions";
 "directions_title" = "Title";
 "directions_description" = "Description";
+"directions_empty" = "Unfortunatelly, there is no directions.";
 
 // PROFILE
 "profile_title" = "Profile";
