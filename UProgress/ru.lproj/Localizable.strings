@@ -57,8 +57,16 @@
 
 // PROFILE
 "profile_title" = "Профиль";
+"profile_first_name" = "Имя";
+"profile_last_name" = "Фамилия";
+"profile_email" = "Электронная почта";
+"profile_location" = "Место";
 "profile_about" = "О себе";
 
 // ERROR
 "error_title" = "Ошибка сервера";
 "server_not_respond" = "К сожалению, сервер не отвечает. Повторите запрос позже";
+
+// FORM
+"form_save" = "Сохранить";
+"form_cancel" = "Отмена";

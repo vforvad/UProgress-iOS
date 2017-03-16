@@ -63,8 +63,17 @@
 
 // PROFILE
 "profile_title" = "Profile";
+"profile_first_name" = "First name";
+"profile_last_name" = "Last name";
+"profile_email" = "Email name";
+"profile_location" = "Location";
 "profile_about" = "Few words about yourself";
 
 // ERROR
 "error_title" = "Server error";
 "server_not_respond" = "Unfortunatelly, server does not respond. Please try request later";
+
+
+// FORM
+"form_save" = "Save";
+"form_cancel" = "Cancel";

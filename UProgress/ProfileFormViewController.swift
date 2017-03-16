@@ -84,12 +84,13 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
         descriptionField.layer.borderWidth = 0.3
         descriptionField.layer.borderColor = UIColor.lightGray.cgColor
         
-        firstNameField.placeholder = "First name"
-        lastNameField.placeholder = "Last name"
-        emailField.placeholder = "Email"
-        locationField.placeholder = "Location"
+        firstNameField.placeholder = NSLocalizedString("profile_first_name", comment: "")
+        lastNameField.placeholder = NSLocalizedString("profile_last_name", comment: "")
+        emailField.placeholder = NSLocalizedString("profile_email", comment: "")
+        locationField.placeholder = NSLocalizedString("profile_location", comment: "")
         descriptionField.text = NSLocalizedString("profile_about", comment: "")
-        
+        saveButton.setTitle(NSLocalizedString("form_save", comment: ""), for: .normal)
+        cancelButton.setTitle(NSLocalizedString("form_cancel", comment: ""), for: .normal)
         saveButton.layer.cornerRadius = 4.0
         cancelButton.layer.cornerRadius = 4.0
     }
