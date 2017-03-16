@@ -11,6 +11,7 @@ import UIKit
 import Alamofire
 import ObjectMapper
 import MBProgressHUD
+import CDAlertView
 
 class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegate, UITableViewDataSource, UINavigationControllerDelegate, AttachmentViewProtocol {
     private var cellIdentifier = "profileItem"
@@ -184,7 +185,8 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     }
     
     internal func failedAttachmentUpload(error: ServerError) {
-        
+        CDAlertView(title: NSLocalizedString("upload_error", comment: ""),
+                    message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
     }
     
     internal func stopLoader() {

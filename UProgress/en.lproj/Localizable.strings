@@ -72,6 +72,7 @@
 // ERROR
 "error_title" = "Server error";
 "server_not_respond" = "Unfortunatelly, server does not respond. Please try request later";
+"upload_error" = "Upload error";
 
 
 // FORM
