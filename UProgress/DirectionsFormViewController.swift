@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 import MBProgressHUD
 
-class DirectionsFormViewController: BasePopupViewController, DirectionFormProtocol, UITextViewDelegate {
+class DirectionsFormViewController: BasePopupViewController, DirectionFormProtocol, UITextViewDelegate, UITextFieldDelegate {
+    @IBOutlet weak var scrollView: UIScrollView!
     var actions: DirectionPopupActions!
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var stackView: UIStackView!
@@ -35,6 +36,7 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
     }
     
     func setupUI() {
+        titleField.delegate = self
         saveButton.layer.cornerRadius = 8.0
         cancellButton.layer.cornerRadius = 8.0
         
@@ -42,6 +44,10 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
         descriptionField.layer.borderWidth = 0.3
         descriptionField.layer.borderColor = UIColor.lightGray.cgColor
         self.baseView.layer.cornerRadius = 8.0
+        
+        saveButton.setTitle(NSLocalizedString("form_save", comment: ""), for: .normal)
+        cancellButton.setTitle(NSLocalizedString("form_cancel", comment: ""), for: .normal)
+        
         let model = DirectionManager()
         presenter = DirectionFormPresenter(model: model, view: self)
     }
@@ -114,5 +120,15 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
             descriptionField.text = NSLocalizedString("directions_descriptions", comment: "")
             descriptionField.textColor = UIColor.lightGray
         }
+    }
+    
+    // MARK: UITextFieldDelegate methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if textField === titleField {
+            titleField.resignFirstResponder()
+            self.scrollView.scrollToView(view: descriptionField, animated: true)
+            descriptionField.becomeFirstResponder()
+        }
+        return true
     }
 }

@@ -2099,11 +2099,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/DirectionsFormViewController.swift"
-            timestampString = "511202048.74588"
+            timestampString = "511374189.684205"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "stopLoader()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2814,11 +2814,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UProgress/DirectionsFormViewController.swift"
-            timestampString = "511202048.74588"
+            timestampString = "511374189.684205"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
