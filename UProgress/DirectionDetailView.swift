@@ -194,7 +194,13 @@ UITableViewDataSource, StepCellProtocol {
     }
     
     internal func failureStepUpdate(error: ServerError!) {
-        Toast(text: NSLocalizedString("steps_update_failed", comment: "")).show()
+        switch(error.status!) {
+        case 400 ... 499:
+            Toast(text: NSLocalizedString("steps_update_failed", comment: "")).show()
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
     }
     
     internal func successStepDelete(step: Step!){
@@ -207,6 +213,12 @@ UITableViewDataSource, StepCellProtocol {
     }
     
     internal func failureStepDelete(error: ServerError!) {
-    
+        switch(error.status!) {
+        case 400 ... 499:
+            Toast(text: NSLocalizedString("steps_delete_failed", comment: "")).show()
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
     }
 }

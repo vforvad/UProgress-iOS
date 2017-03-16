@@ -79,7 +79,6 @@ class StepFormViewController: BasePopupViewController, StepViewProtocol, UITextV
             CDAlertView(title: NSLocalizedString("error_title", comment: ""),
                         message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
         }
-
     }
     
     private func handleFormError(error: ServerError!) {

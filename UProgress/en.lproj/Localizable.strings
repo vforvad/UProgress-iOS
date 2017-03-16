@@ -39,6 +39,7 @@
 "steps_delete_success" = "Step '%@' was succesfully deleted";
 "steps_delete_failed" = "Unfortunatelly, an error has occured";
 "steps_empty" = "Unfortunatelly, there are no steps";
+"steps_delete_failed" = "Unfortunatelly, step deletion has failed.";
 
 // PROFILE
 "profile_select_image" = "Choose image";
