@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 class AuthorizationsViewController: BaseViewController, SignInProtocol, AuthorizationViewProtocol {
     public var signIn: Bool!
@@ -25,6 +26,9 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor("#f6f7f8")
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
         
@@ -142,5 +146,22 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     deinit {
         NotificationCenter.default.removeObserver(self);
+    }
+    
+    internal func startLoader() {
+        MBProgressHUD.showAdded(to: view, animated: true)
+    }
+    
+    internal func stopLoader() {
+        MBProgressHUD.hide(for: view, animated: true)
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    func scrollToField(view: UIView) {
+        scrollView.scrollToView(view: view, animated: true)
     }
 }

@@ -103,7 +103,7 @@ class DirectionDetailManagerSpec: BaseTest {
                 }
                 
                 it("have a particular error key") {
-                    expect(self.createStepError.params?["title"]).toEventuallyNot(beNil())
+                    expect(self.createStepError.params?["errors"]?["title"]).toEventuallyNot(beNil())
                 }
             }
         }
@@ -166,7 +166,7 @@ class DirectionDetailManagerSpec: BaseTest {
                 }
                 
                 it("key for title error is present") {
-                    expect(updateStepError.params!["title"]).toEventuallyNot(beNil())
+                    expect(updateStepError.params?["errors"]?["title"]).toEventuallyNot(beNil())
                 }
             }
         }

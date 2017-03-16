@@ -15,6 +15,9 @@ class DirectionDetailPresenterSpec: QuickSpec {
     let view = DirectionDetailViewMock()
     
     class DirectionDetailViewMock: DirectionsDetailViewProtocol {
+        internal func startRefreshing() {}
+        internal func stopRefreshing() {}
+
         var directionLoad: Bool!
         var stepUpdate: Bool!
         var stepCreate: Bool!

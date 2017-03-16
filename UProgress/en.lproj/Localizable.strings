@@ -38,6 +38,8 @@
 "delete_step" = "Delete";
 "steps_delete_success" = "Step '%@' was succesfully deleted";
 "steps_delete_failed" = "Unfortunatelly, an error has occured";
+"steps_empty" = "Unfortunatelly, there are no steps";
+"steps_delete_failed" = "Unfortunatelly, step deletion has failed.";
 
 // PROFILE
 "profile_select_image" = "Choose image";
@@ -51,14 +53,35 @@
 
 
 // STATISTISCS
+"statistics_title_page" = "Statistics";
 "statistics_directions" = "Directions";
 "statistics_steps" = "Steps";
 "statistics_directions_steps" = "Directions steps";
 "statistics_title" = "Chose scope";
 
 // DIRECTIONS
+"directions_page_title" = "Directions";
 "directions_title" = "Title";
 "directions_description" = "Description";
+"directions_empty" = "Unfortunatelly, there are no directions.";
+"direction_detail_title" = "Direction";
+"direction_not_found" = "There is not such direction";
 
 // PROFILE
+"profile_title" = "Profile";
+"profile_first_name" = "First name";
+"profile_last_name" = "Last name";
+"profile_email" = "Email name";
+"profile_location" = "Location";
 "profile_about" = "Few words about yourself";
+
+// ERROR
+"not_found" = "Не найдено";
+"error_title" = "Server error";
+"server_not_respond" = "Unfortunatelly, server does not respond. Please try request later";
+"upload_error" = "Upload error";
+
+
+// FORM
+"form_save" = "Save";
+"form_cancel" = "Cancel";

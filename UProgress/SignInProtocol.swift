@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 protocol SignInProtocol {
+    func scrollToField(view: UIView)
     func signInRequest(parameters: Dictionary<String, AnyObject>)
     func signUpRequest(parameters: Dictionary<String, AnyObject>)
 }

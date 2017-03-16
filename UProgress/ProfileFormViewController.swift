@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 import MBProgressHUD
+import CDAlertView
 
-class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, UITextViewDelegate {
+class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, UITextViewDelegate, UITextFieldDelegate {
     var presenter: ProfilePresenter!
     var user: User! = AuthorizationService.sharedInstance.currentUser
     var actions: ProfilePopupProtocol!
@@ -47,6 +48,10 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
         let model = ProfileManager()
         presenter = ProfilePresenter(model: model, view: self)
         
+        self.firstNameField.delegate = self
+        self.lastNameField.delegate = self
+        self.emailField.delegate = self
+        self.locationField.delegate = self
         self.descriptionField.delegate = self
     }
     
@@ -58,8 +63,8 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
             "last_name": lastNameField.text,
             "email": emailField.text,
             "location": locationField.text,
-            "description": descriptionField.text,
-            "attachment": user.attachment.toDict()
+            "description": getDescription(),
+            "attachment": user.attachment?.toDict()
         ] as [String : Any]
         
         presenter.updateProfile(userId: userId, parameters: parameters as Dictionary<String, AnyObject>)
@@ -84,12 +89,13 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
         descriptionField.layer.borderWidth = 0.3
         descriptionField.layer.borderColor = UIColor.lightGray.cgColor
         
-        firstNameField.placeholder = "First name"
-        lastNameField.placeholder = "Last name"
-        emailField.placeholder = "Email"
-        locationField.placeholder = "Location"
+        firstNameField.placeholder = NSLocalizedString("profile_first_name", comment: "")
+        lastNameField.placeholder = NSLocalizedString("profile_last_name", comment: "")
+        emailField.placeholder = NSLocalizedString("profile_email", comment: "")
+        locationField.placeholder = NSLocalizedString("profile_location", comment: "")
         descriptionField.text = NSLocalizedString("profile_about", comment: "")
-        
+        saveButton.setTitle(NSLocalizedString("form_save", comment: ""), for: .normal)
+        cancelButton.setTitle(NSLocalizedString("form_cancel", comment: ""), for: .normal)
         saveButton.layer.cornerRadius = 4.0
         cancelButton.layer.cornerRadius = 4.0
     }
@@ -99,8 +105,8 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
         lastNameField.text = user.lastName
         emailField.text = user.email
         locationField.text = user.location
-        if let desc = user.description {
-            descriptionField.text = desc
+        if user.description != nil && !user.description.isEmpty {
+            descriptionField.text = user.description
         }
         else {
             descriptionField.text = NSLocalizedString("profile_about", comment: "")
@@ -115,9 +121,19 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
     }
     
     internal func failedUpdate(error: ServerError!) {
+        switch(error.status!) {
+        case 400 ... 499:
+            handleFormErrors(error: error)
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
+    }
+    
+    private func handleFormErrors(error: ServerError) {
         self.stackView.spacing = 5.0
-        let errorsList = error.params!
-        if let titleErrorsArr = errorsList["first_name"] {
+        let errorsList = error.params?["errors"]
+        if let titleErrorsArr = errorsList?["first_name"]! {
             let errorsArr = titleErrorsArr as! [String]
             let titleError: String! = errorsArr.joined(separator: "\n")
             self.firstNameFieldError.text = titleError
@@ -125,15 +141,15 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
             
         }
         
-        if errorsList["last_name"] != nil {
-            let errorsArr = errorsList["last_name"] as! [String]
+        if errorsList?["last_name"]! != nil {
+            let errorsArr = errorsList?["last_name"] as! [String]
             let descriptionError: String! = errorsArr.joined(separator: "\n")
             self.lastNameFieldError.text = descriptionError
             self.lastNameFieldError.isHidden = false
         }
         
-        if errorsList["email"] != nil {
-            let errorsArr = errorsList["email"] as! [String]
+        if errorsList?["email"]! != nil {
+            let errorsArr = errorsList?["email"] as! [String]
             let descriptionError: String! = errorsArr.joined(separator: "\n")
             self.emailFieldError.text = descriptionError
             self.emailFieldError.isHidden = false
@@ -141,11 +157,11 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
     }
     
     internal func startLoader() {
-        MBProgressHUD.showAdded(to: view, animated: true)
+        MBProgressHUD.showAdded(to: self.view, animated: true)
     }
     
     internal func stopLoader() {
-        MBProgressHUD.hide(for: view, animated: true)
+        MBProgressHUD.hide(for: self.view, animated: true)
     }
     
     // MARK: UITextViewDelegate methods
@@ -162,4 +178,40 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
             descriptionField.textColor = UIColor.lightGray
         }
     }
+    
+    // MARK: UITextFieldDelegate methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if textField === firstNameField {
+            firstNameField.resignFirstResponder()
+            self.scrollView.scrollToView(view: lastNameField, animated: true)
+            lastNameField.becomeFirstResponder()
+        }
+        
+        if textField == lastNameField {
+            lastNameField.resignFirstResponder()
+            self.scrollView.scrollToView(view: emailField, animated: true)
+            emailField.becomeFirstResponder()
+        }
+        
+        if textField == emailField {
+            emailField.resignFirstResponder()
+            self.scrollView.scrollToView(view: locationField, animated: true)
+            locationField.becomeFirstResponder()
+        }
+        
+        if textField == locationField {
+            locationField.resignFirstResponder()
+            self.scrollView.scrollToView(view: descriptionField, animated: true)
+            descriptionField.becomeFirstResponder()
+        }
+        return true
+    }
+    
+    func getDescription() -> String? {
+        if descriptionField.text == NSLocalizedString("profile_about", comment: "") {
+            return nil
+        }
+        return descriptionField.text
+    }
+    
 }

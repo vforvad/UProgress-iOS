@@ -61,9 +61,13 @@ class User: Mappable {
         if firstName != nil && lastName != nil {
             list.append(["title": "email", "value": email])
         }
-        list.append(["title": "location", "value": location != nil ? location : ""])
-        list.append(["title": "description", "value": description != nil ? description : ""])
+        if location != nil {
+            list.append(["title": "location", "value": location])
+        }
         
+        if description != nil && !description.isEmpty {
+            list.append(["title": "description", "value": description])
+        }
         return list
     }
 }

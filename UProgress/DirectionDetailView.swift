@@ -10,6 +10,7 @@ import Foundation
 import Toaster
 import MBProgressHUD
 import UIKit
+import CDAlertView
 
 class DirectionDetailView: NSObject, DirectionsDetailViewProtocol, UITableViewDelegate,
 UITableViewDataSource, StepCellProtocol {
@@ -48,9 +49,6 @@ UITableViewDataSource, StepCellProtocol {
         myBtn.addTarget(self, action: #selector(createStep), for: .touchUpInside)
         viewController.navigationItem.rightBarButtonItems = [
             UIBarButtonItem(customView: myBtn)
-//            UIBarButtonItem(image: UIImage(image: "menu"), style: .plain, target: self, action: #selector(createStep)),
-//            UIBarButtonItem(title: "Remove", style: .plain, target: self, action: #selector(removeDirection),
-//                            image: UIImage(image: "menu"))
         ]
         
         tableView.register(UINib(nibName: "StepTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
@@ -77,6 +75,14 @@ UITableViewDataSource, StepCellProtocol {
         MBProgressHUD.hide(for: parentView, animated: true)
     }
     
+    internal func startRefreshing() {
+        refreshControl.beginRefreshing()
+    }
+    
+    internal func stopRefreshing() {
+        refreshControl.endRefreshing()
+    }
+    
     internal func successDirectionLoad(direction: Direction!) {
         self.direction = direction
         steps = direction.steps
@@ -84,7 +90,14 @@ UITableViewDataSource, StepCellProtocol {
     }
     
     internal func failedDirectionLoad(error: ServerError) {
-        
+        switch(error.status!) {
+        case 400 ... 499:
+            CDAlertView(title: NSLocalizedString("not_found", comment: ""),
+                        message: NSLocalizedString("direction_not_found", comment: ""), type: .error).show()
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -134,10 +147,28 @@ UITableViewDataSource, StepCellProtocol {
         actions.showStepDescription(step: steps[indexPath.row])
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if steps.count > 0 {
+            tableView.backgroundView = nil
+            return 1
+        }
+        else {
+            let view = EmptyTableView.instanceFromNib() as! EmptyTableView
+            view.emptyLabel.text = NSLocalizedString("steps_empty", comment: "")
+            tableView.backgroundView  = view
+            return 1
+        }
+    }
+    
+    func reloadList() {
+        presenter.refreshDirection(userNick: user?.nick, directionId: directionId)
+    }
+    
     // MARK: Refresh Control
     func setupUIRefreshController() {
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: NSLocalizedString("pull_to_refresh", comment: ""))
+        refreshControl.addTarget(self, action: #selector(DirectionDetailView.reloadList), for: UIControlEvents.valueChanged)
         tableView.addSubview(refreshControl)
     }
     
@@ -163,7 +194,13 @@ UITableViewDataSource, StepCellProtocol {
     }
     
     internal func failureStepUpdate(error: ServerError!) {
-        Toast(text: NSLocalizedString("steps_update_failed", comment: "")).show()
+        switch(error.status!) {
+        case 400 ... 499:
+            Toast(text: NSLocalizedString("steps_update_failed", comment: "")).show()
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
     }
     
     internal func successStepDelete(step: Step!){
@@ -176,6 +213,12 @@ UITableViewDataSource, StepCellProtocol {
     }
     
     internal func failureStepDelete(error: ServerError!) {
-    
+        switch(error.status!) {
+        case 400 ... 499:
+            Toast(text: NSLocalizedString("steps_delete_failed", comment: "")).show()
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
     }
 }

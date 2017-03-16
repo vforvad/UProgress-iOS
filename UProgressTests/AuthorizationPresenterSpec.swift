@@ -16,6 +16,9 @@ class AuthorizationPresenterSpec: QuickSpec {
     let view = AuthorizationViewMock()
     
     class AuthorizationViewMock: AuthorizationViewProtocol {
+        internal func startLoader() {}
+        internal func stopLoader() {}
+
         var success: Bool!
         var signInFailure: Bool!
         var signUpFailure: Bool!

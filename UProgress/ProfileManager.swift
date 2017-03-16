@@ -20,9 +20,8 @@ class ProfileManager: ProfileManagerProtocol {
                 success(user!)
             }
             else {
-                let error = response.result.value as! NSDictionary
-                let errorMessage = error.object(forKey: "errors") as! NSDictionary
-                failure(ServerError(status: response.response!.statusCode, parameters: errorMessage))
+                let error = response.result.value as? Dictionary<String, AnyObject>
+                failure(ServerError(status: response.response!.statusCode, parameters: error))
             }
         }
     }

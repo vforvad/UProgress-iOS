@@ -30,6 +30,11 @@ class ServerError: NSObject {
         self.desc = description
     }
     
+    init(status: Int?, parameters: Dictionary<String, AnyObject>?) {
+        self.status = status
+        self.params = parameters
+    }
+    
     init(parameters: NSError!, data: NSData!) {
         self.status = parameters.code
         self.desc = parameters.localizedDescription

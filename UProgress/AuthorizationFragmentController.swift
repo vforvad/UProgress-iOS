@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import CDAlertView
 
-class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
+class AuthorizationFragmentController: BaseViewController, ErrorsHandling, UITextFieldDelegate {
     var parentVC: SignInProtocol!
     
     @IBOutlet weak var stackView: UIStackView!
@@ -28,10 +29,16 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
         hideErrors()
         self.view.backgroundColor = UIColor.white
         self.view.layer.cornerRadius = 10.0
+        
         signInButton.setTitle(NSLocalizedString("auth_sign_in", comment: ""), for: UIControlState.normal)
         signInButton.layer.cornerRadius = 5.0
+        
+        emailField.delegate = self
+        passwordField.delegate = self
+        
         emailField.isUserInteractionEnabled = true
         passwordField.isUserInteractionEnabled = true
+        
         CommonFunctions.customizeTextField(field: self.emailField, placeholder: NSLocalizedString("auth_email", comment: ""), image: "email_icon")
         CommonFunctions.customizeTextField(field: self.passwordField, placeholder: NSLocalizedString("auth_password", comment: ""), image: "password_icon")
     }
@@ -43,28 +50,18 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
     
     @IBAction func signIn(_ sender: Any) {
         hideErrors()
-        signInButton.loadingIndicator(show: true)
         let dictionary = ["email": emailField.text!, "password": passwordField.text!]
         parentVC.signInRequest(parameters: dictionary as Dictionary<String, AnyObject> )
     }
     
     func handleErrors(errors: ServerError) {
         signInButton.loadingIndicator(show: false)
-        stackView.spacing = Constants.authErrorSpacing
-        let errorsList = errors.params!
-        if let emailErrorsArr = errorsList["email"] {
-            let errorsArr = emailErrorsArr as! [String]
-            let emailError: String! = errorsArr.joined(separator: "\n")
-            self.emailErrors.text = emailError
-            self.emailErrors.isHidden = false
-
-        }
-        
-        if errorsList["password"] != nil {
-            let errorsArr = errorsList["password"] as! [String]
-            let passwordError: String! = errorsArr.joined(separator: "\n")
-            self.passwordErrors.text = passwordError
-            self.passwordErrors.isHidden = false
+        switch(errors.status!) {
+        case 400 ... 499:
+            handleFormErrors(errors: errors)
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
         }
     }
     
@@ -72,5 +69,41 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling {
         emailErrors.isHidden = true
         passwordErrors.isHidden = true
         stackView.spacing = Constants.authDefaultSpacing
+    }
+    
+    private func handleFormErrors(errors: ServerError) {
+        signInButton.loadingIndicator(show: false)
+        stackView.spacing = Constants.authErrorSpacing
+        let errorsList = errors.params!["errors"]
+        if let emailErrorsArr = errorsList?["email"] {
+            let errorsArr = emailErrorsArr as! [String]
+            let emailError: String! = errorsArr.joined(separator: "\n")
+            self.emailErrors.text = emailError
+            self.emailErrors.isHidden = false
+            
+        }
+        
+        if errorsList?["password"]! != nil {
+            let errorsArr = errorsList?["password"] as! [String]
+            let passwordError: String! = errorsArr.joined(separator: "\n")
+            self.passwordErrors.text = passwordError
+            self.passwordErrors.isHidden = false
+        }
+    }
+    
+    
+    // MARK: UITextFieldDelegate methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if (textField === emailField) {
+            emailField.resignFirstResponder()
+            parentVC.scrollToField(view: passwordField)
+            passwordField.becomeFirstResponder()
+        }
+        
+        if textField == passwordField {
+            parentVC.scrollToField(view: signInButton)
+            self.signIn(signInButton)
+        }
+        return true
     }
 }

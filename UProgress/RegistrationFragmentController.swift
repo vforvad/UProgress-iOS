@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import CDAlertView
 
-class RegistrationFragmentController: BaseViewController, ErrorsHandling {
+class RegistrationFragmentController: BaseViewController, ErrorsHandling, UITextFieldDelegate {
     var parentVC: SignInProtocol!
     
     @IBOutlet weak var stackView: UIStackView!
@@ -31,6 +32,12 @@ class RegistrationFragmentController: BaseViewController, ErrorsHandling {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.view.layer.cornerRadius = 10.0
+        
+        emailField.delegate = self
+        passwordField.delegate = self
+        passwordConfirmationField.delegate = self
+        nickField.delegate = self
+        
         signUpButton.setTitle(NSLocalizedString("auth_sign_up", comment: ""), for: UIControlState.normal)
         signUpButton.layer.cornerRadius = 5.0
         emailErrors.isHidden = true
@@ -60,10 +67,20 @@ class RegistrationFragmentController: BaseViewController, ErrorsHandling {
     }
     
     internal func handleErrors(errors: ServerError) {
+        switch(errors.status!) {
+        case 400 ... 499:
+            handleFormErrors(errors: errors)
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
+    }
+    
+    private func handleFormErrors(errors: ServerError) {
         stackView.spacing = Constants.authErrorSpacing
         
-        let errorsList = errors.params!
-        if let emailErrorsArr = errorsList["email"] {
+        let errorsList = errors.params!["errors"]
+        if let emailErrorsArr = errorsList?["email"] {
             let errorsArr = emailErrorsArr as! [String]
             let emailError: String! = errorsArr.joined(separator: "\n")
             self.emailErrors.text = emailError
@@ -71,25 +88,49 @@ class RegistrationFragmentController: BaseViewController, ErrorsHandling {
             
         }
         
-        if errorsList["password"] != nil {
-            let errorsArr = errorsList["password"] as! [String]
+        if errorsList?["password"]! != nil {
+            let errorsArr = errorsList?["password"]! as! [String]
             let passwordError: String! = errorsArr.joined(separator: "\n")
             self.passwordErrors.text = passwordError
             self.passwordErrors.isHidden = false
         }
         
-        if errorsList["password_confirmation"] != nil {
-            let errorsArr = errorsList["password_confirmation"] as! [String]
+        if errorsList?["password_confirmation"]! != nil {
+            let errorsArr = errorsList?["password_confirmation"]! as! [String]
             let passwordConfError: String! = errorsArr.joined(separator: "\n")
             self.passwordConfirmationErrors.text = passwordConfError
             self.passwordConfirmationErrors.isHidden = false
         }
         
-        if errorsList["nick"] != nil {
-            let errorsArr = errorsList["nick"] as! [String]
+        if errorsList?["nick"]! != nil {
+            let errorsArr = errorsList?["nick"]! as! [String]
             let nickError: String! = errorsArr.joined(separator: "\n")
             self.nickErrors.text = nickError
             self.nickErrors.isHidden = false
         }
+    }
+    
+    // MARK: UITextFieldDelegate methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if (textField === emailField) {
+            emailField.resignFirstResponder()
+            parentVC.scrollToField(view: passwordField)
+            passwordField.becomeFirstResponder()
+        }
+        if textField == passwordField {
+            passwordField.resignFirstResponder()
+            parentVC.scrollToField(view: passwordConfirmationField)
+            passwordConfirmationField.becomeFirstResponder()
+        }
+        if textField == passwordConfirmationField {
+            passwordConfirmationField.resignFirstResponder()
+            parentVC.scrollToField(view: nickField)
+            nickField.becomeFirstResponder()
+        }
+        if textField == nickField {
+            parentVC.scrollToField(view: signUpButton)
+            self.signUp(signUpButton)
+        }
+        return true
     }
 }

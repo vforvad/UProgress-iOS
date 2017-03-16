@@ -126,7 +126,6 @@ class AuthorizationViewControllerTest: BaseUITest {
         passwordField.tap()
         passwordField.typeText("password")
         app.swipeUp()
-        app.swipeUp()
         button.tap()
         sleep(1)
         XCTAssert(self.app.staticTexts["@aaa"].exists)

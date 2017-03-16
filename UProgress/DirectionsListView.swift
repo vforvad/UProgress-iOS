@@ -77,8 +77,17 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
         tableView.finishInfiniteScroll()
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if itemsList.count > 0 {
+            tableView.backgroundView = nil
+            return 1
+        }
+        else {
+            let view = EmptyTableView.instanceFromNib() as! EmptyTableView
+            view.emptyLabel.text = NSLocalizedString("directions_empty", comment: "")
+            tableView.backgroundView  = view
+            return 0
+        }
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

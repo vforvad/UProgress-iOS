@@ -9,6 +9,8 @@
 import Foundation
 
 protocol AuthorizationViewProtocol {
+    func startLoader()
+    func stopLoader()
     func successSignIn(currentUser: User)
     func failedSignIn(error: ServerError)
     func failedSignUp(error: ServerError)
