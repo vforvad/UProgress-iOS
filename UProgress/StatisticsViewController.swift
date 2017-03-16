@@ -11,6 +11,7 @@ import UIKit
 import MBProgressHUD
 import Charts
 import UIColor_Hex_Swift
+import CDAlertView
 
 class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
     @IBOutlet weak var baseView: UIView!
@@ -98,7 +99,8 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
     }
     
     internal func failedStatisticsLoad(error: ServerError!) {
-    
+        CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                    message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
     }
     
     internal func startLoader() {
