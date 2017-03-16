@@ -47,6 +47,17 @@
                BlueprintName = "UProgressUITests"
                ReferencedContainer = "container:UProgress.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "DirectionsDetailViewControllerTest">
+               </Test>
+               <Test
+                  Identifier = "DirectionsListViewControllerTest">
+               </Test>
+               <Test
+                  Identifier = "ProfileViewControllerTest">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <EnvironmentVariables>
