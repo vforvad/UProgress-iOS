@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol SignInProtocol {
     func scrollToField(view: UIView)

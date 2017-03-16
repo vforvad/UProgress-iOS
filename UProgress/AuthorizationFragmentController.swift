@@ -74,8 +74,8 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling, UITex
     private func handleFormErrors(errors: ServerError) {
         signInButton.loadingIndicator(show: false)
         stackView.spacing = Constants.authErrorSpacing
-        let errorsList = errors.params!
-        if let emailErrorsArr = errorsList["email"] {
+        let errorsList = errors.params!["errors"]
+        if let emailErrorsArr = errorsList?["email"] {
             let errorsArr = emailErrorsArr as! [String]
             let emailError: String! = errorsArr.joined(separator: "\n")
             self.emailErrors.text = emailError
@@ -83,8 +83,8 @@ class AuthorizationFragmentController: BaseViewController, ErrorsHandling, UITex
             
         }
         
-        if errorsList["password"] != nil {
-            let errorsArr = errorsList["password"] as! [String]
+        if errorsList?["password"]! != nil {
+            let errorsArr = errorsList?["password"] as! [String]
             let passwordError: String! = errorsArr.joined(separator: "\n")
             self.passwordErrors.text = passwordError
             self.passwordErrors.isHidden = false

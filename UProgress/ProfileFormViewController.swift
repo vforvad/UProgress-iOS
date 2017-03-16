@@ -133,7 +133,7 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
     private func handleFormErrors(error: ServerError) {
         self.stackView.spacing = 5.0
         let errorsList = error.params?["errors"]
-        if let titleErrorsArr = errorsList?["first_name"] {
+        if let titleErrorsArr = errorsList?["first_name"]! {
             let errorsArr = titleErrorsArr as! [String]
             let titleError: String! = errorsArr.joined(separator: "\n")
             self.firstNameFieldError.text = titleError
@@ -141,14 +141,14 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
             
         }
         
-        if errorsList?["last_name"] != nil {
+        if errorsList?["last_name"]! != nil {
             let errorsArr = errorsList?["last_name"] as! [String]
             let descriptionError: String! = errorsArr.joined(separator: "\n")
             self.lastNameFieldError.text = descriptionError
             self.lastNameFieldError.isHidden = false
         }
         
-        if errorsList?["email"] != nil {
+        if errorsList?["email"]! != nil {
             let errorsArr = errorsList?["email"] as! [String]
             let descriptionError: String! = errorsArr.joined(separator: "\n")
             self.emailFieldError.text = descriptionError

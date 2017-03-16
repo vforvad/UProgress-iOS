@@ -79,8 +79,8 @@ class RegistrationFragmentController: BaseViewController, ErrorsHandling, UIText
     private func handleFormErrors(errors: ServerError) {
         stackView.spacing = Constants.authErrorSpacing
         
-        let errorsList = errors.params!
-        if let emailErrorsArr = errorsList["email"] {
+        let errorsList = errors.params!["errors"]
+        if let emailErrorsArr = errorsList?["email"] {
             let errorsArr = emailErrorsArr as! [String]
             let emailError: String! = errorsArr.joined(separator: "\n")
             self.emailErrors.text = emailError
@@ -88,22 +88,22 @@ class RegistrationFragmentController: BaseViewController, ErrorsHandling, UIText
             
         }
         
-        if errorsList["password"] != nil {
-            let errorsArr = errorsList["password"] as! [String]
+        if errorsList?["password"]! != nil {
+            let errorsArr = errorsList?["password"]! as! [String]
             let passwordError: String! = errorsArr.joined(separator: "\n")
             self.passwordErrors.text = passwordError
             self.passwordErrors.isHidden = false
         }
         
-        if errorsList["password_confirmation"] != nil {
-            let errorsArr = errorsList["password_confirmation"] as! [String]
+        if errorsList?["password_confirmation"]! != nil {
+            let errorsArr = errorsList?["password_confirmation"]! as! [String]
             let passwordConfError: String! = errorsArr.joined(separator: "\n")
             self.passwordConfirmationErrors.text = passwordConfError
             self.passwordConfirmationErrors.isHidden = false
         }
         
-        if errorsList["nick"] != nil {
-            let errorsArr = errorsList["nick"] as! [String]
+        if errorsList?["nick"]! != nil {
+            let errorsArr = errorsList?["nick"]! as! [String]
             let nickError: String! = errorsArr.joined(separator: "\n")
             self.nickErrors.text = nickError
             self.nickErrors.isHidden = false
