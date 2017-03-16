@@ -138,8 +138,6 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ProfileCell
         cell.setData(list: profileItems[indexPath.row])
-//        cell.textLabel?.text = profileItems[indexPath.row]["value"]
-//        cell.detailTextLabel?.text = profileItems[indexPath.row]["title"]
         return cell as! UITableViewCell
     }
     
