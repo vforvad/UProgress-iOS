@@ -19,8 +19,8 @@ class DirectionDetailManager: DirectionDetailManagerProtocol {
                 let direction = Mapper<Direction>().map(JSONObject: directionObject["direction"])
                 success(direction!)
             } else {
-                let stepError = response.result.value! as! Dictionary<String, Any>
-                failure(ServerError(status: response.response!.statusCode, parameters: stepError["errors"] as! NSDictionary))
+                let error = response.result.value as? Dictionary<String, AnyObject>
+                failure(ServerError(status: response.response!.statusCode, parameters: error))
             }
         }
     }
@@ -33,8 +33,8 @@ class DirectionDetailManager: DirectionDetailManagerProtocol {
                 let step = Mapper<Step>().map(JSONObject: stepObject["step"])
                 success(step!)
             } else {
-                let stepError = response.result.value! as! Dictionary<String, Any>
-                failure(ServerError(status: response.response!.statusCode, parameters: stepError["errors"] as! NSDictionary))
+                let error = response.result.value as? Dictionary<String, AnyObject>
+                failure(ServerError(status: response.response!.statusCode, parameters: error))
             }
         }
     }
@@ -47,8 +47,8 @@ class DirectionDetailManager: DirectionDetailManagerProtocol {
                 let step = Mapper<Step>().map(JSONObject: stepObject["step"])
                 success(step!)
             } else {
-                let stepError = response.result.value! as! Dictionary<String, Any>
-                failure(ServerError(status: response.response!.statusCode, parameters: stepError["errors"] as! NSDictionary))
+                let error = response.result.value as? Dictionary<String, AnyObject>
+                failure(ServerError(status: response.response!.statusCode, parameters: error))
             }
         }
     }
@@ -61,8 +61,8 @@ class DirectionDetailManager: DirectionDetailManagerProtocol {
                 let step = Mapper<Step>().map(JSONObject: stepObject["step"])
                 success(step!)
             } else {
-                let stepError = response.result.value! as! Dictionary<String, Any>
-                failure(ServerError(status: response.response!.statusCode, parameters: stepError["errors"] as! NSDictionary))
+                let error = response.result.value as? Dictionary<String, AnyObject>
+                failure(ServerError(status: response.response!.statusCode, parameters: error))
             }
         }
     }

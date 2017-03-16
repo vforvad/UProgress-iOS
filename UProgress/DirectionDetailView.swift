@@ -10,6 +10,7 @@ import Foundation
 import Toaster
 import MBProgressHUD
 import UIKit
+import CDAlertView
 
 class DirectionDetailView: NSObject, DirectionsDetailViewProtocol, UITableViewDelegate,
 UITableViewDataSource, StepCellProtocol {
@@ -84,7 +85,14 @@ UITableViewDataSource, StepCellProtocol {
     }
     
     internal func failedDirectionLoad(error: ServerError) {
-        
+        switch(error.status!) {
+        case 400 ... 499:
+            CDAlertView(title: NSLocalizedString("not_found", comment: ""),
+                        message: NSLocalizedString("direction_not_found", comment: ""), type: .error).show()
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -63,6 +63,7 @@
 "directions_description" = "Description";
 "directions_empty" = "Unfortunatelly, there is no directions.";
 "direction_detail_title" = "Direction";
+"direction_not_found" = "There is not such direction";
 
 // PROFILE
 "profile_title" = "Profile";
@@ -73,6 +74,7 @@
 "profile_about" = "Few words about yourself";
 
 // ERROR
+"not_found" = "Не найдено";
 "error_title" = "Server error";
 "server_not_respond" = "Unfortunatelly, server does not respond. Please try request later";
 "upload_error" = "Upload error";

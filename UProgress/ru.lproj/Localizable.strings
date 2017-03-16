@@ -57,6 +57,7 @@
 "directions_description" = "Описание";
 "directions_empty" = "К сожалению, сейчас у вас нет направлений.";
 "direction_detail_title" = "Направление";
+"direction_not_found" = "Такого направления не существует";
 
 // PROFILE
 "profile_title" = "Профиль";
@@ -67,8 +68,10 @@
 "profile_about" = "О себе";
 
 // ERROR
+"not_found" = "Не найдено";
 "error_title" = "Ошибка сервера";
 "server_not_respond" = "К сожалению, сервер не отвечает. Повторите запрос позже";
+"upload_error" = "Ошибка загрузки";
 
 // FORM
 "form_save" = "Сохранить";
