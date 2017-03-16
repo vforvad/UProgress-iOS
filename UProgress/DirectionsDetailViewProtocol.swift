@@ -11,6 +11,8 @@ import Foundation
 protocol DirectionsDetailViewProtocol {
     func startLoader()
     func stopLoader()
+    func startRefreshing()
+    func stopRefreshing()
     func successDirectionLoad(direction: Direction!)
     func failedDirectionLoad(error: ServerError)
     func successStepUpdate(step: Step!)

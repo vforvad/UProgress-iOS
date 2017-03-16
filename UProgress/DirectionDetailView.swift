@@ -49,9 +49,6 @@ UITableViewDataSource, StepCellProtocol {
         myBtn.addTarget(self, action: #selector(createStep), for: .touchUpInside)
         viewController.navigationItem.rightBarButtonItems = [
             UIBarButtonItem(customView: myBtn)
-//            UIBarButtonItem(image: UIImage(image: "menu"), style: .plain, target: self, action: #selector(createStep)),
-//            UIBarButtonItem(title: "Remove", style: .plain, target: self, action: #selector(removeDirection),
-//                            image: UIImage(image: "menu"))
         ]
         
         tableView.register(UINib(nibName: "StepTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
@@ -76,6 +73,14 @@ UITableViewDataSource, StepCellProtocol {
     
     internal func stopLoader() {
         MBProgressHUD.hide(for: parentView, animated: true)
+    }
+    
+    internal func startRefreshing() {
+        refreshControl.beginRefreshing()
+    }
+    
+    internal func stopRefreshing() {
+        refreshControl.endRefreshing()
     }
     
     internal func successDirectionLoad(direction: Direction!) {
@@ -142,10 +147,15 @@ UITableViewDataSource, StepCellProtocol {
         actions.showStepDescription(step: steps[indexPath.row])
     }
     
+    func reloadList() {
+        presenter.refreshDirection(userNick: user?.nick, directionId: directionId)
+    }
+    
     // MARK: Refresh Control
     func setupUIRefreshController() {
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: NSLocalizedString("pull_to_refresh", comment: ""))
+        refreshControl.addTarget(self, action: #selector(DirectionDetailView.reloadList), for: UIControlEvents.valueChanged)
         tableView.addSubview(refreshControl)
     }
     

@@ -18,6 +18,7 @@ class DirectionsDetailViewController: BaseViewController, DirectionViewActionsPr
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.setColoredTitle(title: NSLocalizedString("direction_detail_title", comment: ""))
         directionDetailView = DirectionDetailView(table: tableView,
                                                   direction: direction,
                                                   viewController: self, view: view )
