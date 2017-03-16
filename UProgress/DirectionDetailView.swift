@@ -147,6 +147,19 @@ UITableViewDataSource, StepCellProtocol {
         actions.showStepDescription(step: steps[indexPath.row])
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if steps.count > 0 {
+            tableView.backgroundView = nil
+            return 1
+        }
+        else {
+            let view = EmptyTableView.instanceFromNib() as! EmptyTableView
+            view.emptyLabel.text = NSLocalizedString("steps_empty", comment: "")
+            tableView.backgroundView  = view
+            return 1
+        }
+    }
+    
     func reloadList() {
         presenter.refreshDirection(userNick: user?.nick, directionId: directionId)
     }

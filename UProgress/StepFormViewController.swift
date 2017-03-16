@@ -46,8 +46,6 @@ class StepFormViewController: BasePopupViewController, StepViewProtocol, UITextV
         self.popupView.layer.cornerRadius = 8.0
         let model = DirectionDetailManager()
         presenter = StepPresenter(model: model, view: self)
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

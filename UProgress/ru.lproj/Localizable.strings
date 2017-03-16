@@ -33,6 +33,7 @@
 "delete_step" = "Удалить";
 "steps_delete_success" = "Шаг '%@' был успешно удален";
 "steps_delete_failed" = "Во время удаления произошла ошибка";
+"steps_empty" = "К сожалению, для данного направления нет шагов";
 
 // PROFILE
 "profile_select_image" = "Выберите изображение";

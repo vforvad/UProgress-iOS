@@ -38,6 +38,7 @@
 "delete_step" = "Delete";
 "steps_delete_success" = "Step '%@' was succesfully deleted";
 "steps_delete_failed" = "Unfortunatelly, an error has occured";
+"steps_empty" = "Unfortunatelly, there are no steps";
 
 // PROFILE
 "profile_select_image" = "Choose image";
@@ -61,7 +62,7 @@
 "directions_page_title" = "Directions";
 "directions_title" = "Title";
 "directions_description" = "Description";
-"directions_empty" = "Unfortunatelly, there is no directions.";
+"directions_empty" = "Unfortunatelly, there are no directions.";
 "direction_detail_title" = "Direction";
 "direction_not_found" = "There is not such direction";
 
