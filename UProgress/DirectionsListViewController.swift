@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import MBProgressHUD
+import CDAlertView
 
 class DirectionsListViewController: BaseViewController, DirectionViewProtocol, DirectionsListViewProtocol,
 DirectionPopupActions {
@@ -53,7 +54,8 @@ DirectionPopupActions {
     }
     
     internal func failedDirectionsLoad(error: NSError) {
-        
+        CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                    message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
     }
     
     internal func clickOnItem(direction: Direction, indexPath: IndexPath!) {
