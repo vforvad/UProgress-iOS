@@ -79,6 +79,7 @@ class DirectionsListView: NSObject, UITableViewDataSource, UITableViewDelegate, 
     
     func numberOfSections(in tableView: UITableView) -> Int {
         if itemsList.count > 0 {
+            tableView.backgroundView = nil
             return 1
         }
         else {
