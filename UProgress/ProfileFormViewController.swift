@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MBProgressHUD
+import CDAlertView
 
 class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, UITextViewDelegate, UITextFieldDelegate {
     var presenter: ProfilePresenter!
@@ -120,6 +121,16 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
     }
     
     internal func failedUpdate(error: ServerError!) {
+        switch(error.status!) {
+        case 400 ... 499:
+            handleFormErrors(error: error)
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
+    }
+    
+    private func handleFormErrors(error: ServerError) {
         self.stackView.spacing = 5.0
         let errorsList = error.params!
         if let titleErrorsArr = errorsList["first_name"] {
@@ -168,8 +179,6 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
         }
     }
     
-
-    
     // MARK: UITextFieldDelegate methods
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         if textField === firstNameField {
@@ -204,4 +213,5 @@ class ProfileFormViewController: BasePopupViewController, ProfileViewProtocol, U
         }
         return descriptionField.text
     }
+    
 }
