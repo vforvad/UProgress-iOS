@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 class AuthorizationsViewController: BaseViewController, SignInProtocol, AuthorizationViewProtocol {
     public var signIn: Bool!
@@ -138,6 +139,14 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
             viewController.parentVC = self
             self.signUpView = viewController
         }
+    }
+    
+    internal func stopLoader() {
+        MBProgressHUD.hide(for: view, animated: true)
+    }
+    
+    internal func startLoader() {
+        MBProgressHUD.showAdded(to: view, animated: true)
     }
     
     deinit {
