@@ -156,14 +156,6 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         NotificationCenter.default.removeObserver(self);
     }
     
-    internal func startLoader() {
-        MBProgressHUD.showAdded(to: view, animated: true)
-    }
-    
-    internal func stopLoader() {
-        MBProgressHUD.hide(for: view, animated: true)
-    }
-    
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
