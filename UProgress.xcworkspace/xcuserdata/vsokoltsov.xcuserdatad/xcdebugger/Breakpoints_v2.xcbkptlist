@@ -956,8 +956,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
             endingLineNumber = "34"
-            landmarkName = "AuthorizationPresenter"
-            landmarkType = "3">
+            landmarkName = "signIn(parameters:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

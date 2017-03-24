@@ -28,6 +28,11 @@ class SidebarViewController: UIViewController, NavigationViewProtocol {
         super.viewDidAppear(animated)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     internal func onItemSelect(segueName: String!) {
         if CommonFunctions.DeviceData.isIphone() {
             segueForNavigationController(identifier: segueName)

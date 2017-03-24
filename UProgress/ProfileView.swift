@@ -11,6 +11,7 @@ import UIKit
 import Alamofire
 import ObjectMapper
 import MBProgressHUD
+import CDAlertView
 
 class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegate, UITableViewDataSource, UINavigationControllerDelegate, AttachmentViewProtocol {
     private var cellIdentifier = "profileItem"
@@ -22,7 +23,6 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     private var viewController: BaseViewController!
     private var actions: ProfileViewActionsProtocol!
     private let imagePicker = UIImagePickerController()
-    private var popover:UIPopoverController!
     private var presenter: AttachmentPresenter!
     private var uploadedImage: UIImage!
     
@@ -42,12 +42,14 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         self.tableView.dataSource = self
         self.profileItems = user.attributesDictionary()
         
+        tableView.backgroundColor = UIColor("#f6f7f8")
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         var buttonsArr: [UIBarButtonItem]! = []
         
         if user.id == AuthorizationService.sharedInstance.currentUser.id {
-            buttonsArr.append(CommonFunctions.makeBarButton(withIcon: "settings_icon", action: #selector(createStep(sender:)), target: self))
-            buttonsArr.append(CommonFunctions.makeBarButton(withIcon: "camera", action: #selector(takePhoto(sender:)), target: self));
+            buttonsArr.append(CommonFunctions.barButtonAsButton(target: self, iconName: "settings_icon", action: #selector(showOptions(_:))))
+            buttonsArr.append(CommonFunctions.barButtonAsButton(target: self, iconName: "camera", action: #selector(takePhoto(_:))));
         }
         
         viewController.navigationItem.rightBarButtonItems = buttonsArr
@@ -57,12 +59,7 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         
     }
     
-    func setBarButton(withIcon: String!, action: Selector) -> UIBarButtonItem {
-        return UIBarButtonItem(image: CommonFunctions.resizeImage(image: UIImage(named: withIcon)!, targetSize: CGSize(width: 30.0, height: 30.0)), style: UIBarButtonItemStyle.plain, target: self, action: action)
-    }
-    
-    func createStep(sender: UIBarButtonItem) {
-//        actions.editUser()
+    func showOptions(_ sender: UIButton) {
         let alert:UIAlertController=UIAlertController(title: NSLocalizedString("profile_settings_action", comment: ""), message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         
         let editAction = UIAlertAction(title: NSLocalizedString("profile_settings_edit", comment: ""), style: UIAlertActionStyle.default) { UIAlertAction in
@@ -81,10 +78,12 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         alert.addAction(editAction)
         alert.addAction(signOutAction)
         alert.addAction(cancelAction)
-        displayMenu(contentView: alert, sender: sender)
+        alert.popoverPresentationController?.sourceView = sender
+        alert.popoverPresentationController?.sourceRect = sender.bounds
+        viewController.present(alert, animated: true, completion: {})
     }
     
-    func takePhoto(sender: UIBarButtonItem) {
+    func takePhoto(_ sender: UIButton) {
         let alert:UIAlertController=UIAlertController(title: NSLocalizedString("profile_select_image", comment: ""), message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -96,7 +95,7 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         
         let gallaryAction = UIAlertAction(title: NSLocalizedString("profile_image_gallery", comment: ""), style: UIAlertActionStyle.default) {
             UIAlertAction in
-            self.openGallery(sender: sender)
+            self.openGallery()
         }
         
         let cancelAction = UIAlertAction(title: NSLocalizedString("profile_image_cancel", comment: ""), style: UIAlertActionStyle.cancel) { UIAlertAction in
@@ -104,7 +103,9 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         
         alert.addAction(gallaryAction)
         alert.addAction(cancelAction)
-        displayMenu(contentView: alert, sender: sender)
+        alert.popoverPresentationController?.sourceView = sender
+        alert.popoverPresentationController?.sourceRect = sender.bounds
+        viewController.present(alert, animated: true, completion: {})
     }
     
     func signOut() {
@@ -119,28 +120,16 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
         viewController.present(imagePicker, animated: true, completion: {})
     }
     
-    func openGallery(sender: UIBarButtonItem) {
+    func openGallery() {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
-        displayMenu(contentView: imagePicker, sender: sender)
-    }
-    
-    func displayMenu(contentView: UIViewController!, sender: UIBarButtonItem!) {
-        if CommonFunctions.DeviceData.isIphone() {
-            viewController.present(contentView, animated: true, completion: {})
-        }
-        else {
-            popover = UIPopoverController(contentViewController: contentView)
-            popover.present(from: sender, permittedArrowDirections: UIPopoverArrowDirection.any, animated: true)
-        }
+        viewController.present(imagePicker, animated: true, completion: {})
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ProfileCell
         cell.setData(list: profileItems[indexPath.row])
-//        cell.textLabel?.text = profileItems[indexPath.row]["value"]
-//        cell.detailTextLabel?.text = profileItems[indexPath.row]["title"]
-        return cell as! UITableViewCell
+        return cell as UITableViewCell
     }
     
     public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -159,7 +148,7 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 140
+        return 220
     }
     
     func updateUser(user: User!) {
@@ -182,7 +171,7 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     }
     
     internal func successAttachmentUpload(attachment: Attachment) {
-        var user = AuthorizationService.sharedInstance.currentUser
+        let user = AuthorizationService.sharedInstance.currentUser
         user?.attachment = attachment
         user?.avatarUrl = attachment.url
         if let selectedImage = uploadedImage {
@@ -196,7 +185,8 @@ class ProfileView: NSObject, UITableViewDelegate, UIImagePickerControllerDelegat
     }
     
     internal func failedAttachmentUpload(error: ServerError) {
-        
+        CDAlertView(title: NSLocalizedString("upload_error", comment: ""),
+                    message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
     }
     
     internal func stopLoader() {

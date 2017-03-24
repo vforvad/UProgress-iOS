@@ -11,6 +11,7 @@ import UIKit
 import MBProgressHUD
 import Charts
 import UIColor_Hex_Swift
+import CDAlertView
 
 class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
     @IBOutlet weak var baseView: UIView!
@@ -21,7 +22,6 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
     var statisticsInfo: StatisticsInfo!
     private let imagePicker = UIImagePickerController()
     private var scopeId: String! = "directions"
-    private var popover: UIPopoverController!
     
     
     @IBOutlet weak var pieChartView: UIView!
@@ -29,13 +29,14 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.setColoredTitle(title: NSLocalizedString("statistics_title_page", comment: ""))
         let model = StatisticsManager()
         let presenter = StatisticsPresenter(model: model, view: self)
         presenter.loadStatistics(userId: AuthorizationService.sharedInstance.currentUser.nick)
         
         var buttonsArr: [UIBarButtonItem]! = []
-        switchChartIcon = customBarButtonItem(iconName: "bar_chart_icon", action: #selector(switchChartView(_:)))
-        buttonsArr.append(customBarButtonItem(iconName: "chart_type_icon", action: #selector(switchChartType(_:))))
+        switchChartIcon = CommonFunctions.barButtonAsButton(target: self, iconName: "bar_chart_icon", action: #selector(switchChartView(_:)))
+        buttonsArr.append(CommonFunctions.barButtonAsButton(target: self, iconName: "chart_type_icon", action: #selector(switchChartType(_:))))
         buttonsArr.append(switchChartIcon)
         self.navigationItem.rightBarButtonItems = buttonsArr
     }
@@ -55,10 +56,7 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
         else {
             iconName = "pie_chart_icon"
         }
-//        button.setImage(UIImage(named: iconName), for: .normal)
-//        switchChartIcon.setImage
         sender.setImage(UIImage(named: iconName), for: UIControlState.normal)
-//        switchChartIcon.image = UIImage(named: iconName)
         displayStatistics()
     }
     
@@ -89,32 +87,20 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
         alert.addAction(stepsActions)
         alert.addAction(directionsSteps)
         alert.addAction(cancelAction)
-        alert.popoverPresentationController?.sourceView = sender as! UIView
+        alert.popoverPresentationController?.sourceView = sender
         alert.popoverPresentationController?.sourceRect = sender.bounds
         present(alert, animated: true, completion: {})
         
     }
     
-    
-    func displayMenu(contentView: UIViewController!, sender: UIBarButtonItem!) {
-        if CommonFunctions.DeviceData.isIphone() {
-            self.present(contentView, animated: true, completion: {})
-        }
-        else {
-//            let alert = contentView as! UIAlertController
-//            popover = UIPopoverController(contentViewController: contentView)
-//            popover.present(from: sender, permittedArrowDirections: UIPopoverArrowDirection.any, animated: true)
-        }
-    }
-    
     internal func successStatisticsLoad(statistics: StatisticsInfo!) {
         self.statisticsInfo = statistics
         displayStatistics()
-//        pieChatViewController.setData(statistics: statistics.directionSteps)
     }
     
     internal func failedStatisticsLoad(error: ServerError!) {
-    
+        CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                    message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
     }
     
     internal func startLoader() {
@@ -134,14 +120,7 @@ class StatisticsViewController: BaseViewController, StatisticsViewProtocol {
             barChartViewController = segue.destination as! BarChartViewController
         }
     }
-    func customBarButtonItem(iconName: String!, action: Selector!) -> UIBarButtonItem {
-        let btn1 = UIButton(type: .custom)
-        btn1.setImage(UIImage(named: iconName), for: .normal)
-        btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        btn1.addTarget(self, action: action, for: .touchUpInside)
-        
-        return UIBarButtonItem(customView: btn1)
-    }
+    
     private func displayStatistics() {
         if pieChartDisplayed! {
             barChartView.isHidden = true

@@ -33,6 +33,8 @@
 "delete_step" = "Удалить";
 "steps_delete_success" = "Шаг '%@' был успешно удален";
 "steps_delete_failed" = "Во время удаления произошла ошибка";
+"steps_empty" = "К сожалению, для данного направления нет шагов";
+"steps_delete_failed" = "К сожалению, удаление шага неудачно. Попробуйте удалить позже.";
 
 // PROFILE
 "profile_select_image" = "Выберите изображение";
@@ -45,14 +47,34 @@
 "profile_settings_sign_out" = "Выйти";
 
 // STATISTISCS
+"statistics_title_page" = "Статистика";
 "statistics_directions" = "Направления";
 "statistics_steps" = "Шаги";
 "statistics_directions_steps" = "Шаги направлений";
 "statistics_title" = "Выборка";
 
 // DIRECTIONS
+"directions_page_title" = "Направления";
 "directions_title" = "Название";
 "directions_description" = "Описание";
+"directions_empty" = "К сожалению, сейчас у вас нет направлений.";
+"direction_detail_title" = "Направление";
+"direction_not_found" = "Такого направления не существует";
 
 // PROFILE
+"profile_title" = "Профиль";
+"profile_first_name" = "Имя";
+"profile_last_name" = "Фамилия";
+"profile_email" = "Электронная почта";
+"profile_location" = "Место";
 "profile_about" = "О себе";
+
+// ERROR
+"not_found" = "Не найдено";
+"error_title" = "Ошибка сервера";
+"server_not_respond" = "К сожалению, сервер не отвечает. Повторите запрос позже";
+"upload_error" = "Ошибка загрузки";
+
+// FORM
+"form_save" = "Сохранить";
+"form_cancel" = "Отмена";

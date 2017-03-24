@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 import MBProgressHUD
+import CDAlertView
 
-class DirectionsFormViewController: BasePopupViewController, DirectionFormProtocol, UITextViewDelegate {
+class DirectionsFormViewController: BasePopupViewController, DirectionFormProtocol, UITextViewDelegate, UITextFieldDelegate {
+    @IBOutlet weak var scrollView: UIScrollView!
     var actions: DirectionPopupActions!
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var stackView: UIStackView!
@@ -35,6 +37,7 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
     }
     
     func setupUI() {
+        titleField.delegate = self
         saveButton.layer.cornerRadius = 8.0
         cancellButton.layer.cornerRadius = 8.0
         
@@ -42,6 +45,10 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
         descriptionField.layer.borderWidth = 0.3
         descriptionField.layer.borderColor = UIColor.lightGray.cgColor
         self.baseView.layer.cornerRadius = 8.0
+        
+        saveButton.setTitle(NSLocalizedString("form_save", comment: ""), for: .normal)
+        cancellButton.setTitle(NSLocalizedString("form_cancel", comment: ""), for: .normal)
+        
         let model = DirectionManager()
         presenter = DirectionFormPresenter(model: model, view: self)
     }
@@ -63,7 +70,7 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
         titleFieldError.isHidden = true
         descriptionFieldError.isHidden = true
         presenter.createDirection(userNick: AuthorizationService.sharedInstance.currentUser.nick,
-                                  parameters: ["title": titleField.text, "description": descriptionField.text]
+                                  parameters: ["title": titleField.text, "description": getDescription()]
         )
         
     }
@@ -77,16 +84,26 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
     }
     
     internal func failedCreation(error: ServerError) {
-        let errorsList = error.params!
-        if let titleErrorsArr = errorsList["title"] {
+        switch(error.status!) {
+        case 400 ... 499:
+            handleFormErrors(error: error)
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
+    }
+    
+    private func handleFormErrors(error: ServerError) {
+        let errorsList = error.params!["errors"]
+        if let titleErrorsArr = errorsList?["title"] {
             let errorsArr = titleErrorsArr as! [String]
             let titleError: String! = errorsArr.joined(separator: "\n")
             self.titleFieldError.text = titleError
             self.titleFieldError.isHidden = false
         }
         
-        if errorsList["description"] != nil {
-            let errorsArr = errorsList["description"] as! [String]
+        if errorsList?["description"]! != nil {
+            let errorsArr = errorsList?["description"] as! [String]
             let descriptionError: String! = errorsArr.joined(separator: "\n")
             self.descriptionFieldError.text = descriptionError
             self.descriptionFieldError.isHidden = false
@@ -111,8 +128,26 @@ class DirectionsFormViewController: BasePopupViewController, DirectionFormProtoc
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if descriptionField.text.isEmpty {
-            descriptionField.text = NSLocalizedString("directions_descriptions", comment: "")
+            descriptionField.text = NSLocalizedString("directions_description", comment: "")
             descriptionField.textColor = UIColor.lightGray
         }
+    }
+    
+    // MARK: UITextFieldDelegate methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if textField === titleField {
+            titleField.resignFirstResponder()
+            self.scrollView.scrollToView(view: descriptionField, animated: true)
+            descriptionField.becomeFirstResponder()
+        }
+        return true
+    }
+    
+    
+    private func getDescription() -> String? {
+        if descriptionField.text! == NSLocalizedString("directions_description", comment: "") {
+            return nil
+        }
+        return descriptionField.text
     }
 }

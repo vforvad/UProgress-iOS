@@ -14,6 +14,7 @@ target 'UProgress' do
   pod 'KeychainSwift', '~> 7.0'
   pod 'Toaster', '~> 2.0'
   pod 'Charts'
+  pod 'CDAlertView'
 
   # Pods for UProgress
 

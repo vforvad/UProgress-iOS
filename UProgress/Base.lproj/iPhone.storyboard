@@ -44,7 +44,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gcZ-Il-1xx">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="15" width="414" height="721"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="navigationCellId" id="2mj-M7-Lv9">
@@ -63,7 +63,7 @@
                             <constraint firstItem="Gm6-9d-fCu" firstAttribute="top" secondItem="gcZ-Il-1xx" secondAttribute="bottom" id="8kk-5S-OQa"/>
                             <constraint firstAttribute="trailing" secondItem="gcZ-Il-1xx" secondAttribute="trailing" id="Feg-8f-6m1"/>
                             <constraint firstItem="gcZ-Il-1xx" firstAttribute="leading" secondItem="0rC-lE-ygp" secondAttribute="leading" id="JrQ-PS-7ca"/>
-                            <constraint firstItem="gcZ-Il-1xx" firstAttribute="top" secondItem="0rC-lE-ygp" secondAttribute="top" id="ajO-Rx-m1P"/>
+                            <constraint firstItem="gcZ-Il-1xx" firstAttribute="top" secondItem="0rC-lE-ygp" secondAttribute="top" constant="15" id="ajO-Rx-m1P"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AtJ-qP-g4j"/>

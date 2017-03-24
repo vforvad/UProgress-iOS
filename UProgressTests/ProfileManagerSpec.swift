@@ -79,7 +79,7 @@ class ProfileManagerSpec: BaseTest {
                 }
                 
                 it("errors object is not empty") {
-                    expect(self.updateError.params?["email"]).toEventuallyNot(beNil())
+                    expect(self.updateError.params?["errors"]?["email"]).toEventuallyNot(beNil())
                 }
             }
         }

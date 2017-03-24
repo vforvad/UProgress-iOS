@@ -16,6 +16,8 @@ class ProfileViewController: BaseViewController, ProfileViewActionsProtocol, Pro
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.setColoredTitle(title: NSLocalizedString("profile_title", comment: ""))
+        self.view.backgroundColor = UIColor("#B1E8AE")        
         profileView = ProfileView(user: user, table: tableView, viewController: self)
     }
     

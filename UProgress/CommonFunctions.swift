@@ -79,6 +79,15 @@ struct CommonFunctions {
         return UIBarButtonItem(image: CommonFunctions.resizeImage(image: (UIImage(named: withIcon)?.withRenderingMode(.alwaysOriginal))!,  targetSize: CGSize(width: 30.0, height: 30.0)), style: UIBarButtonItemStyle.plain, target: target, action: action)
     }
     
+    static func barButtonAsButton(target: Any, iconName: String!, action: Selector!) -> UIBarButtonItem {
+        let btn1 = UIButton(type: .custom)
+        btn1.setImage(UIImage(named: iconName), for: .normal)
+        btn1.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        btn1.addTarget(target, action: action, for: .touchUpInside)
+        
+        return UIBarButtonItem(customView: btn1)
+    }
+    
     static func fromStoryboard(name: String!, identifier: String! ) -> UIViewController {
         return UIStoryboard(name: name, bundle: nil).instantiateViewController(withIdentifier: identifier)
     }

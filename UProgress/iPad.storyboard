@@ -68,9 +68,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e9d-PI-G9s">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e9d-PI-G9s">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="navigationCellId" id="Q9l-7W-Q5s">
@@ -85,6 +84,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e9d-PI-G9s" firstAttribute="top" secondItem="mHU-V9-yWu" secondAttribute="top" constant="15" id="26T-qL-wYu"/>
+                            <constraint firstItem="e9d-PI-G9s" firstAttribute="leading" secondItem="mHU-V9-yWu" secondAttribute="leading" id="LjW-XR-Uc7"/>
+                            <constraint firstAttribute="trailing" secondItem="e9d-PI-G9s" secondAttribute="trailing" id="a4w-Js-Z0K"/>
+                            <constraint firstItem="rIf-bF-JKg" firstAttribute="top" secondItem="e9d-PI-G9s" secondAttribute="bottom" id="rxs-Pd-8em"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MbI-Vw-6BT"/>
                     <connections>

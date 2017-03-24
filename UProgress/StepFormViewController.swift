@@ -9,14 +9,16 @@
 import Foundation
 import MBProgressHUD
 import UIKit
+import CDAlertView
 
-class StepFormViewController: BasePopupViewController, StepViewProtocol, UITextViewDelegate {
+class StepFormViewController: BasePopupViewController, StepViewProtocol, UITextViewDelegate, UITextFieldDelegate {
     var defaultKeyboardSize: CGFloat!
     var mainView: DirectionsPopupProtocol!
     var presenter: StepPresenter!
     var direction: Direction!
     var user: User! = AuthorizationService.sharedInstance.currentUser
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var popupTopMargin: NSLayoutConstraint!
     @IBOutlet weak var titleField: UITextField!
@@ -30,6 +32,7 @@ class StepFormViewController: BasePopupViewController, StepViewProtocol, UITextV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.titleField.delegate = self
         saveButton.layer.cornerRadius = 8.0
         cancellButton.layer.cornerRadius = 8.0
         
@@ -43,8 +46,6 @@ class StepFormViewController: BasePopupViewController, StepViewProtocol, UITextV
         self.popupView.layer.cornerRadius = 8.0
         let model = DirectionDetailManager()
         presenter = StepPresenter(model: model, view: self)
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,8 +58,8 @@ class StepFormViewController: BasePopupViewController, StepViewProtocol, UITextV
         self.titleFieldError.isHidden = true
         self.descriptionFieldError.isHidden = true
         let directionId: String = String(self.direction.id)
-        let parameters: Dictionary<String, AnyObject>! = ["title": self.titleField.text as String! as AnyObject, "description": self.descriptionField.text as String! as AnyObject]
-        presenter.createStep(userId: user.nick, directionId: directionId, parameters: parameters )
+        let parameters = ["title": self.titleField.text, "description": getDescription()]
+        presenter.createStep(userId: user.nick, directionId: directionId, parameters: parameters as Dictionary<String, AnyObject> )
     }
     @IBAction func clickCancel(_ sender: Any) {
         self.dismiss(animated: true, completion: {})
@@ -71,8 +72,18 @@ class StepFormViewController: BasePopupViewController, StepViewProtocol, UITextV
     }
     
     internal func failureCreation(error: ServerError!) {
-        let errorsList = error.params!
-        if let titleErrorsArr = errorsList["title"] {
+        switch(error.status!) {
+        case 400 ... 499:
+            handleFormError(error: error)
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
+    }
+    
+    private func handleFormError(error: ServerError!) {
+        let errorsList = error.params!["errors"]
+        if let titleErrorsArr = errorsList?["title"] {
             let errorsArr = titleErrorsArr as! [String]
             let titleError: String! = errorsArr.joined(separator: "\n")
             self.titleFieldError.text = titleError
@@ -80,8 +91,8 @@ class StepFormViewController: BasePopupViewController, StepViewProtocol, UITextV
             
         }
         
-        if errorsList["description"] != nil {
-            let errorsArr = errorsList["description"] as! [String]
+        if errorsList?["description"]! != nil {
+            let errorsArr = errorsList?["description"] as! [String]
             let descriptionError: String! = errorsArr.joined(separator: "\n")
             self.descriptionFieldError.text = descriptionError
             self.descriptionFieldError.isHidden = false
@@ -109,5 +120,22 @@ class StepFormViewController: BasePopupViewController, StepViewProtocol, UITextV
             descriptionField.text = NSLocalizedString("directions_description", comment: "")
             descriptionField.textColor = UIColor.lightGray
         }
+    }
+    
+    func getDescription() -> String? {
+        if descriptionField.text! == NSLocalizedString("directions_description", comment: "") {
+            return nil
+        }
+        return descriptionField.text
+    }
+    
+    // MARK: UITextFieldDelegate methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        if textField === titleField {
+            titleField.resignFirstResponder()
+            self.scrollView.scrollToView(view: descriptionField, animated: true)
+            descriptionField.becomeFirstResponder()
+        }
+        return true
     }
 }

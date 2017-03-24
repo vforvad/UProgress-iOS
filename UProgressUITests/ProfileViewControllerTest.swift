@@ -28,6 +28,40 @@ class ProfileViewControllerTest: BaseUITest {
                     ]
                 ]
             })
+            
+            super.router["/api/v1/users/aaa/directions"] = JSONResponse(statusCode: 200, handler: { eviron -> Any in
+                return [
+                    "directions": [
+                        [
+                            "id": 1,
+                            "title": "Domainer",
+                            "description": "The JSON program is down, reboot the online pixel so we can connect the SCSI feed!",
+                            "finished_steps_count": 2,
+                            "percents_result": 40,
+                            "updated_at": "2016-12-31T19:18:01.148Z",
+                            "slug": "treeflex"
+                        ],
+                        [
+                            "id": 2,
+                            "title": "Domainer 1",
+                            "description": "The JSON program is down, reboot the online pixel so we can connect the SCSI feed!",
+                            "finished_steps_count": 2,
+                            "percents_result": 40,
+                            "updated_at": "2016-12-31T19:18:01.148Z",
+                            "slug": "treeflex"
+                        ],
+                        [
+                            "id": 3,
+                            "title": "Domainer 2",
+                            "description": "The JSON program is down, reboot the online pixel so we can connect the SCSI feed!",
+                            "finished_steps_count": 2,
+                            "percents_result": 40,
+                            "updated_at": "2016-12-31T19:18:01.148Z",
+                            "slug": "treeflex"
+                        ]
+                    ]
+                ]
+            })
         }
         
         app.navigationBars.buttons.element(boundBy: 0).tap()
@@ -50,7 +84,7 @@ class ProfileViewControllerTest: BaseUITest {
         
         XCTAssert(app.textFields["First name"].exists)
         XCTAssert(app.textFields["Last name"].exists)
-        XCTAssert(app.textFields["Email"].exists)
+        XCTAssert(app.textFields["example@mail.com"].exists)
         XCTAssert(app.textFields["Location"].exists)
         XCTAssert(app.textViews["Few words about yourself"].exists)
     }
@@ -76,7 +110,7 @@ class ProfileViewControllerTest: BaseUITest {
         app.navigationBars.buttons.element(boundBy: 2).tap()
         app.sheets["Choose an action"].buttons["Edit"].tap()
         
-        let email = app.textFields["Email"];
+        let email = app.textFields["example@mail.com"];
         
         email.tap()
         email.typeText("example1@mail.com")

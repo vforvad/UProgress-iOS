@@ -20,9 +20,8 @@ class StatisticsManager: StatisticsManagerProtocol {
                 success(statistics!)
             }
             else {
-                // TODO implement specs for this type
-                let stepError = response.result.value! as! Dictionary<String, Any>
-                failure(ServerError(status: response.response!.statusCode, parameters: stepError["errors"] as! NSDictionary))
+                let error = response.result.value as? Dictionary<String, AnyObject>
+                failure(ServerError(status: response.response!.statusCode, parameters: error))
             }
         }
     }

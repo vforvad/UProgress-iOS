@@ -19,18 +19,22 @@ class AttachmentManager: AttachmentManagerProtocol {
             formData.append(imageData, withName: "file", fileName: imageName, mimeType: "image/jpg")
             formData.append((String(attachableType)?.data(using: String.Encoding.utf8))!, withName: "attachable_type")
             formData.append(String(attachableId).data(using: String.Encoding.utf8)!, withName: "attachable_id")
-        }, to: "\(ApiRequest.sharedInstance.host)/api/v1/attachments", encodingCompletion: { (result) in
+        }, to: "\(ApiRequest.sharedInstance.host)/api/v1/attachments", encodingCompletion: { result in
             switch result {
             case .success(let upload, _, _):
                 upload.validate().responseJSON(completionHandler: { response in
-                    if let result = response.result.value {
-                        let JSON = result as! Dictionary<String, AnyObject>
+                    if response.response?.statusCode == 200 {
+                        let JSON = response.result.value as! Dictionary<String, AnyObject>
                         let attachment = Mapper<Attachment>().map(JSONObject: JSON["attachment"])
                         success(attachment!)
                     }
+                    else {
+                        let error = response.result.value as? Dictionary<String, AnyObject>
+                        failure(ServerError(status: response.response!.statusCode, parameters: error))
+
+                    }
                 })
             case .failure(let error):
-                // TODO - handle error case
                 print(error)
             }
             

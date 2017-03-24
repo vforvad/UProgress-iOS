@@ -107,7 +107,7 @@ class DirectionManagerSpec: BaseTest {
                 }
                 
                 it("contain title key") {
-                    expect(errorObject.params?["title"]).toEventuallyNot(beNil())
+                    expect(errorObject.params?["errors"]?["title"]).toEventuallyNot(beNil())
                 }
             }
         }

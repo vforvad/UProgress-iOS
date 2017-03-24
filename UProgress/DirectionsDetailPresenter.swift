@@ -19,11 +19,14 @@ class DirectionsDetailPresenter: DirectionsDetailPresenterProtocol {
     
     
     func loadDirection(userNick: String!, directionId: String!) {
+        view.startLoader()
         model.loadDirection(userNick: userNick, directionId: directionId,
         success: { direction in
+            self.view.stopLoader()
             self.view.successDirectionLoad(direction: direction)
         },
         failure: { error in
+            self.view.stopLoader()
             self.view.failedDirectionLoad(error: error)
         })
     }
@@ -50,6 +53,19 @@ class DirectionsDetailPresenter: DirectionsDetailPresenterProtocol {
         failure: { error in
             self.view.stopLoader()
             self.view.failureStepDelete(error: error)
+        })
+    }
+    
+    internal func refreshDirection(userNick: String!, directionId: String!) {
+        self.view.startRefreshing()
+        model.loadDirection(userNick: userNick, directionId: directionId,
+                            success: { direction in
+                                self.view.stopRefreshing()
+                                self.view.successDirectionLoad(direction: direction)
+        },
+                            failure: { error in
+                                self.view.stopRefreshing()
+                                self.view.failedDirectionLoad(error: error)
         })
     }
 }

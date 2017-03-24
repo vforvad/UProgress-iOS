@@ -20,7 +20,7 @@ class AuthorizationPresenter: AuthorizationPresenterProtocol {
     }
     
     internal func signIn(parameters: Dictionary<String, AnyObject>) {
-        view.startLoader()
+        self.view.startLoader()
         model.signIn(signInParameters: parameters,
         success: { user in
             self.view.stopLoader()
@@ -33,7 +33,7 @@ class AuthorizationPresenter: AuthorizationPresenterProtocol {
     }
     
     internal func signUp(parameters: Dictionary<String, AnyObject>) {
-        view.startLoader()
+        self.view.startLoader()
         model.signUp(signUpParameters: parameters,
         success: { user in
             self.view.stopLoader()
