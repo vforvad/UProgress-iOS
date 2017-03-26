@@ -339,6 +339,7 @@
 		64D930C61E3E730E007C7112 /* DirectionsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AB1E3E45EE007C7112 /* DirectionsListPresenter.swift */; };
 		64D930C71E3E7311007C7112 /* DirectionListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */; };
 		64D930C81E3E7312007C7112 /* DirectionListPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */; };
+		64D9DD061E883991005D039B /* DeviceToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9DD051E883991005D039B /* DeviceToken.swift */; };
 		64DA9CFD1E6567E4008D24AD /* StatisticsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DA9CFC1E6567E4008D24AD /* StatisticsStoryboard.storyboard */; };
 		64DA9CFF1E656817008D24AD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */; };
 		64DA9D001E656817008D24AD /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */; };
@@ -547,6 +548,7 @@
 		64C4DE141E5C8DBC009B896B /* Pods_UProgress_UProgressUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgress_UProgressUITests.framework; path = "Pods/../build/Debug-iphoneos/Pods_UProgress_UProgressUITests.framework"; sourceTree = "<group>"; };
 		64C4DE161E5C8DD0009B896B /* Pods_UProgress_UProgressTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgress_UProgressTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_UProgress_UProgressTests.framework"; sourceTree = "<group>"; };
 		64C4DE181E5C8DD7009B896B /* Pods_UProgress_UProgressUITests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_UProgress_UProgressUITests.framework; path = "Pods/../build/Debug-iphoneos/Pods_UProgress_UProgressUITests.framework"; sourceTree = "<group>"; };
+		64CE6CC41E8802A0006E5F60 /* UProgress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UProgress.entitlements; sourceTree = "<group>"; };
 		64D1BD1B1E475DA6001DDDC5 /* ProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		64D1BD1D1E475DB2001DDDC5 /* ProfileViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewCell.xib; sourceTree = "<group>"; };
 		64D9309B1E3E2CEE007C7112 /* DirectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionManager.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 		64D930AD1E3E4632007C7112 /* DirectionListPresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionListPresenterImpl.swift; sourceTree = "<group>"; };
 		64D930AF1E3E4DA1007C7112 /* DirectionsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListView.swift; sourceTree = "<group>"; };
 		64D930B11E3E4EF2007C7112 /* DirectionsListViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsListViewProtocol.swift; sourceTree = "<group>"; };
+		64D9DD051E883991005D039B /* DeviceToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceToken.swift; sourceTree = "<group>"; };
 		64DA9CFC1E6567E4008D24AD /* StatisticsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StatisticsStoryboard.storyboard; sourceTree = "<group>"; };
 		64DA9CFE1E656817008D24AD /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		64E015171E3E023E0055DFD5 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
@@ -902,6 +905,7 @@
 		6474B1A51E3D04C200C46165 /* UProgress */ = {
 			isa = PBXGroup;
 			children = (
+				64CE6CC41E8802A0006E5F60 /* UProgress.entitlements */,
 				64DA9CFB1E6567D4008D24AD /* Statistics */,
 				64A108111E64138700BBD065 /* Attachment */,
 				646E8EA21E48B22E003B8DFB /* DirectionsDetail */,
@@ -1160,6 +1164,7 @@
 			children = (
 				64D9309E1E3E3C68007C7112 /* ApiRequest.swift */,
 				6443CBEC1E42BFE3008F15E5 /* ServerError.swift */,
+				64D9DD051E883991005D039B /* DeviceToken.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -1350,6 +1355,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = H6WZYAW7R8;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					6474B1B61E3D04C200C46165 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1667,6 +1677,7 @@
 				641F25D31E42307B008BD119 /* AuthorizationPresenter.swift in Sources */,
 				64F0C8CC1E5D9224000DD1D8 /* ProfileViewActionsProtocol.swift in Sources */,
 				6483E4C71E3FA9E50072B97C /* NavigationViewProtocol.swift in Sources */,
+				64D9DD061E883991005D039B /* DeviceToken.swift in Sources */,
 				64D1BD1C1E475DA6001DDDC5 /* ProfileViewCell.swift in Sources */,
 				64860B841E5F5865002ACD43 /* ProfilePresenter.swift in Sources */,
 				64F80D3D1E41FCB000E90004 /* RegistrationFragmentController.swift in Sources */,
@@ -1980,7 +1991,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				API_ENDPOINT = "http://0e0e33e3.ngrok.io";
+				API_ENDPOINT = "http://0d527506.ngrok.io";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -2077,13 +2088,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7A32DDD7EF182634B70BB10 /* Pods-UProgress.debug.xcconfig */;
 			buildSettings = {
+				API_ENDPOINT = "http://0d527506.ngrok.io";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UProgress/UProgress.entitlements;
 				DEVELOPMENT_TEAM = H6WZYAW7R8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/OHHTTPStubs",
 				);
 				INFOPLIST_FILE = UProgress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2097,12 +2111,14 @@
 			baseConfigurationReference = 3EEFA24D7EA84D774EDB8B59 /* Pods-UProgress.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UProgress/UProgress.entitlements;
 				DEVELOPMENT_TEAM = H6WZYAW7R8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/OHHTTPStubs",
 				);
 				INFOPLIST_FILE = UProgress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vsokoltsov.UProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
