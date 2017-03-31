@@ -26,12 +26,18 @@ class DeviceToken {
         keychain.set(token, forKey: token_key)
     }
     
-    func getToken() -> String! {
+    func getToken() -> String? {
         if self.token != nil {
             return self.token
         }
         else {
-            return keychain.get(token_key)!
+            if let savedToken = keychain.get(token_key) {
+                return savedToken
+            }
+            else {
+                return nil
+            }
+            
         }
     }
 
