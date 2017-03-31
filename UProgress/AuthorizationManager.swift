@@ -73,8 +73,11 @@ class AuthorizationManager: AuthorizationManagerProtocol {
     
     func deviseInormation(provider: String!) -> NSDictionary {
         let devise = UIDevice.current
+        let app_version = Bundle.main.infoDictionary!["CFBundleShortVersionString"]
         let deviseData = ["platform": devise.systemName, "platform_version": devise.systemVersion,
-                          "app_name": devise.name, provider: provider]
+                          "app_name": "UProgress", provider: provider,
+                          "app_version": app_version,
+                          "device_token": DeviceToken.sharedInstance.getToken()]
         return deviseData as NSDictionary
     }
 }

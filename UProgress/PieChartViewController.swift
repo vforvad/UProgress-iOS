@@ -22,9 +22,12 @@ class PieChartViewController: UIViewController {
         var dataEntries: [PieChartDataEntry] = []
         var colors: [NSUIColor] = []
         for var i in (0..<statistics.count) {
+            var dataEntry: PieChartDataEntry!
             let item: StatisticsItem! = statistics[i]
-            let dataEntry = PieChartDataEntry(value: item.value, label: item.label)
-            dataEntries.append(dataEntry)
+            if item.value != nil {
+                dataEntry = PieChartDataEntry(value: item.value, label: item.label)
+                dataEntries.append(dataEntry)
+            }
             colors.append(UIColor(item.color))
             
         }

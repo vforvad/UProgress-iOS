@@ -22,11 +22,15 @@ class BarChartViewController: UIViewController {
         var labels: [String]! = []
         var colors: [NSUIColor] = []
         for var i in (0..<statistics.count) {
+            var dataEntry: BarChartDataEntry!
+            
             let item: StatisticsItem! = statistics[i]
-            let dataEntry = BarChartDataEntry(x: Double(i), y: item.value)
-            labels.append(item.label)
-            dataEntries.append(dataEntry)
-            colors.append(UIColor(item.color))
+            if item.value != nil {
+                dataEntry = BarChartDataEntry(x: Double(i), y: item.value)
+                labels.append(item.label)
+                dataEntries.append(dataEntry)
+                colors.append(UIColor(item.color))
+            }
         }
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "")
         chartDataSet.setColors(colors, alpha: 1.0)
