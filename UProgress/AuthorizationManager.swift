@@ -67,6 +67,14 @@ class AuthorizationManager: AuthorizationManagerProtocol {
         }
     }
     
+    func registerDevice(parameters: Dictionary<String, AnyObject>, failure: @escaping (ServerError) -> Void) {
+        ApiRequest.sharedInstance.post(url: "/devices", parameters: parameters as NSDictionary).responseJSON { response in
+            if response.response?.statusCode != 200 {
+                failure(ServerError(status: response.response?.statusCode, description: "Token expired"))
+            }
+        }
+    }
+    
     private func writeToken(token: String!) {
         self.keychain.set(token, forKey: "uprogresstoken")
     }
