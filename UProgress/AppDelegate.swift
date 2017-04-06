@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
@@ -47,6 +47,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
         DeviceToken.sharedInstance.setToken(token: deviceTokenString)
+        
+        if AuthorizationService.sharedInstance.currentUser != nil {
+            let manager = AuthorizationManager()
+            let parameters = ["token": deviceTokenString]
+            manager.registerDevice(parameters: parameters as Dictionary<String, AnyObject>, failure: { error in
+                
+            })
+        }
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
