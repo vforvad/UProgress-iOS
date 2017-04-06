@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MBProgressHUD
+import CDAlertView
 
 class AuthorizationsViewController: BaseViewController, SignInProtocol, AuthorizationViewProtocol {
     public var signIn: Bool!
@@ -16,17 +17,20 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var signInContainer: UIView!
     @IBOutlet weak var signUpContainer: UIView!
+    @IBOutlet weak var restorePasswordContainer: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollViewHeightConstraint: NSLayoutConstraint!
     
     private var presenter: AuthorizationPresenter!
     private var signInView: ErrorsHandling!
     private var signUpView: ErrorsHandling!
+    private var restoreView: ErrorsHandling!
+    
+    private var resetPasswordToken: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor("#f6f7f8")
-        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         
@@ -37,6 +41,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         
         self.segmentControl.setTitle(NSLocalizedString("segment_authorization", comment: ""), forSegmentAt: 0)
         self.segmentControl.setTitle(NSLocalizedString("segment_registration", comment: ""), forSegmentAt: 1)
+        self.segmentControl.setTitle(NSLocalizedString("segment_password", comment: ""), forSegmentAt: 2)
         setMVP()
     }
     
@@ -44,7 +49,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         var increasingHeight: Int!
         
         if UIDevice.current.orientation.isLandscape {
-            if (!signInContainer.isHidden) {
+            if (!signInContainer.isHidden || !restorePasswordContainer.isHidden) {
                 increasingHeight = 2 * 40 + 50
             }
             else {
@@ -91,11 +96,19 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
             segmentControl.selectedSegmentIndex = 0
             signInContainer.isHidden = false
             signUpContainer.isHidden = true
+            restorePasswordContainer.isHidden = true
         }
         else if index == 1 {
             segmentControl.selectedSegmentIndex = 1
             signInContainer.isHidden = true
             signUpContainer.isHidden = false
+            restorePasswordContainer.isHidden = true
+        }
+        else if index == 2 {
+            segmentControl.selectedSegmentIndex = 2
+            signInContainer.isHidden = true
+            signUpContainer.isHidden = true
+            restorePasswordContainer.isHidden = false
         }
     }
     
@@ -105,6 +118,10 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     internal func signUpRequest(parameters: Dictionary<String, AnyObject>) {
         presenter.signUp(parameters: parameters)
+    }
+    
+    internal func restorePasswordRequest(parameters: Dictionary<String, AnyObject>) {
+        presenter.restorePassword(parameters: parameters)
     }
     
     internal func successSignIn(currentUser: User) {
@@ -121,12 +138,21 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         }
     }
     
+    internal func successRestore(token: String) {
+        resetPasswordToken = token
+        performSegue(withIdentifier: "reset_password", sender: self)
+    }
+    
     internal func failedSignIn(error: ServerError) {
         self.signInView.handleErrors(errors: error)
     }
     
     internal func failedSignUp(error: ServerError) {
         self.signUpView.handleErrors(errors: error)
+    }
+    
+    internal func failedRestore(error: ServerError) {
+        self.restoreView.handleErrors(errors: error)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -142,7 +168,18 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
             viewController.parentVC = self
             self.signUpView = viewController
         }
-    }
+        
+        if segue.identifier == "restore_fragment" {
+            let viewController = segue.destination as! RestorePasswordFragmentController
+            viewController.parentVC = self
+            self.restoreView = viewController
+        }
+        
+        if segue.identifier == "reset_password" {
+            let viewController = segue.destination as! ResetPasswordViewController
+            viewController.token = resetPasswordToken
+        }
+     }
     
     internal func stopLoader() {
         MBProgressHUD.hide(for: view, animated: true)
@@ -151,6 +188,9 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     internal func startLoader() {
         MBProgressHUD.showAdded(to: view, animated: true)
     }
+    
+    internal func successReset(message: String!) {}
+    internal func failedReset(errors: ServerError) {}
     
     deinit {
         NotificationCenter.default.removeObserver(self);
@@ -163,5 +203,14 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     func scrollToField(view: UIView) {
         scrollView.scrollToView(view: view, animated: true)
+    }
+    
+    @IBAction func unwindToRoot(segue:UIStoryboardSegue) {
+        if segue.identifier! == "backSegue" {
+            updateSegment(sender: self.segmentControl, index: 0)
+            CDAlertView(title: NSLocalizedString("success_title", comment: ""),
+                        message: NSLocalizedString("password_reset_success", comment: ""), type: .success).show()
+
+        }
     }
 }

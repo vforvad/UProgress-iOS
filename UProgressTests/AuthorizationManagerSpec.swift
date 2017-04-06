@@ -125,5 +125,42 @@ class AuthorizationManagerSpec: QuickSpec {
                 expect(self.currentUser).toEventuallyNot(beNil(), timeout: 1.0)
             }
         }
+        
+        describe("restorePassword()") {
+            var tokenValue: String!
+            
+            context("with valid attributes") {
+                self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/sessions/restore_password"), json(["token": "12345"], status: 200, headers: [:]))
+                self.model.restorePassword(restorePassword: ["email": "vforvad@gmail.com" as AnyObject],
+                                  success: { token in
+                                    tokenValue = token
+                },
+                                  failure: { error in
+                                    self.errors = error
+                })
+                
+                it("receives token") {
+                    expect(tokenValue).toEventuallyNot(beNil(), timeout: 1.0)
+                }
+            }
+            
+            context("with invalid attributes") {
+                context("with valid attributes") {
+                    beforeEach {
+                        self.stub(uri("\(ApiRequest.sharedInstance.host)/api/v1/sessions/restore_password"), json(["errors": ["email": "Can't be blank"]], status: 422, headers: [:]))
+                        self.model.restorePassword(restorePassword: ["email": "" as AnyObject],
+                                                   success: { token in
+                        },
+                                                   failure: { error in
+                                                    self.errors = error
+                        })
+                    }
+                    
+                    it("receives errors") {
+                        expect(self.errors).toEventuallyNot(beNil(), timeout: 1.0)
+                    }
+                }
+            }
+        }
     }
 }

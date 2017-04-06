@@ -156,4 +156,120 @@ class AuthorizationViewControllerTest: BaseUITest {
         sleep(1)
         XCTAssert(self.app.staticTexts["Can't be blank"].exists)
     }
+    
+    func testSuccessRestorePassword() {
+        super.router["/api/v1/sessions/restore_password"] = JSONResponse(statusCode: 200, handler: { _ -> Any in
+            return [
+                "token": "12345"
+            ]
+        })
+        
+        let segment = app.buttons["Password"]
+        segment.tap()
+        
+        let emailField = app.textFields["Email"]
+        let button = app.buttons["Restore password"]
+        
+        emailField.tap()
+        emailField.typeText("example@mail.com")
+        button.tap()
+        sleep(1)
+        XCTAssert(self.app.buttons["Reset password"].exists)
+    }
+    
+    func testFailedRestorePassword() {
+        super.router["/api/v1/sessions/restore_password"] = JSONResponse(statusCode: 422, handler: { _ -> Any in
+            return [
+                "errors": [
+                    "email": ["Can't be blank"]
+                ]
+            ]
+        })
+        
+        let segment = app.buttons["Password"]
+        segment.tap()
+        
+        let button = app.buttons["Restore password"]
+        
+        button.tap()
+        sleep(1)
+        XCTAssert(self.app.staticTexts["Can't be blank"].exists)
+    }
+    
+    func testSuccessResetPassword() {
+        super.router["/api/v1/sessions/restore_password"] = JSONResponse(statusCode: 200, handler: { _ -> Any in
+            return [
+                "token": "12345"
+            ]
+        })
+        
+        super.router["/api/v1/sessions/reset_password"] = JSONResponse(statusCode: 200, handler: { _ -> Any in
+            return [
+                "message": "Success"
+            ]
+        })
+        
+        let segment = app.buttons["Password"]
+        segment.tap()
+        
+        let emailField = app.textFields["Email"]
+        let button = app.buttons["Restore password"]
+        
+        emailField.tap()
+        emailField.typeText("example@mail.com")
+        button.tap()
+        sleep(1)
+        
+        let passwordField = app.secureTextFields["Password"]
+        let passwordConfirmationField = app.secureTextFields["Password confirmation"]
+        let resetButton = app.buttons["Reset password"]
+        
+        passwordField.tap()
+        passwordField.typeText("12345")
+        
+        passwordConfirmationField.tap()
+        passwordConfirmationField.typeText("12345")
+        
+        resetButton.tap()
+        
+        sleep(1)
+        
+        XCTAssert(self.app.staticTexts["Success!"].exists)
+    }
+    
+    func testFailedResetPassword() {
+        super.router["/api/v1/sessions/restore_password"] = JSONResponse(statusCode: 200, handler: { _ -> Any in
+            return [
+                "token": "12345"
+            ]
+        })
+        
+        super.router["/api/v1/sessions/reset_password"] = JSONResponse(statusCode: 422, handler: { _ -> Any in
+            return [
+                "errors": [
+                    "password": ["Can't be blank"]
+                ]
+            ]
+        })
+        
+        let segment = app.buttons["Password"]
+        segment.tap()
+        
+        let emailField = app.textFields["Email"]
+        let button = app.buttons["Restore password"]
+        
+        emailField.tap()
+        emailField.typeText("example@mail.com")
+        button.tap()
+        sleep(1)
+        
+        let resetButton = app.buttons["Reset password"]
+        
+    
+        resetButton.tap()
+        
+        sleep(1)
+        
+        XCTAssert(self.app.staticTexts["Can't be blank"].exists)
+    }
 }

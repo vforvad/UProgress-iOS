@@ -49,6 +49,18 @@
             </BuildableReference>
             <SkippedTests>
                <Test
+                  Identifier = "AuthorizationViewControllerTest/testFailedResetPassword()">
+               </Test>
+               <Test
+                  Identifier = "AuthorizationViewControllerTest/testFailedRestorePassword()">
+               </Test>
+               <Test
+                  Identifier = "AuthorizationViewControllerTest/testSuccessResetPassword()">
+               </Test>
+               <Test
+                  Identifier = "AuthorizationViewControllerTest/testSuccessRestorePassword()">
+               </Test>
+               <Test
                   Identifier = "DirectionsDetailViewControllerTest">
                </Test>
                <Test
