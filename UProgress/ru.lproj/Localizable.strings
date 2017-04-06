@@ -7,6 +7,7 @@
 */
 "pull_to_refresh" = "Потяните для обновления";
 "search" = "Поиск";
+"success_title" = "Успешно!";
 
 "segment_authorization"="Авторизация";
 "segment_registration" = "Регистрация";
@@ -18,7 +19,9 @@
 "auth_nick" = "Имя пользователя";
 "auth_sign_in" = "Авторизация";
 "auth_sign_up" = "Регистрация";
-"auth_password" = "Восстановить пароль";
+"auth_restore_password" = "Восстановить пароль";
+"auth_reset_password" = "Сбросить пароль";
+"password_reset_success" = "Пароль был успешно обновлен";
 
 
 // NAVIGATION

@@ -57,4 +57,17 @@ class AuthorizationPresenter: AuthorizationPresenterProtocol {
                         self.view.failedRestore(error: error)
         })
     }
+    
+    internal func resetPassword(parameters: Dictionary<String, AnyObject>) {
+        self.view.startLoader()
+        model.resetPassword(resetPasswordParams: parameters,
+                              success: { message in
+                                self.view.stopLoader()
+                                self.view.successReset(message: message)
+        },
+                              failure: { error in
+                                self.view.stopLoader()
+                                self.view.failedReset(errors: error)
+        })
+    }
 }

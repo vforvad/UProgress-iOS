@@ -23,7 +23,7 @@ class RestorePasswordFragmentController: BaseViewController, ErrorsHandling, UIT
         self.view.backgroundColor = UIColor.white
         self.view.layer.cornerRadius = 10.0
         
-        restorePasswordButton.setTitle(NSLocalizedString("auth_password", comment: ""), for: UIControlState.normal)
+        restorePasswordButton.setTitle(NSLocalizedString("auth_restore_password", comment: ""), for: UIControlState.normal)
         restorePasswordButton.layer.cornerRadius = 5.0
         
         emailField.delegate = self

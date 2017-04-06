@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MBProgressHUD
+import CDAlertView
 
 class AuthorizationsViewController: BaseViewController, SignInProtocol, AuthorizationViewProtocol {
     public var signIn: Bool!
@@ -30,7 +31,6 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor("#f6f7f8")
-        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         
@@ -189,6 +189,9 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         MBProgressHUD.showAdded(to: view, animated: true)
     }
     
+    internal func successReset(message: String!) {}
+    internal func failedReset(errors: ServerError) {}
+    
     deinit {
         NotificationCenter.default.removeObserver(self);
     }
@@ -200,5 +203,14 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     
     func scrollToField(view: UIView) {
         scrollView.scrollToView(view: view, animated: true)
+    }
+    
+    @IBAction func unwindToRoot(segue:UIStoryboardSegue) {
+        if segue.identifier! == "backSegue" {
+            updateSegment(sender: self.segmentControl, index: 0)
+            CDAlertView(title: NSLocalizedString("success_title", comment: ""),
+                        message: NSLocalizedString("password_reset_success", comment: ""), type: .success).show()
+
+        }
     }
 }

@@ -8,6 +8,7 @@
 
 "pull_to_refresh" = "Pull to refresh";
 "search" = "Search";
+"success_title" = "Success!";
 
 // AUTHORIZATION
 "segment_authorization"= "Authorization";
@@ -22,7 +23,9 @@
 "auth_nick" = "Nick";
 "auth_sign_in" = "Sign in!";
 "auth_sign_up" = "Sign up!";
-"auth_password" = "Restore password";
+"auth_restore_password" = "Restore password";
+"auth_reset_password" = "Reset password";
+"password_reset_success" = "Password was succesfully updated";
 
 
 // NAVIGATION

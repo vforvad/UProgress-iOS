@@ -15,5 +15,7 @@ protocol AuthorizationManagerProtocol {
     
     func restorePassword(restorePassword: Dictionary<String, AnyObject>, success: @escaping (_ token: String) -> Void, failure: @escaping (_ error: ServerError) -> Void)
     
+    func resetPassword(resetPasswordParams: Dictionary<String, AnyObject>, success: @escaping (_ message: String) -> Void, failure: @escaping (_ error: ServerError) -> Void)
+    
     func currentUser(success: @escaping (User) -> Void, failure: @escaping (ServerError) -> Void)
 }

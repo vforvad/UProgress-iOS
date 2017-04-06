@@ -12,4 +12,5 @@ protocol AuthorizationPresenterProtocol {
     func signIn(parameters: Dictionary<String, AnyObject>)
     func signUp(parameters: Dictionary<String, AnyObject>)
     func restorePassword(parameters: Dictionary<String, AnyObject>)
+    func resetPassword(parameters: Dictionary<String, AnyObject>)
 }
