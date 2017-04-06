@@ -39,10 +39,11 @@
                                                 </constraints>
                                             </imageView>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IhS-RI-hNM">
-                                                <rect key="frame" x="127" y="195" width="121" height="29"/>
+                                                <rect key="frame" x="96.5" y="195" width="182" height="29"/>
                                                 <segments>
                                                     <segment title="First"/>
                                                     <segment title="Second"/>
+                                                    <segment title="Third"/>
                                                 </segments>
                                                 <connections>
                                                     <action selector="toggleController:" destination="YaS-JC-nXI" eventType="valueChanged" id="Aci-Rp-K2O"/>
@@ -68,6 +69,15 @@
                                                     <segue destination="05v-Qu-sVH" kind="embed" identifier="reg_fragment" id="Una-lK-98g"/>
                                                 </connections>
                                             </containerView>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVH-OE-Vzv">
+                                                <rect key="frame" x="30" y="253" width="315" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="0gs-4f-eco"/>
+                                                </constraints>
+                                                <connections>
+                                                    <segue destination="Ynf-Gi-s6I" kind="embed" identifier="restore_fragment" id="LTK-lF-Xk3"/>
+                                                </connections>
+                                            </containerView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -75,10 +85,13 @@
                                             <constraint firstItem="hDy-5r-tx2" firstAttribute="centerX" secondItem="U5X-EW-8oj" secondAttribute="centerX" id="CN5-qZ-HkX"/>
                                             <constraint firstItem="80G-X1-Edc" firstAttribute="leading" secondItem="U5X-EW-8oj" secondAttribute="leading" constant="30" id="FOo-XD-Ws3"/>
                                             <constraint firstItem="hDy-5r-tx2" firstAttribute="top" secondItem="U5X-EW-8oj" secondAttribute="top" constant="10" id="Ghp-5R-f7Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="gVH-OE-Vzv" secondAttribute="trailing" constant="30" id="Jza-U9-2rg"/>
                                             <constraint firstItem="UiF-bd-3XQ" firstAttribute="top" secondItem="IhS-RI-hNM" secondAttribute="bottom" constant="30" id="Mtg-Mo-uzI"/>
                                             <constraint firstItem="IhS-RI-hNM" firstAttribute="top" secondItem="hDy-5r-tx2" secondAttribute="bottom" constant="25" id="ZjQ-FZ-3SN"/>
                                             <constraint firstItem="UiF-bd-3XQ" firstAttribute="leading" secondItem="U5X-EW-8oj" secondAttribute="leading" constant="30" id="fE3-d3-Dv6"/>
+                                            <constraint firstItem="gVH-OE-Vzv" firstAttribute="top" secondItem="IhS-RI-hNM" secondAttribute="bottom" constant="30" id="fp1-0e-paB"/>
                                             <constraint firstAttribute="trailing" secondItem="UiF-bd-3XQ" secondAttribute="trailing" constant="30" id="gjt-rU-5zv"/>
+                                            <constraint firstItem="gVH-OE-Vzv" firstAttribute="leading" secondItem="U5X-EW-8oj" secondAttribute="leading" constant="30" id="iQW-JS-5BQ"/>
                                             <constraint firstAttribute="trailing" secondItem="80G-X1-Edc" secondAttribute="trailing" constant="30" id="wpi-f0-o1u"/>
                                             <constraint firstItem="IhS-RI-hNM" firstAttribute="centerX" secondItem="U5X-EW-8oj" secondAttribute="centerX" id="z5C-fq-DAL"/>
                                         </constraints>
@@ -105,6 +118,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gYq-a7-UcS"/>
                     <connections>
+                        <outlet property="restorePasswordContainer" destination="gVH-OE-Vzv" id="uCp-on-mZM"/>
                         <outlet property="scrollView" destination="lQD-bE-z0z" id="dQJ-3i-8ZY"/>
                         <outlet property="scrollViewHeightConstraint" destination="0nk-gc-Nfo" id="4NT-c5-PU1"/>
                         <outlet property="segmentControl" destination="IhS-RI-hNM" id="DYg-it-tuC"/>
@@ -301,6 +315,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5iA-8f-RCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3805" y="78"/>
+        </scene>
+        <!--Restore Password Fragment Controller-->
+        <scene sceneID="KMA-NO-nxs">
+            <objects>
+                <viewController id="Ynf-Gi-s6I" customClass="RestorePasswordFragmentController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uml-aV-vyf">
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BTG-Vw-riN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3853" y="-327"/>
         </scene>
     </scenes>
     <resources>

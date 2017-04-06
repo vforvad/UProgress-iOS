@@ -16,6 +16,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var signInContainer: UIView!
     @IBOutlet weak var signUpContainer: UIView!
+    @IBOutlet weak var restorePasswordContainer: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollViewHeightConstraint: NSLayoutConstraint!
     
@@ -37,6 +38,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         
         self.segmentControl.setTitle(NSLocalizedString("segment_authorization", comment: ""), forSegmentAt: 0)
         self.segmentControl.setTitle(NSLocalizedString("segment_registration", comment: ""), forSegmentAt: 1)
+        self.segmentControl.setTitle(NSLocalizedString("segment_password", comment: ""), forSegmentAt: 2)
         setMVP()
     }
     
@@ -44,7 +46,7 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         var increasingHeight: Int!
         
         if UIDevice.current.orientation.isLandscape {
-            if (!signInContainer.isHidden) {
+            if (!signInContainer.isHidden || !restorePasswordContainer.isHidden) {
                 increasingHeight = 2 * 40 + 50
             }
             else {
@@ -91,11 +93,19 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
             segmentControl.selectedSegmentIndex = 0
             signInContainer.isHidden = false
             signUpContainer.isHidden = true
+            restorePasswordContainer.isHidden = true
         }
         else if index == 1 {
             segmentControl.selectedSegmentIndex = 1
             signInContainer.isHidden = true
             signUpContainer.isHidden = false
+            restorePasswordContainer.isHidden = true
+        }
+        else if index == 2 {
+            segmentControl.selectedSegmentIndex = 2
+            signInContainer.isHidden = true
+            signUpContainer.isHidden = true
+            restorePasswordContainer.isHidden = false
         }
     }
     
@@ -141,6 +151,11 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
             let viewController = segue.destination as! RegistrationFragmentController
             viewController.parentVC = self
             self.signUpView = viewController
+        }
+        
+        if segue.identifier == "restore_fragment" {
+            let viewController = segue.destination as! RestorePasswordFragmentController
+            viewController.parentVC = self
         }
     }
     

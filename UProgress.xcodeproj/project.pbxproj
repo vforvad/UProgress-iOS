@@ -234,6 +234,9 @@
 		64944B121E5E35650093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
 		64944B131E5E3BF40093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
 		64944B141E5E3BF50093961B /* BasePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64944B111E5E35650093961B /* BasePopupViewController.swift */; };
+		6496DFA71E9636F80070BAF5 /* RestorePasswordFragmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6496DFA61E9636F80070BAF5 /* RestorePasswordFragmentController.swift */; };
+		6496DFA81E9639080070BAF5 /* RestorePasswordFragmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6496DFA61E9636F80070BAF5 /* RestorePasswordFragmentController.swift */; };
+		6496DFA91E9639090070BAF5 /* RestorePasswordFragmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6496DFA61E9636F80070BAF5 /* RestorePasswordFragmentController.swift */; };
 		649C33D41E66D04C00665C48 /* DirectionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643C202F1E47D6D90066D9BC /* DirectionsStoryboard.storyboard */; };
 		649C33D51E66D04E00665C48 /* DirectionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 643C202F1E47D6D90066D9BC /* DirectionsStoryboard.storyboard */; };
 		649C33D91E66D64B00665C48 /* KIF+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649C33D81E66D64B00665C48 /* KIF+Extensions.swift */; };
@@ -529,6 +532,7 @@
 		649369BF1E65CFB900B4C58F /* StatisticsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsPresenter.swift; sourceTree = "<group>"; };
 		649369C11E65CFC800B4C58F /* StatisticsPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsPresenterProtocol.swift; sourceTree = "<group>"; };
 		64944B111E5E35650093961B /* BasePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePopupViewController.swift; sourceTree = "<group>"; };
+		6496DFA61E9636F80070BAF5 /* RestorePasswordFragmentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestorePasswordFragmentController.swift; sourceTree = "<group>"; };
 		649C33D81E66D64B00665C48 /* KIF+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KIF+Extensions.swift"; sourceTree = "<group>"; };
 		649C33DA1E66D68700665C48 /* UProgressUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UProgressUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		649C33DB1E66D68800665C48 /* BH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BH.m; sourceTree = "<group>"; };
@@ -988,6 +992,7 @@
 				641F25D01E422FC3008BD119 /* AuthorizationViewProtocol.swift */,
 				641F25D61E4232BE008BD119 /* SignInProtocol.swift */,
 				6443CBEE1E42C0DA008F15E5 /* ErrorsHandling.swift */,
+				6496DFA61E9636F80070BAF5 /* RestorePasswordFragmentController.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -1657,6 +1662,7 @@
 				649369C01E65CFB900B4C58F /* StatisticsPresenter.swift in Sources */,
 				64D9309C1E3E2CEE007C7112 /* DirectionManager.swift in Sources */,
 				647382FC1E59D33200F9C72E /* ProfileView.swift in Sources */,
+				6496DFA71E9636F80070BAF5 /* RestorePasswordFragmentController.swift in Sources */,
 				646E8EB31E48BF87003B8DFB /* Step.swift in Sources */,
 				641F25D71E4232BE008BD119 /* SignInProtocol.swift in Sources */,
 				64860B7C1E5F568E002ACD43 /* ProfileManager.swift in Sources */,
@@ -1784,6 +1790,7 @@
 				645800591E54AD14002366CA /* StepDetailViewController.swift in Sources */,
 				64A108491E64655500BBD065 /* DirectionsFormViewController.swift in Sources */,
 				64860B8B1E5F77E4002ACD43 /* ProfileManagerProtocol.swift in Sources */,
+				6496DFA81E9639080070BAF5 /* RestorePasswordFragmentController.swift in Sources */,
 				64D930BB1E3E72EB007C7112 /* ApiRequest.swift in Sources */,
 				649369B31E65CD9D00B4C58F /* StatisticsManagerProtocol.swift in Sources */,
 				64A108431E645A3F00BBD065 /* AuthorizationPresenterProtocol.swift in Sources */,
@@ -1905,6 +1912,7 @@
 				64A108241E6415C100BBD065 /* AttachmentPresenterProtocol.swift in Sources */,
 				64D930C41E3E72FB007C7112 /* DirectionsListViewProtocol.swift in Sources */,
 				64DA9D011E656817008D24AD /* StatisticsViewController.swift in Sources */,
+				6496DFA91E9639090070BAF5 /* RestorePasswordFragmentController.swift in Sources */,
 				6424076E1E52114600E4CF95 /* String.swift in Sources */,
 				649C33D91E66D64B00665C48 /* KIF+Extensions.swift in Sources */,
 				642407761E52197100E4CF95 /* StepCellProtocol.swift in Sources */,

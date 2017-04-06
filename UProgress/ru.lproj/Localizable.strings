@@ -10,6 +10,7 @@
 
 "segment_authorization"="Авторизация";
 "segment_registration" = "Регистрация";
+"segment_password" = "Пароль";
 
 "auth_email" = "Электронная почта";
 "auth_password" = "Пароль";

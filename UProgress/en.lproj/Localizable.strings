@@ -12,6 +12,7 @@
 // AUTHORIZATION
 "segment_authorization"= "Authorization";
 "segment_registration" = "Registration";
+"segment_password" = "Password";
 
 
 
