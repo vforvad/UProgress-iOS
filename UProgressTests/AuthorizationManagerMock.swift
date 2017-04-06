@@ -13,6 +13,8 @@ class AuthorizationManagerMock: AuthorizationManagerProtocol {
     var signIn: Bool!
     var signUp: Bool!
     var userReceived: Bool!
+    var restorePassword: Bool!
+    var resetPassword: Bool!
     
     init(request: Bool) {
         self.successRequest = request
@@ -47,6 +49,28 @@ class AuthorizationManagerMock: AuthorizationManagerProtocol {
         }
         else {
             userReceived = false
+            failure(ServerError())
+        }
+    }
+    
+    func restorePassword(restorePassword: Dictionary<String, AnyObject>, success: @escaping (_ token: String) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
+        if successRequest! {
+            self.restorePassword = true
+            success("12345")
+        }
+        else {
+            self.restorePassword = false
+            failure(ServerError())
+        }
+    }
+    
+    func resetPassword(resetPasswordParams: Dictionary<String, AnyObject>, success: @escaping (_ message: String) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
+        if successRequest! {
+            resetPassword = true
+            success("aaa")
+        }
+        else {
+            resetPassword = false
             failure(ServerError())
         }
     }

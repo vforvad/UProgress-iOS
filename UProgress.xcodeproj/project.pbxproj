@@ -355,6 +355,8 @@
 		64DA9D041E657391008D24AD /* BaseSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861931E46AC9800583945 /* BaseSplitViewController.swift */; };
 		64DA9D051E657391008D24AD /* BaseSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646861931E46AC9800583945 /* BaseSplitViewController.swift */; };
 		64E015181E3E023E0055DFD5 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E015171E3E023E0055DFD5 /* Direction.swift */; };
+		64E391181E96686E00163DEF /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6496DFAA1E9643730070BAF5 /* ResetPasswordViewController.swift */; };
+		64E391191E96686F00163DEF /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6496DFAA1E9643730070BAF5 /* ResetPasswordViewController.swift */; };
 		64E4A6501E77DB320063C4A9 /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A64F1E77DB320063C4A9 /* XCUIElement.swift */; };
 		64E4A6521E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A6511E77F1E60063C4A9 /* DirectionsListViewControllerTest.swift */; };
 		64E4A6541E786C5E0063C4A9 /* DirectionsDetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E4A6531E786C5E0063C4A9 /* DirectionsDetailViewControllerTest.swift */; };
@@ -1750,6 +1752,7 @@
 				64860B8F1E5F77EE002ACD43 /* ProfilePopupProtocol.swift in Sources */,
 				649C33DF1E66F79A00665C48 /* PieChartViewController.swift in Sources */,
 				6458005D1E54B053002366CA /* StepViewProtocol.swift in Sources */,
+				64E391181E96686E00163DEF /* ResetPasswordViewController.swift in Sources */,
 				64F0C8CF1E5D942E000DD1D8 /* ProfileViewActionsProtocol.swift in Sources */,
 				64A1083B1E645A0700BBD065 /* LaunchPresenterProtocol.swift in Sources */,
 				64754E941E6CB61D00F9D3B0 /* AuthorizationPresenterSpec.swift in Sources */,
@@ -1941,6 +1944,7 @@
 				649369C61E65CFDB00B4C58F /* StatisticsPresenter.swift in Sources */,
 				64DA9D051E657391008D24AD /* BaseSplitViewController.swift in Sources */,
 				64A108401E645A2600BBD065 /* AuthorizationFragmentController.swift in Sources */,
+				64E391191E96686F00163DEF /* ResetPasswordViewController.swift in Sources */,
 				64A108201E64153F00BBD065 /* AttachmentViewProtocol.swift in Sources */,
 				641B30A01E4B67A300FF60CC /* DirectionsDetailPresenter.swift in Sources */,
 				646861961E47370300583945 /* CommonFunctions.swift in Sources */,
