@@ -22,6 +22,7 @@
 "auth_nick" = "Nick";
 "auth_sign_in" = "Sign in!";
 "auth_sign_up" = "Sign up!";
+"auth_password" = "Restore password";
 
 
 // NAVIGATION

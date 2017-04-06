@@ -70,9 +70,9 @@
                                                 </connections>
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVH-OE-Vzv">
-                                                <rect key="frame" x="30" y="253" width="315" height="200"/>
+                                                <rect key="frame" x="30" y="253" width="315" height="150"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="0gs-4f-eco"/>
+                                                    <constraint firstAttribute="height" constant="150" id="0gs-4f-eco"/>
                                                 </constraints>
                                                 <connections>
                                                     <segue destination="Ynf-Gi-s6I" kind="embed" identifier="restore_fragment" id="LTK-lF-Xk3"/>
@@ -321,14 +321,53 @@
             <objects>
                 <viewController id="Ynf-Gi-s6I" customClass="RestorePasswordFragmentController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uml-aV-vyf">
-                        <rect key="frame" x="0.0" y="0.0" width="315" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MgL-6b-qXL">
+                                <rect key="frame" x="10" y="15" width="295" height="80.5"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hwC-Zv-eBF">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ed6-rW-0mu">
+                                        <rect key="frame" x="0.0" y="30" width="295" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nq2-PF-eXS">
+                                        <rect key="frame" x="0.0" y="50.5" width="295" height="30"/>
+                                        <color key="backgroundColor" red="0.0119239362" green="0.47466540340000002" blue="0.98470920319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="restorePassword:" destination="Ynf-Gi-s6I" eventType="touchUpInside" id="93A-wY-CNd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MgL-6b-qXL" firstAttribute="leading" secondItem="Uml-aV-vyf" secondAttribute="leading" constant="10" id="Spz-JB-q9y"/>
+                            <constraint firstItem="MgL-6b-qXL" firstAttribute="top" secondItem="Uml-aV-vyf" secondAttribute="top" constant="15" id="Xc6-5v-1Mj"/>
+                            <constraint firstAttribute="trailing" secondItem="MgL-6b-qXL" secondAttribute="trailing" constant="10" id="gv0-3b-Hnh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="hwC-Zv-eBF" id="qJb-Z2-Q4J"/>
+                        <outlet property="emailFieldError" destination="ed6-rW-0mu" id="NrJ-eL-ONk"/>
+                        <outlet property="restorePasswordButton" destination="nq2-PF-eXS" id="P5U-Oh-CE5"/>
+                        <outlet property="stackView" destination="MgL-6b-qXL" id="bNL-ia-73H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTG-Vw-riN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3853" y="-327"/>
+            <point key="canvasLocation" x="3852" y="-327.4362818590705"/>
         </scene>
     </scenes>
     <resources>
