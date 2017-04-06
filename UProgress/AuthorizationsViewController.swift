@@ -23,6 +23,9 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
     private var presenter: AuthorizationPresenter!
     private var signInView: ErrorsHandling!
     private var signUpView: ErrorsHandling!
+    private var restoreView: ErrorsHandling!
+    
+    private var resetPasswordToken: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,6 +120,10 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         presenter.signUp(parameters: parameters)
     }
     
+    internal func restorePasswordRequest(parameters: Dictionary<String, AnyObject>) {
+        presenter.restorePassword(parameters: parameters)
+    }
+    
     internal func successSignIn(currentUser: User) {
         if CommonFunctions.DeviceData.isIphone() {
             var viewController = CommonFunctions.fromStoryboard(name: "ProfileStoryboard", identifier: "ProfileViewController") as! ProfileViewController
@@ -131,12 +138,21 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         }
     }
     
+    internal func successRestore(token: String) {
+        resetPasswordToken = token
+        performSegue(withIdentifier: "reset_password", sender: self)
+    }
+    
     internal func failedSignIn(error: ServerError) {
         self.signInView.handleErrors(errors: error)
     }
     
     internal func failedSignUp(error: ServerError) {
         self.signUpView.handleErrors(errors: error)
+    }
+    
+    internal func failedRestore(error: ServerError) {
+        self.restoreView.handleErrors(errors: error)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -156,8 +172,14 @@ class AuthorizationsViewController: BaseViewController, SignInProtocol, Authoriz
         if segue.identifier == "restore_fragment" {
             let viewController = segue.destination as! RestorePasswordFragmentController
             viewController.parentVC = self
+            self.restoreView = viewController
         }
-    }
+        
+        if segue.identifier == "reset_password" {
+            let viewController = segue.destination as! ResetPasswordViewController
+            viewController.token = resetPasswordToken
+        }
+     }
     
     internal func stopLoader() {
         MBProgressHUD.hide(for: view, animated: true)

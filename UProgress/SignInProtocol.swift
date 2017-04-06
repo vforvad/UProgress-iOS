@@ -13,4 +13,5 @@ protocol SignInProtocol {
     func scrollToField(view: UIView)
     func signInRequest(parameters: Dictionary<String, AnyObject>)
     func signUpRequest(parameters: Dictionary<String, AnyObject>)
+    func restorePasswordRequest(parameters: Dictionary<String, AnyObject>)
 }

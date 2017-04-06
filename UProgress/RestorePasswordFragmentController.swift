@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import CDAlertView
 
-class RestorePasswordFragmentController: BaseViewController, UITextFieldDelegate {
+class RestorePasswordFragmentController: BaseViewController, ErrorsHandling, UITextFieldDelegate {
     var parentVC: SignInProtocol!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var emailFieldError: UILabel!
@@ -45,6 +46,31 @@ class RestorePasswordFragmentController: BaseViewController, UITextFieldDelegate
         stackView.spacing = Constants.authDefaultSpacing
     }
     
+    func handleErrors(errors: ServerError) {
+        switch(errors.status!) {
+        case 400 ... 499:
+            handleFormErrors(errors: errors)
+        default:
+            CDAlertView(title: NSLocalizedString("error_title", comment: ""),
+                        message: NSLocalizedString("server_not_respond", comment: ""), type: .error).show()
+        }
+    }
+    
+    private func handleFormErrors(errors: ServerError) {
+        stackView.spacing = Constants.authErrorSpacing
+        let errorsList = errors.params!["errors"]
+        if let emailErrorsArr = errorsList?["email"] {
+            let errorsArr = emailErrorsArr as! [String]
+            let emailError: String! = errorsArr.joined(separator: "\n")
+            self.emailFieldError.text = emailError
+            self.emailFieldError.isHidden = false
+            
+        }
+    }
+    
     @IBAction func restorePassword(_ sender: Any) {
+        hideErrors()
+        let dictionary = ["email": emailField.text!]
+        parentVC.restorePasswordRequest(parameters: dictionary as Dictionary<String, AnyObject> )
     }
 }

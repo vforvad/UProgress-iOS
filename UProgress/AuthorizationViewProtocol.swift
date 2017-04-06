@@ -14,4 +14,7 @@ protocol AuthorizationViewProtocol {
     func successSignIn(currentUser: User)
     func failedSignIn(error: ServerError)
     func failedSignUp(error: ServerError)
+    
+    func successRestore(token: String)
+    func failedRestore(error: ServerError)
 }

@@ -124,11 +124,12 @@
                         <outlet property="segmentControl" destination="IhS-RI-hNM" id="DYg-it-tuC"/>
                         <outlet property="signInContainer" destination="80G-X1-Edc" id="C0e-Dg-Mgg"/>
                         <outlet property="signUpContainer" destination="UiF-bd-3XQ" id="7dg-y4-2Rl"/>
+                        <segue destination="BtO-31-Tmw" kind="push" identifier="reset_password" id="x1E-fR-I3H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjw-LH-5bC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2976.811594202899" y="-440.21739130434787"/>
+            <point key="canvasLocation" x="3034" y="-612"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cto-jj-Cio">
@@ -320,6 +321,10 @@
         <scene sceneID="KMA-NO-nxs">
             <objects>
                 <viewController id="Ynf-Gi-s6I" customClass="RestorePasswordFragmentController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bjG-2c-bRp"/>
+                        <viewControllerLayoutGuide type="bottom" id="7K1-1l-lnO"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Uml-aV-vyf">
                         <rect key="frame" x="0.0" y="0.0" width="315" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -368,6 +373,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTG-Vw-riN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3852" y="-327.4362818590705"/>
+        </scene>
+        <!--Reset Password View Controller-->
+        <scene sceneID="zNM-JA-pV7">
+            <objects>
+                <viewController id="BtO-31-Tmw" customClass="ResetPasswordViewController" customModule="UProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y2L-Ed-fuF"/>
+                        <viewControllerLayoutGuide type="bottom" id="3eX-Gd-PhL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3jY-yF-RGI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="khi-sY-dPh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8B-RF-7rz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3804" y="-1137"/>
         </scene>
     </scenes>
     <resources>

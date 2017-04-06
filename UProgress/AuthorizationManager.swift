@@ -51,6 +51,20 @@ class AuthorizationManager: AuthorizationManagerProtocol {
         }
     }
     
+    internal func restorePassword(restorePassword: Dictionary<String, AnyObject>, success: @escaping (_ token: String) -> Void, failure: @escaping (_ error: ServerError) -> Void) {
+        var params = restorePassword
+        ApiRequest.sharedInstance.post(url: "/sessions/restore_password", parameters: ["user": params] as NSDictionary).responseJSON { response in
+            if response.response?.statusCode == 200 {
+                let dictionary = response.result.value as! Dictionary<String, String>
+                success(dictionary["token"]!)
+            }
+            else {
+                let error = response.result.value as? Dictionary<String, AnyObject>
+                failure(ServerError(status: response.response!.statusCode, parameters: error))
+            }
+        }
+    }
+    
     func currentUser(success: @escaping (User) -> Void, failure: @escaping (ServerError) -> Void) {
         ApiRequest.sharedInstance.get(url: "/sessions/current", parameters: [:]).responseJSON { response in
             if response.response?.statusCode == 200 {
